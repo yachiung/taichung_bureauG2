@@ -1,0 +1,9 @@
+
+.row{border-bottom: 1px dashed #d0d;}
+.change{text-align: center;margin: 0 auto 1em;position: fixed;left: 0;right: 0;top: 0;z-index: 999;background: rgba(0,0,0,.6);min-height: 3em;}
+.change ul{display: inline-block;margin: 0 1em;padding: 0;}
+.change li{display: inline-block;margin: 0 2px;padding: .3em 1em;color: #fff;}
+.change li:hover{background: rgba(0, 20,30, .7);}
+.change li.now{background: #f50;}
+.change li.g.now,
+.change li.g1.now{background: #6b0;}

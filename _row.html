@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>欄寬組合說明與示範</title>
+	<link rel="stylesheet" href="css/layout.css">
+  <style>
+  h1, h2, h3{text-align: center;}
+  h1{margin:5em 0 1em;}
+    .row>section{box-shadow: #999 0 0 0 1px inset;background: #fff;}
+    .main>h3{padding: 2.5em 0 .5em;margin: 0;font-weight: normal;color: #e4f;background: #333;}
+    .row h2{margin-bottom: 1em;}
+    .gutter, .gutter1{background: #ddd;}
+    .gutter1{background: #bb9}
+    p{width: 90%;margin: 0 auto;}
+
+  </style>
+</head>
+<body><div class="main">
+
+
+<div class="row gutter">
+	<section>
+		<h2>基本 layout 說明</h2>
+		<article>
+			<p>基本橫列容器：＜div class="row"＞＜/div＞，此為單欄（全寬）容器。</p>
+			<p>"row" 之後接的，以 cx 開頭的 class name 代表此橫列可以容納幾個直欄，以及直欄寬度的組合方式，例如＜div class="row cx2"＞、＜div class="row cx2a"＞、＜div class="row cx2b"＞都是兩欄的容器，但有不同的寬度組合，請參考下方示範。</p>
+			<p>＜div class="row cx3"＞、＜div class="row cx3a"＞、＜div class="row cx3b"＞、＜div class="row cx3c"＞都是三欄的容器，但有不同的寬度組合；＜div class="row cx4"＞是等寬四欄容器，請參考下方示範及說明。</p>
+			<p>＜div class="row"＞如果有 class name "gutter"，則此容器中的欄有欄間距。例如＜div class="row cx3 gutter"＞</p>
+			<p>上稿者必須注意使用正確的欄寬組合方式。</p>
+			<p>注意：說明文字中，包html標籤的大於＞、小於＜，以全形符號替代。</p>
+			<p>下方橫列的粗黑水平線和直欄的細灰框線，是為示範說明方便，在實際應用時不會有。</p>
+		</article>
+	</section>
+</div>
+
+<h1>欄數與欄寬組合:（一）無欄距</h1>	
+
+<h3>單欄：１２ ＜div class="row"＞</h3>
+<div class="row">
+	<section><h2>單欄（12）</h2>
+		<p>＜div class="row"＞</p>
+	</section>
+</div>
+
+<h3>兩欄：６＋６ ＜div class="row cx2"＞</h3>
+<div class="row cx2">
+	<section>
+		<h2>兩欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+	<section><h2>兩欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+		<p>XXX</p><p>XXX</p>
+	</section>
+</div>
+
+<h3>兩欄：８＋４ ＜div class="row cx2a"＞</h3>
+<div class="row cx2a">
+	<section><h2>兩欄（8）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+	<section><h2>兩欄（4）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+</div>
+
+<h3>兩欄：４＋８ ＜div class="row cx2b"＞</h3>
+<div class="row cx2b">
+	<section><h2>兩欄（4）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+	<section><h2>兩欄（8）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+</div>
+
+<h3>三欄：４＋４＋４ ＜div class="row cx3"＞</h3>
+<div class="row cx3">
+	<section>
+		<h2>三欄（4）</h2>
+		<p>{width:34%;}</p>
+		<p>＠ ww ＜ 800 ：｛float:none;max-width:420px;｝</p>	
+	</section>
+	<section><h2>三欄（4）</h2>
+		<p>{width:33%;}</p>
+		<p>＠ ww ＜ 800 ：｛float:none;max-width:420px;｝</p>	
+	</section>
+	<section><h2>三欄（4）</h2>
+		<p>{width:33%;}</p>
+		<p>＠ ww ＜ 800 ：｛float:none;max-width:420px;｝</p>	
+	</section>
+</div>
+
+<h3>三欄：６＋３＋３ ＜div class="row cx3a"＞</h3>
+<div class="row cx3a">
+	<section>
+		<h2>三欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+</div>
+
+<h3>三欄：３＋３＋６ ＜div class="row cx3b"＞</h3>
+<div class="row cx3b">
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+	<section><h2>三欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+</div>
+
+<h3>三欄：３＋６＋３ ＜div class="row cx3c"＞</h3>
+<div class="row cx3c">
+	<section>
+		<h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+	<section><h2>三欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛全寬｝</p>
+	</section>
+</div>
+
+<h3>四欄：３＋３＋３＋３ ＜div class="row cx4"＞</h3>
+<div class="row cx4">
+	<section>
+		<h2>四欄（3）</h2>
+		<p>＠ ww ＜ 1000：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:50%;｝</p>
+		<p>＠ ww ＜ 600 ：｛全寬｝</p>
+	</section>
+</div>
+
+
+
+
+<h1>欄數與欄寬組合:（二）有欄距</h1>	
+
+<h3>單欄：１２ ＜div class="row gutter"＞</h3>
+<div class="row gutter">
+	<section><h2>單欄（12）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+</div>
+
+<h3>兩欄，有欄距等分第一型：６＋６＜div class="row cx2 gutter"＞</h3>
+<div class="row cx2 gutter">
+	<section>
+		<h2>兩欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+	<section><h2>兩欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+		<p>XXX</p><p>XXX</p>
+	</section>
+</div>
+
+<h3>兩欄，有欄距等分第二型：６＋６＜div class="row cx2 gutter1"＞</h3>
+<div class="row cx2 gutter1">
+	<section><h2>兩欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:86vw;｝</p>
+		<p>XXX</p>
+	</section>
+	<section><h2>兩欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:86vw;｝</p>
+	</section>
+</div>
+
+<h3>兩欄：８＋４＜div class="row cx2a gutter"＞</h3>
+<div class="row cx2a gutter">
+	<section><h2>兩欄（8）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+		<p>XXX</p>
+	</section>
+	<section><h2>兩欄（4）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+</div>
+
+<h3>兩欄：４＋８＜div class="row cx2b gutter"＞</h3>
+<div class="row cx2b gutter">
+	<section><h2>兩欄（4）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+		<p>XXX</p>
+	</section>
+	<section><h2>兩欄（8）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+</div>
+
+<h3>三欄，等分第一型：４＋４＋４＜div class="row cx3 gutter"＞</h3>
+<div class="row cx3 gutter">
+	<section><h2>三欄（4）</h2>
+		<p>＠ ww ＜ 800 ：｛width:92vw;｝</p>
+	</section>
+	<section><h2>三欄（4）</h2>
+		<p>＠ ww ＜ 800 ：｛width:92vw;｝</p>
+		<p>XXX</p>
+	</section>
+	<section><h2>三欄（4）</h2>
+		<p>＠ ww ＜ 800 ：｛width:92vw;｝</p>
+	</section>
+</div>
+
+<h3>三欄，等分第二型：４＋４＋４＜div class="row cx3 gutter1"＞</h3>
+<div class="row cx3 gutter1">
+	<section><h2>三欄（4）</h2>
+		<p>＠ ww ＜ 800 ：｛width:92vw;｝</p>
+	</section>
+	<section><h2>三欄（4）</h2>
+		<p>＠ ww ＜ 800 ：｛width:92vw;｝</p>
+	</section>
+	<section><h2>三欄（4）</h2>
+		<p>＠ ww ＜ 800 ：｛width:92vw;｝</p>
+		<p>XXX</p>
+	</section>
+</div>
+
+<h3>三欄：６＋３＋３＜div class="row cx3a gutter"＞</h3>	
+<div class="row cx3a gutter">
+	<section>
+		<h2>三欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+		<p>XXX</p>
+		<p>XXX</p>
+	</section>
+</div>
+
+<h3>三欄：３＋３＋６＜div class="row cx3b gutter"＞</h3>	
+<div class="row cx3b gutter">
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+		<p>XXX</p><p>XXX</p>
+	</section>
+	<section>
+		<h2>三欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+</div>
+
+<h3>三欄：３＋６＋３＜div class="row cx3c gutter"＞</h3>	
+<div class="row cx3c gutter">
+	<section>
+		<h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+		<p>XXX</p><p>XXX</p>
+	</section>
+	<section><h2>三欄（6）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+	<section><h2>三欄（3）</h2>
+		<p>＠ ww ＜ 1000 ：｛width:92vw;｝</p>
+		<p>＠ ww ＜ 800 ：｛width:96vw;｝</p>
+	</section>
+</div>
+
+<h3>四欄：３＋３＋３＋３＜div class="row cx4 gutter"＞</h3>	
+<div class="row cx4 gutter">
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+		<p>XXX</p><p>XXX</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+		<p>XXX</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:96vw;｝</p>
+	</section>
+</div>
+
+<h3>四欄：３＋３＋３＋３＜div class="row cx4 gutter1"＞</h3>	
+<div class="row cx4 gutter1">
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:86vw;｝</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:86vw;｝</p>
+		<p>XXX</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:86vw;｝</p>
+		<p>XXX</p><p>XXX</p>
+	</section>
+	<section><h2>四欄（3）</h2>
+		<p>＠ ww ＜ 600 ：｛width:86vw;｝</p>
+	</section>
+</div>
+
+</div>	
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="js/rwdTable.js"></script> 
+<script type="text/javascript" src="js/jquery.jscroll.js"></script> 
+<script type="text/javascript" src="js/effect.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+</body>
+</html>

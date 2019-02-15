@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>臺中市政府 2017 ：機關共用首頁模組</title>
+
+	<style>
+		html {min-height: 100%; }
+		body { background: #333; padding: 0; margin: 0; color: #555;font-size: 16px; font-family:Arial, Helvetica, sans-serif; }
+		h1 { font-size: 1.6em; ; margin: 0 0 30px; padding: 12px 20px; background: #c06; color: #fff; font-weight: normal; }
+		a { color: #0058a2; text-decoration: none; }
+		a:hover { color: #009cff; text-decoration: underline; }
+		h2 { font-size: 20px;padding: 1em 2% .5em; margin: 0 0 15px; line-height: 100%; background: #369ab0; color: #fff; border-bottom: 4px solid #ccc; border-radius: 7px 7px 0 0; text-align: center; font-weight: normal; }
+		h2 a { float: right; letter-spacing: 0; font-size: 15px; }
+		h3 { margin: 1.2em 2% .4em; color: #222; font-size: 16px; }
+		.list { background: #fff; border-radius: 15px; margin: 2em auto; padding:0 0 1em; max-width:1100px; width: 92%;}
+		.list table { width: 96%; margin: 0 2% 15px; border-collapse: collapse; line-height: 150%; border: 1px solid #ccc; counter-reset: item; }
+		caption { padding: .6em 0; letter-spacing: 2px; }
+		caption a { margin-left: 10px; }
+		.list td { padding: .4em 1em .4em; border-bottom: 1px solid #b6b6b6; border-right: 1px solid #ddd; vertical-align: top; }
+		.list table{margin: 0 auto;width: 96%;}
+		.list td:first-child {text-align: center;}
+		.list td:first-child:before {  content: counter(item); counter-increment: item; }
+		.list th { border-bottom: 2px solid #b6b6b6; border-right: 1px solid #ddd; padding: .4em .6em; font-weight: normal; color: #333; }
+		.list ol { margin: 10px 0; }
+		.list li { line-height: 145%; margin: 0 0 .2em; padding: 3px 0; }
+		.list>ol{width: 80%; margin: 5em auto;}
+		h1 { text-align: center;margin: 0; }
+
+		nav { background: #74ad19; margin: 0 0 10px;}
+		nav ul { padding:0; margin: 0 auto; text-align: center;}
+		nav ul li { margin: 0;;padding: 0; display: inline-block; min-width: 10em;}
+		nav ul li a{display: block;height: 2.6em;line-height: 2.6em; padding: 0 1em;color: #fff;}
+	nav ul li a:hover{background:rgba(0,0,60,.2);color: #fff;text-decoration: none; }
+
+
+
+
+
+		@media (max-width: 640px) {
+			.list table { width:90%;border:none;}
+			.list th { display:none;}
+			.list td { border:none; display:inline-block;padding: .4em;}
+			.list tr { border-bottom: 1px solid #ddd; display:block; }
+			.list td:nth-child(3) { display:block;}
+			.list td:nth-child(3+n) { display:none;}
+		}
+	</style>
+
+</head>
+<body>
+
+<h1>臺中市政府 2017</h1>
+
+<nav>
+	<ul>
+		<li><a href="#m1">機關共用首頁模組</a></li>
+		<li><a href="#mpList">已完成首頁樣式</a></li>
+		<li><a href="#mpNot">機關共用內頁版型</a></li>
+	</ul>
+</nav>	
+
+<section class="list" id="m1">
+	<h2>機關共用首頁模組</h2>
+	<table>
+    <tr>
+	    <th></th>
+	    <th>模組名稱</th>
+	    <th>檔名和連結</th>
+	    <th>說明</th>
+    </tr>
+
+    <tr>
+	    <td></td>
+	    <td>直欄分割方式說明</td>
+	    <td><a href="_row.html">_row.html</a></td>
+	    <td>目前可用的分割方式：12｜6+6｜8+4｜4+8｜4+4+4｜6+3+3｜3+3+6｜3+6+3｜3+3+3+3</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>網頁基本架構</td>
+	    <td><a href="beginPage.html">beginPage.html</a></td>
+	    <td>有RWD和定位點</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>小的橫幅廣告</td>
+	    <td><a href="_ad.html">_ad.html</a></td>
+	    <td>數個小廣告圖，水平或垂直排列</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>活動相簿＋線上電子書</td>
+	    <td><a href="_album.html">_album.html</a></td>
+	    <td>數款【活動相簿】、一款【線上電子書】</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>大型橫幅廣告</td>
+	    <td><a href="_bigBanner.html">_bigBanner.html</a></td>
+	    <td>不同寬、高比的大圖輪播</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>線上電子書</td>
+	    <td><a href="_eBook.html">_eBook.html</a></td>
+	    <td><ol>
+	    	<li>電子書封面圖＋線上閱覽＋檔案下載</li>
+	    	<li>直欄中只顯示一筆</li>
+	    	<li>以左、右箭頭切換，看其他筆資料</li>
+	    </ol></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>頁尾（footer）模組</td>
+	    <td><a href="_footer.html">_footer.html</a></td>
+	    <td>包括：fat footer、聯絡資訊、社群連結、QRcode 等</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>放在版頭（header）內的模組</td>
+	    <td><a href="_header.html">_header.html</a></td>
+	    <td>包括：【網站標題】、【右上連結項】、【查詢】、【主選單】</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>巨型選單模組</td>
+	    <td><a href="_megaMenu.html">_megaMenu.html</a></td>
+	    <td>巨型選單 mega menu</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>帶有文字說明的圖示連結</td>
+	    <td><a href="_icon.html">_icon.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>文字連結</td>
+	    <td><a href="_link.html">_link.html</a></td>
+	    <td>「文字連結」是相關主題的連結集合，連結目標可能是一個網頁，也可能是一個網站的首頁。</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>訊息模組</td>
+	    <td><a href="_news.html">_news.html</a></td>
+	    <td>訊息通常含有貼文單位和日期，連結到該訊息的內容頁。與「文字連結」有別</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>其他模組</td>
+	    <td><a href="_others.html">_others.html</a></td>
+	    <td>目前包含：<ol>
+		    <li>【搜尋區】</li>
+		    <li>【跑馬燈訊息】</li>
+		    <li>【訂閱／取消電子報】</li>
+		    <li>【社群連結】（fb, youtube 等）</li>
+		    <li>臉書嵌入</li>
+		    <li>【彈出訊息】</li></ol>
+		  </td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>常見問答</td>
+	    <td><a href="_qa.html">_qa.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>特定機關的客製化模組</td>
+	    <td><a href="_special.html">_special.html</a></td>
+	    <td>目前包含：<ol>
+		    <li>勞動統計數據（勞工局）
+		    <li>主題專區（勞工局）</li>
+		    <li>空氣品質（環保局）</li>
+		  	<li>垃圾清運（環保局）</li></ol>
+  	</td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>影音專區</td>
+	    <td><a href="_video.html">_video.html</a></td>
+	    <td>影音截圖和YouTube 嵌入兩款</td>
+    </tr>
+	</table>
+</section>
+
+<section class="list" id="mpList">
+	<h2>已完成首頁樣式</h2>
+	<ol>
+
+
+		<li><a href="mp_人事處.html	">人事處</a></li>
+		<li><a href="mp_水利局.html	">水利局</a></li>
+		<li><a href="mp_法制局.html	">法制局</a></li>
+		<li><a href="mp_社會局.html	">社會局</a></li>
+		<li><a href="mp_客委會.html	">客委會</a></li>
+		<li><a href="mp_建設局.html	">建設局</a></li>
+		<li><a href="mp_政風處.html	">政風處</a></li>
+		<li><a href="mp_研考會.html	">研考會</a></li>
+		<li><a href="mp_原民會.html	">原民會</a></li>
+		<li><a href="mp_秘書處.html	">秘書處</a></li>
+		<li><a href="mp_財政局.html	">財政局</a></li>
+		<li><a href="mp_都發局.html	">都發局</a></li>
+		<li><a href="mp_勞工局.html	">勞工局</a></li>
+		<li><a href="mp_新聞局.html	">新聞局</a></li>
+		<li><a href="mp_經發局.html	">經發局</a></li>
+		<li><a href="mp_農業局.html	">農業局</a></li>
+		<li><a href="mp_衛生局.html	">衛生局</a></li>
+		<li><a href="mp_環保局.html	">環保局</a></li>
+
+
+	</ol>
+</section>
+
+<section class="list" id="mpNot">
+	<h2>機關共用內頁版型</h2>
+	<table>
+    <tr>
+	    <th></th>
+	    <th>內頁簡述</th>
+	    <th>檔名和連結</th>
+	    <th>說明</th>
+    </tr>
+
+    <tr>
+	    <td></td>
+	    <td>榮譽榜內頁</td>
+	    <td><a href="cp_honor.html">cp_honor.html</a></td>
+    	<td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>相簿內頁</td>
+	    <td><a href="cp_photo.html">cp_photo.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>拍片景點內頁</td>
+	    <td><a href="cp_photoForFilm.html">cp_photoForFilm.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>首長簡介內頁</td>
+	    <td><a href="cp_resume.html">cp_resume.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>表格形式內頁</td>
+	    <td><a href="cp_table.html">cp_table.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>運動場館內頁</td>
+	    <td><a href="cp_venue.html">cp_venue.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>影音播放內頁</td>
+	    <td><a href="cp_video.html">cp_video.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>圖文內頁</td>
+	    <td><a href="cp.html">cp.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>轉寄</td>
+	    <td><a href="forward.html">forward.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>機關通訊錄</td>
+	    <td><a href="lp_address.html">lp_address.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>App 縮圖瀏覽</td>
+	    <td><a href="lp_app.html">lp_app.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>小廣告縮圖瀏覽</td>
+	    <td><a href="lp_banner.html">lp_banner.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>活動行事曆</td>
+	    <td><a href="lp_calendar.html">lp_calendar.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>機關首長條列頁</td>
+	    <td><a href="lp_chief.html">lp_chief.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>電子書縮圖瀏覽</td>
+	    <td><a href="lp_eBook.html">lp_eBook.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>榮譽榜縮圖瀏覽</td>
+	    <td><a href="lp_honor.html">lp_honor.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>機關首長條列頁（二）</td>
+	    <td><a href="lp_orgTable.html">lp_orgTable.html</a></td>
+	    <td></td>
+    </tr>
+<!--     <tr>
+	    <td></td>
+	    <td>內頁簡述</td>
+	    <td><a href="lp_orgTree.html">lp_orgTree.html</a></td>
+	    <td></td>
+    </tr> -->
+    <tr>
+	    <td></td>
+	    <td>相簿縮圖瀏覽</td>
+	    <td><a href="lp_photo.html">lp_photo.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>首長行程</td>
+	    <td><a href="lp_schedule.html">lp_schedule.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>表格條列頁</td>
+	    <td><a href="lp_table.html">lp_table.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>競賽場館條列頁</td>
+	    <td><a href="lp_venue.html">lp_venue.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>RSS訂閱和JSON下載條列頁</td>
+	    <td><a href="lp_openData.html">lp_openData.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>影音專區縮圖瀏覽</td>
+	    <td><a href="lp_video.html">lp_video.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>項目條列頁</td>
+	    <td><a href="lp.html">lp.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>節點頁</td>
+	    <td><a href="np.html">np.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>問卷主題條列頁</td>
+	    <td><a href="poll_list.html">poll_list.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>問卷調查統計結果</td>
+	    <td><a href="poll_result.html">poll_result.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>問卷調查</td>
+	    <td><a href="poll.html">poll.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>意見信箱</td>
+	    <td><a href="qp_mailSearch.html">qp_mailSearch.html</a></td>
+	    <td></td>
+    </tr>
+    <tr>
+	    <td></td>
+	    <td>網站導覽頁</td>
+	    <td><a href="sitemap.html">sitemap.html</a></td>
+    	<td></td>
+    </tr>
+   </table>
+</section>
+
+</body>
+</html>

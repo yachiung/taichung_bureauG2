@@ -1,0 +1,59 @@
+/* 動物保護處特殊版 */
+
+.askBtn{display: inline-block;}
+.askBtn a{display: block;margin: 0 auto;height: 2.6em;line-height: 2.55em;padding: 0 1em;background: #f60;color: #fff;border-radius: 2em;text-align: center;transition: .2s;}
+.askBtn a:hover{text-decoration: none;color: #fff;background: #f60;box-shadow: #fa0 0 0 0 3px;}
+
+
+.profileList,
+.profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;overflow: hidden;}
+.profileList>ul>li{border-bottom: 1px dashed #888;clear: both;overflow: hidden;padding: 0 0 1.8em;margin: 0 0 1.8em;}
+.profileList>ul>li:last-child{border-bottom: none;}
+
+figure.petPicture{display: block;}
+.petPicture img{display: block;width: 100%;}
+
+
+
+.profile .askBtn,
+.profileList li .askBtn{display: block;padding-top: 1em;text-align: center;width: 96%;margin-left: auto;margin-right: auto}
+.profile .askBtn a,
+.profileList li .askBtn a{padding: 0 2em;}
+
+
+
+
+.animalSearch{width: 96%;margin: 1em auto;overflow: hidden;background: #f3f3f3;}
+.animalSearch>.bulletin{padding: 2em 3% 1.5em;}
+.bulletin ul{padding-left: 1.5em;line-height: 1.5;}
+.bulletin li{list-style:square;margin: 0 0 1em;}
+
+.animalSearch>form{margin: 0;padding: 2em 3% 1.5em;background: #555;color: #fff}
+.animalSearch>form th,
+.animalSearch>form td{padding: 4px 0;display: table-cell;}
+.animalSearch>form th,
+.animalSearch>form td:first-child{font-weight: bold;color: #ddd;padding-right: 6px;text-align: right;}
+.animalSearch>form th label,
+.animalSearch>form td:first-child label{width: auto;margin: 0;}
+.animalSearch>form .buttonDiv{margin-left: 0;margin-right: 0;}
+.animalSearch>form td:nth-child(2) label{display: inline-block;margin: 0 .9em 0 .2em;}
+.animalSearch>form td label input{vertical-align: 5%;outline: none;}
+.animalSearch>form td select,
+.animalSearch>form td input[type="text"],
+.animalSearch>form td textarea{border: none;}
+.animalSearch>form td select{width:11em;}
+.animalSearch>form td input[type="text"]{width:10.2em;}
+.animalSearch>form td textarea{width:14em;}
+.animalSearch>form td button{border-radius: 4px;}
+.animalSearch>form td input[id*="SaveDate"],
+.animalSearch>form td input[name*="SaveDate"]{width: 6em;margin-bottom: 5px;}
+.animalSearch>form td button[id*="SaveDate"]{width: 2em;margin:3px 0 0 5px;vertical-align: middle;text-indent: -5em;overflow: hidden;background:#ad3 url(../images/icon_close.png) no-repeat center center;background-size: 16px;transition: .15s;}
+.animalSearch>form td button:hover,
+.animalSearch>form td button:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;border-radius: 2px;}
+@media screen and (min-width:800px){
+  .animalSearch>form{width: 44%;float: right;}
+  .animalSearch>.bulletin{width: 44%;float: left;}
+  .animalSearch>.bulletin:only-child{float: none;width: auto;}
+  .animalSearch>form textarea{border: none;width: 14em;height: 5.8em;min-height: 0;line-height: 1.4}
+
+}
