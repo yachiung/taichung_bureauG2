@@ -17,7 +17,7 @@
 .header .search form{display:inline-block;vertical-align:top;}
 .header .search form input{vertical-align:top;margin:0;padding:0 .5em;border:none;height:2.4em;line-height:2.4em;float:left;}
 .header .search input[type="submit"]{padding:0;}
-.header .search input[type="text"]{width:10em;border:1px solid #bbb;box-sizing:border-box;}
+.header .search input[type="text"]{width:10em;border:1px solid #bbb;box-sizing:border-box;/* border-radius: 0; */}
 .header .search form a{display:inline-block;height:2.4em;line-height:2.4em;margin:0;padding:0 2px;text-decoration:none;}
 .search .keywordHot{display:block;}
 .keywordHot{vertical-align:middle;}
@@ -64,7 +64,6 @@
 
 	.header .search {display:none;position:fixed;left:0;right:0;padding:.5em .8em;background:rgba(0,0,0,.7);width: auto;}
 	.header .search a{color:#fff}
-	.header .search form {}
 	.header .search input[type="text"]{width:16em;padding:0 .8em;margin:0;background:#fff;box-shadow:none;}
 	.header .search input[type="submit"]{position:relative; background:#666 url(../images/search_submit.png) no-repeat center center;background-size:20px;width:3em;margin-left:-5px;text-indent:-200px;}
 	.search .keywordHot{ display:inline-block;}

@@ -91,20 +91,32 @@
 .fileType.other{background:#ddd;color:#444;}
 
 /*--附件：圖檔*/
-.attachment .images{overflow:hidden;}
-.attachment .images li{position:relative;float:left;overflow:hidden;line-height:16px;margin:0 10px 10px 0;padding:0; text-align:center;border: 1px solid #ccc;}
-.attachment .images li a{display:block;width:200px;height:200px;margin:0;} 
+.attachment .images{width: 96vw;margin: 2vw auto;}
+.attachment .images li{text-align:center;border: 1px solid #bbb;padding: 0;margin: 0 0 2vw;}
+.attachment .images li a{display:block;margin:0 auto;height: 100%;} 
 .attachment .images li a:hover{text-decoration:none;}
-/*.attachment .images li img{display:block;width:200px;height:200px;*max-width:200px;*max-height:200px;object-fit:cover;margin:0 auto;}*/
-.attachment .images li img{display:block;max-width:200px;max-height:200px;/*object-fit:cover;*/margin:0 auto;width:200px;height:200px;object-fit: contain;}
+.attachment .images li img{display:block;margin:0 auto;width:100%;}
+.attachment .images li p{line-height: 1.5;padding: .4em .5em .2em;margin:0;font-size:1em;}
 
+@media screen and (min-width:800px){
+	.attachment .images{overflow:hidden;}
+	.attachment .images li{position: relative;float: left;width: 49%;height: 50vw;}
+	.attachment .images li:nth-child(even){float: right;}
+	.attachment .images li img{height: 100%;object-fit: contain}
+	.attachment .images li p{position:absolute;left:0;right: 0;bottom: 0;max-height: 4.2em;overflow: hidden;background: rgba(255,255,255,.82)}
+}
+@media screen and (min-width:1000px){
+	.attachment .images{width: 99%;margin:1em 0;}
+	.attachment .images li{position:relative;float:left;width:220px;height:220px;margin:0 10px 10px 0;padding:0;overflow:hidden;}
+	.attachment .images li:nth-child(even){float: left;}
+	.attachment .images li img{display:block;max-width:100%;max-height:100%;width:100%;height:100%;}
+	.attachment .images li p{bottom:-4.8em;background:rgba(0,0,0,.6);color:#fff;font-size:.87em;text-align:left;transition:.3s;}
+	.attachment .images li a:hover p,
+	.attachment .images li a:focus p{bottom:0;}
+	.attachment .images li a:before{content:"";position:absolute;left:0;top:0;right:0;bottom:0;border:2px solid #d00;display:none;z-index:9;}
+	.attachment .images li a:focus:before{display:block;}
 
-.attachment .images li p{position:absolute;left:0;bottom:-88px;margin:0;padding:6px;width:188px;max-height:86px;overflow:hidden;background:rgba(0,0,0,.6);color:#fff;font-size:.87em;line-height:19px;text-align:left;transition:.3s;}
-.attachment .images li a:hover p,
-.attachment .images li a:focus p{bottom:0;}
-.attachment .images li a:before{content:"";position:absolute;left:0;top:0;right:0;bottom:0;border:2px solid #d00;display:none;z-index:9;}
-.attachment .images li a:focus:before{display:block;}
-
+}
 
 
 .pubInfo{width:96%;margin:30px auto;border:1px solid #aa9;padding:1.5em 0 .5em;clear:both;color:#999;}
@@ -125,41 +137,6 @@
 .meta td iframe {display:block;padding:0;margin:0;width:1000px;max-width:100%;height:600px;width:820px\9;border:none;}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {/*修正 IE10 和 IE11*/
 	.meta td iframe { width:820px; }
-}
-/* 動物保護處: 動物基本資料 */
-table.meta4col,
-.meta4col table{width: 100%;line-height: 1.5;border-collapse: collapse;border: 2px solid #888;margin: 0 auto 1em;}
-.meta4col tr:hover{background: #fff8f0;}
-.meta4col th,
-.meta4col td{vertical-align: top;padding: .5em 6px .4em;border-bottom: 1px solid #aaa;}
-.meta4col th{text-align: right;padding-right:12px;position: relative;width: 20%;}
-.meta4col th:after{content:'';position: absolute;top: 4px;bottom: 4px;right: 2px;width: 1px;background: #ddd;}
-.meta4col th:nth-child(3){border-left: 1px solid #aaa;}
-.meta4col td a{color: #0a77bb;text-decoration: underline;}
-.meta4col td a:hover{text-decoration: none;color: #09f}
-@media screen and (max-width:440px){
-  .meta4col{clear: both;}
-  .meta4col tr{display: block;}
-  .meta4col th,
-  .meta4col td{padding-left: 1%;padding-right: 1%;display: inline-block;border-bottom: none;border-top: 1px dotted #bbb;}
-  .meta4col tr:first-child th:nth-child(1),
-  .meta4col tr:first-child td:nth-child(2){border-top: none;}
-  .meta4col th{width:32%;clear: both;padding-right: 2%;}
-  .meta4col td{width: calc(64% - 4px);margin-left: -5px;}
-  .meta4col th:nth-child(3){border-left: none;clear: both;}
-  .meta4col th:after{content: ":";bottom: auto;top: .5em;right: 4px;background: none;color: #888}
-}
-@media screen and (min-width:800px){
-  .profile .meta4col,
-  .profileList li .meta4col{float: left;width:70%;margin: 0;}
-  .profile .petPicture,
-  .profileList li .petPicture{float: right;width: 28%;}
-  .profile .askBtn,
-  .profileList li .askBtn{clear: both;}
-  .profile .askBtn a,
-	.profileList li .askBtn a{display: inline-block;}
-	.meta4col th{width: 20%;}
-	.meta4col td{width: 28%;}
 }
 
 
@@ -357,12 +334,7 @@ ol.policies{position:relative;list-style:none;margin:-20px auto 0;padding:0;widt
 	.eMag.LatestIssue .buttons li a{display:block;width:auto;margin:0 0 8px;}
 
 	.seeAlso ul li a{display:block;padding:.8em 0 .2em;}
-	.attachment, .seeAlso{margin:30px 15px;}
-	.attachment .images li{float:none;display:inline-block;vertical-align:top;width:24%;margin:0 .4% 10px 0;border:1px solid #999;box-sizing:border-box;}
-	.attachment .images li:nth-child(4n) {margin-right:0;}
-	.attachment .images li a{width:auto;height:auto;}
-	.attachment .images li img{width:100%;height:auto;}
-	.attachment .images li p{position:static;width:auto;background:none;color:#888;max-height:4em;font-size:.88em;line-height:1.4;}
+	.seeAlso{margin:30px auto;}
 
 
 	.album{width:100vw}
@@ -400,6 +372,7 @@ ol.policies{position:relative;list-style:none;margin:-20px auto 0;padding:0;widt
 	.preface .info, .preface .count{font-size:.9em;display:block;}
 	.preface .info li{margin:0 0 .8em;display:block;}
 	.preface .count{float:none;text-align:left;}
+
 }
 @media screen and (max-width:600px) {
 	.cpArticle figure{float:none;width:100%;margin:0 auto 2em;box-sizing:border-box;}
@@ -411,9 +384,6 @@ ol.policies{position:relative;list-style:none;margin:-20px auto 0;padding:0;widt
 
 	.cpArticle .list  table{border:none;}
 	.cpArticle .list td{border:none;border-bottom:1px dotted #ccc;}
-
-	.attachment .images li{display:block;width:100%;margin:0 0 12px;}
-	.attachment .images li p{max-height:auto;}
 
 	.meta{margin:1em 0 0;}
 	.meta h2{margin:0 16px;font-size:1em;}
@@ -482,9 +452,7 @@ form td .magList p{margin:0 0 1.5em;line-height:1.6;}
 
 .note{margin:0 0 2.5em;padding:2.5em 3% 2.5em;border-width:1px;line-height:1.8;background:#fe8;}
 .note h2{font-size:1.2em;margin:0 0 1em;}
-.note ol{/*margin:0 2em 0 1em;*/}
 .note li{margin-bottom:1.2em;}
-.note p{/*margin:1em 2em;*/}
 .note a{color:#f50;text-decoration:underline;}
 
 .forwardForm .note{position:relative;float:left;width:33%;}
@@ -539,6 +507,46 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 	.forwardForm .note + form{padding:1em 4vw 2em;background:none;}
 
 }
+
+
+
+/* 動物保護處: 動物基本資料 */
+table.meta4col,
+.meta4col table{width: 100%;line-height: 1.7;border-collapse: collapse;border: 2px solid #888;margin: 0 auto 1em;}
+.meta4col th,
+.meta4col td{vertical-align: top;padding: .5em 6px .4em;border-bottom: 1px solid #aaa;}
+.meta4col th{text-align: right;padding-right:12px;position: relative;width: 20%;}
+.meta4col th:after{content:'';position: absolute;top: 4px;bottom: 4px;right: 2px;width: 1px;background: #ddd;}
+.meta4col th:nth-child(3){border-left: 1px solid #aaa;}
+.meta4col td a{color: #0a77bb;text-decoration: underline;}
+.meta4col td a:hover{text-decoration: none;color: #09f}
+@media screen and (max-width:600px){
+  .meta4col{clear: both;}
+	.meta4col tr, .meta4col th, .meta4col td{display: block;}
+  .meta4col th,
+	.meta4col td{width: auto;padding-left: 2vw;padding-right: 2vw;border-bottom: none;text-align: left;}
+	.meta4col td{border-bottom: 1px solid #ddd;}
+	.meta4col tr:last-child td:nth-child(2){border: none;}
+	.meta4col th{float: left;clear: both;padding-bottom: 0;padding-right:24px}
+  .meta4col td:empty{height: 1.5em;}
+  .meta4col th:nth-child(3){border-left: none;clear: both;}
+	.meta4col th:after{width: 8px;height: 8px;margin-right:6px ;top: 1.15em;background: #fb0;}
+}
+@media screen and (min-width:800px){
+  .profile .meta4col,
+  .profileList li .meta4col{float: left;width:70%;margin: 0;}
+  .profile .petPicture,
+  .profileList li .petPicture{float: right;width: 28%;}
+  .profile .askBtn,
+  .profileList li .askBtn{clear: both;}
+  .profile .askBtn a,
+	.profileList li .askBtn a{display: inline-block;}
+	.meta4col tr{display:table-row;}
+	.meta4col tr:hover{background: #fff8f0;}
+	.meta4col th{width: 20%;display: table-cell;}
+	.meta4col td{width: 28%;display: table-cell;}
+}
+
 
 
 

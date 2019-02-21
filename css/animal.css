@@ -13,8 +13,6 @@
 figure.petPicture{display: block;}
 .petPicture img{display: block;width: 100%;}
 
-
-
 .profile .askBtn,
 .profileList li .askBtn{display: block;padding-top: 1em;text-align: center;width: 96%;margin-left: auto;margin-right: auto}
 .profile .askBtn a,
@@ -55,5 +53,4 @@ figure.petPicture{display: block;}
   .animalSearch>.bulletin{width: 44%;float: left;}
   .animalSearch>.bulletin:only-child{float: none;width: auto;}
   .animalSearch>form textarea{border: none;width: 14em;height: 5.8em;min-height: 0;line-height: 1.4}
-
 }

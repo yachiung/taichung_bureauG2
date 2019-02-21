@@ -222,7 +222,7 @@ input[type="text"],
 input[type="password"],
 textarea,
 input[type="file"],
-select{border:solid 1px #bbb;height:2.4em;line-height:2.4em;padding:0 .4em;border-radius: 4px;}
+select{border:solid 1px #bbb;height:2.4em;line-height:2.4em;padding:0 .4em;/* border-radius: 4px; */}
 input[type="file"]{-webkit-appearance:none;width:12em;}
 
 input[type="text"]:focus,

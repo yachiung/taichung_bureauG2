@@ -9,6 +9,12 @@
 .thumbnail li .image a:hover,
 .thumbnail li .image a:focus{box-shadow:rgba(0,0,0,.5) 0 0 5px;}
 .thumbnail li .image img{display:block;margin:0 auto;width:100%;height:100%;object-fit:cover;}
+
+.thumbnail.animalPhotos>ul>li{padding: 0;}
+.thumbnail.animalPhotos>ul>li>a {display: block;padding: 9px 0;}
+.thumbnail.animalPhotos li .image img{object-fit:contain;}
+.thumbnail.animalPhotos li p {text-align: center;}
+
 .thumbnail li h3{padding:0;margin:0 10px .6em;font-size:1.05em;line-height:1.3;color:#000;}
 .thumbnail li a h3{color:#000;}
 .thumbnail li p{margin:0 10px;padding:0;line-height:1.6;}
@@ -99,6 +105,9 @@
 	.thumbnail.videos li p{height:3.1em;}
 	.thumbnail.videos li .image{height:28vw;}
 
+	.thumbnail.animalPhotos li .image{height:40vw;}
+	.thumbnail.animalPhotos li p {height: 1.5em;}
+
 	.thumbnail.eBooks ul>li{padding-bottom:4.2em;}
 	.thumbnail.eBooks li h3{display:block;text-align:center;height:1.3em ;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 	.thumbnail.eBooks li .image img{width:100%;height:100%;object-fit:scale-down;}
@@ -122,8 +131,8 @@
 	.thumbnail ul>li{width:31%;margin:.8vw 0 1vw 1.75vw;}
 	.thumbnail li .image{height:20vw;}
 	.thumbnail.videos li .image{height:18vw;}
-
 	.thumbnail.banners li .image{height:12vw}
+	.thumbnail.animalPhotos li .image{height:30vw;}
 
 	.thumbnail.apps ul>li{padding-right:8%;position:relative;width:88%;margin:.8vw auto 1vw;}
 	.thumbnail.apps li ol{position:absolute;right:0;top:0;bottom:0;margin:0;width:7%}
@@ -133,14 +142,16 @@
 @media screen and (min-width:1001px){
 	.thumbnail ul>li{margin:.5em 0 1em 1.5%;transition:box-shadow .2s;}
 	.thumbnail ul>li:nth-child(3n+1){margin-left:2%}
-	.thumbnail ul>li:hover{box-shadow:rgba(0,0,0,.6) 0 4px 12px -2px;}
+	.thumbnail ul>li:hover{box-shadow:rgba(0,0,0,.6) 0 4px 16px -2px;}
 	.thumbnail li .image{height:14em;}
+	.thumbnail.videos li .image{height:12em;}
+	.thumbnail.animalPhotos li .image{height:18em;}
+
 	.thumbnail li .image img{max-width:100%;max-height:100%;}
 	.thumbnail li .image a:before{content:'';position:absolute;left:0;top:0;right:0;bottom:0;border:1px solid #d00;display:none;}
 	.thumbnail li .image a:focus:before{display:block;}
 	.thumbnail li p a:focus{color:#179;}
 
-	.thumbnail.videos li .image{height:12em;/*padding:10px 80px 10px 10px;*/}
 
 	.thumbnail.banners ul>li{height:120px;width:23%;margin:8px .5%;}
 	.thumbnail.banners ul>li:nth-child(4n+1){margin-left:2.5%}
