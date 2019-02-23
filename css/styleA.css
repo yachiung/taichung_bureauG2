@@ -173,9 +173,9 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;}
 .gutter1 section.iconType6{background: #ffcf44;}
 .iconType6 li a{box-shadow: none;}
 .iconType6 li a:hover,
-.iconType6 li a:focus,
+.iconType6 li a:focus{box-shadow:#f70 0 0 0 4px;}
 .iconType6.circle li a:hover img,
-.iconType6.circle li a:focus img{box-shadow: #f91 0 0 0 3px;}
+.iconType6.circle li a:focus img{box-shadow:#f70 0 0 0 4px;background-color: #000;}
 .iconType6 .more a{background-color: #fff;}
 
 /* link link link link link */

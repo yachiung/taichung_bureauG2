@@ -212,10 +212,13 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;}
 .iconType6 li a{box-shadow: none;}
 .iconType6.circle li a{color: #fff}
 .iconType6 li a:hover,
-.iconType6 li a:focus,
+.iconType6 li a:focus{box-shadow:#0aa3b3 0 0 0 1px, #7ef 0 0 0 4px;}
 .iconType6.circle li a:hover img,
-.iconType6.circle li a:focus img{box-shadow:#0b7d8a 0 0 0 1px, #6ef 0 0 0 4px;}
+.iconType6.circle li a:focus img{box-shadow: #7ef 0 0 0 4px;}
 .iconType6 .more a{background-color: #fff;}
+
+
+
 /* link link link link link */
 
 .linkType1 h2,

@@ -65,7 +65,7 @@
 .iconType6.circle li{margin-bottom: 15px;}
 .iconType6.circle li a img{width: 45%;height: auto;background-color: #000;padding:18%;transition: .2s;}
 .iconType6.circle li a:hover img,
-.iconType6.circle li a:focus img{box-shadow: #333 0 0 0 3px;background-color: #fff;}
+.iconType6.circle li a:focus img{box-shadow: #999 0 0 0 3px;}
 .iconType6.circle li a,
 .iconType6.circle li a:hover,
 .iconType6.circle li a:focus{box-shadow: none;background-color: transparent}
