@@ -206,6 +206,16 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;}
 .iconType5.circle li a:hover img,
 .iconType5.circle li a:focus img{background:#bb2965;box-shadow:#fff 0 0 0 3px;}
 
+.iconType6,
+.gutter section.iconType6,
+.gutter1 section.iconType6{background: #0aa3b3;}
+.iconType6 li a{box-shadow: none;}
+.iconType6.circle li a{color: #fff}
+.iconType6 li a:hover,
+.iconType6 li a:focus,
+.iconType6.circle li a:hover img,
+.iconType6.circle li a:focus img{box-shadow:#0b7d8a 0 0 0 1px, #6ef 0 0 0 4px;}
+.iconType6 .more a{background-color: #fff;}
 /* link link link link link */
 
 .linkType1 h2,

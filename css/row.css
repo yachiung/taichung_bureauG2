@@ -127,7 +127,7 @@
 
 @media screen and (max-width:1000px) {
 
-	.row.gutter>section:only-child{width:92vw;}
+	/* .row.gutter>section:only-child{width:92vw;} 20190221*/
 
 	.cx2a.gutter>section,
 	.cx2a.gutter>section:first-child,
@@ -178,6 +178,10 @@
 	.cx3c.gutter>section:nth-child(n){margin:30px auto;width:92vw;}
 }
 @media screen and (max-width:600px) {
+	.cx2.gutter>section,
+	.cx2.gutter>section:first-child,
+	.cx2.gutter1>section,
+	.cx2.gutter1>section:first-child{width: 96vw;}
 
 	.cx3a.gutter>section,
 	.cx3b.gutter>section{float: none;margin:30px auto;width:92vw;max-width: none;}
