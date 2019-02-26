@@ -90,7 +90,7 @@ time{display:inline-block;margin-left:1em;font-family:Courier New;letter-spacing
 .navbar .shareThis a{display:block;width:100%;height:100%;}
 .navbar .back a:before{content:'';position:absolute;width:20px;height:20px;border:3px solid #fff;transform:rotate(45deg);border-top:none;border-right:none;left:50%;top:50%;margin:-11px auto auto -5px;}
 .navbar .shareThis{left:auto;right:0;}
-.navbar .shareThis a{background:url(../images/share.png) no-repeat center center;background-size: 34px;}
+.navbar .shareThis a{background:url(../images/icon_share.png) no-repeat center center;background-size: 34px;}
 
 
 
