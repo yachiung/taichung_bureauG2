@@ -232,10 +232,6 @@ function fatfootCtrl(){// Fatfooter 開合
 		e.preventDefault();
 	}
 }
-
-
-
-
 function mobileSearch(){//行動版查詢
 	var _searchCtrl = $('.searchCtrl');
 
@@ -247,14 +243,12 @@ function mobileSearch(){//行動版查詢
 		_searchCtrl.toggleClass('close');
 	});
 }
-
 function searchTop(){
 	ww = _window.width();
 	hh = _header.outerHeight(true);
 	if(ww<wwNormal){_search.css('top', hh);}
 	else {_search.attr('style','');}
 }
-
 function mobileCategory(){//行動版資料大類開合
 	if(ww<=wwMedium){
 		var _category = $('.category'),
@@ -561,8 +555,8 @@ function photoShow(){//相簿內頁
 		var _btnNext = _photoList.find('.right'),
 				_btnPrev = _photoList.find('.left');
 
-		_btnNext.click(function(){i = (i+1) % photoCount;showPhoto();});
-		_btnPrev.click(function(){i = (i+7) % photoCount;showPhoto();});
+		_btnNext.click(function(){i = (i+1) % photoCount; showPhoto();});
+		_btnPrev.click(function(){i = (i-1) % photoCount; showPhoto();});
 
 		_photoThumb.find('a').click(function(e){
 			i = $(this).parent('li').index();
@@ -583,13 +577,13 @@ function photoShow(){//相簿內頁
 		_photoShow.find('a').keydown(function(ev){
 			var tabCode = ev.which || ev.keyCode;
 			if(ev.shiftKey==1 && i==0 && tabCode==9){
-		    tt = setInterval(autoShow, duration);
+				tt = setInterval(autoShow, duration);
 			}
 		});
 		_photoThumb.find('a').keydown(function(ev){
 			var tabCode = ev.which || ev.keyCode;
 			if(ev.shiftKey==0 && i==photoCount-1 && tabCode==9){
-		    tt = setInterval(autoShow, duration);
+				tt = setInterval(autoShow, duration);
 			}
 		});
 		$('.photoShow, .photoThumb li').hover(
@@ -609,7 +603,11 @@ function photoShow(){//相簿內頁
 			_photoShow.find('.caption').hide().prev('a').css('z-index', 0);
 			_photoShow.eq(i).find('img').stop(true,false).fadeIn().parent('a').css('z-index', 88).next('.caption').fadeIn();
 			_photoShow.eq(i).siblings().find('img').stop(true,false).fadeOut();
-			_photoCounter.text(i+1);
+			if(i <= -1){
+				_photoCounter.text(i+photoCount+1);
+			} else {
+				_photoCounter.text(i+1);
+			}			
 			if(ww <= wwSmall){
 				var	photoHeight = _photoShow.eq(i).height();
 				$('.photoShow').animate({height:photoHeight});
@@ -618,9 +616,24 @@ function photoShow(){//相簿內頁
 
 	});
 
+
+	//首頁大圖輪播參數
+	$('.adloop').slick({
+		accessibility:true,
+		focusOnSelect: true,
+		autoplay:true,
+		dots:true,
+		autoplaySpeed: 4000,
+		speed: 1000,
+		vertical:false,
+	});
+	//首頁大圖輪播下方dot tab移動時,無障礙人工檢測要求,按enter鍵需能直接連結圖檔網址
+	$( ".slick-dots li button" ).keypress(function(e) {
+			var txt = $(e.target).text();
+			var achr = $(".slick-slide[data-slick-index="+txt+"] a");
+			window.open(achr.attr('href'));
+	}); 	
+
+
+
 }
-
-
-
-
-

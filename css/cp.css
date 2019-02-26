@@ -185,9 +185,9 @@ a.mapMarker:focus{border-color:#186c7d;box-shadow:#186c7d 0 0 3px;outline:none;}
 .photoShow li:first-child img,
 .photoShow li:first-child .photoCount{display:block;}
 
-.photoShow .arbtn{padding:0;margin:-60px 0 0;width:44px;height:60px;position:absolute;top:50%;left:10px;border-radius:6px;cursor:pointer;background:rgba(0,0,0,.2);z-index:99;}
-.photoShow .arbtn:hover{background:rgba(0,0,0,.6)}
-.photoShow .arbtn.right{left:auto;right:10px;}
+.photoShow .arbtn{padding:0;margin:-60px 0 0;width:44px;height:60px;position:absolute;top:50%;cursor:pointer;z-index:99;}
+.photoShow .arbtn:hover,
+.photoShow .arbtn:focus{background:rgba(0,0,0,.6);}
 .photoShow .arbtn:before{border-color:#fff;}
 
 .ppause{display:block;position:relative;left:50%;margin:-26px auto -26px -26px;width:52px;height:52px;background:rgba(0,0,0,.5);border-radius:50%;transition:.3s;}
@@ -207,10 +207,11 @@ a.mapMarker:focus{border-color:#186c7d;box-shadow:#186c7d 0 0 3px;outline:none;}
 	.photoShow a:hover img{box-shadow:rgba(0,0,0,.6) 0 0 24px;}
 	.photoShow li .caption {position: relative;top: 100%;width:88%;color:#000;}
 	.photoShow li a:focus img{outline:2px solid red;}
-}
 
-@media screen and (min-width:1001px) {
-	.photoShow{margin-top: -15px}
+	.photoShow .arbtn{background:rgba(0,0,0,.2);border-radius:6px;}
+	.photoShow .arbtn.left{left:10px;}
+	.photoShow .arbtn.right{right:10px;}
+	
 	.ppause{display:none;}
 	.photoThumb{display: block;margin:0 auto;padding:8px;background:#333;}
 	.photoThumb ul{padding:1px;text-align:center;overflow:hidden;}
@@ -218,6 +219,10 @@ a.mapMarker:focus{border-color:#186c7d;box-shadow:#186c7d 0 0 3px;outline:none;}
 	.photoThumb li a{display:block;outline:none;}
 	.photoThumb li img {display:block;width:76px;height:76px;object-fit:cover;margin:0;padding:0;}
 	.photoThumb li.active:before {content:'';position:absolute;left:-2px;top:-2px;width:76px;height:76px;border:2px solid #9d0;z-index:99;}
+}
+
+@media screen and (min-width:1001px) {
+	.photoShow{margin-top: -15px}
 }
 
 
