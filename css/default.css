@@ -202,11 +202,11 @@ form{margin:0;padding:0;font-size:1em;}
 form table{border:none;border-collapse:collapse;margin:0 auto;line-height:1.6;max-width:92%;}
 form caption{padding:0 0 .8em;}
 form th,
-form td{padding:.5em 0;vertical-align:top;}
+form td{padding:.5em 2px;vertical-align:top;}
 form th,
 form td:first-child{text-align:right;font-weight:normal;max-width:15em;padding-right:.4em;line-height:2.5em;}
-form td:nth-child(even) label{display:inline;margin:0 1em 7px 0;line-height:2.2em;}
-form td:first-child label{width:96%;margin-right: .2em;}
+form td:first-child label{margin-right: .2em;}
+form td:nth-child(even) label{display: inline-block;margin:0 1em 7px 0;line-height:2.2em;}
 form td p{line-height:1.2;margin:.3em 0 .5em;}
 
 input,
@@ -237,7 +237,7 @@ input[type="button"],
 input[type="reset"]{height:2em;line-height:2em;cursor:pointer;border:none;cursor:pointer;}
 
 input[type="radio"],
-input[type="checkbox"]{margin-right:4px;vertical-align:middle;}
+input[type="checkbox"]{margin-right:4px;vertical-align:middle;outline:none;}
 
 @media screen and (max-width:800px){
 	form table{max-width:none;margin: 0 auto;}

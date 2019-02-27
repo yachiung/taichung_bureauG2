@@ -124,7 +124,7 @@
     </nav>
   </header>
   <section class="navbar">
-    <h2>意見信箱</h2>
+    <h2>自行研究報告</h2>
     <div class="back"><a href="javascript:history.go(-1)">返回</a></div> </section>
   <div class="center" id="center"><a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
     <section class="friendly">
@@ -170,6 +170,49 @@
               <tr>
                 <td><label for="htx_xabstract">英文計畫名稱</label></td>
                 <td><textarea name="htx_xabstract" id="htx_xabstract" placeholder="請輸入英文計畫名稱"></textarea></td>
+              </tr>
+              <tr>
+                <td><label for="">出國日期區間</label></td>
+                <td>
+                  <div class="dateRange">
+                    民國<label><input type="text" class="year">年</label>
+                    <label><input type="text">月</label></div> 
+                    ～
+                    <div class="dateRange">
+                      民國<label><input type="text" class="year">年</label>
+                    <label><input type="text">月</label>
+                  </div> 
+                </td>
+              </tr>
+              <tr>
+                <td><label for="">報告日期區間</label></td>
+                <td>
+                  <div class="dateRange">
+                    民國<label><input type="text" class="year">年</label>
+                    <label><input type="text">月</label></div> 
+                    ～
+                    <div class="dateRange">
+                      民國<label><input type="text" class="year">年</label>
+                    <label><input type="text">月</label>
+                  </div> 
+                </td>
+              </tr>
+              <tr>
+                <td><label for="">前往地區</label></td>
+                <td>
+                  <div class="optionPool">一般國家：
+                    <label><input name="area" type="checkbox">歐洲</label>
+                    <label><input name="area" type="checkbox">亞洲</label>
+                    <label><input name="area" type="checkbox">非洲</label>
+                    <label><input name="area" type="checkbox">美洲</label>
+                    <label><input name="area" type="checkbox">大洋洲</label>
+                  </div>
+                  <div class="optionPool">大陸港澳：
+                    <label><input name="area" type="checkbox">中國大陸</label>
+                    <label><input name="area" type="checkbox">香港</label>
+                    <label><input name="area" type="checkbox">澳門</label>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td><label for="htx_topCat">業務類別</label></td>
