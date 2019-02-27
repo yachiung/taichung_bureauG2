@@ -616,24 +616,5 @@ function photoShow(){//相簿內頁
 
 	});
 
-
-	//首頁大圖輪播參數
-	$('.adloop').slick({
-		accessibility:true,
-		focusOnSelect: true,
-		autoplay:true,
-		dots:true,
-		autoplaySpeed: 4000,
-		speed: 1000,
-		vertical:false,
-	});
-	//首頁大圖輪播下方dot tab移動時,無障礙人工檢測要求,按enter鍵需能直接連結圖檔網址
-	$( ".slick-dots li button" ).keypress(function(e) {
-			var txt = $(e.target).text();
-			var achr = $(".slick-slide[data-slick-index="+txt+"] a");
-			window.open(achr.attr('href'));
-	}); 	
-
-
-
 }
+
