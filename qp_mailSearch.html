@@ -204,11 +204,11 @@
           </tr>
           <tr>
             <td><label for="aspCaptcha"><abbr class="must" title="必填欄位">*</abbr>驗證</label></td>
-            <td><img id="imgCaptcha" src="images/captcha.png"  alt="點擊換一組驗證碼" onclick="this.src = this.src+'?'+Math.random();" onkeypress="this.src = this.src+'?'+Math.random();" /><!--alt="請輸入驗證碼"-->
-              
+            <td><img id="imgCaptcha" src="images/captcha.png"  alt="點擊換一組驗證碼" onclick="this.src = this.src+'?'+Math.random();" onkeypress="this.src = this.src+'?'+Math.random();" />
               <input id="strCAPTCHA" name="aspCaptcha" type="text" value="" class="captchaTxt"  tabindex="90"/>
-              <br>
-              如果看不清楚驗證碼，請點圖片<a href="javascript:resetCaptchaA();" title="換一組驗證碼"><img src="images/refresh.png"  /></a>重新產生一組驗證碼。 </td>
+              <br />點擊<a href="javascript:resetCaptchaA();" title="換一組驗證碼"><img src="images/refresh.png"  /></a>
+              可重新產生一組驗證碼。
+            </td>
           </tr>
         </table>
         <div class="buttonDiv">
