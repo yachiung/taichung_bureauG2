@@ -178,3 +178,63 @@
 	.qa .answer:before{left:12px;top:9px;text-indent: 0;}
 	.qa .question:before{top:8px;}
 }
+
+
+
+/* 20190306 Animal */
+.animalSearch{width: 96%;margin: 1em auto;overflow: hidden;background: #f3f3f3;}
+.animalSearch>.bulletin{padding: 2em 3% 1.5em;background:url(../images/pets_bg.png) no-repeat right 15px; }
+.bulletin {line-height: 1.5;}
+.bulletin h3{margin: 0 0 1em;}
+.bulletin ul {list-style: disc;}
+.bulletin ol {list-style: decimal;}
+.bulletin ul,
+.bulletin ol {margin-left: 1.2em;}
+.bulletin>ul {list-style: none;}
+.bulletin>ul>li{padding-left: .5em;}
+.bulletin>ul>li:before{content: "◎ ";margin-left: -1.3em;}
+.bulletin li + li{margin-top: .7em;;}
+
+.animalSearch>form{margin: 0;padding: 2em 3% 1.5em;background: #555;color: #fff}
+.animalSearch>form th,
+.animalSearch>form td{padding: 4px 0;display: table-cell;}
+.animalSearch>form th,
+.animalSearch>form td:first-child{font-weight: bold;color: #ddd;padding-right: 6px;text-align: right;line-height:1.25;white-space: nowrap;}
+.animalSearch>form th label,
+.animalSearch>form td:first-child label{width: auto;margin: 0;line-height: inherit;white-space: normal}
+.animalSearch>form th:after,
+.animalSearch>form td:first-child:after{content: "";display: inline-block;height: 2.3em;width: 0;vertical-align: middle;}
+.animalSearch>form .buttonDiv{margin-left: 0;margin-right: 0;}
+.animalSearch>form td:nth-child(2) label{display: inline-block;margin: 0 .9em 0 .2em;border-radius: 4px;padding: 0 3px;}
+.animalSearch>form td label input{vertical-align: 5%;outline: none;}
+.animalSearch>form td select,
+.animalSearch>form td input[type="text"],
+.animalSearch>form td textarea{border: none;border-radius: 4px;box-sizing: content-box;}
+.animalSearch>form td select:only-child{width: 100%;}
+.animalSearch>form td input[type="text"]:only-child{width: 97%;width: calc(100% - .8em)}
+.animalSearch>form td textarea{height: 6em;min-height: 0;width: 97%;width: calc(100% - .8em)}
+.animalSearch>form td button{border-radius: 4px;}
+.animalSearch>form td input[id*="SaveDate"],
+.animalSearch>form td input[name*="SaveDate"]{width: 6em;margin-bottom: 5px;}
+.animalSearch>form td button[id*="SaveDate"]{width: 2em;margin:3px 0 0 5px;vertical-align: middle;text-indent: -5em;overflow: hidden;background:#ad3 url(../images/icon_close.png) no-repeat center center;background-size: 16px;transition: .15s;}
+.animalSearch>form td button:hover,
+.animalSearch>form td button:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;border-radius: 2px;}
+.animalSearch>form table{width: 100%;margin: 0 auto}
+
+.animalSearch>form td:nth-child(2) label:hover,
+.animalSearch>form td:nth-child(2) label:focus{box-shadow:#dbff57 0 0 0 2px;}
+
+.animalSearch>form td:nth-child(2){width: 70%;}
+
+@media screen and (min-width:440px){
+	.animalSearch>form td:nth-child(2){width: 70%;}
+}
+@media screen and (min-width:800px){
+  .animalSearch>form{width: 35%;float: right;}
+  .animalSearch>.bulletin{width: 53%;float: left;}
+  .animalSearch>.bulletin:only-child{float: none;width: auto;}
+  .animalSearch>form textarea{height: 7em;line-height: 1.4}
+}
+@media screen and (min-width:1060px){
+	.animalSearch>form td button[id*="SaveDate"] ~ br{display: none}
+}

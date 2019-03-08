@@ -119,10 +119,10 @@
 }
 
 
-.pubInfo{width:96%;margin:30px auto;border:1px solid #aa9;padding:1.5em 0 .5em;clear:both;color:#999;}
-.pubInfo ul{width:98%;margin:0 auto;padding:0;line-height:1.1;}
-.pubInfo li{margin:0 .8em 1em;padding:0;display:inline-block;}
-.pubInfo li em{font-weight:normal;color:#555;}
+.pubInfo{width:96%;margin:30px auto;border:1px solid #aa9;padding:1.2em 0 .6em;clear:both;color:#999;}
+.pubInfo ul{margin:0 .5em;padding:0;line-height:1.1;}
+.pubInfo li{margin:0 .5em .6em;padding:0;display:inline-block;color:#666;vertical-align: top}
+.pubInfo li em{font-weight:normal;color:#111;}
 
 .meta{width:96%;margin:0 auto;}
 .meta table{width:100%;margin:.2em auto;border-collapse:collapse;line-height:1.8;border:2px solid #999;font-size:1em;}
@@ -401,6 +401,7 @@ ol.policies{position:relative;list-style:none;margin:-20px auto 0;padding:0;widt
 	.meta.resume table{width:100%;float:none;margin:0;}
 	.meta.resume figure{width:92%;max-width:none;float:none;margin:10px auto 2em;}
 	.pubInfo ul{font-size:.67em;}
+	.pubInfo li{white-space:normal}
 	.pubInfo li em{font-size:1.25em;}
 
 	.eMag .image, .eMag.LatestIssue .image{float:none;width:100%;height:auto;margin:0;}
@@ -563,6 +564,52 @@ header + .qp {padding-top: 1em}
 .center .forwardForm header{margin:0 3px 3px;border:none;}
 
 
+
+
+
+
+
+/* 2019 動保處新增版型 */
+/* 認養事項發問 btn */
+.askBtn{display: inline-block;text-align: center;}
+.askBtn a{display: block;margin: 0 auto;height: 2.6em;line-height: 2.55em;padding: 0 2em;background: #777;color: #fff;border-radius: 2em;text-decoration: none;transition: .2s;}
+.askBtn a:hover,
+.askBtn a:focus{text-decoration: none;color: #fff;background: #555;box-shadow: #bbb 0 0 0 3px;}
+/* 萌指數 button */
+.like{display: inline-block;font-size: 1em;}
+.like input[type="button"] {color: transparent;padding: 0;margin: 0 3px 0 0;;width: 35px;height: 30px;line-height: 30px;background:url(../images/like.png) no-repeat 0 0;  cursor:pointer;}
+.like input[type="button"]:hover,
+.like input[type="button"]:focus { background-position:0 -30px;outline: none}
+/* 本日新增 */
+.newArrival {width:124px; height:72px; background:url(../images/newArrival.png) no-repeat 0 0;font-size: 0;}
+
+
+
+.profileList li{position: relative;}
+.profileList li .askBtn{display: block;margin:15px 0;}
+.profileList li .askBtn a{display: inline-block}
+.profileList li .newArrival{position:absolute; right:2px; bottom:8px;}
+.profile .askBtn {display: block;margin:0 5px;padding-top: 15px;}
+.profile .askBtn a{display: inline-block}
+
+/* 動物資料表格與照片列表 */
+.profileList,
+.profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;}
+.profile{overflow: hidden;}
+.profileList>ul>li{clear: both;overflow: hidden;margin: 0 0 25px;padding:25px 10px 15px;border: none;background: #fff;box-shadow: rgba(0,0,0,.6) 0 0 4px;border-radius: 4px;}
+.profileList>ul>li:last-child{border-bottom: none;}
+
+figure.petPicture{display: block;}
+.petPicture img{display: block;width: 100%;}
+.petPicture>a{display: block;border: 1px solid #fff;transition: .15s;}
+.petPicture>a:hover{box-shadow: rgba(0,0,0,.5) 0 0 8px;}
+.petPicture>a:focus{box-shadow: #f60 0 0 0 2px;}
+
+
+
+
+
+
 /* 動物保護處: 動物基本資料 */
 table.meta4col,
 .meta4col table{width: 100%;line-height: 1.7;border-collapse: collapse;border: 2px solid #888;margin: 0 auto 1em;}
@@ -572,35 +619,47 @@ table.meta4col,
 .meta4col th:after{content:'';position: absolute;top: 4px;bottom: 4px;right: 2px;width: 1px;background: #ddd;}
 .meta4col th:nth-child(3){border-left: 1px solid #aaa;}
 .meta4col td a{color: #0a77bb;text-decoration: underline;}
-.meta4col td a:hover{text-decoration: none;color: #09f}
+.meta4col td a:hover,
+.meta4col td a:focus{text-decoration: none;color: #09f}
+.meta4col td a:focus{outline: 1px solid #09f}
 @media screen and (max-width:600px){
   .meta4col{clear: both;}
 	.meta4col tr, .meta4col th, .meta4col td{display: block;}
   .meta4col th,
 	.meta4col td{width: auto;padding-left: 2vw;padding-right: 2vw;border-bottom: none;text-align: left;}
 	.meta4col td{border-bottom: 1px solid #ddd;}
-	.meta4col tr:last-child td:nth-child(2){border: none;}
-	.meta4col th{float: left;clear: both;padding-bottom: 0;padding-right:24px}
-  .meta4col td:empty{height: 1.5em;}
+	.meta4col tr:last-child td:last-child{border: none;}
+	.meta4col th{float: left;clear: both;padding-bottom: 0;padding-right:20px}
+	.meta4col td:before{content: '';display: inline-block;height: 5px;}/* 避免無資料時高度塌陷 */
   .meta4col th:nth-child(3){border-left: none;clear: both;}
-	.meta4col th:after{width: 8px;height: 8px;margin-right:6px ;top: 1.15em;background: #fb0;}
+	.meta4col th:after{width: 4px;height: 12px;margin-right:6px ;top: .8em;background: #fb0;}
 }
-@media screen and (min-width:800px){
+@media screen and (min-width:441px){
+}
+@media screen and (min-width:601px){
+	.meta4col tr:hover{background: #f4f5f5;}
+	.profileList li .like ,
+	.profileList li .askBtn{margin:12px 0 0;float: left;}
+	.profileList li .askBtn+.like{margin-left: 15px;padding-top: 7px;}
+}
+@media screen and (min-width:801px){
   .profile .meta4col,
-  .profileList li .meta4col{float: left;width:70%;margin: 0;}
+  .profileList li .meta4col{float: left;width:68%;margin: 0;}
   .profile .petPicture,
-  .profileList li .petPicture{float: right;width: 28%;}
-  .profile .askBtn,
-  .profileList li .askBtn{clear: both;}
+	.profileList li .petPicture{float: right;width: 30%;}
+
+	.profileList li .askBtn,
+	.profileList li .like {float: left;}
+	.profileList li .askBtn + .like{margin-left: 1em;}
+	.profileList li .askBtn,
+	.profile .askBtn{clear: both;}
+
+  /* .profile .askBtn,
+	.profileList li .askBtn,
+	.profileList li .like{clear: both;} 
   .profile .askBtn a,
-	.profileList li .askBtn a{display: inline-block;}
+	.profileList li .askBtn a{display: inline-block;font-size: 1em;}*/
 	.meta4col tr{display:table-row;}
-	.meta4col tr:hover{background: #fff8f0;}
 	.meta4col th{width: 20%;display: table-cell;}
 	.meta4col td{width: 28%;display: table-cell;}
 }
-
-
-
-
-

@@ -15,6 +15,14 @@
 .slide .box li{width:100%;height:100%;}
 .slide .box li{position:absolute;left:0;top:0;}
 .slide .box img{display:block;width:100%;height:100%;}
+
+.slide .box li.lovelyPets {overflow: hidden;}
+.slide .box li.lovelyPets a{display: block;width:100%;height:100%;}
+.slide .box li.lovelyPets img {float: left;width:33%;height: 50%;object-fit: cover}
+.slide .box li.lovelyPets img:nth-child(3){width:34%;}
+.lovely {position: absolute;right: 0;bottom: 0;width: 34%;height:50%;background: url(../images/lovely.png) no-repeat center center;background-size: auto 100%;}
+
+
 .slide .box a:before{content:'';position:absolute;left:0;top:0;right:0;bottom:0;border:2px solid #c19;display:none;}
 .slide .box a:focus{outline:none;}
 .slide .box a:focus:before{display:block;z-index: 99;}

@@ -20,7 +20,7 @@ $(document).ready(function(){
 		if (_slide.hasClass('bb2')){boxRatio = .25};
 		if (_slide.hasClass('bb3')){boxRatio = .5};
 		if (_slide.hasClass('albumType3')){boxRatio = .75};
-		_slideItem.find('img').width(imgWidth);
+		_slideItem.not('.lovelyPets').find('img').width(imgWidth);
 		_slideBox.height(imgWidth*boxRatio);
 
 		_slide.find('.dots').append('<ul></ul>');
@@ -47,7 +47,7 @@ $(document).ready(function(){
 		  			ww=ww2;
 			  		imgWidth = _slideItem.width();
 			  		_slideBox.height(imgWidth*boxRatio);
-			  		_slideItem.find('img').width(imgWidth);
+			  		_slideItem.not('.lovelyPets').find('img').width(imgWidth);
 			  		if( count > 1){
 				  		_slideItem.not(':animated').css('left' , imgWidth);
 				  		photoSlide();
