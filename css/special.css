@@ -193,7 +193,10 @@
 .bulletin>ul {list-style: none;}
 .bulletin>ul>li{padding-left: .5em;}
 .bulletin>ul>li:before{content: "◎ ";margin-left: -1.3em;}
-.bulletin li + li{margin-top: .7em;;}
+.bulletin li + li,
+.bulletin li ul,
+.bulletin li ol{margin-top: .6em;}
+.bulletin em{color: #c00; font-weight: normal;}
 
 .animalSearch>form{margin: 0;padding: 2em 3% 1.5em;background: #555;color: #fff}
 .animalSearch>form th,
@@ -238,3 +241,11 @@
 @media screen and (min-width:1060px){
 	.animalSearch>form td button[id*="SaveDate"] ~ br{display: none}
 }
+
+/* 送、領養佈告欄 */
+.switchTo {border: 1px solid red;margin: 1em auto;padding: 0;}
+.switchTo ul {list-style: none;margin: 0;padding: 0;text-align: center;}
+.switchTo li{margin: 0;padding: 0;display: inline-block;vertical-align: bottom;}
+.switchTo li + li{margin-left: 6px}
+.switchTo li a{display: block;margin: 0;width: 7em;height: 7em;background: #999;color: 000;line-height: 11em;text-decoration: none;}
+.switchTo {}

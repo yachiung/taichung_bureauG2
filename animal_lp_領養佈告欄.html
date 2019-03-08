@@ -124,7 +124,7 @@
     </nav>
   </header>
   <section class="navbar">
-    <h2>鼓勵認養公告</h2>
+    <h2>民眾寵物領養佈告欄</h2>
     <div class="back"><a href="javascript:history.go(-1)">返回</a></div>
   </section>
 
@@ -140,68 +140,50 @@
       </section>
     </section>
     <header>
-      <h2>鼓勵認養公告</h2>
+      <h2>民眾寵物領養佈告欄</h2>
     </header>
 
     <section class="animalSearch">
-        <article class="bulletin">
-          <h3>認養流程及須知</h3>
+      <article class="bulletin">
+        <h3>領養佈告欄</h3>
+        <p>你家有貓咪、狗狗或其它的寵物要送人嗎 ?</p>
+        <p>這裡提供送領養寵物的管道，相對的如果你有寵物要找新主人，也可以在這兒登載本站僅提供民眾登錄載認養及送養的訊息。</p>
+        <p>禁止任何商業及買賣之行為。依據動物保護法第22條規定：「以營利為目的，經營特定寵物之繁殖、買賣或寄養業者，應先向直轄市、縣（市）主管機關申請許可，並依法領得營業證照，始得為之。」違反者，依同法第25條之1規定，處新臺幣十萬元以上三百萬元以下罰鍰，特定寵物主管機關得沒入，提醒民眾切勿觸法，以免受罰。</p>
+        <p>民眾除利用本網站進行寵物之送領養外，亦可透過本市動物之家辦理犬貓隻不擬續養及認養之事宜。</p>
+        <p><em>本送養/領養資料,僅公告3個月,若動物資料須刪修下架,請按[送養/領養回報]按鈕。</em></p>
+        <nav class="switchTo">
           <ul>
-            <li>認養民眾需年滿20歲，攜帶身分證。</li>
-            <li>認養地點：
-              <ol>
-                <li>臺中市動物之家
-                  <ul>
-                    <li>南屯園區：臺中市南屯區中台路601號<br>電話：04­23850949</li>
-                    <li>后里園區：臺中市后里區堤防路370號<br>電話：04­25588024(后里園區因改建中，暫不開放)</li>
-                  </ul>
-                </li>
-                <li>中途動物醫院：本市委託辦理中途收容及絕育動物醫院，詳細所在醫院，公佈於動物認養資料「備註欄」，「認養時間」請電洽各委辦動物醫院。</li>
-                <li>認養會場(益起認養吧、愛心小站、活動認養會場) 
-                  <ul>
-                    <li>認養時間：10:00~12:00，13:30~16:00（星期日除外）</li>
-                    <li>認養中大型犬可申請送愛到家服務，範圍限大台中區域。</li>
-                    <li>免費認養，犬貓皆實施植入晶片寵物登記及注射狂犬病疫苗。</li>
-                    <li>本認養公告之犬貓均已絕育可供認養，採現場辦理認養手續為主，恕不受理預約。</li>
-                  </ul>
-                </li>
-              </ol>
-            </li>
+            <li><a href="#">領養佈告欄</a></li>
+            <li><a href="#">送養佈告欄</a></li>
+            <li><a href="#">我要領養</a></li>
+            <li><a href="#">我要送養</a></li>
           </ul>
-        </article>
+        </nav>
+      </article>
   
-        <form>
-          <table summary="待認養犬貓照片檢索-條件查詢">
-            <caption>待認養犬貓照片檢索</caption>
+      <form name="queryForm" method="get" id="queryForm">
+        <table summary="民眾寵物領養佈告欄-條件查詢">
+          <caption>民眾寵物領養佈告欄-條件查詢</caption>
             <tr>
-              <td><label for="htx_stitle">動物編號</label></td>
-              <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入動物編號">(請輸入動物編號) </td>
-            </tr>
-            <tr>
-              <td><label for="htx_topCat">所在園區</label></td>
+              <td><label for="htx_topCat">寵物種類</label></td>
               <td><select name="htx_topCat" id="htx_topCat">
                   <option value="" selected="">請選擇</option>
-                  <option value="A01">南屯園區</option>
-                  <option value="A02">后里園區</option>
-                  <option value="A03">中途動物醫院</option>
-                  <option value="A04">愛心小站</option>
-                  <option value="A05">益起認養吧</option>
-                </select></td>
-            </tr>
-            <tr>
-              <td><label for="htx_Age">年齡</label></td>
-              <td><select name="htx_Age" id="htx_Age">
-                  <option value="" selected="">請選擇</option>
                   <option value="00">其他</option>
-                  <option value="01">幼犬</option>
-                  <option value="02">成犬</option>
-                  <option value="03">幼貓</option>
-                  <option value="04">成貓</option>
+                  <option value="01">狗</option>
+                  <option value="02">貓</option>
+                  <option value="03">鳥</option>
+                  <option value="04">兔</option>
+                  <option value="05">龜</option>
+                  <option value="06">鼠</option>
                 </select></td>
             </tr>
             <tr>
-              <td><label for="htx_Color">毛色</label></td>
-              <td><select name="htx_Color" id="htx_Color">
+              <td><label for="htx_stitle">品種</label></td>
+              <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入品種"></td>
+            </tr>
+            <tr>
+              <td><label for="htx_vgroup">毛色</label></td>
+              <td><select name="htx_vgroup" id="htx_vgroup">
                   <option value="" selected="">請選擇</option>
                   <option value="01">黑色</option>
                   <option value="00">其他</option>
@@ -216,28 +198,34 @@
                 </select></td>
             </tr>
             <tr>
-              <td><label for="htx_Size">體型</label></td>
-              <td><select name="htx_Size" id="htx_Size">
+              <td><label for="htx_xkeyword">年鹷</label></td>
+              <td><select name="htx_xkeyword" id="htx_xkeyword">
                   <option value="" selected="">請選擇</option>
-                  <option value="01">迷你型(3公斤以下)</option>
-                  <option value="02">小型(3-13公斤)</option>
-                  <option value="03">中型(13-23公斤)</option>
-                  <option value="04">大型(23公斤以上)</option>
+                  <option value="00">其他</option>
+                  <option value="01">幼犬</option>
+                  <option value="02">成犬</option>
+                  <option value="03">幼貓</option>
+                  <option value="04">成貓</option>
                 </select></td>
             </tr>
             <tr>
-              <td><label for="htx_Gender">性別</label></td>
-              <td><label><input type="radio" name="htx_Gender" value="00">母</label><label><input type="radio" name="htx_Gender" value="01">公</label>
+              <td><label for="htx_xabstract">性別</label></td>
+              <td><label><input type="radio" name="htx_xabstract" value="00">母</label><label><input type="radio" name="htx_xabstract" value="01">公</label></td>
+            </tr>
+            <tr>
+              <td><label for="htx_xpostDate_S">登錄日期</label></td>
+              <td><input type="text" readonly="" size="10" class="" name="htx_xpostDate_S" id="htx_xpostDate_S"><button id="btnShowhtx_htx_xpostDate_S">清除</button>
+                ～
+              <input type="text" readonly="" size="10" class="" name="htx_xpostDate_E" id="htx_xpostDate_E"><button id="btnShowhtx_xpostDate_E">清除</button>
               </td>
             </tr>
-          </table>
-          <div class="buttonDiv">
-            <input type="submit" value="送出">
-            <input type="reset" value="清除重填">
-          </div>
-        </form>
-  
-      </section>
+        </table>
+        <div class="buttonDiv">
+          <input type="submit" value="送出">
+          <input type="reset" value="清除重填">
+        </div>
+      </form>  
+    </section>
   
 
 
@@ -271,71 +259,133 @@
       </ul>
     </section>
 
-    <section class="thumbnail animalPhotos">
+    <section class="profileList">
       <ul>
-        <li><a href="animal_cp_待認養犬貓詳細內容.html">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/93714221771.PNG" alt="10803050026"></span>
-            <p>10803050002</p>
-          </a>
+        <li>
+          <table class="meta4col">
+            <tr>
+              <th scope="row">動物編號</th>
+              <td><a href="#" title="10803080017">10803080017</a></td>
+              <th scope="row">收容日期</th>
+              <td>2019-03-08</td>
+            </tr>
+            <tr>
+              <th scope="row">收容園區</th>
+              <td>南屯園區</td>
+              <th scope="row">收容原因</th>
+              <td>民眾拾獲</td>
+            </tr>
+            <tr>
+              <th scope="row">來源區域</th>
+              <td>太平區</td>
+              <th scope="row">性別</th>
+              <td>母</td>
+            </tr>
+            <tr>
+              <th scope="row">來源地點</th>
+              <td>光興路</td>
+              <th scope="row">毛色毛長</th>
+              <td>1黃白5虎斑/2公4母</td>
+            </tr>
+            <tr>
+              <th scope="row">晶片號碼</th>
+              <td></td>
+              <th scope="row">動物種類</th>
+              <td>貓</td>
+            </tr>
+            <tr>
+              <th scope="row">犬牌編號</th>
+              <td></td>
+              <th scope="row">其他特徵</th>
+              <td>6隻10803080017-22</td>
+            </tr>
+          </table>
+          <div class="askBtn"><a href="#">領養人回報</a></div>
         </li>
-        <li><a href="animal_cp_待認養犬貓詳細內容.html">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/9371425571.PNG" alt="10803050026"></span>
-            <p>10803050026</p>
-          </a>
+        <li>
+          <table class="meta4col">
+            <tr>
+              <th scope="row">動物編號</th>
+              <td><a href="#" title="10803080012">10803080012</a></td>
+              <th scope="row">收容日期</th>
+              <td>2019-03-08</td>
+            </tr>
+            <tr>
+              <th scope="row">收容園區</th>
+              <td>南屯園區</td>
+              <th scope="row">收容原因</th>
+              <td>民眾拾獲</td>
+            </tr>
+            <tr>
+              <th scope="row">來源區域</th>
+              <td>潭子區</td>
+              <th scope="row">性別</th>
+              <td>母</td>
+            </tr>
+            <tr>
+              <th scope="row">來源地點</th>
+              <td>豐興路一段</td>
+              <th scope="row">毛色毛長</th>
+              <td>1黃(母)1黑棕3黑</td>
+            </tr>
+            <tr>
+              <th scope="row">晶片號碼</th>
+              <td></td>
+              <th scope="row">動物種類</th>
+              <td>混種犬</td>
+            </tr>
+            <tr>
+              <th scope="row">犬牌編號</th>
+              <td></td>
+              <th scope="row">其他特徵</th>
+              <td>母帶4子10803080012-16</td>
+            </tr>
+          </table>
+          <div class="askBtn"><a href="#">領養人回報</a></div>
         </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/93714282971.PNG" alt="10803050026"></span>
-            <p>10802280003</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/s_9371005371.JPG" alt="10802270025"></span>
-            <p>10802270025</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/s_9371023871.JPG" alt="10802270024"></span>
-            <p>10802270024</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/s_93611523471.JPG" alt="10802260011"></span>
-            <p>10802260011</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/93710583971.PNG" alt="10802230008"></span>
-            <p>10802230008</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/922611453271.png" alt="10802220015"></span>
-            <p>10802220015</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/92271626771.png" alt="10802190054"></span>
-            <p>10802190054</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/93611292171.png" alt="10802190053"></span>
-            <p>10802190053</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/93611403971.png" alt="10802190013"></span>
-            <p>10802190013</p>
-          </a>
-        </li>
-        <li><a href="#">
-            <span class="image"><img src="https://www.animal.taichung.gov.tw/public/Data/119020/934159571.png" alt="10802190012">></span>
-            <p>10802190012</p>
-          </a>
+        <li>
+          <table class="meta4col">
+            <tr>
+              <th scope="row">動物編號</th>
+              <td><a href="#" title="10803080011">10803080011</a></td>
+              <th scope="row">收容日期</th>
+              <td>2019-03-08</td>
+            </tr>
+            <tr>
+              <th scope="row">收容園區</th>
+              <td>南屯園區</td>
+              <th scope="row">收容原因</th>
+              <td>陳情</td>
+            </tr>
+            <tr>
+              <th scope="row">來源區域</th>
+              <td>沙鹿區</td>
+              <th scope="row">性別</th>
+              <td>公</td>
+            </tr>
+            <tr>
+              <th scope="row">來源地點</th>
+              <td>中山路</td>
+              <th scope="row">毛色毛長</th>
+              <td>黃白</td>
+            </tr>
+            <tr>
+              <th scope="row">晶片號碼</th>
+              <td></td>
+              <th scope="row">動物種類</th>
+              <td>貓</td>
+            </tr>
+            <tr>
+              <th scope="row">犬牌編號</th>
+              <td></td>
+              <th scope="row">其他特徵</th>
+              <td></td>
+            </tr>
+          </table>
+          <div class="askBtn"><a href="#">領養人回報</a></div>
         </li>
       </ul>
-
-      <span class="nextPage"><a href="animal_lp_待認養犬貓照片檢索.html">下一頁</a></span>
+      <span class="nextPage"><a href="xxx".html">下一頁</a></span>
     </section>
       
     <section class="page" title="分頁功能">

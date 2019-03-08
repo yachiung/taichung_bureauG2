@@ -572,9 +572,9 @@ header + .qp {padding-top: 1em}
 /* 2019 動保處新增版型 */
 /* 認養事項發問 btn */
 .askBtn{display: inline-block;text-align: center;}
-.askBtn a{display: block;margin: 0 auto;height: 2.6em;line-height: 2.55em;padding: 0 2em;background: #777;color: #fff;border-radius: 2em;text-decoration: none;transition: .2s;}
+.askBtn a{display: block;margin: 0 auto;height: 2.6em;line-height: 2.55em;padding: 0 2em;background: #05a3bb;color: #fff;border-radius: 2em;text-decoration: none;transition: .2s;}
 .askBtn a:hover,
-.askBtn a:focus{text-decoration: none;color: #fff;background: #555;box-shadow: #bbb 0 0 0 3px;}
+.askBtn a:focus{text-decoration: none;color: #fff;background: #00b5d0;box-shadow: #6ed9e9 0 0 0 3px;}
 /* 萌指數 button */
 .like{display: inline-block;font-size: 1em;}
 .like input[type="button"] {color: transparent;padding: 0;margin: 0 3px 0 0;;width: 35px;height: 30px;line-height: 30px;background:url(../images/like.png) no-repeat 0 0;  cursor:pointer;}
@@ -654,12 +654,30 @@ table.meta4col,
 	.profileList li .askBtn,
 	.profile .askBtn{clear: both;}
 
-  /* .profile .askBtn,
-	.profileList li .askBtn,
-	.profileList li .like{clear: both;} 
-  .profile .askBtn a,
-	.profileList li .askBtn a{display: inline-block;font-size: 1em;}*/
 	.meta4col tr{display:table-row;}
 	.meta4col th{width: 20%;display: table-cell;}
 	.meta4col td{width: 28%;display: table-cell;}
+}
+
+/* 內容頁的「認養流程及須知」，可開合 */
+.aDrawer.closed .toggleArea{display: none;}
+.aDrawer, .aDrawer .toggleCtrl{position: relative;}
+.aDrawer .toggleCtrl:after{content:'';position: absolute;right:2.5%;margin-top:15px;width:14px;height:14px;border:3px solid #666;transform:rotate(45deg);border-bottom:none;border-right:none;transition: .5s;}
+.aDrawer.closed .toggleCtrl:after{transform:rotate(225deg);margin-top: 8px;}
+.aDrawer .toggleCtrl ~ .hint{display:none;}
+@media screen and (min-width:1001px){
+	.aDrawer .toggleCtrl ~ .hint{position:absolute;right:0;top:-2em;background-color:#fff;padding:.3em .5em;font-size: .85rem;color: #555;border-radius: 3px;border: 1px dotted #f66;}
+}
+/* 內容頁的「認養流程及須知」，可開合 */
+.AdopNotes{clear:both;width: 96%;margin:1em auto;padding:1em 0;background: #f2f2e1;border-radius: 6px;transition:padding .6s; }
+.AdopNotes.closed{padding:8px 0;}
+.AdopNotes h3{width: 96%;text-align: left;font-size: 1.2em;font-weight: bold;padding:0;margin: 0 auto;}
+.AdopNotes h3 a{position: relative;display: block;height: 2.2em;line-height: 2.2em;text-decoration: none;padding: 0 2%;border-radius: 3px;background: transparent;transition: .2s;}
+.AdopNotes h3 a:hover,
+.AdopNotes h3 a:focus{background: rgba(255,255,255,.7);outline: none;color: #000;}
+.AdopNotes .bulletin{width: 91%;margin:0 auto;padding: 1em 3% 1em 2%;}
+.AdopNotes h3 + .bulletin{border-top: 2px solid #999;margin-top: .4em;}
+.AdopNotes h3 .hint{font-weight: normal;}
+@media screen and (min-width:801px){
+	.AdopNotes{padding:2em 0;}
 }

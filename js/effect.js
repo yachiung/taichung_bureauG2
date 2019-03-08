@@ -54,6 +54,7 @@ $(document).ready(function(){
 	qa();
 	tabSet();
 	evenColH();
+	drawer();
 
 	if (ww <= wwMedium ) {
 		$('.list, .thumbnail').jscroll({
@@ -313,6 +314,7 @@ function share(){//分享
 		});
 	}
 }
+
 function tabSet(){//頁籤
 
 	$('.tabs').each(function(){
@@ -368,6 +370,7 @@ function tabSet(){//頁籤
 			}
 	});
 }
+
 function qa(){//QA 常見問答
 	var _qaList = $('.qa').find('li'),
 			_iniShowAns = _qaList.slice(0, 2),
@@ -392,6 +395,7 @@ function qa(){//QA 常見問答
 			e.preventDefault();
 	}
 }
+
 function clickToSlide(){//click 左右箭頭滑動
 	if (ww >= 200) {
 		$('.ckSlide').each(function(){
@@ -436,14 +440,7 @@ function clickToSlide(){//click 左右箭頭滑動
 					});
 
 				});
-
-
 			}
-
-
-
-
-
 		});
 	}
 }
@@ -493,8 +490,6 @@ function evenColH(){//並排直欄設為等高
 	}
 
 }
-
-
 
 function popMessage(){//彈出訊息
   var _popMsg = $('.popMessage'),
@@ -618,3 +613,25 @@ function photoShow(){//相簿內頁
 
 }
 
+// 隱藏／展開
+function drawer(){
+	$('.aDrawer').each(function(){
+
+		var _aDrawer = $(this),
+				_toggleCtrl = _aDrawer.find('.toggleCtrl'),
+				_toggleArea = _aDrawer.find('.toggleArea');
+		
+		_toggleCtrl.after('<span class="hint">按 enter 鍵展開／收合，按 tab 鍵往下游走</span>');
+		_aDrawer.addClass('closed');
+
+		_toggleCtrl.click(function(e){
+			_toggleArea.stop(true, true).slideToggle(600);
+			_aDrawer.toggleClass('closed');
+			e.preventDefault();
+		});
+		_toggleCtrl.on('keyup', function(){
+			$(this).next('.hint').stop(true, true).fadeIn(200).delay(5000).fadeOut(500);
+		});
+
+	});
+}
