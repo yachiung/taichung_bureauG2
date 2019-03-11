@@ -182,7 +182,7 @@
 
 
 /* 20190306 Animal */
-.animalSearch{width: 96%;margin: 1em auto;overflow: hidden;background: #f3f3f3;}
+.animalSearch{margin:0;overflow: hidden;background: #f3f3f3;}
 .animalSearch>.bulletin{padding: 2em 3% 1.5em;background:url(../images/pets_bg.png) no-repeat right 15px; }
 .bulletin {line-height: 1.5;}
 .bulletin h3{margin: 0 0 1em;}
@@ -200,29 +200,31 @@
 
 .animalSearch>form{margin: 0;padding: 2em 3% 1.5em;background: #555;color: #fff}
 .animalSearch>form th,
-.animalSearch>form td{padding: 4px 0;display: table-cell;}
+.animalSearch>form td{padding: 2px 0;display: table-cell;}
 .animalSearch>form th,
 .animalSearch>form td:first-child{font-weight: bold;color: #ddd;padding-right: 6px;text-align: right;line-height:1.25;white-space: nowrap;}
 .animalSearch>form th label,
 .animalSearch>form td:first-child label{width: auto;margin: 0;line-height: inherit;white-space: normal}
 .animalSearch>form th:after,
-.animalSearch>form td:first-child:after{content: "";display: inline-block;height: 2.3em;width: 0;vertical-align: middle;}
+.animalSearch>form td:first-child:after{content: "";display: inline-block;height: 2.2em;width: 0;vertical-align: middle;}
 .animalSearch>form .buttonDiv{margin-left: 0;margin-right: 0;}
-.animalSearch>form td:nth-child(2) label{display: inline-block;margin: 0 .9em 0 .2em;border-radius: 4px;padding: 0 3px;}
+.animalSearch>form td:nth-child(2) label{display: inline-block;margin: 0 .9em 5px 2px;border-radius: 4px;padding: 0 3px;}
 .animalSearch>form td label input{vertical-align: 5%;outline: none;}
 .animalSearch>form td select,
 .animalSearch>form td input[type="text"],
-.animalSearch>form td textarea{border: none;border-radius: 4px;box-sizing: content-box;}
+.animalSearch>form td textarea{border: none;border-radius: 4px;box-sizing: content-box;height: 2.1em;margin: 0 2px 5px;}
 .animalSearch>form td select:only-child{width: 100%;}
 .animalSearch>form td input[type="text"]:only-child{width: 97%;width: calc(100% - .8em)}
 .animalSearch>form td textarea{height: 6em;min-height: 0;width: 97%;width: calc(100% - .8em)}
 .animalSearch>form td button{border-radius: 4px;}
-.animalSearch>form td input[id*="SaveDate"],
-.animalSearch>form td input[name*="SaveDate"]{width: 6em;margin-bottom: 5px;}
-.animalSearch>form td button[id*="SaveDate"]{width: 2em;margin:3px 0 0 5px;vertical-align: middle;text-indent: -5em;overflow: hidden;background:#ad3 url(../images/icon_close.png) no-repeat center center;background-size: 16px;transition: .15s;}
+.animalSearch>form td input[id*="htx_xpostDate"]{width: 6em;margin-right: 5px;}
+.animalSearch>form td button[id*="htx_xpostDate"]{width: 2em;vertical-align: middle;text-indent: -5em;overflow: hidden;background:#ad3 url(../images/icon_close.png) no-repeat center center;background-size: 16px;border-radius: 50%;vertical-align:middle;transition: .15s;}
 .animalSearch>form td button:hover,
-.animalSearch>form td button:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;border-radius: 2px;}
+.animalSearch>form td button:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;}
 .animalSearch>form table{width: 100%;margin: 0 auto}
+
+/* .animalSearch>form td input[id*=htx_xpostDate]{width: 6em;margin-bottom: 5px;margin-right: 5px;}
+.animalSearch>form td input[id*=htx_xpostDate] + button{width: 1.9em;height: 1.9em;color: transparent;background:#fff url(../images/icon_close.png) no-repeat center center;background-size: 16px;vertical-align:middle;border-radius: 50% } */
 
 .animalSearch>form td:nth-child(2) label:hover,
 .animalSearch>form td:nth-child(2) label:focus{box-shadow:#dbff57 0 0 0 2px;}
@@ -230,6 +232,7 @@
 .animalSearch>form td:nth-child(2){width: 70%;}
 
 @media screen and (min-width:440px){
+	.animalSearch{width: 96%;margin: 1em auto;}
 	.animalSearch>form td:nth-child(2){width: 70%;}
 }
 @media screen and (min-width:800px){
@@ -243,9 +246,20 @@
 }
 
 /* 送、領養佈告欄 */
-.switchTo {border: 1px solid red;margin: 1em auto;padding: 0;}
-.switchTo ul {list-style: none;margin: 0;padding: 0;text-align: center;}
-.switchTo li{margin: 0;padding: 0;display: inline-block;vertical-align: bottom;}
-.switchTo li + li{margin-left: 6px}
-.switchTo li a{display: block;margin: 0;width: 7em;height: 7em;background: #999;color: 000;line-height: 11em;text-decoration: none;}
-.switchTo {}
+.switchTo {margin: 1em auto;padding: 0;}
+.switchTo ul {list-style: none;margin: 0 -2%;padding:1px 0 8px;text-align: center;}
+.switchTo li{	margin: 0;padding:0;display: inline-block;vertical-align: bottom;width: 48%;}
+.switchTo li a{display: block;position: relative;margin:2px	3px;height: 3.6em;line-height:3.7em;color: 000;text-decoration: none;background: #ccc;padding:0 0 0 36%;text-align: left;border: 2px solid #fff;border-radius: 3px;box-shadow: rgba(0,0,0,.4) 0 2px 5px;transition: .15s;}
+.switchTo li a:before{content: '';position: absolute;left: 0;top: 0;width:35%;height: 100%;background: url(../images/animalMenu.png) no-repeat center 0;background-size:48px auto;}
+.switchTo li:nth-child(2) a:before {background-position: center 33%;}
+.switchTo li:nth-child(3) a:before {background-position: center 66%;}
+.switchTo li:nth-child(4) a:before {background-position: center 99%;}
+@media screen and (min-width:441px){
+	.switchTo li{width:24%;max-width: 8em;}
+	.switchTo li a{padding:0 0 5px;height: auto;line-height: 1.2em;text-align: center;}
+	.switchTo li a:before{display: block;position: static;height:80px;width:100%;margin: 0 auto;background-size:80px auto;}
+}
+@media screen and (min-width:901px){
+	.switchTo li a:hover{box-shadow: rgba(0,0,0,.4) 0 1px 2px;}
+	/* .switchTo li a{width:98px;height:100px;} */
+}
