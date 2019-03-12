@@ -272,7 +272,7 @@
 /*  拾獲／失蹤查詢、登錄資料 */
 .missingFinding {margin: 1em auto 0;padding: 0;}
 .missingFinding ul {list-style: none;margin: 0;padding:4px 0 8px;overflow: hidden;text-align: center;}
-.bulletin .missingFinding li{margin: 0 .6% 10px;padding:0;display: inline-block;width: 31%;max-width:9em; }
+.bulletin .missingFinding li{margin: 0 .6% 10px;padding:0;display: inline-block;width: 31%;max-width:10em; }
 .missingFinding li a{display: block;padding:8px 0 6px;border-radius: 8px;background:#5c5c5c ;color: #fff;text-decoration: none;box-shadow: rgba(0,0,0,.4) 0 1px 5px;white-space: nowrap;transition: .15s;}
 .missingFinding li a:before{content: '';display: block;width: 64px;height: 64px;margin: 0 auto 4px;background: #444 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;}
 .missingFinding li:nth-child(2) a:before{background-position: 0 -52px;}

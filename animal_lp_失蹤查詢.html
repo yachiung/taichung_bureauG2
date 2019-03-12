@@ -124,7 +124,7 @@
     </nav>
   </header>
   <section class="navbar">
-    <h2>民眾寵物領養佈告欄</h2>
+    <h2>失蹤查詢</h2>
     <div class="back"><a href="javascript:history.go(-1)">返回</a></div>
   </section>
 
@@ -140,96 +140,75 @@
       </section>
     </section>
     <header>
-      <h2>民眾寵物領養佈告欄</h2>
+      <h2>失蹤查詢</h2>
     </header>
 
     <section class="animalSearch">
       <article class="bulletin">
-        <h3>送、領養佈告欄</h3>
-        <p>你家有貓咪、狗狗或其它的寵物要送人嗎 ?</p>
-        <p>這裡提供送領養寵物的管道，相對的如果你有寵物要找新主人，也可以在這兒登載本站僅提供民眾登錄載認養及送養的訊息。</p>
-        <p>禁止任何商業及買賣之行為。依據動物保護法第22條規定：「以營利為目的，經營特定寵物之繁殖、買賣或寄養業者，應先向直轄市、縣（市）主管機關申請許可，並依法領得營業證照，始得為之。」違反者，依同法第25條之1規定，處新臺幣十萬元以上三百萬元以下罰鍰，特定寵物主管機關得沒入，提醒民眾切勿觸法，以免受罰。</p>
-        <p>民眾除利用本網站進行寵物之送領養外，亦可透過本市動物之家辦理犬貓隻不擬續養及認養之事宜。</p>
-        <p><em>本送養/領養資料,僅公告3個月,若動物資料須刪修下架,請按[送養/領養回報]按鈕。</em></p>
-        <nav class="switchTo">
+        <p><em>本失蹤／失蹤協尋資料，僅公告6個月，若動物資料須刪修下架，請按【失蹤/拾獲回報】按鈕。</em></p>
+        <nav class="missingFinding">
           <ul>
-            <li><a href="#">領養佈告欄</a></li>
-            <li><a href="#">送養佈告欄</a></li>
-            <li><a href="#">我要領養</a></li>
-            <li><a href="#">我要送養</a></li>
-          </ul>
+            <li><a href="#">登錄資料</a></li>
+            <li><a href="#">拾獲查詢</a></li>
+            <li><a href="#">失蹤查詢</a></li>
+            </ul>
         </nav>
       </article>
-  
-      <form name="queryForm" method="get" id="queryForm">
-        <table summary="民眾寵物領養佈告欄-條件查詢">
-          <caption>民眾寵物領養佈告欄-條件查詢</caption>
-            <tr>
-              <td><label for="htx_topCat">寵物種類</label></td>
-              <td><select name="htx_topCat" id="htx_topCat">
-                  <option value="" selected="">請選擇</option>
-                  <option value="00">其他</option>
-                  <option value="01">狗</option>
-                  <option value="02">貓</option>
-                  <option value="03">鳥</option>
-                  <option value="04">兔</option>
-                  <option value="05">龜</option>
-                  <option value="06">鼠</option>
-                </select></td>
-            </tr>
-            <tr>
-              <td><label for="htx_stitle">品種</label></td>
-              <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入品種"></td>
-            </tr>
-            <tr>
-              <td><label for="htx_vgroup">毛色</label></td>
-              <td><select name="htx_vgroup" id="htx_vgroup">
-                  <option value="" selected="">請選擇</option>
-                  <option value="01">黑色</option>
-                  <option value="00">其他</option>
-                  <option value="02">黃色</option>
-                  <option value="03">白色</option>
-                  <option value="04">米色</option>
-                  <option value="05">棕色</option>
-                  <option value="06">黃白</option>
-                  <option value="07">黑白</option>
-                  <option value="08">虎斑</option>
-                  <option value="09">咖啡</option>
-                </select></td>
-            </tr>
-            <tr>
-              <td><label for="htx_xkeyword">年鹷</label></td>
-              <td><select name="htx_xkeyword" id="htx_xkeyword">
-                  <option value="" selected="">請選擇</option>
-                  <option value="00">其他</option>
-                  <option value="01">幼犬</option>
-                  <option value="02">成犬</option>
-                  <option value="03">幼貓</option>
-                  <option value="04">成貓</option>
-                </select></td>
-            </tr>
-            <tr>
-              <td><label for="htx_xabstract">性別</label></td>
-              <td>
-                <label><input type="radio" name="htx_xabstract" value="00">母</label>
-                <label><input type="radio" name="htx_xabstract" value="01">公</label>
-              </td>
-            </tr>
-            <tr>
-              <td><label for="htx_xpostDate_S">登錄日期</label></td>
-              <td><input type="text" readonly="readonly" size="10 name="htx_xpostDate_S" id="htx_xpostDate_S" placeholder="點擊選日期"><button id="btnShowhtx_htx_xpostDate_S" title="清除" class="clearDate">清除</button>
-               ～
-              <input type="text" readonly="readonly" size="10 name="htx_xpostDate_E" id="htx_xpostDate_E" placeholder="點擊選日期"><button id="btnShowhtx_xpostDate_E" title="清除" class="clearDate">清除</button>
-              </td>
-            </tr>
+      <form> 
+        <table summary="失蹤查詢-條件查詢">
+          <caption>失蹤查詢-條件查詢</caption>
+          <tr>
+            <td><label for="htx_Gender">性別</label></td>
+            <td>
+              <label><input type="radio" name="htx_Gender" value="00">母</label>
+              <label><input type="radio" name="htx_Gender" value="01">公</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_LostDate_S">失蹤時間</label></td>
+            <td><input type="text" class="dateInput" readonly="readonly" size="10" name="htx_LostDate_S" id="htx_LostDate_S" placeholder="點擊選日期"><button id="btnShowhtx_htx_LostDate_S" title="清除" class="clearDate">清除</button> ～ <input type="text" class="dateInput" readonly="readonly" size="10" name="htx_LostDate_E" id="htx_LostDate_E" placeholder="點擊選日期"><button id="btnShowhtx_LostDate_E" title="清除" class="clearDate">清除</button>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_LostPlace">地點</label></td>
+            <td><input type="text" name="htx_LostPlace" id="htx_LostPlace" placeholder="請輸入失蹤地點"></td>
+          </tr>
+          <tr>
+            <td><label for="htx_Kind">種類</label></td>
+            <td><select name="htx_Kind" id="htx_Kind">
+                <option value="" selected="">請選擇</option>
+                <option value="01">混種犬</option>
+                <option value="10">吉娃娃</option>
+                <option value="11">北京犬</option>
+                <option value="12">巴哥</option>
+                <option value="13">狆</option>
+                <option value="14">台灣土狗</option>
+                <option value="15">柴犬</option>
+                <option value="16">秋田犬</option>
+                <option value="17">可卡犬</option>
+                <option value="18">狼犬</option>
+                <option value="19">狐狸犬</option>
+                <option value="02">西施</option>
+                <option value="20">大麥町</option>
+                <option value="21">貓</option>
+                <option value="00">其他</option>
+                <option value="03">博美</option>
+                <option value="04">瑪爾濟斯</option>
+                <option value="05">約克夏</option>
+                <option value="06">雪那瑞</option>
+                <option value="07">挪威那</option>
+                <option value="08">杜賓</option>
+                <option value="09">貴賓</option>
+              </select></td>
+          </tr>
         </table>
         <div class="buttonDiv">
           <input type="submit" value="送出">
           <input type="reset" value="清除重填">
         </div>
-      </form>  
+      </form>
     </section>
-  
+
 
 
 
@@ -262,166 +241,146 @@
       </ul>
     </section>
 
-    <section class="profileList noPicture">
+    <section class="profileList">
       <ul>
         <li>
           <table class="meta4col">
-            <caption>編號：10790</caption>
+            <caption>編號：9647</caption>
             <tr>
-              <th scope="row">登錄日期</th>
-              <td>2019-03-08</td>
-              <th scope="row">希望種類</th>
-              <td>狗</td>
+              <th scope="row">動物種類</th>
+              <td></td>
+              <th scope="row">晶片號碼</th>
+              <td>945000009096562</td>
             </tr>
             <tr>
-              <th scope="row">希望性別</th>
+              <th scope="row">毛色</th>
+              <td>虎斑</td>
+              <th scope="row">年齡</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">性別</th>
               <td>公</td>
-              <th scope="row">希望品種</th>
-              <td>科基</td>
+              <th scope="row">體型(重)</th>
+              <td>小型(3-13公斤)</td>
             </tr>
             <tr>
-              <th scope="row">希望毛色</th>
-              <td>黃色</td>
-              <th scope="row">要領養人</th>
+              <th scope="row">狂犬病牌號</th>
+              <td></td>
+              <th scope="row">失蹤時間</th>
               <td></td>
             </tr>
             <tr>
-              <th scope="row">聯絡電話</th>
-              <td></td>
-            <th scope="row">電子郵件</th>
-              <td>cptlsl@msn.com</td>
-            </tr>
-            <tr>
-              <th scope="row">聯絡地址</th>
+              <th scope="row">地點</th>
               <td colspan="3"></td>
             </tr>
             <tr>
-              <th scope="row">備註</th>
-              <td colspan="3"></td>
+              <th scope="row">聯絡方式</th>
+              <td>0982987750</td>
+              <th scope="row">聯絡Email</th>
+              <td>a160509@yahoo.com</td>
+            </tr>
+            <tr>
+              <th scope="row">特徵</th>
+              <td colspan="3">手掌有黑斑，耳多大，嘴巴有斜右邊口罩</td>
             </tr>
           </table>
-          <div class="askBtn"><a href="#">領養人回報</a></div>
-          </li>
-          <li>
-            <table class="meta4col">
-                <caption>編號：10789</caption>
-              <tr>
-                <th scope="row">登錄日期</th>
-                <td>2019-03-08</td>
-                <th scope="row">希望種類</th>
-                <td>狗</td>
-              </tr>
-              <tr>
-                <th scope="row">希望性別</th>
-                <td>公</td>
-                <th scope="row">希望品種</th>
-                <td>拉不拉多</td>
-              </tr>
-              <tr>
-                <th scope="row">希望毛色</th>
-                <td>黑色</td>
-                <th scope="row">要領養人</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">聯絡電話</th>
-                <td></td>
-                <th scope="row">電子郵件</th>
-                <td>abc0919085543@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">聯絡地址</th>
-                <td colspan="3"></td>
-              </tr>
-              <tr>
-                <th scope="row">備註</th>
-                <td colspan="3"></td>
-              </tr>
-            </table>
-            <div class="askBtn"><a href="#">領養人回報</a></div>
-          </li>
-          <li>
-            <table class="meta4col">
-              <caption>編號：10788</caption>
-              <tr>
-                <th scope="row">登錄日期</th>
-                <td>2019-03-08</td>
-                <th scope="row">希望種類</th>
-                <td>狗</td>
-              </tr>
-              <tr>
-                <th scope="row">希望性別</th>
-                <td>公</td>
-                <th scope="row">希望品種</th>
-                <td>鬥牛 柴犬 拉不拉多 黃金獵犬 薩摩耶</td>
-              </tr>
-              <tr>
-                <th scope="row">希望毛色</th>
-                <td></td>
-                <th scope="row">要領養人</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">聯絡電話</th>
-                <td></td>
-                <th scope="row">電子郵件</th>
-                <td>ann071624@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">聯絡地址</th>
-                <td colspan="3"></td>
-              </tr>
-              <tr>
-                <th scope="row">備註</th>
-                <td colspan="3"></td>
-              </tr>
-            </table>
-            <div class="askBtn"><a href="#">領養人回報</a></div>
-          </li>
-
-          <li>
-            <table class="meta4col">
-              <caption>編號：10787</caption>
-              <tr>
-                <th scope="row">登錄日期</th>
-                <td>2019-03-08</td>
-                <th scope="row">希望種類</th>
-                <td>狗</td>
-              </tr>
-              <tr>
-                <th scope="row">希望性別</th>
-                <td>公</td>
-                <th scope="row">希望品種</th>
-                <td>鬥牛 柴犬 拉不拉多 黃金獵犬 薩摩耶</td>
-              </tr>
-              <tr>
-                <th scope="row">希望毛色</th>
-                <td></td>
-                <th scope="row">要領養人</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">聯絡電話</th>
-                <td></td>
-                <th scope="row">電子郵件</th>
-                <td>ann071624@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">聯絡地址</th>
-                <td colspan="3"></td>
-              </tr>
-              <tr>
-                <th scope="row">備註</th>
-                <td colspan="3"></td>
-              </tr>
-            </table>
-            <div class="askBtn"><a href="#">領養人回報</a></div>
-          </li>
-
-
+          <figure class="petPicture"><img src="http://www.animal.taichung.gov.tw/genimg.asp?id=2022414" alt="9648"></figure>
+          <div class="askBtn"><a href="#">失蹤回報</a></div>
+        </li>
+        <li>
+          <table class="meta4col">
+            <caption>編號：9647</caption>
+            <tr>
+              <th scope="row">動物種類</th>
+              <td>貴賓</td>
+              <th scope="row">晶片號碼</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">毛色</th>
+              <td>咖啡</td>
+              <th scope="row">年齡</th>
+              <td>1歲7個月</td>
+            </tr>
+            <tr>
+              <th scope="row">性別</th>
+              <td>公</td>
+              <th scope="row">體型(重)</th>
+              <td>迷你型(3公斤以下)</td>
+            </tr>
+            <tr>
+              <th scope="row">狂犬病牌號</th>
+              <td></td>
+              <th scope="row">失蹤時間</th>
+              <td>2019-02-21</td>
+            </tr>
+            <tr>
+              <th scope="row">地點</th>
+              <td colspan="3">台中清水</td>
+            </tr>
+            <tr>
+              <th scope="row">聯絡方式</th>
+              <td>0981327007</td>
+              <th scope="row">聯絡Email</th>
+              <td>mikiibear61840@yahoo.com.tw</td>
+            </tr>
+            <tr>
+              <th scope="row">特徵</th>
+              <td colspan="3">脖子有項圈黃色和紅色 體型很瘦、膽小、怕人 剛剃毛只有頭有毛</td>
+            </tr>
+          </table>
+          <figure class="petPicture"><img src="http://www.animal.taichung.gov.tw/genimg.asp?id=2022207" alt="9647"></figure>
+          <div class="askBtn"><a href="#">失蹤回報</a></div>
+        </li>
+        <li>
+          <table class="meta4col">
+            <caption>編號：9646</caption>
+            <tr>
+              <th scope="row">動物種類</th>
+              <td>混種犬</td>
+              <th scope="row">晶片號碼</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">毛色</th>
+              <td>黃色</td>
+              <th scope="row">年齡</th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th scope="row">性別</th>
+              <td>公</td>
+              <th scope="row">體型(重)</th>
+              <td>中型(13-23公斤)</td>
+            </tr>
+            <tr>
+              <th scope="row">狂犬病牌號</th>
+              <td></td>
+              <th scope="row">失蹤時間</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">地點</th>
+              <td colspan="3">沙鹿區中山路19巷附近</td>
+            </tr>
+            <tr>
+              <th scope="row">聯絡方式</th>
+              <td>0983231456</td>
+              <th scope="row">聯絡Email</th>
+              <td>okok5945@gmail.com</td>
+            </tr>
+            <tr>
+              <th scope="row">特徵</th>
+              <td colspan="3">動作大會驚嚇反應，對人有戒心，</td>
+            </tr>
+          </table>
+          <figure class="petPicture"><img src="http://www.animal.taichung.gov.tw/genimg.asp?id=2022015" alt="9646"></figure>
+          <div class="askBtn"><a href="#">失蹤回報</a></div>
+        </li>
       </ul>
 
-      <span class="nextPage"><a href="xxx".html">下一頁</a></span>
+      <span class="nextPage"><a href="xxx" .html">下一頁</a></span>
     </section>
       
     <section class="page" title="分頁功能">
