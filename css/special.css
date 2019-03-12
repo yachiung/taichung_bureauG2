@@ -184,8 +184,10 @@
 /* 20190306 Animal */
 .animalSearch{margin:0;overflow: hidden;background: #f3f3f3;}
 .animalSearch>.bulletin{padding: 3em 3% 1.5em;background:url(../images/pets_bg.png) no-repeat right 15px; }
+.animalSearch>.bulletin:before{content: '';float: right;width: 80px;height: 60px;}
 .bulletin {line-height: 1.5;}
 .bulletin h3{margin: 0 0 1em;font-size: 1.25em;}
+.bulletin p{margin: 1.2em 0;}
 .bulletin ul {list-style: disc;}
 .bulletin ol {list-style: decimal;}
 .bulletin ul,
@@ -217,10 +219,8 @@
 .animalSearch>form td input[type="text"]:only-child{width: 96%;width: calc(98% - .8em)}
 .animalSearch>form td textarea{height: 6em;min-height: 0;width: 96%;width: calc(98% - .8em)}
 .animalSearch>form td button{border-radius: 4px;}
-.animalSearch>form td input[id*="htx_xpostDate"],
-.animalSearch>form td input[id*="htx_SaveDate"]{width: 6em;margin-right: 5px;}/* htx_SaveDate_S */
-.animalSearch>form td button[id*="htx_xpostDate"],
-.animalSearch>form td button[id*="SaveDate"]{width: 2em;vertical-align: middle;text-indent: -5em;overflow: hidden;background:#ad3 url(../images/icon_close.png) no-repeat center center;background-size: 16px;border-radius: 50%;vertical-align:middle;transition: .15s;}
+.animalSearch>form td input.dateInput{width: 6em;margin-right: 5px;}
+.animalSearch>form td button.clearDate{width: 2em;vertical-align: middle;text-indent: -5em;overflow: hidden;background:#ad3 url(../images/icon_close.png) no-repeat center center;background-size: 16px;border-radius: 50%;vertical-align:middle;transition: .15s;}
 .animalSearch>form td button:hover,
 .animalSearch>form td button:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;}
 .animalSearch>form table{width: 100%;max-width: 500px;margin: 0 auto}
@@ -267,4 +267,23 @@
 @media screen and (min-width:901px){
 	.switchTo li a:hover,
 	.switchTo li a:focus{box-shadow: rgba(0,0,0,.6) 0 1px 4px -1px;margin:4px	3px 0;}
+}
+
+/*  拾獲／失蹤查詢、登錄資料 */
+.missingFinding {margin: 1em auto 0;padding: 0;}
+.missingFinding ul {list-style: none;margin: 0;padding:4px 0 8px;overflow: hidden;text-align: center;}
+.bulletin .missingFinding li{margin: 0 .6% 10px;padding:0;display: inline-block;width: 31%;max-width:9em; }
+.missingFinding li a{display: block;padding:8px 0 6px;border-radius: 8px;background:#5c5c5c ;color: #fff;text-decoration: none;box-shadow: rgba(0,0,0,.4) 0 1px 5px;white-space: nowrap;transition: .15s;}
+.missingFinding li a:before{content: '';display: block;width: 64px;height: 64px;margin: 0 auto 4px;background: #444 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;}
+.missingFinding li:nth-child(2) a:before{background-position: 0 -52px;}
+.missingFinding li:nth-child(3) a:before{background-position: 0 -118px;}
+.missingFinding li a:hover,
+.missingFinding li a:focus{color: #deff33;background-color: #333;}
+.missingFinding li a:hover:before,
+.missingFinding li a:focus:before{background-color: #111;box-shadow: #eee 0 0 0 2px;}
+@media screen and (min-width:801px){
+	.missingFinding ul{margin: 0 -2%;}
+	.bulletin .missingFinding li{float: left;	margin: 0 .6% 10px;padding:0;min-width:9em;width: 32%;max-width:none;}
+	.missingFinding li a{position: relative;line-height: 70px;height: 72px;padding:0 .4em 0 4.4em;border-radius: 80px;}
+	.missingFinding li a:before{content: '';position: absolute;;width: 64px;height: 64px;left: 4px;top: 4px;background: #333 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;}
 }

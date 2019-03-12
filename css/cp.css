@@ -592,6 +592,7 @@ header + .qp {padding-top: 1em}
 .profile .askBtn {display: block;margin:0 5px;padding-top: 15px;}
 .profile .askBtn a{display: inline-block}
 
+
 /* 動物資料表格與照片列表 */
 .profileList,
 .profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;}
@@ -599,7 +600,7 @@ header + .qp {padding-top: 1em}
 .profileList>ul>li{clear: both;overflow: hidden;margin: 0 0 25px;padding:25px 10px 15px;border: none;background: #fff;box-shadow: rgba(0,0,0,.6) 0 0 4px;border-radius: 4px;}
 .profileList>ul>li:last-child{border-bottom: none;}
 
-figure.petPicture{display: block;}
+figure.petPicture{display: block;background: url(../images/animalNoPhoto.png) no-repeat center center;border: 4px solid #fff;box-shadow: rgba(0,0,0,.3) 0 0 8px;}
 .petPicture img{display: block;width: 100%;}
 .petPicture>a{display: block;border: 1px solid #fff;transition: .15s;}
 .petPicture>a:hover{box-shadow: rgba(0,0,0,.5) 0 0 8px;}
@@ -623,6 +624,7 @@ table.meta4col,
 .meta4col td a:hover,
 .meta4col td a:focus{text-decoration: none;color: #09f}
 .meta4col td a:focus{outline: 1px solid #09f}
+.profileList li .askBtn + p.hint{padding: .4em 1em;margin:1em 0 0;border: 1px dashed #bcc;background-color: #eef3f6;;border-radius: 4px;font-size:.9em}
 @media screen and (max-width:600px){
   .meta4col{clear: both;}
 	.meta4col tr, .meta4col th, .meta4col td{display: block;}
@@ -635,13 +637,12 @@ table.meta4col,
   .meta4col th:nth-child(3){border-left: none;clear: both;}
 	.meta4col th:after{width: 4px;height: 12px;margin-right:6px ;top: .8em;background: #fb0;}
 }
-@media screen and (min-width:441px){
-}
 @media screen and (min-width:601px){
 	.meta4col tr:hover{background: #f4f5f5;}
 	.profileList li .like ,
 	.profileList li .askBtn{margin:12px 0 0;float: left;}
 	.profileList li .askBtn+.like{margin-left: 15px;padding-top: 7px;}
+	.profileList li .askBtn + p.hint{float:right;width:calc(100% - 12em);}
 }
 @media screen and (min-width:801px){
   .profile .meta4col,
