@@ -201,13 +201,14 @@
 .bulletin em{color: #c00; font-weight: normal;}
 
 
-.animalSearch{width: 96%;margin: 0 auto;padding: 1.5em 0;border-radius: 5px;background: #5c5c5c;color: #fff;}
+.animalSearch{width: 96%;margin: 2vw auto 0;padding: 1.5em 0;border-radius: 5px;background: #5c5c5c;color: #fff;}
 .animalSearch>*{margin-left: auto;margin-right: auto; width: 94%;}
 .animalSearch>*+*{margin-top: 1.5em;}
-.multiColumn .animalSearch{padding-top: 2.5em;border-radius: 0;width: 100%}
+.multiColumn .animalSearch{padding-top: 2.5em;border-radius: 0;width: 100%;margin:0;}
 
 .animalSearch form table{width: 100%;max-width:500px;margin: 0 auto;background: #555;}
 .animalSearch form table caption{font-size: 1.25em;margin-bottom: .5em;}
+.animalSearch form table caption i{font-style: normal;font-size: .82em;display: block;}
 .animalSearch form th,
 .animalSearch form td{padding: 2px 0;display: table-cell;}
 .animalSearch form th,

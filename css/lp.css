@@ -36,17 +36,17 @@
 .list td{padding:.8em 8px .6em;vertical-align:middle;border-bottom:1px solid #ccc;text-align:center;}
 .list tr:first-child th{white-space:nowrap;}
 .list td{border-bottom:1px solid #d8d8d8;}
-.list td.title{text-align:left;}
 .list td img{vertical-align:middle;margin:0 3px;}
 .list td[data-title="姓名"]{font-size:1.2em;text-decoration:underline;}
 .list td span{display:block;margin:0 auto;text-align:center;white-space:nowrap;}
+.list td.title{text-align:left;white-space:normal;}
 .list td .date{letter-spacing:0;color:#666;font-family:Arial, Helvetica, sans-serif;}
 .list td.date{display:table-cell;text-align:center;letter-spacing:0;color:#666;font-family:Arial, Helvetica, sans-serif;}
 .list tr:nth-child(odd) {background:#f6f6f6;}
 .list table tr:last-child td{border-bottom:none;}
 .list td a{text-decoration:none;color:#000}
-.list td a:hover, .list td a:focus{text-decoration:underline;color:#006898;}
-.list td.title{text-align:left;white-space:normal;}
+.list td a:hover,
+.list td a:focus{text-decoration:underline;color:#006898;}
 .list td.document a{display:inline-block;text-align:left;min-width:15em;margin:0 auto;}
 .list td.document br+a{border-top:1px solid #ddd;}
 .list td a.fileType{display: inline-block;color: #fff;border: 1px solid #c00;}
