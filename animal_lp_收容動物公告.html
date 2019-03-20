@@ -143,145 +143,142 @@
       <h2>收容動物公告</h2>
     </header>
 
-    <section class="animalSearch">
-      <article class="bulletin">
-        <h3>家犬及流浪犬認領注意事項</h3>
-        <ol>
-          <li>請至臺中市動物之家 <ul>
-              <li>南屯園區 臺中市南屯區中台路601號。電話：04-23814978</li>
-              <li>后里園區 臺中市后里區堤防路370號。電話：04-25588024（后里園區因改建中,暫不開放）</li>
-            </ul>
-          </li>
-          <li>本處收容動物均依動物保護法及人道捕犬作業規範,由飼主、民眾拾獲送交,或由本處動物管制人員依前項作業規範捕獲,由於尚未馴養故部份犬隻必須使用制式捕犬桿保定,以利拍照,供民眾查詢及認領。</li>
-        </ol>
-      </article>
-  
-      <form>
-        <table summary="收容動物公告-條件查詢">
-          <caption>收容動物公告-條件查詢</caption>
-          <tr>
-            <td><label for="htx_stitle">動物編號</label></td>
-            <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入動物編號"></td>
-          </tr>
-          <tr>
-            <td><label for="htx_SaveDate_S">收容日期</label></td>
-            <td>
-              <input type="text" class="dateInput" readonly="readonly" name="htx_SaveDate_S" id="htx_SaveDate_S" placeholder="點擊選日期"><button id="btnShowhtx_htx_SaveDate_S" title="清除" class="clearDate">清除</button>
-              ～
-              <input type="text" class="dateInput" readonly="readonly" name="htx_SaveDate_E" id="htx_SaveDate_E" placeholder="點擊選日期"><button id="btnShowhtx_SaveDate_E" title="清除" class="clearDate">清除</button>
-            </td>
-          </tr>
-          <tr>
-            <td><label for="htx_topCat">收容園區</label></td>
-            <td><select name="htx_topCat" id="htx_topCat">
-                <option value="" selected="">請選擇</option>
-                <option value="A01">南屯園區</option>
-                <option value="A02">后里園區</option>
-                <option value="A03">中途動物醫院</option>
-                <option value="A04">愛心小站</option>
-                <option value="A05">益起認養吧</option>
-              </select></td>
-          </tr>
-          <tr>
-            <td><label for="htx_SourceArea">來源區域</label></td>
-            <td><select name="htx_SourceArea" id="htx_SourceArea">
-                <option value="" selected="">請選擇</option>
-                <option value="001">中區</option>
-                <option value="002">東區</option>
-                <option value="003">南區</option>
-                <option value="004">西區</option>
-                <option value="005">北區</option>
-                <option value="006">北屯區</option>
-                <option value="007">西屯區</option>
-                <option value="008">南屯區</option>
-                <option value="010">豐原區</option>
-                <option value="011">大里區</option>
-                <option value="012">太平區</option>
-                <option value="013">東勢區</option>
-                <option value="014">大甲區</option>
-                <option value="015">清水區</option>
-                <option value="016">沙鹿區</option>
-                <option value="017">梧棲區</option>
-                <option value="018">后里區</option>
-                <option value="019">神岡區</option>
-                <option value="020">潭子區</option>
-                <option value="021">大雅區</option>
-                <option value="022">新社區</option>
-                <option value="023">石岡區</option>
-                <option value="024">外埔區</option>
-                <option value="025">大安區</option>
-                <option value="026">烏日區</option>
-                <option value="027">大肚區</option>
-                <option value="028">龍井區</option>
-                <option value="029">霧峰區</option>
-                <option value="030">和平區</option>
-                <option value="0">全區</option>
-              </select></td>
-          </tr>
-          <tr>
-            <td><label for="htx_SourcePlace">來源地區</label></td>
-            <td><input type="text" name="htx_SourcePlace" id="htx_SourcePlace" placeholder="請輸入來源地區"></td>
-          </tr>
-          <tr>
-            <td><label for="htx_Gender">性別</label></td>
-            <td>
-              <label><input type="radio" name="htx_Gender" value="00">母</label>
-              <label><input type="radio" name="htx_Gender" value="01">公</label>
-            </td>
-          </tr>
-          <tr>
-            <td><label for="htx_Color">毛色</label></td>
-            <td><select name="htx_Color" id="htx_Color">
-                <option value="" selected="">請選擇</option>
-                <option value="01">黑色</option>
-                <option value="00">其他</option>
-                <option value="02">黃色</option>
-                <option value="03">白色</option>
-                <option value="04">米色</option>
-                <option value="05">棕色</option>
-                <option value="06">黃白</option>
-                <option value="07">黑白</option>
-                <option value="08">虎斑</option>
-                <option value="09">咖啡</option>
-              </select></td>
-          </tr>
-          <tr>
-            <td><label for="htx_Kind">動物種類</label></td>
-            <td><select name="htx_Kind" id="htx_Kind">
-                <option value="" selected="">請選擇</option>
-                <option value="01">混種犬</option>
-                <option value="10">吉娃娃</option>
-                <option value="11">北京犬</option>
-                <option value="12">巴哥</option>
-                <option value="13">狆</option>
-                <option value="14">台灣土狗</option>
-                <option value="15">柴犬</option>
-                <option value="16">秋田犬</option>
-                <option value="17">可卡犬</option>
-                <option value="18">狼犬</option>
-                <option value="19">狐狸犬</option>
-                <option value="02">西施</option>
-                <option value="20">大麥町</option>
-                <option value="21">貓</option>
-                <option value="00">其他</option>
-                <option value="03">博美</option>
-                <option value="04">瑪爾濟斯</option>
-                <option value="05">約克夏</option>
-                <option value="06">雪那瑞</option>
-                <option value="07">挪威那</option>
-                <option value="08">杜賓</option>
-                <option value="09">貴賓</option>
-              </select></td>
-          </tr>
-        </table>
-        <div class="buttonDiv">
-          <input type="submit" value="送出">
-          <input type="reset" value="清除重填">
-        </div>
-      </form>
-  
-      </section>
-  
+<div class="multiColumn">
+  <article class="bulletin">
+    <h3>家犬及流浪犬認領注意事項</h3>
+    <ol>
+      <li>請至臺中市動物之家 <ul>
+          <li>南屯園區 臺中市南屯區中台路601號。電話：04-23814978</li>
+          <li>后里園區 臺中市后里區堤防路370號。電話：04-25588024（后里園區因改建中,暫不開放）</li>
+        </ul>
+      </li>
+      <li>本處收容動物均依動物保護法及人道捕犬作業規範,由飼主、民眾拾獲送交,或由本處動物管制人員依前項作業規範捕獲,由於尚未馴養故部份犬隻必須使用制式捕犬桿保定,以利拍照,供民眾查詢及認領。</li>
+    </ol>
+  </article>
+  <section class="animalSearch">
+    <form>
+      <table summary="收容動物公告-條件查詢">
+        <caption>收容動物公告-條件查詢</caption>
+        <tr>
+          <td><label for="htx_stitle">動物編號</label></td>
+          <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入動物編號"></td>
+        </tr>
+        <tr>
+          <td><label for="htx_SaveDate_S">收容日期</label></td>
+          <td>
+            <input type="text" class="dateInput" readonly="readonly" name="htx_SaveDate_S" id="htx_SaveDate_S" placeholder="點擊選日期"><button id="btnShowhtx_htx_SaveDate_S" title="清除" class="clearDate">清除</button> ～ <input type="text" class="dateInput" readonly="readonly" name="htx_SaveDate_E" id="htx_SaveDate_E" placeholder="點擊選日期"><button id="btnShowhtx_SaveDate_E" title="清除" class="clearDate">清除</button>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="htx_topCat">收容園區</label></td>
+          <td><select name="htx_topCat" id="htx_topCat">
+              <option value="" selected="">請選擇</option>
+              <option value="A01">南屯園區</option>
+              <option value="A02">后里園區</option>
+              <option value="A03">中途動物醫院</option>
+              <option value="A04">愛心小站</option>
+              <option value="A05">益起認養吧</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td><label for="htx_SourceArea">來源區域</label></td>
+          <td><select name="htx_SourceArea" id="htx_SourceArea">
+              <option value="" selected="">請選擇</option>
+              <option value="001">中區</option>
+              <option value="002">東區</option>
+              <option value="003">南區</option>
+              <option value="004">西區</option>
+              <option value="005">北區</option>
+              <option value="006">北屯區</option>
+              <option value="007">西屯區</option>
+              <option value="008">南屯區</option>
+              <option value="010">豐原區</option>
+              <option value="011">大里區</option>
+              <option value="012">太平區</option>
+              <option value="013">東勢區</option>
+              <option value="014">大甲區</option>
+              <option value="015">清水區</option>
+              <option value="016">沙鹿區</option>
+              <option value="017">梧棲區</option>
+              <option value="018">后里區</option>
+              <option value="019">神岡區</option>
+              <option value="020">潭子區</option>
+              <option value="021">大雅區</option>
+              <option value="022">新社區</option>
+              <option value="023">石岡區</option>
+              <option value="024">外埔區</option>
+              <option value="025">大安區</option>
+              <option value="026">烏日區</option>
+              <option value="027">大肚區</option>
+              <option value="028">龍井區</option>
+              <option value="029">霧峰區</option>
+              <option value="030">和平區</option>
+              <option value="0">全區</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td><label for="htx_SourcePlace">來源地區</label></td>
+          <td><input type="text" name="htx_SourcePlace" id="htx_SourcePlace" placeholder="請輸入來源地區"></td>
+        </tr>
+        <tr>
+          <td><label for="htx_Gender">性別</label></td>
+          <td>
+            <label><input type="radio" name="htx_Gender" value="00">母</label>
+            <label><input type="radio" name="htx_Gender" value="01">公</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="htx_Color">毛色</label></td>
+          <td><select name="htx_Color" id="htx_Color">
+              <option value="" selected="">請選擇</option>
+              <option value="01">黑色</option>
+              <option value="00">其他</option>
+              <option value="02">黃色</option>
+              <option value="03">白色</option>
+              <option value="04">米色</option>
+              <option value="05">棕色</option>
+              <option value="06">黃白</option>
+              <option value="07">黑白</option>
+              <option value="08">虎斑</option>
+              <option value="09">咖啡</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td><label for="htx_Kind">動物種類</label></td>
+          <td><select name="htx_Kind" id="htx_Kind">
+              <option value="" selected="">請選擇</option>
+              <option value="01">混種犬</option>
+              <option value="10">吉娃娃</option>
+              <option value="11">北京犬</option>
+              <option value="12">巴哥</option>
+              <option value="13">狆</option>
+              <option value="14">台灣土狗</option>
+              <option value="15">柴犬</option>
+              <option value="16">秋田犬</option>
+              <option value="17">可卡犬</option>
+              <option value="18">狼犬</option>
+              <option value="19">狐狸犬</option>
+              <option value="02">西施</option>
+              <option value="20">大麥町</option>
+              <option value="21">貓</option>
+              <option value="00">其他</option>
+              <option value="03">博美</option>
+              <option value="04">瑪爾濟斯</option>
+              <option value="05">約克夏</option>
+              <option value="06">雪那瑞</option>
+              <option value="07">挪威那</option>
+              <option value="08">杜賓</option>
+              <option value="09">貴賓</option>
+            </select></td>
+        </tr>
+      </table>
+      <div class="buttonDiv">
+        <input type="submit" value="送出">
+        <input type="reset" value="清除重填">
+      </div>
+    </form>
+  </section>
+</div>
 
 
 

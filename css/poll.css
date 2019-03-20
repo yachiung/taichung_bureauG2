@@ -92,7 +92,8 @@ a[href="javascript:resetCaptchaM();"] img , a[href="javascript:resetCaptchaG();"
 a[href="javascript:resetCaptchaM();"] , a[href="javascript:resetCaptchaG();"]
 {display:inline-block;width:35px;height:35px;background:url(../images/btn_refresh.png) no-repeat;vertical-align:middle;}
 /*投票*/img#imgCaptcham, input#aspCaptchm , /*會員*/img#imgCaptchamem, input#strCAPTCHA{vertical-align:middle;}
-/*投票*/input#aspCaptchm, input[name="aspCaptcha"]  , /*會員*/input#strCAPTCHA {height:22px;margin-right:8px;}
+/*投票input#aspCaptchm, input[name="aspCaptcha"] ,
+input#strCAPTCHA {height:22px;margin-right:8px;}*/
 .polling.imgMode .captcha{text-align:center;}
 /*--------------lightbox*/
 #lightboxOverlay{display:none;position:absolute;top:0;left:0;z-index:9999;background-color:black;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);opacity:0.8;}

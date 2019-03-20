@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>台中市政府機關網</title>
 <link href="css/layout.css" rel="stylesheet" type="text/css">
-<link href="css/styleB.css" rel="stylesheet" type="text/css">
+<link href="css/styleC.css" rel="stylesheet" type="text/css">
 <link media="print" href="css/print.css" rel="stylesheet" type="text/css">
 
 <!--[if lt IE 9]>
@@ -124,97 +124,78 @@
     </nav>
   </header>
   <section class="navbar">
-    <h2>轉寄友人</h2>
-    <div class="back"><a href="javascript:history.go(-1)">返回</a></div> </section>
+    <h2>認養事項發問</h2>
+    <div class="back"><a href="javascript:history.go(-1)">返回</a></div>
+  </section>
+
   <div class="center" id="center"><a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
     <section class="friendly">
-      <section class="path"><span class="before">現在位置</span><a href="mp.html" title="Home">首頁</a> &gt; 本頁標題</section>
+      <section class="path"><span class="before">現在位置</span><a href="mp.html" title="Home">首頁</a> &gt; 登錄資料</section>
       <section class="function">
         <ul>
           <li><a class="print" href="#">友善列印</a></li>
+          <li><a class="forward" href="#">轉寄友人</a></li>
           <li><a class="back" href="javascript:history.back();">回上一頁</a></li>
         </ul>
-        <!-- /.function--></section>
-      <!-- /.friendly--></section>
+      </section>
+    </section>
     <header>
-      <h2>轉寄友人</h2>
+      <h2>認養事項發問</h2>
     </header>
-    <section class="forwardForm"> 
-      <!--<header><h1>轉寄友人</h1></header>-->
+
+
+    <section class="qp">
       <form>
-        <p class="reqMark">有 <abbr class="must" title="必填欄位">*</abbr>註記的欄位是必填欄位。</p>
-        <input type="hidden" name="TopInfo" value="您的朋友轉寄文章給您，原文位址：">
-        <input type="hidden" name="formforward" value="7758.189">
-        <table summary="轉寄文章">
-          <caption>轉寄文章</caption>
+        <table summary="認養事項發問"><caption>認養事項發問 Adoption Questions</caption>
           <tr>
-            <td scope="row"><label for="name">我的名字：</label></td>
-            <td><input type="text" class="text" id="name" name="name" size="40" value="請輸入我的名字" onfocus="javascript: if(this.value=='請輸入我的名字'){this.value='';}"></td>
+            <td><label>動物編號</label></td>
+            <td><input type="hidden" name="htx_docid" value="10711300006">10711300006</td>
           </tr>
           <tr>
-            <td scope="row"><label for="frommail">我的E-mail：</label></td>
-            <td><input type="text" class="text" id="frommail" name="frommail" size="40" value="請輸入我的E-mail" onfocus="javascript: if(this.value=='請輸入我的E-mail'){this.value='';}"></td>
+            <td><abbr class="must" title="必填欄位 Required">*</abbr><label for="htx_realname">姓名 Name</label></td>
+            <td><input type="text" name="htx_realname" id="htx_realname" placeholder="請輸入您的真實姓名"></td>
           </tr>
           <tr>
-            <td scope="row"><label for="tomail"><abbr class="must" title="必填欄位">*</abbr>收件人E-mail：</label></td>
-            <td><input type="text" class="text" id="tomail" name="tomail" size="40" value="請輸入收件人E-mail" onfocus="javascript: if(this.value=='請輸入收件人E-mail'){this.value='';}">
-              <p>PS: Mail Address以逗號[ , ]區隔，即可發多封Mail。</p></td>
+            <td><abbr class="must" title="必填欄位 Required">*</abbr><label for="htx_email">電子信箱 E-mail</label></td>
+            <td><input type="text" id="htx_email" name="htx_email" placeholder="請輸入您的電子信箱"></td>
           </tr>
           <tr>
-            <td scope="row"><label for="msg">給朋友的話：</label></td>
-            <td><textarea id="msg" name="msg" cols="35" rows="12" onfocus="javascript: if(this.value=='請輸入給朋友的話'){this.value='';}" data-gramm="" data-txt_gramm_id="061fa7fd-d0cf-c901-67ba-4a4530b2dd84">請輸入給朋友的話</textarea></td>
+            <td><abbr class="must" title="必填欄位 Required">*</abbr><label for="htx_tel">聯絡電話 TEL</label></td>
+            <td><input type="text" id="htx_tel" name="htx_tel" placeholder="請輸入您的聯絡電話"></td>
           </tr>
           <tr>
-            <td scope="row"><label for="msg">過長的選項：</label></td>
-            <td><select name="htx_idept" id="htx_idept">
-                <option value="" selected="">請選擇</option>
-                <option value="0">臺中市政府</option>
-                <option value="00P01">臺中市政府原住民族事務委員會‧會本部</option>
-                <option value="00P0101">臺中市政府原住民族事務委員會‧主任委員</option>
-                <option value="00P0102">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</option>
-                <option value="00P0102">主任秘書</option>
-                <option value="00P0103">臺中市政府原住民族事務委員會‧專門委員</option>
-                <option value="00P02">文教福利組</option>
-                <option value="00P03">臺中市政府原住民族事務委員會‧經濟建設及土地管理組</option>
-                <option value="00P04">臺中市政府原住民族事務委員會‧人事室</option>
-                <option value="00R0401">都計測量工程科第一股</option>
-                <option value="00R0402">都計測量工程科第二股</option>
-                <option value="00R05">臺中市政府都市發展局</option>
-                <option value="00R0501">臺中市政府都市發展局‧都市設計工程科第一股</option>
-                <option value="00R0502">臺中市政府都市發展局‧都市設計工程科第二股</option>
-                <option value="00R0503">臺中市政府都市發展局‧都市設計工程科第三股</option>
-                <option value="00Z0A">臺中市北屯區公所‧公用課</option>
-              </select></td>
+            <td><abbr class="must" title="必填欄位 Required">*</abbr><label for="htx_title">來信主旨 Subject</label></td>
+            <td><input type="text" id="htx_title" name="htx_title" placeholder="請輸入您的來信主旨"></td>
           </tr>
           <tr>
-            <td scope="row"><label for="strCAPTCHA"><abbr class="must" title="必填欄位">*</abbr>驗證碼</label>
-              </th>
-            <td><img id="imgCaptcha" src="images/captcha.png" alt="驗證碼圖片" />
-              <input id="strCAPTCHA" name="aspCaptcha" type="text" class="captchaTxt" placeholder="請輸入驗證碼">
-              <embed width="16" height="16" src="captchaWave.swf" name="captchaWave" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" play="true" loop="true" scale="showall" wmode="window" devicefont="false" bgcolor="#ffffff" menu="true" allowfullscreen="false" allowscriptaccess="sameDomain" salign="" type="application/x-shockwave-flash">
-              
-              <noscript>
-              <!--  &lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="16" height="16" id="captchaWave" align="middle"&gt;
-&lt;param name="allowScriptAccess" value="sameDomain" /&gt;
-&lt;param name="allowFullScreen" value="false" /&gt;
-&lt;param name="movie" value="captchaWave.swf" /&gt;&lt;param name="quality" value="high" /&gt;&lt;param name="bgcolor" value="#ffffff" /&gt;
-&lt;embed src="captchaWave.swf" quality="high" bgcolor="#ffffff" width="16" height="16" name="captchaWave" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /&gt;
-語音驗證碼
-&lt;/object&gt;
--->
-              </noscript>
-              <br>
-              如果看不清楚驗證碼，請點圖片<a href="javascript:resetCaptchaA();" title="換一組驗證碼"><img src="/images/refresh_icon.gif" border="0" alt="換一組驗證碼" style="ime-mode:disabled;vertical-align:bottom;*vertical-align:text-bottom;"></a>重新產生一組驗證碼。 </td>
+            <td><abbr class="must" title="必填欄位 Required">*</abbr><label for="htx_content">意見 Content</label></td>
+            <td><textarea id="htx_content" name="htx_content" placeholder="請輸入您的意見，4000字以內 "></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="fileDownLoad1">上傳照片<br>File upload (Optional)</label></td>
+            <td><input type="file" name="fileDownLoad1"><p>僅接受副檔名為 .jpg 的影像檔，檔案不能超過3MB</p></td>
+          </tr>
+          <tr>
+          </tr>
+          <tr>
+            <td><label for="aspCaptcha"><abbr class="must" title="必填欄位 Required">*</abbr>驗證<br>Verification</label></td>
+            <td><img id="imgCaptcha" src="images/captcha.png" title="點擊換一組驗證碼" onclick="" onkeypress="">
+              <input type="text" id="strCAPTCHA" name="aspCaptcha">
+              <p>如果看不清楚驗證碼，請點圖片<a href="javascript:resetCaptchaA();" title="換一組驗證碼"><img src="/images/refresh_icon.gif" alt="換一組驗證碼" style="ime-mode:disabled;vertical-align:bottom;*vertical-align:text-bottom;"></a>重新產生驗證碼。</p>
+            </td>
           </tr>
         </table>
         <div class="buttonDiv">
-          <input type="submit" name="send" class="btn" value="送出">
-          <input type="reset" name="reset" class="btn" value="清除重填">
+          <input type="submit" value="送出">
+          <input type="reset" value="清除重填">
         </div>
       </form>
     </section>
-    
-    <!--/.center--></div>
+
+
+  
+  </div><!--/.center-->
   <footer class="footer"><a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
     <button type="button" class="fatfootCtrl">收合</button>
     <nav>

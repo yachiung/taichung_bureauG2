@@ -216,28 +216,59 @@ button{font-size:inherit;margin:0;vertical-align:top;}
 select{outline:none;max-width:100%;}
 input[type="text"],
 textarea{-webkit-appearance:none;}
-textarea{min-height:8em;line-height:1.6;}
+textarea{min-height:8em;line-height:1.5;}
+
+input[type="radio"],
+input[type="checkbox"]{margin-right:5px;margin-left:3px;vertical-align:5%;outline:none;}
 
 input[type="text"],
 input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="url"],
 textarea,
-input[type="file"],
-select{border:solid 1px #bbb;height:2.4em;line-height:2.4em;padding:0 .4em;/* border-radius: 4px; */}
-input[type="file"]{-webkit-appearance:none;width:12em;}
+select{border:solid 1px #bbb;height:2.4em;line-height:2.4;padding:0 .4em;border-radius: 4px;vertical-align: top;}
+textarea{line-height: 1.4;padding:.3em .4em;min-height: 6em;}
+input[type="file"]{height:2.4em;padding:0 .4em;}
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-textarea:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
 input[type="file"]:focus,
-select:focus{border-color:#be0;box-shadow:#be0 0 0 0 2px;outline:none;}
+textarea:focus,
+select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;outline:none;}
 
 button,
 input[type="submit"],
 input[type="button"],
-input[type="reset"]{height:2em;line-height:2em;cursor:pointer;border:none;cursor:pointer;}
+input[type="reset"]{height:2.4em;line-height:2.4em;cursor:pointer;border:none;cursor:pointer;}
 
-input[type="radio"],
-input[type="checkbox"]{margin-right:4px;vertical-align:middle;outline:none;}
+input.dateInput{width: 6em;}
+button.clearDate{width: 2.4em;text-indent: -5em;overflow: hidden;background:#7faf0b url(../images/icon_close.png) no-repeat center center;background-size: 16px;border-radius: 4px;vertical-align:top;transition: .15s;}
+button:hover,
+button:focus{box-shadow:#99c300 0 0 0 2px;background-color: #99c300;outline: none;}
+input[type="file"]{-webkit-appearance:none;width:12em;}
+
+.buttonDiv{border-top:solid 1px #999;margin:1.5em 16px 0;padding:1.5em 0 0;text-align:center;}
+.buttonDiv input[type="submit"],
+.buttonDiv input[type="button"], 
+.buttonDiv input[type="reset"]{-webkit-appearance:none;display:inline-block;height:2.4em;line-height:1.8em;padding-left:16px;padding-right:16px;margin:2px 6px 10px;min-width:5em;border-radius:.4em;background:#7faf0b;color:#fff;font-size:1.06em;box-shadow:#587320 0 4px, #222 0 5px 0 1px, rgba(0,0,0,.5) 0 6px 6px 1px;transition:.1s;}
+.buttonDiv input[type="submit"]:hover,
+.buttonDiv input[type="button"]:hover,
+.buttonDiv input[type="reset"]:hover,
+.buttonDiv input[type="submit"]:focus,
+.buttonDiv input[type="button"]:focus,
+.buttonDiv input[type="reset"]:focus{margin-top: 4px;margin-bottom: 8px;background-color:#99c300;
+	box-shadow:#587320 0 3px, #222 0 4px 0 1px, rgba(109, 45, 45, 0.5) 0 5px 5px;outline: none}
+.must, abbr.must{margin-right:3px;color:#C30;font-size:1.3em;text-decoration: none;display: inline}
 
 @media screen and (max-width:800px){
 	form table{max-width:none;margin: 0 auto;}
@@ -252,11 +283,17 @@ input[type="checkbox"]{margin-right:4px;vertical-align:middle;outline:none;}
 
 	input[type="text"],
 	input[type="password"],
-	input[type="file"],
-	input.text,
+	input[type="tel"],
+	input[type="email"],
+	input[type="date"],
+	input[type="number"],
+	input[type="time"],
+	input[type="url"],
 	textarea,
 	select {box-sizing:border-box;width:100%;height:2.4em; line-height:2.4em;}
 	textarea { min-height:12em; line-height:1.6;}
 	input[type="radio"],
 	input[type="checkbox"]{font-size:1.2em;}
+
+	input.dateInput{width: 6em;}
 }

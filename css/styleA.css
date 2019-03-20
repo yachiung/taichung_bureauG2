@@ -13,11 +13,11 @@ a.goCenter{background:#bdf21c;border-radius:0;height:1.85em;line-height:1.85em;}
 /*.bb1 .arbtn:hover{background:rgba;}*/
 
 
-input[type="text"]:focus,
+/* input[type="text"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 input[type="file"]:focus,
-select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;}
+select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 
 .header{background-color:#ffac0e;color:#000;border-bottom:1px solid #fff;box-shadow:rgba(0,0,0,.5) 0 3px 8px -3px;}
 .header.fixed .menu,

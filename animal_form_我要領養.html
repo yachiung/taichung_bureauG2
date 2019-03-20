@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>台中市政府機關網</title>
 <link href="css/layout.css" rel="stylesheet" type="text/css">
-<link href="css/styleB.css" rel="stylesheet" type="text/css">
+<link href="css/styleC.css" rel="stylesheet" type="text/css">
 <link media="print" href="css/print.css" rel="stylesheet" type="text/css">
 
 <!--[if lt IE 9]>
@@ -124,96 +124,165 @@
     </nav>
   </header>
   <section class="navbar">
-    <h2>轉寄友人</h2>
-    <div class="back"><a href="javascript:history.go(-1)">返回</a></div> </section>
+    <h2>我要領養</h2>
+    <div class="back"><a href="javascript:history.go(-1)">返回</a></div>
+  </section>
+
   <div class="center" id="center"><a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
     <section class="friendly">
       <section class="path"><span class="before">現在位置</span><a href="mp.html" title="Home">首頁</a> &gt; 本頁標題</section>
       <section class="function">
         <ul>
           <li><a class="print" href="#">友善列印</a></li>
+          <li><a class="forward" href="#">轉寄友人</a></li>
           <li><a class="back" href="javascript:history.back();">回上一頁</a></li>
         </ul>
-        <!-- /.function--></section>
-      <!-- /.friendly--></section>
+      </section>
+    </section>
     <header>
-      <h2>轉寄友人</h2>
+      <h2>我要領養</h2>
     </header>
-    <section class="forwardForm"> 
-      <!--<header><h1>轉寄友人</h1></header>-->
+
+
+    <article class="bulletin">
+      <h3>送、領養佈告欄</h3>
+      <p>你家有貓咪、狗狗或其它的寵物要送人嗎 ?</p>
+      <p>這裡提供送領養寵物的管道，相對的如果你有寵物要找新主人，也可以在這兒登載本站僅提供民眾登錄載認養及送養的訊息。</p>
+      <p>禁止任何商業及買賣之行為。依據動物保護法第22條規定：「以營利為目的，經營特定寵物之繁殖、買賣或寄養業者，應先向直轄市、縣（市）主管機關申請許可，並依法領得營業證照，始得為之。」違反者，依同法第25條之1規定，處新臺幣十萬元以上三百萬元以下罰鍰，特定寵物主管機關得沒入，提醒民眾切勿觸法，以免受罰。</p>
+      <p>民眾除利用本網站進行寵物之送領養外，亦可透過本市動物之家辦理犬貓隻不擬續養及認養之事宜。</p>
+      <p><em>本送養/領養資料,僅公告3個月,若動物資料須刪修下架,請按[送養/領養回報]按鈕。</em></p>
+      <nav class="switchTo">
+        <ul>
+          <li><a href="#">領養佈告欄</a></li>
+          <li><a href="#">送養佈告欄</a></li>
+          <li><a href="#">我要領養</a></li>
+          <li><a href="#">我要送養</a></li>
+        </ul>
+      </nav>
+    </article>
+
+
+
+
+    <section class="qp">
       <form>
-        <p class="reqMark">有 <abbr class="must" title="必填欄位">*</abbr>註記的欄位是必填欄位。</p>
-        <input type="hidden" name="TopInfo" value="您的朋友轉寄文章給您，原文位址：">
-        <input type="hidden" name="formforward" value="7758.189">
-        <table summary="轉寄文章">
-          <caption>轉寄文章</caption>
+        <table summary="領養表格">
+          <caption>我要領養</caption>
           <tr>
-            <td scope="row"><label for="name">我的名字：</label></td>
-            <td><input type="text" class="text" id="name" name="name" size="40" value="請輸入我的名字" onfocus="javascript: if(this.value=='請輸入我的名字'){this.value='';}"></td>
+            <td><label for="htx_topCat">寵物種類</label></td>
+            <td><select id="htx_topCat" name="htx_topCat" size="1">
+                <option value="">請選擇</option>
+                <option value="00">其他</option>
+                <option value="01">狗</option>
+                <option value="02">貓</option>
+                <option value="03">鳥</option>
+                <option value="04">兔</option>
+                <option value="05">龜</option>
+                <option value="06">鼠</option>
+              </select>
+            </td>
           </tr>
           <tr>
-            <td scope="row"><label for="frommail">我的E-mail：</label></td>
-            <td><input type="text" class="text" id="frommail" name="frommail" size="40" value="請輸入我的E-mail" onfocus="javascript: if(this.value=='請輸入我的E-mail'){this.value='';}"></td>
+            <td><label for="htx_backup_A">其他寵物種類</label></td>
+            <td><input type="text" id="htx_backup_A" name="htx_backup_A" placeholder="請輸入寵物種類"></td>
           </tr>
           <tr>
-            <td scope="row"><label for="tomail"><abbr class="must" title="必填欄位">*</abbr>收件人E-mail：</label></td>
-            <td><input type="text" class="text" id="tomail" name="tomail" size="40" value="請輸入收件人E-mail" onfocus="javascript: if(this.value=='請輸入收件人E-mail'){this.value='';}">
-              <p>PS: Mail Address以逗號[ , ]區隔，即可發多封Mail。</p></td>
+            <td><label for="htx_xabstract">性別</label></td>
+            <td>
+              <label><input type="radio" id="htx_xabstract" name="htx_xabstract" value="00">母</label>
+              <label><input type="radio" id="htx_xabstract" name="htx_xabstract" value="01">公</label>
+            </td>
           </tr>
           <tr>
-            <td scope="row"><label for="msg">給朋友的話：</label></td>
-            <td><textarea id="msg" name="msg" cols="35" rows="12" onfocus="javascript: if(this.value=='請輸入給朋友的話'){this.value='';}" data-gramm="" data-txt_gramm_id="061fa7fd-d0cf-c901-67ba-4a4530b2dd84">請輸入給朋友的話</textarea></td>
+            <td><abbr class="must" title="必填">*</abbr><label for="htx_stitle">品種</label></td>
+            <td><input type="text" id="htx_stitle" name="htx_stitle" placeholder="請輸入寵物品種"></td>
           </tr>
           <tr>
-            <td scope="row"><label for="msg">過長的選項：</label></td>
-            <td><select name="htx_idept" id="htx_idept">
-                <option value="" selected="">請選擇</option>
-                <option value="0">臺中市政府</option>
-                <option value="00P01">臺中市政府原住民族事務委員會‧會本部</option>
-                <option value="00P0101">臺中市政府原住民族事務委員會‧主任委員</option>
-                <option value="00P0102">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</option>
-                <option value="00P0102">主任秘書</option>
-                <option value="00P0103">臺中市政府原住民族事務委員會‧專門委員</option>
-                <option value="00P02">文教福利組</option>
-                <option value="00P03">臺中市政府原住民族事務委員會‧經濟建設及土地管理組</option>
-                <option value="00P04">臺中市政府原住民族事務委員會‧人事室</option>
-                <option value="00R0401">都計測量工程科第一股</option>
-                <option value="00R0402">都計測量工程科第二股</option>
-                <option value="00R05">臺中市政府都市發展局</option>
-                <option value="00R0501">臺中市政府都市發展局‧都市設計工程科第一股</option>
-                <option value="00R0502">臺中市政府都市發展局‧都市設計工程科第二股</option>
-                <option value="00R0503">臺中市政府都市發展局‧都市設計工程科第三股</option>
-                <option value="00Z0A">臺中市北屯區公所‧公用課</option>
-              </select></td>
+            <td><label for="htx_vgroup">毛色</label></td>
+            <td><select id="htx_vgroup" name="htx_vgroup" size="1">
+                <option value="">請選擇</option>
+                <option value="01">黑色</option>
+                <option value="02">黃色</option>
+                <option value="03">白色</option>
+                <option value="04">米色</option>
+                <option value="05">棕色</option>
+                <option value="06">黃白</option>
+                <option value="07">黑白</option>
+                <option value="08">虎斑</option>
+                <option value="09">咖啡</option>
+                <option value="00">其他</option>
+              </select>
+            </td>
           </tr>
           <tr>
-            <td scope="row"><label for="strCAPTCHA"><abbr class="must" title="必填欄位">*</abbr>驗證碼</label>
-              </th>
-            <td><img id="imgCaptcha" src="images/captcha.png" alt="驗證碼圖片" />
-              <input id="strCAPTCHA" name="aspCaptcha" type="text" class="captchaTxt" placeholder="請輸入驗證碼">
-              <embed width="16" height="16" src="captchaWave.swf" name="captchaWave" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" play="true" loop="true" scale="showall" wmode="window" devicefont="false" bgcolor="#ffffff" menu="true" allowfullscreen="false" allowscriptaccess="sameDomain" salign="" type="application/x-shockwave-flash">
-              
-              <noscript>
-              <!--  &lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="16" height="16" id="captchaWave" align="middle"&gt;
-&lt;param name="allowScriptAccess" value="sameDomain" /&gt;
-&lt;param name="allowFullScreen" value="false" /&gt;
-&lt;param name="movie" value="captchaWave.swf" /&gt;&lt;param name="quality" value="high" /&gt;&lt;param name="bgcolor" value="#ffffff" /&gt;
-&lt;embed src="captchaWave.swf" quality="high" bgcolor="#ffffff" width="16" height="16" name="captchaWave" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /&gt;
-語音驗證碼
-&lt;/object&gt;
--->
-              </noscript>
-              <br>
-              如果看不清楚驗證碼，請點圖片<a href="javascript:resetCaptchaA();" title="換一組驗證碼"><img src="/images/refresh_icon.gif" border="0" alt="換一組驗證碼" style="ime-mode:disabled;vertical-align:bottom;*vertical-align:text-bottom;"></a>重新產生一組驗證碼。 </td>
+            <td><label for="htx_backup_B">其他毛色</label></td>
+            <td><input type="text" id="htx_backup_B" name="htx_backup_B" placeholder="請描述毛色"></td>
+          </tr>
+          <tr>
+            <td><label for="htx_xkeyword">年齡</label></td>
+            <td><select id="htx_xkeyword" name="htx_xkeyword" size="1">
+                <option value="">請選擇</option>
+                <option value="00">其他</option>
+                <option value="01">幼犬</option>
+                <option value="02">成犬</option>
+                <option value="03">幼貓</option>
+                <option value="04">成貓</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_backup_C">寵物年齡</label></td>
+            <td><input type="text" id="htx_backup_C" name="htx_backup_C" placeholder="請輸入寵物年齡">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_xContact">要領養人</label></td>
+            <td><input type="text" id="htx_xContact" name="htx_xContact" placeholder="請輸入要領養人姓名">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_xContactTel">聯絡電話</label></td>
+            <td><input type="tel" id="htx_xContactTel" name="htx_xContactTel" placeholder="請輸入聯絡電話">
+            </td>
+          </tr>
+          <tr>
+            <td><abbr class="must" title="必填">*</abbr><label for="htx_xurl">電子郵件</label></td>
+            <td><input type="email" id="htx_xurl" name="htx_xurl" placeholder="請輸入電子郵件">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_xaddress">聯絡地址</label></td>
+            <td><input type="text" id="htx_xaddress" name="htx_xaddress" placeholder="請輸入聯絡地址">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="htx_xbody">備註</label></td>
+            <td><textarea id="htx_xbody" name="htx_xbody" placeholder="其他說明"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr class="must" title="必填">*</abbr><label for="aspCaptcha">驗證碼</label></td>
+            <td><img id="imgCaptcha" src="images/captcha.png" alt="驗證碼" title="點擊換一組驗證碼" onclick="" onkeypress=""><input type="text" id="strCAPTCHA" name="aspCaptcha" placeholder="請輸入圖片上的驗證碼">
+              <p>如按【送出】後出現驗證碼錯誤，請點擊<em>驗證碼圖片</em>或
+                <a href="javascript:resetCaptchaA();"><img src="/images/refresh_icon.gif" alt="換一組驗證碼"></a>
+                重新產生驗證碼。</p>
+              (<a href="#">驗證碼語音檔下載</a>) 
+            </td>
           </tr>
         </table>
         <div class="buttonDiv">
-          <input type="submit" name="send" class="btn" value="送出">
-          <input type="reset" name="reset" class="btn" value="清除重填">
+          <input type="submit" value="送出">
+          <input type="reset" value="清除重填">
         </div>
       </form>
     </section>
-    
+  
+
+
+
+
+
+   
     <!--/.center--></div>
   <footer class="footer"><a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
     <button type="button" class="fatfootCtrl">收合</button>
