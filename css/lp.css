@@ -35,9 +35,14 @@
 .list th,
 .list td{padding:.8em 8px .6em;vertical-align:middle;border-bottom:1px solid #ccc;text-align:center;}
 .list tr:first-child th{white-space:nowrap;}
-.list td{border-bottom:1px solid #d8d8d8;}
+.list td{border-bottom:1px solid #d8d8d8;max-width:300px;}
 .list td img{vertical-align:middle;margin:0 3px;}
 .list td[data-title="姓名"]{font-size:1.2em;text-decoration:underline;}
+.list td[data-title*="名稱"],
+.list td[data-title*="地址"],
+.list td[data-title="業務類別"],
+.list td[data-title="核准飼養頭數"]{text-align: left;}
+
 .list td span{display:block;margin:0 auto;text-align:center;white-space:nowrap;}
 .list td.title{text-align:left;white-space:normal;}
 .list td .date{letter-spacing:0;color:#666;font-family:Arial, Helvetica, sans-serif;}
@@ -294,7 +299,7 @@
 	.list tr{display:block;position:relative;border:1px solid #999;padding:0;margin:0 0 15px;}
 	.list tr:first-child{display:none;}
 	.list th{display:none;}
-	.list td{display:block;padding:.7em .5em .5em;margin:0;text-align:left;}
+	.list td{display:block;padding:.7em .5em .5em;margin:0;text-align:left;max-width: none}
 	.list td:last-child{border:none;}
 	.list table tr:last-child td{border-bottom:1px dotted #ccc;}
 	.list table tr:last-child td:last-child{border:none}
