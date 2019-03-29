@@ -74,8 +74,8 @@
 
 
 
-.linkBtn{float:right;margin:5px 0;font-size:13px;}
-.linkBtn a{display:inline-block;background:url(../images/button_bg.gif) repeat-x;padding:4px 15px 1px;border:1px solid #aaa;box-shadow:rgba(0, 0, 0, 0.3) 0 1px 3px;border-radius:12px;height:16px;text-decoration:none;color:#fff;}
+.linkBtn{margin:5px 0;font-size:13px;display: inline-block;line-height: 1.4;}
+.linkBtn a{display:block;background: #eeeeee;;padding:.8em 1em;box-shadow:rgba(0,0,0,.4) 0 1px 4px;border-radius:5px;text-decoration:none;color:#fff;}
 .linkBtn a:hover{background:#666;}
 
 .jscroll-added small { display:block; text-align:center; margin:1em auto; font-size:.92em;}

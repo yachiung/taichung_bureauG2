@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>台中市政府機關網</title>
+<title>動物處特殊版</title>
 <link href="css/layout.css" rel="stylesheet" type="text/css">
 <link href="css/styleC.css" rel="stylesheet" type="text/css">
 <link media="print" href="css/print.css" rel="stylesheet" type="text/css">
@@ -143,85 +143,94 @@
       <h2>臺中市友善寵物空間</h2>
     </header>
 
-    <section class="animalSearch">
-      <form>
-        <table summary="臺中市友善寵物空間-條件查詢">
-          <tr>
-            <td><label for="htx_stitle">空間名稱</label></td>
-            <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入空間名稱"></td>
-          </tr>
-          <tr>
-            <td><label for="htx_topCat">服務類別</label></td>
-            <td>
-              <label><input type="checkbox" name="htx_topCat" id="htx_topCat10" value="10">餐飲</label>
-              <label><input type="checkbox" name="htx_topCat" id="htx_topCat20" value="20">交通</label>
-              <label><input type="checkbox" name="htx_topCat" id="htx_topCat30" value="30">住宿</label>
-              <label><input type="checkbox" name="htx_topCat" id="htx_topCat40" value="40">娛樂</label>
-              <label><input type="checkbox" name="htx_topCat" id="htx_topCat50" value="50">其他</label>
-            </td>
-          </tr>
-          <tr>
-            <td><label for="htx_topCats">允許入內之寵物別</label></td>
-            <td>
-              <label><input type="checkbox" name="htx_topCats" id="htx_topCats10" value="10">犬</label>
-              <label><input type="checkbox" name="htx_topCats" id="htx_topCats20" value="20">貓</label>
-              <label><input type="checkbox" name="htx_topCats" id="htx_topCats30" value="30">其他</label>
-            </td>
-          </tr>
-          <tr>
-            <td><label for="htx_vgroup">區域</label></td>
-            <td><select name="htx_vgroup" id="htx_vgroup">
-                <option value="" selected="">請選擇</option>
-                <option value="001">中區</option>
-                <option value="002">東區</option>
-                <option value="003">南區</option>
-                <option value="004">西區</option>
-                <option value="005">北區</option>
-                <option value="006">北屯區</option>
-                <option value="007">西屯區</option>
-                <option value="008">南屯區</option>
-                <option value="010">豐原區</option>
-                <option value="011">大里區</option>
-                <option value="012">太平區</option>
-                <option value="013">東勢區</option>
-                <option value="014">大甲區</option>
-                <option value="015">清水區</option>
-                <option value="016">沙鹿區</option>
-                <option value="017">梧棲區</option>
-                <option value="018">后里區</option>
-                <option value="019">神岡區</option>
-                <option value="020">潭子區</option>
-                <option value="021">大雅區</option>
-                <option value="022">新社區</option>
-                <option value="023">石岡區</option>
-                <option value="024">外埔區</option>
-                <option value="025">大安區</option>
-                <option value="026">烏日區</option>
-                <option value="027">大肚區</option>
-                <option value="028">龍井區</option>
-                <option value="029">霧峰區</option>
-                <option value="030">和平區</option>
-                <option value="0">全區</option>
-              </select></td>
-          </tr>
-        </table>
-        <div class="buttonDiv">
-          <input type="submit" value="送出">
-          <input type="reset" value="清除重填">
+    <div class="multiColumn">
+      <article class="bulletin">
+        <p>本站訊息僅供參考，正確資訊皆以各空間發布為準。如有訊息勘誤，請洽動物保護組柯小姐。</p>
+        <p>電話：04-23869425#105，電子信箱：<a href="mailto:vforvet611@taichung.gov.tw">vforvet611@taichung.gov.tw</a></p>
+        <!-- <span class="linkBtn"><a href="#" target="_blank">我要加入<em>友善寵物空間認證</em></a></span> -->
+        <div class="linkBtnGp">
+          <ul>
+            <li class="joinUs"><a href="#" target="_blank">我要加入<em>友善寵物空間認證</em></a></li>
+            <li><a title="開新視窗，連結「Pet你玩台中粉絲頁」" href="#" target="_blank">Pet 你玩台中粉絲頁</a></li>
+            <li><a title="開新視窗，連結「阿毛的台中旅遊指南」" href="#" target="_blank">阿毛的台中旅遊指南</a></li>
+          </ul>
         </div>
-      </form>
-    </section>
-    <article class="bulletin">
-      <span class="btn join"><a href="http://www.animal.taichung.gov.tw/ct.asp?xItem=1897910&amp;ctNode=33338&amp;mp=119020" target="_blank">我要加入<em>友善寵物空間認證</em></a></span>
+    
+      </article>
+      <section class="animalSearch">
+        <form>
+          <table summary="臺中市友善寵物空間查詢">
+            <tr>
+              <td><label for="htx_stitle">空間名稱</label></td>
+              <td><input type="text" name="htx_stitle" id="htx_stitle" placeholder="請輸入空間名稱"></td>
+            </tr>
+            <tr>
+              <td><label for="htx_topCat">服務類別</label></td>
+              <td>
+                <label><input type="checkbox" name="htx_topCat" id="htx_topCat10" value="10">餐飲</label>
+                <label><input type="checkbox" name="htx_topCat" id="htx_topCat20" value="20">交通</label>
+                <label><input type="checkbox" name="htx_topCat" id="htx_topCat30" value="30">住宿</label>
+                <label><input type="checkbox" name="htx_topCat" id="htx_topCat40" value="40">娛樂</label>
+                <label><input type="checkbox" name="htx_topCat" id="htx_topCat50" value="50">其他</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="htx_topCats">允許入內之寵物別</label></td>
+              <td>
+                <label><input type="checkbox" name="htx_topCats" id="htx_topCats10" value="10">犬</label>
+                <label><input type="checkbox" name="htx_topCats" id="htx_topCats20" value="20">貓</label>
+                <label><input type="checkbox" name="htx_topCats" id="htx_topCats30" value="30">其他</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="htx_vgroup">區域</label></td>
+              <td><select class="select" name="htx_vgroup" id="htx_vgroup">
+                  <option value="" selected="">請選擇</option>
+                  <option value="001">中區</option>
+                  <option value="002">東區</option>
+                  <option value="003">南區</option>
+                  <option value="004">西區</option>
+                  <option value="005">北區</option>
+                  <option value="006">北屯區</option>
+                  <option value="007">西屯區</option>
+                  <option value="008">南屯區</option>
+                  <option value="010">豐原區</option>
+                  <option value="011">大里區</option>
+                  <option value="012">太平區</option>
+                  <option value="013">東勢區</option>
+                  <option value="014">大甲區</option>
+                  <option value="015">清水區</option>
+                  <option value="016">沙鹿區</option>
+                  <option value="017">梧棲區</option>
+                  <option value="018">后里區</option>
+                  <option value="019">神岡區</option>
+                  <option value="020">潭子區</option>
+                  <option value="021">大雅區</option>
+                  <option value="022">新社區</option>
+                  <option value="023">石岡區</option>
+                  <option value="024">外埔區</option>
+                  <option value="025">大安區</option>
+                  <option value="026">烏日區</option>
+                  <option value="027">大肚區</option>
+                  <option value="028">龍井區</option>
+                  <option value="029">霧峰區</option>
+                  <option value="030">和平區</option>
+                  <option value="0">全區</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <div class="buttonDiv">
+            <input type="submit" value="送出">
+            <input type="reset" value="清除重填">
+          </div>
+        </form>
+      </section>
+    </div>
 
+    <section class="petsFrMap">
       <iframe title="臺中市友善寵物空間地圖" src="https://www.google.com/maps/d/embed?hl=en&amp;mid=15yMgoJSa9y-A5MmYOLmO96X1eKQ" width="540" height="500"></iframe>
-
-      <p>本站訊息僅供參考，正確資訊皆以各空間發布為準。如有訊息勘誤，請洽動物保護組柯小姐，<br>電話：04-23869425#105，電子信箱：<a href="mailto:vforvet611@taichung.gov.tw">vforvet611@taichung.gov.tw</a></p>
-
-      <a title="開新視窗-Pet你玩台中粉絲頁" href="https://m.facebook.com/Pet.Taichung/" target="_blank">Pet你玩台中粉絲頁</a>
-      <a title="開新視窗-阿毛的台中旅遊指南" href="http://www.animal.taichung.gov.tw/ct.asp?xItem=2001285&amp;ctNode=36229&amp;mp=119020" target="_blank">阿毛的台中旅遊指南</a>
-    </article>
-
+    </section>
 
     <section class="page" title="分頁功能">
       <p>共 430 筆資料，第<abbr title="目前在第19頁，總共43頁">19/43</abbr>頁，
@@ -344,7 +353,7 @@
         </tr>
       </table>
 
-      <span class="nextPage"><a href="animal_qp+lp_合法動物醫院名錄.html">下一頁</a></span>
+      <span class="nextPage"><a href="animal_qp+lp_合法寵物業者名冊.html">下一頁</a></span>
     </section>
       
     <section class="page" title="分頁功能">

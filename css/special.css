@@ -315,7 +315,6 @@
 	.missingFinding li a:before{content: '';position: absolute;width: 64px;height: 64px;left: 4px;top: 4px;background: #333 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;}
 }
 @media screen and (min-width:801px){
-	.missingFinding {}
 	.missingFinding ul {float: right}
 	.missingFinding li{float: left;margin: 0 0 5px 5px;padding:0;}
 	/* .missingFinding li a{position: relative;line-height: 70px;height: 72px;padding:0 15px 0 76px;border-radius: 80px;}
@@ -324,4 +323,30 @@
 	.bulletin .missingFinding{margin: 0 -2%;width: auto}
 	.bulletin .missingFinding ul{padding:4px 5px 8px;}
 	.bulletin .missingFinding li{margin: 0 .6% 10px;padding:0;min-width:9em;width: 32%;max-width:none;}
+}
+
+.petsFrMap{border:none;margin: 0 auto 15px;}
+.petsFrMap iframe{display: block;width: 100%;border: none;}
+.linkBtnGp ul{list-style: none;margin: 0 auto;padding:6px 0;}
+.linkBtnGp li{line-height: 1.3;margin: 0;padding:1px 0;}
+.linkBtnGp li a{display: block;text-align: center;text-decoration: none;padding:6px;background: #fff;color: #555;border-radius: 4px;box-shadow: rgba(0,0,0,.4) 0 1px 5px;margin: 0 0 2px;transition: .1s;}
+.linkBtnGp li a:hover,
+.linkBtnGp li a:focus{box-shadow: rgba(0,0,0,.7) 0 0 2px;margin: 2px 0 0;background-color: #fff;color: #000;outline: none}
+.linkBtnGp li a:before,
+.linkBtnGp li:first-child em:before{content: '';display: inline-block;width: 48px;height: 48px;vertical-align: middle;margin-right: 6px;background: url(../images/animalFriendly.png) no-repeat 0 0;background-size: 48px auto;}
+.linkBtnGp li:first-child a:before{width: 0;}
+.linkBtnGp li:nth-child(3) a:before{background-position: 0 -50px;}
+.linkBtnGp li:first-child em:before{background-position: 0 -100px;margin-left: 6px;}
+.linkBtnGp li em{color: #555;font-size: 1.1em;}
+.linkBtnGp li a:hover em,
+.linkBtnGp li a:focus em{color: #000}
+.linkBtnGp li:first-child{text-align: center}
+@media screen and (min-width:601px){
+	.linkBtnGp ul{overflow: hidden;}
+	.linkBtnGp li{float: left;line-height: 1.3;margin: 0 1%;width: 48%}
+	.linkBtnGp li:first-child{float: none;width:auto;}
+	.linkBtnGp li em{color: #555;font-size: 1.3em;}
+}
+@media screen and (min-width:1001px){
+	.petsFrMap{border:none;width: 96%;margin: -10px auto 15px;}
 }
