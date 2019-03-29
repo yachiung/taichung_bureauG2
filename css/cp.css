@@ -584,10 +584,10 @@ header + .qp {padding-top: 1em}
 .askBtn a:hover,
 .askBtn a:focus{text-decoration: none;color: #fff;background: #00b5d0;box-shadow: #6ed9e9 0 0 0 3px;}
 /* 萌指數 button */
-.like{display: inline-block;font-size: 1em;}
-.like input[type="button"] {color: transparent;padding: 0;margin: 0 3px 0 0;;width: 35px;height: 30px;line-height: 30px;background:url(../images/like.png) no-repeat 0 0;  cursor:pointer;}
+.like{display: inline-block;font-size: 1em;line-height:40px; }
+.like input[type="button"] {color: transparent;padding: 0;margin: 0 4px 0 0;;width: 44px;height: 40px;background:url(../images/iconLovely.png) no-repeat 0 0;  cursor:pointer;background-size:100% auto}
 .like input[type="button"]:hover,
-.like input[type="button"]:focus { background-position:0 -30px;outline: none}
+.like input[type="button"]:focus { background-position:0 -50px;outline: none}
 /* 本日新增 */
 .newArrival {width:124px; height:72px; background:url(../images/newArrival.png) no-repeat 0 0;font-size: 0;}
 
@@ -648,8 +648,8 @@ table.meta4col,
 @media screen and (min-width:601px){
 	.meta4col tr:hover{background: #f4f5f5;}
 	.profileList li .like ,
-	.profileList li .askBtn{margin:12px 0 0;float: left;}
-	.profileList li .askBtn+.like{margin-left: 15px;padding-top: 7px;}
+	.profileList li .askBtn{margin:0;float: left;}
+	.profileList li .askBtn+.like{margin-left: 10px;}
 	.profileList li .askBtn + p.hint{float:right;width:calc(100% - 12em);}
 }
 @media screen and (min-width:801px){
@@ -661,9 +661,8 @@ table.meta4col,
   .profileList.noPicture li .meta4col{float: none;width: 100%}
 
 	.profileList li .askBtn,
-	.profileList li .like {float: left;}
+	.profileList li .like {float: left;margin-top: 8px;}
 	.profileList.noPicture li .askBtn{float: none;}
-	.profileList li .askBtn + .like{margin-left: 1em;}
 	.profileList li .askBtn,
 	.profile .askBtn{clear: both;}
 

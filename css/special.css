@@ -182,7 +182,7 @@
 
 
 /* 20190306 Animal */
-.multiColumn{margin:0;overflow: hidden;background: #f3f3f3;}
+.multiColumn{margin:0;overflow: hidden;background: #f1f3ea;}
 .multiColumn>.bulletin{padding: 3em 3% 1.5em;background:url(../images/pets_bg.png) no-repeat right 15px; }
 .multiColumn>.bulletin:before{content: '';float: right;width: 80px;height: 60px;}
 .bulletin {line-height: 1.5;}
@@ -201,12 +201,12 @@
 .bulletin em{color: #c00; font-weight: normal;}
 
 
-.animalSearch{width: 96%;margin: 2vw auto 0;padding: 1.5em 0;border-radius: 5px;background: #5c5c5c;color: #fff;}
+.animalSearch{width: 96%;margin: 2vw auto 0;padding: 1.5em 0;border-radius: 5px;background: #686d64;color: #fff;}
 .animalSearch>*{margin-left: auto;margin-right: auto; width: 94%;}
 .animalSearch>*+*{margin-top: 1.5em;}
 .multiColumn .animalSearch{padding-top: 2.5em;border-radius: 0;width: 100%;margin:0;}
 
-.animalSearch form table{width: 100%;max-width:500px;margin: 0 auto;background: #555;}
+.animalSearch form table{width: 100%;max-width:500px;margin: 0 auto;}
 .animalSearch form table caption{font-size: 1.25em;margin-bottom: .5em;}
 .animalSearch form table caption i{font-style: normal;font-size: .82em;display: block;}
 .animalSearch form th,
@@ -235,7 +235,11 @@
 .animalSearch textarea{height: 6em;min-height: 0;width: 96%;width: calc(98% - .8em)}
 
 .animalSearch select:only-child{width: 98%;}
-.animalSearch input[type="text"]:only-child{width: 96%;width: calc(98% - .8em)}
+.animalSearch input[type="text"]:only-child,
+.animalSearch input[type="tel"]:only-child,
+.animalSearch input[type="email"]:only-child,
+.animalSearch input[type="number"]:only-child,
+.animalSearch input[type="date"]:only-child{width: 96%;width: calc(98% - .8em)}
 .animalSearch input.dateInput + .clearDate {margin-left: 4px;}
 .animalSearch button.clearDate:hover,
 .animalSearch button.clearDate:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;}
