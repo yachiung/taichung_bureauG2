@@ -117,8 +117,8 @@
 .row:not(.gutter):not(.gutter1)>.epb{box-shadow:none;}
 .epb.trash{background:#8cc11f;color:#fff;}
 .epb a{color:#fff;}
-.row>.epb h2{float:left;width:37%;text-align:center;letter-spacing:3px;padding: .3em 0 0;/*border-right: 1px solid #fff;*/}
-.epb .icon{position:absolute;left:0;width:37%;top:5em;/*border-right: 1px solid #fff;*/}
+.row>.epb h2{float:left;width:37%;text-align:center;letter-spacing:3px;padding: .3em 0 0;}
+.epb .icon{position:absolute;left:0;width:37%;top:5em;}
 .epb .icon img{display:block;margin:10px auto;width:96px;}
 
 .epb h3,
@@ -131,9 +131,7 @@
 .epb .more a:before{color:#f5ffa0}
 .epb .more a:hover,
 .epb .more a:hover:before{color:#00705f}
-@media screen and (min-width:601px){
-	/*.epb:before{bottom:4.5em;}*/
-}
+
 @media screen and (min-width:1001px){
 	.row>.epb h2{float: none;width: auto;height:80px;line-height:110px !important;margin-left:100px;margin-right: 10%;border: none;padding:0;}
 	.epb:before{display: none;}
@@ -163,8 +161,7 @@
 .qa li .detail a:hover,
 .qa li .detail a:focus{border-color:#000;box-shadow: rgba(0,0,0,.5) 0 1px 5px;}
 .qa .question:before,
-.qa .answer:before{position:absolute;left:-10px;top:10px;text-indent: 5px;
-	/*left:12px;top:9px;*/width:44px;height:44px;line-height:44px;background:#bbb;color:#fff;font-size:20px;text-align:center;border-radius:50%;font-weight:normal;}
+.qa .answer:before{position:absolute;left:-10px;top:10px;text-indent: 5px;width:44px;height:44px;line-height:44px;background:#bbb;color:#fff;font-size:20px;text-align:center;border-radius:50%;font-weight:normal;}
 .qa .question:before{content:'問';}
 .qa .answer:before{content:'答';background:#555;}
 .no-js .qa .answer{display:block;}
@@ -234,7 +231,7 @@
 .animalSearch button.clearDate{height: 2.1em;width: 2.1em;}
 .animalSearch textarea{height: 6em;min-height: 0;width: 96%;width: calc(98% - .8em)}
 
-.animalSearch select:only-child{width: 98%;}
+.animalSearch select:only-child{width: 96%;width: calc(98% - .9em);}
 .animalSearch input[type="text"]:only-child,
 .animalSearch input[type="tel"]:only-child,
 .animalSearch input[type="email"]:only-child,
@@ -260,19 +257,19 @@
 	.animalSearch form td:nth-child(2){width: 72%;}
 	/* 模擬背景延伸 */
 	.multiColumn{position: relative;}
-	.multiColumn:after{content: '';position: absolute;right: 0;bottom: 0;width: 41%;top: 0;background: #5c5c5c;}
+	.multiColumn:after{content: '';position: absolute;right: 0;bottom: 0;width: 41%;top: 0;background: #686d64;}
 }
 @media screen and (min-width:1001px){
+	.animalSearch select:only-child{width: 98%;}
 	.multiColumn{width: 96%;margin: 1em auto;}
 	.animalSearch,
 	.bulletin{width: 96%;margin: 0 auto;padding-left: 0;padding-right: 0;}
 	.multiColumn .animalSearch
 	.multiColumn .bulletin{margin: 0;width: auto;}
 	
+	
 }
-@media screen and (min-width:1060px){
-	/* .multiColumn>.animalSearch form td button[id*="htx_xpostDate"] ~ br{display: none} */
-}
+
 
 /* 送、領養佈告欄 */
 .switchTo {margin: 1em auto;padding: 0;}
@@ -310,7 +307,6 @@
 
 .bulletin .missingFinding ul{float: none;padding:4px 5px 8px;text-align: center;}
 .bulletin .missingFinding li{margin: 0 .6% 10px;display: inline-block;width: 31%;max-width:10em; }
-/* .bulletin .missingFinding li a{padding:8px 0 6px;} */
 @media screen and (min-width:601px){
 	.missingFinding{width: 96%;margin: 10px auto 0;overflow: hidden;}
 	.missingFinding ul{float: right;}
@@ -321,8 +317,6 @@
 @media screen and (min-width:801px){
 	.missingFinding ul {float: right}
 	.missingFinding li{float: left;margin: 0 0 5px 5px;padding:0;}
-	/* .missingFinding li a{position: relative;line-height: 70px;height: 72px;padding:0 15px 0 76px;border-radius: 80px;}
-	.missingFinding li a:before{content: '';position: absolute;width: 64px;height: 64px;left: 4px;top: 4px;background: #333 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;} */
 	
 	.bulletin .missingFinding{margin: 0 -2%;width: auto}
 	.bulletin .missingFinding ul{padding:4px 5px 8px;}
