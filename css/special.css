@@ -146,43 +146,18 @@
 
 
 
-.qa{background:#fff;}
-.qa ol{width:92vw;margin:.6em auto 0;}
-.qa li{line-height:1.5;border:1px solid #aaa;margin-top:-1px;overflow:auto;}
-.qa li p{position:relative;margin:0;}
-.qa .question{font-size:1.2em;}
-.qa .question>a{position:relative;display:block;padding:15px 36px 15px 44px;text-decoration: none;}
-.qa .question>a:after{content:'';position:absolute;right:10px; top:25px;width:16px; height:16px;border:2px solid #777;border-top:none;border-left:none;transform:rotate(-135deg);transition:.4s;}
-.qa .hiddenAns .question>a:after{transform:rotate(45deg);top:18px;}
-.qa .answer{border-top:1px dashed #bbb;padding:15px 12px 15px 44px;}
-.qa .hiddenAns .answer{display:none;}
-.qa li .detail {display:block;text-align:right;margin:.3em 12px 0 1em;line-height:1.5;}
-.qa li .detail a{display:inline-block;text-decoration:none;border:1px solid #bbb;padding:0 .8em;line-height:1.8em;height:1.8em;transition: .2s;}
-.qa li .detail a:hover,
-.qa li .detail a:focus{border-color:#000;box-shadow: rgba(0,0,0,.5) 0 1px 5px;}
-.qa .question:before,
-.qa .answer:before{position:absolute;left:-10px;top:10px;text-indent: 5px;width:44px;height:44px;line-height:44px;background:#bbb;color:#fff;font-size:20px;text-align:center;border-radius:50%;font-weight:normal;}
-.qa .question:before{content:'問';}
-.qa .answer:before{content:'答';background:#555;}
-.no-js .qa .answer{display:block;}
-@media screen and (min-width:601px){
-	.qa ol{width:88%;}
-	.qa .question>a{padding-right:48px;}
-	.qa .question>a:after{right:20px;}
-	.qa .question>a,
-	.qa .answer{padding-left: 68px;}
-	.qa .question:before,
-	.qa .answer:before{left:12px;top:9px;text-indent: 0;}
-	.qa .question:before{top:8px;}
+.qp.regForm{margin:0;padding: 3em 3%;background:#fff;}
+@media screen and (min-width:1001px){
+	.qp.regForm{margin:1em auto 3em;width: 90%;box-shadow: rgba(0,0,0,.4) 0 1px 6px;}
 }
 
 
 
 /* 20190306 Animal */
 .multiColumn{margin:0;overflow: hidden;background: #f1f3ea;}
-.multiColumn>.bulletin{padding: 3em 3% 1.5em;background:url(../images/pets_bg.png) no-repeat right 15px; }
-.multiColumn>.bulletin:before{content: '';float: right;width: 80px;height: 60px;}
-.bulletin {line-height: 1.5;}
+.bulletin {line-height: 1.5;padding:2.5em 3% 1.5em;background: #f1f3ea;}
+.multiColumn>.bulletin{background:url(../images/pets_bg.png) no-repeat right 15px; }
+.multiColumn>.bulletin:before{content: '';float: right;width: 80px;height: 60px;border: 1px solid #000;}
 .bulletin h3{margin: 0 0 1em;font-size: 1.25em;}
 .bulletin p{margin: 1.2em 0;}
 .bulletin ul {list-style: disc;}
@@ -263,10 +238,9 @@
 	.animalSearch select:only-child{width: 98%;}
 	.multiColumn{width: 96%;margin: 1em auto;}
 	.animalSearch,
-	.bulletin{width: 96%;margin: 0 auto;padding-left: 0;padding-right: 0;}
-	.multiColumn .animalSearch
-	.multiColumn .bulletin{margin: 0;width: auto;}
-	
+	.bulletin{width: 90%;margin: 0 auto;}
+	.multiColumn .animalSearch,
+	.multiColumn .bulletin{margin: 0;width: auto;padding-left: 0;padding-right: 0;}
 	
 }
 
@@ -315,8 +289,8 @@
 	.missingFinding li a:before{content: '';position: absolute;width: 64px;height: 64px;left: 4px;top: 4px;background: #333 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;}
 }
 @media screen and (min-width:801px){
-	.missingFinding ul {float: right}
-	.missingFinding li{float: left;margin: 0 0 5px 5px;padding:0;}
+	.missingFinding ul {float: right;padding-right: 5px}
+	.missingFinding li{float: left;margin: 0 0 0 5px;padding:0;}
 	
 	.bulletin .missingFinding{margin: 0 -2%;width: auto}
 	.bulletin .missingFinding ul{padding:4px 5px 8px;}

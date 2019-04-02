@@ -67,7 +67,7 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .flowerCountdown{background:rgba(63,69,52,.75);}
 .flowerCountdown:before{background:#3f4534 }
 
-.header .search{top:28px;}
+/* .header .search{top:28px;} */
 .header .search form a{color:#3f4534;padding:0 .4em;margin-left:3px;}
 .header .search form a:hover,
 .header .search form a:focus{outline:none;background:#009ba4;color:#fff;}

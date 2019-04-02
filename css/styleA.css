@@ -44,7 +44,7 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 .header .navigation li a:focus{color:#bdf21c;}
 .header .navigation li a:focus{background:#000;}
 
-.header .search{top:28px;}
+/* .header .search{top:28px;} */
 .header .search input[type="submit"]{background:#199986 url(../images/search_submit.png) no-repeat center center;background-size:1.8em;color:transparent;width:2.5em;}
 .header .search input[type="submit"]:hover,
 .header .search input[type="submit"]:focus{background-color:#344;outline:none;}

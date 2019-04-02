@@ -12,15 +12,15 @@
 .header .navigation li{float:left;margin:0 .8em;}
 .header .navigation li a{display:inline-block;height:2.15em;line-height:2.15em;padding:0 2px;text-decoration:none;}
 
-.header .search{position:absolute;right:0;top:30px;width:31%;}
+.header .search{position:absolute;right:0;top:33px;width:31%;}
 .header .search label{font-size:0;}
 .header .search form{display:inline-block;vertical-align:top;}
-.header .search form input{vertical-align:top;margin:0;padding:0 .5em;border:none;height:2.4em;line-height:2.4em;float:left;}
+.header .search form input{vertical-align:top;margin:0;padding:0 .5em;border:none;border-radius: 0;height:2.4em;line-height:2.4em;float:left;}
 .header .search input[type="submit"]{padding:0;}
 .header .search input[type="text"]{width:10em;border:1px solid #bbb;box-sizing:border-box;/* border-radius: 0; */}
 .header .search form a{display:inline-block;height:2.4em;line-height:2.4em;margin:0;padding:0 2px;text-decoration:none;}
 .search .keywordHot{display:block;}
-.keywordHot{vertical-align:middle;}
+.keywordHot{vertical-align:middle;margin-top: -5px;}
 .keywordHot ul{display:inline-block;line-height:2em;height:2em;font-size:.87em;}
 .keywordHot li{margin:0 .6em 0 0;padding:0;display:inline-block;}
 .keywordHot li a:hover,

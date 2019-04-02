@@ -507,7 +507,6 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 /*---qp 2019 new*/
 .center .qp header{margin:0 3px 3px;border:none;}
 header + .qp {padding-top: 1em}
-.qp{border: 1px dashed #f99;}
 /*
 .qp table{border: 1px dashed #f99;}
 .qp th,
