@@ -205,8 +205,8 @@ form th,
 form td{padding:.5em 2px;vertical-align:top;}
 form th,
 form td:first-child{text-align:right;font-weight:normal;max-width:15em;padding-right:.4em;line-height:2.5em;}
-form td:first-child label{margin-right: .2em;}
-form td:nth-child(even) label{display: inline-block;margin:0 1em 7px 0;line-height:2.2em;}
+form td label{display: inline-block;margin:0 1em 7px 0;line-height:2.2;}
+form td:first-child label{margin:0 .2em 0 0;line-height:inherit;}
 form td p{line-height:1.2;margin:.3em 0 .5em;}
 
 input,
@@ -251,7 +251,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"]{height:2.4em;line-height:2.4em;cursor:pointer;border:none;cursor:pointer;}
 
-input.dateInput{width: 6em;}
+input.dateInput{width: 5.5em;}
 button.clearDate{width: 2.4em;text-indent: -5em;overflow: hidden;background:#7faf0b url(../images/icon_close.png) no-repeat center center;background-size: 16px;border-radius: 4px;vertical-align:top;transition: .15s;}
 button:hover,
 button:focus{box-shadow:#99c300 0 0 0 2px;background-color: #99c300;outline: none;}
@@ -296,4 +296,21 @@ input[type="file"]{-webkit-appearance:none;width:12em;}
 	input[type="checkbox"]{font-size:1.2em;}
 
 	input.dateInput{width: 6em;}
+}
+
+/* 可開合區 */
+.aDrawer {position: relative;min-height: 44px;}
+.aDrawer.closed .toggleArea{display: none;}
+.no-js .aDrawer.closed .toggleArea{display: block;}
+.aDrawer .toggleCtrl{position: absolute;right: 2%;top: 8px;width: 44px;height: 44px;border-radius: 50%;transition: .2s;font-size: 0;background: none;}
+.aDrawer .toggleCtrl:after{content:'';position: absolute;left:50%;top: 17px;margin-left:-8px;width:14px;height:14px;border:3px solid #666;transform:rotate(45deg);border-bottom:none;border-right:none;transition:border-color .2s, transform .6s, top .6s;}
+.aDrawer.closed .toggleCtrl:after{transform:rotate(225deg);top: 11px;}
+.aDrawer .toggleCtrl:hover,
+.aDrawer .toggleCtrl:focus{background:#8cb7b1;outline: none;box-shadow: none;}
+.aDrawer .toggleCtrl:hover{box-shadow: #8cb7b1 0 0 0 2px;}
+.aDrawer .toggleCtrl:hover:after,
+.aDrawer .toggleCtrl:focus:after{border-color: #fff;}
+.aDrawer .toggleCtrl ~ .hint{display:none;}
+@media screen and (min-width:1001px){
+	.aDrawer .toggleCtrl ~ .hint{position:absolute;right:0;top:-2em;background-color:#fff;padding:.3em .5em;font-size: .85rem;color: #555;border-radius: 3px;border: 1px dotted #f66;}
 }

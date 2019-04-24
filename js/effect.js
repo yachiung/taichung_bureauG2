@@ -55,6 +55,7 @@ $(document).ready(function(){
 	tabSet();
 	evenColH();
 	drawer();
+	optionGp();
 
 	if (ww <= wwMedium ) {
 		$('.list, .thumbnail').jscroll({
@@ -616,22 +617,63 @@ function photoShow(){//相簿內頁
 // 隱藏／展開
 function drawer(){
 	$('.aDrawer').each(function(){
+		var _aDrawer = $(this);
+		_aDrawer.wrapInner('<div class="toggleArea"></div>');
+		_aDrawer.prepend('<button class="toggleCtrl" title="點擊可展開或收合">開合</button>');
+		var _toggleArea = _aDrawer.find('.toggleArea'),
+				_toggleCtrl = _aDrawer.find('.toggleCtrl');
 
-		var _aDrawer = $(this),
-				_toggleCtrl = _aDrawer.find('.toggleCtrl'),
-				_toggleArea = _aDrawer.find('.toggleArea');
-		
 		_toggleCtrl.after('<span class="hint">按 enter 鍵展開／收合，按 tab 鍵往下游走</span>');
-		_aDrawer.addClass('closed');
 
-		_toggleCtrl.click(function(e){
-			_toggleArea.stop(true, true).slideToggle(600);
-			_aDrawer.toggleClass('closed');
-			e.preventDefault();
+		if(_aDrawer.hasClass('animalSearch')){
+			_aDrawer.prepend('<span class="drawerCaption">' + _aDrawer.find('caption').html() + '</span>');
+			_aDrawer.find('caption').hide();
+		};
+		var _drawerCaption = _aDrawer.find('.drawerCaption');
+
+		_toggleCtrl.add(_drawerCaption).click(function(){
+			if(_toggleArea.is(':visible')){
+				_toggleArea.stop(true, true).slideUp(500, function(){_aDrawer.addClass('closed')});
+			} else {
+				_toggleArea.stop(true, true).slideDown(500, function(){_aDrawer.removeClass('closed')});
+			}
 		});
 		_toggleCtrl.on('keyup', function(){
 			$(this).next('.hint').stop(true, true).fadeIn(200).delay(5000).fadeOut(500);
 		});
-
 	});
+}
+
+
+//checkbox and radio redesign
+function optionGp(){	
+  $('.optionGp').each(function(){
+    var _optionGp = $(this),
+        _radioOption = _optionGp.find('input[type="radio"]'),
+        _checkOption = _optionGp.find('input[type="checkbox"]');
+
+    _optionGp.has(_radioOption).addClass('single');
+    _optionGp.has(_checkOption).addClass('multi');
+    _optionGp.find('input[checked]').parent().addClass('isSelected');
+
+    _radioOption.click(function(){
+    	_radioOption.removeAttr('checked').parent().removeClass('isSelected');
+      $(this).attr('checked','checked').parent().addClass('isSelected');
+    });
+    _radioOption.add(_checkOption).focus(function(){
+    	$(this).parent().css('border-color','#ffc');
+    })
+    _radioOption.add(_checkOption).focusout(function(){
+    	$(this).parent().css('border-color','transparent');
+    })
+
+
+    _checkOption.click(function(){
+      if( $(this).parent().hasClass('isSelected') ){
+        $(this).removeAttr('checked').parent().removeClass('isSelected');
+      } else {
+        $(this).attr('checked','checked').parent().addClass('isSelected');
+      }
+    });
+  })
 }
