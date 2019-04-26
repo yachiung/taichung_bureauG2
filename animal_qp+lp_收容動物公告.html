@@ -28,7 +28,8 @@
         <li><a href="#">常見問答</a></li>
       </ul>
     </nav>
-    <section class="search"> <div class="keywordHot">
+    <section class="search">
+      <div class="keywordHot">
         <ul>
           <li><a href="#">熱門</a></li>
           <li><a href="#">關鍵字</a></li>
@@ -165,7 +166,9 @@
         <tr>
           <td><label for="htx_SaveDate_S">收容日期</label></td>
           <td>
-            <input type="text" class="dateInput" readonly="readonly" name="htx_SaveDate_S" id="htx_SaveDate_S" placeholder="點擊選日期"><button id="btnShowhtx_htx_SaveDate_S" title="清除" class="clearDate">清除</button> ～ <input type="text" class="dateInput" readonly="readonly" name="htx_SaveDate_E" id="htx_SaveDate_E" placeholder="點擊選日期"><button id="btnShowhtx_SaveDate_E" title="清除" class="clearDate">清除</button>
+            <div class="datePeriod"><input type="text" readonly="readonly" name="htx_SaveDate_S" id="htx_SaveDate_S" value="2019-04-26" placeholder="點擊選日期"><button class="clearDate" id="btnShowhtx_htx_SaveDate_S" title="清除日期">清除</button> ～
+            <input type="text" readonly="readonly" name="htx_SaveDate_E" id="htx_SaveDate_E" placeholder="點擊選日期"><button  
+            class="clearDate" id="btnShowhtx_SaveDate_E" title="清除日期">清除</button></div>
           </td>
         </tr>
         <tr>

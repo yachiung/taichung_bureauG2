@@ -478,9 +478,9 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 	.forwardForm textarea,
 	.forwardForm select {width:100%; max-width:none;}
 
-	.center .buttonDiv{ margin-left:0; margin-right:0}
+	/* 20190426 .center .buttonDiv{ margin-left:0; margin-right:0} */
 
-	img#imgCaptcha{width:280px;}
+	img#imgCaptcha{width:280px;width: 48%}
 	img#imgCaptcha + input[type="text"] { margin-left:8px; width:12em; vertical-align:top;}
 }
 @media (max-width:600px){
@@ -489,15 +489,16 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 	.forwardForm .note,
 	.forwardForm .note + form{float:none;width:auto;margin:0;padding:1.5em 5vw 1em;}
 	.forwardForm .note + form{padding:1em 4vw 2em;background:none;}
+	img#imgCaptcha{width: 48%}
 
 }
 
 /*---qp 2019 new*/
 .center .qp header{margin:0 3px 3px;border:none;}
 
-.qp{margin:0 auto;padding: 3em 3%;background:#f6f6f6;width:auto}
-.qp form table{width:92vw;}
-.qp td:first-child{padding-top: 1em;padding-bottom: 3px;color: #777;font-weight: bold;}
+.qp{width: 90%;margin:1em auto;padding: 3em 3%;background:#f6f6f6;border-radius: 6px;box-shadow: rgba(0,0,0,.75) 0 1px 5px -2px;}
+.qp form table{width:99%;margin: 0 auto;max-width:560px;}
+.qp td:first-child{padding-bottom: 3px;color: #777;font-weight: bold;}
 .qp tr:first-child td:first-child{border-top: none}
 .qp td:first-child:before{content: "";display: inline-block;width: 4px;height:.9em;background-color: #8cc11f;vertical-align: baseline;margin-bottom: -1px;margin-right:4px;}
 
@@ -507,9 +508,9 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 .qp caption:after{content:"";display: block;height: 3px;background-color: #ccc;}
 
 .dateRange{display: inline-block;}
-.qp .dateRange input[type="text"]{width: 1.6em;margin: .1em 3px 0;height: 2em;}
-.qp .dateRange input[type="text"].year{width: 2.1em;}
-.qp td:nth-child(even) .dateRange label{margin-right:.2em;}
+.qp .dateRange input[type="text"]{width: 2em;margin: .1em 3px auto;height: 2.2em;}
+.qp .dateRange input[type="text"].year{width: 3em;}
+.qp>form td:nth-child(2) .dateRange label{margin-right:0;}
 .optionPool + .optionPool{margin-top:.5em}
 .qp td .optionPool label{white-space: nowrap;display: inline;}
 .optionPool label input[type="checkbox"]{vertical-align: middle;height: 1em;}
@@ -518,19 +519,19 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 .qp>form td:nth-child(2) label{display: inline-block;margin: 0 .9em 5px 2px;border-radius: 4px;padding: 0 3px;}
 .qp>form td:nth-child(2) label:hover,
 .qp>form td:nth-child(2) label:focus{box-shadow:#99c300 0 0 0 2px;}
-.qp>form td input.dateInput {width:23em;}
+.qp>form td input.dateInput {width:calc(100% - 3em);max-width: 14em;}
 .qp>form td input.dateInput+button{margin-left: 5px;}
 .qp input[type="text"][id="strCAPTCHA"],
 .qp input[type="text"][name="aspCaptcha"]{width: 16em}
 
 @media screen and (min-width:601px){
 	.qp td .optionPool label{display: inline-block;}
-	.qp .dateRange input[type="text"].year{width: 3em;}
+
 }
 @media screen and (min-width:801px){
-	.qp form table{width:auto;}
+	.qp form table{max-width: 760px;}
 	.qp td:first-child{padding-top: .4em;padding-bottom: 3px;color: #777;}
-	.qp td:nth-child(even){padding-bottom: .4em;}
+	.qp td:nth-child(2){padding-bottom: .4em;width: 70%}
 	.qp td:first-child:before,
 	.qp .optionPool label:first-child:before{display: none}
 	.qp input[type="text"],
@@ -546,6 +547,7 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 	.qp select{width:27em;}
 	.qp input.short{width:8em;}
 	.qp td p{width: 27em;}
+	.qp>form td input.dateInput {width:calc(100% - 4em);}
 }
 @media screen and (min-width:1001px){
 	.qp{margin:1em auto 3em;width: 90%;border-radius: 6px;box-shadow: rgba(0,0,0,.7) 0 1px 5px -2px;}

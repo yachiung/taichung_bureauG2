@@ -150,7 +150,7 @@
         </ul>
     </nav>
 
-    <section class="animalSearch aDrawer">
+    <section class="animalSearch aDrawer"><!-- 把 aDrawer 刪除就沒有開合效果-->
       <form> 
         <table summary="失蹤查詢-條件查詢">
           <caption>失蹤查詢-條件查詢</caption>
@@ -163,7 +163,9 @@
           </tr>
           <tr>
             <td><label for="htx_LostDate_S">失蹤時間</label></td>
-            <td><input type="text" class="dateInput" readonly="readonly" size="10" name="htx_LostDate_S" id="htx_LostDate_S" placeholder="點擊選日期"><button id="btnShowhtx_htx_LostDate_S" title="清除" class="clearDate">清除</button> ～ <input type="text" class="dateInput" readonly="readonly" size="10" name="htx_LostDate_E" id="htx_LostDate_E" placeholder="點擊選日期"><button id="btnShowhtx_LostDate_E" title="清除" class="clearDate">清除</button>
+            <td><div class="datePeriod">
+              <input type="text" readonly="readonly" name="htx_LostDate_S" id="htx_LostDate_S" placeholder="點擊選日期"><button class="clearDate" id="btnShowhtx_htx_LostDate_S" title="清除日期">清除</button> ～
+              <input type="text" readonly="readonly" name="htx_LostDate_E" id="htx_LostDate_E" placeholder="點擊選日期"><button class="clearDate" id="btnShowhtx_LostDate_E" title="清除日期">清除</button></div>
             </td>
           </tr>
           <tr>

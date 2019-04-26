@@ -295,7 +295,7 @@
 	.list ul li .numb{min-width:3em;margin-left:-3.4em;}
 	.list ul li .date,
 	.list ul li time{ margin-left:1em;position: static; display:inline-block;}
-	.list table{width:94%;margin:0 auto;line-height:1.6em;}
+	.list table{width:96%;margin:0 auto;line-height:1.6em;}
 	.list tr{display:block;position:relative;border:1px solid #999;padding:0;margin:0 0 15px;}
 	.list tr:first-child{display:none;}
 	.list th{display:none;}
