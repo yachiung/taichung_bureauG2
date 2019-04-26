@@ -143,7 +143,7 @@
     </header>
 
 
-    <article class="bulletin">
+    <article class="bulletin  aDrawer">
       <h3>送、領養佈告欄</h3>
       <p>你家有貓咪、狗狗或其它的寵物要送人嗎 ?</p>
       <p>這裡提供送領養寵物的管道，相對的如果你有寵物要找新主人，也可以在這兒登載本站僅提供民眾登錄載認養及送養的訊息。</p>
@@ -165,7 +165,10 @@
         <table summary="送養表格"><caption>我要送養</caption>
           <tr>
             <td><label for="htx_backup_C">性別</label></td>
-            <td> <input type="radio" id="htx_backup_C" name="htx_backup_C" value="00"> 母&nbsp;&nbsp; <input type="radio" id="htx_backup_C" name="htx_backup_C" value="01"> 公&nbsp;&nbsp; </td>
+            <td>
+              <label><input type="radio" id="htx_backup_C" name="htx_backup_C" value="00">母</label>
+              <label><input type="radio" id="htx_backup_C" name="htx_backup_C" value="01">公</label>
+            </td>
           </tr>
           <tr>
             <td><label for="htx_stitle"><abbr class="must">*</abbr>寵物名字</label></td>
@@ -193,7 +196,7 @@
           </tr>
           <tr>
             <td><label for="htx_xabstract">品種</label></td>
-            <td><textarea id="htx_xabstract" name="htx_xabstract" title="請輸入寵物的品種"></textarea>
+            <td><input type="text" id="htx_xabstract" name="htx_xabstract" title="請輸入寵物的品種"></input>
             </td>
           </tr>
           <tr>

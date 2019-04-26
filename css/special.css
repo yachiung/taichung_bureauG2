@@ -146,114 +146,119 @@
 
 
 
-.qp.regForm{margin:0;padding: 3em 3%;background:#fff;}
-@media screen and (min-width:1001px){
-	.qp.regForm{margin:1em auto 3em;width: 90%;box-shadow: rgba(0,0,0,.4) 0 1px 6px;}
-}
 
 
 
 /* 20190306 Animal */
 .multiColumn{margin:0;overflow: hidden;background: #f1f3ea;}
-.bulletin {line-height: 1.5;padding:2.5em 3% 1.5em;background: #f1f3ea;}
-.multiColumn>.bulletin{background:url(../images/pets_bg.png) no-repeat right 15px; }
-.multiColumn>.bulletin:before{content: '';float: right;width: 80px;height: 60px;}
+.bulletin {line-height: 1.5;padding:3.2em 3% 2em;background: #f1f3ea;position: relative;}
+.bulletin .drawerCaption{margin-left: 0;margin-right: 35px;margin-right:calc(50px - 3%)}
+.multiColumn .bulletin{background:url(../images/pets_bg.png) no-repeat right 15px;border-radius: 0;}
+.multiColumn .bulletin:before{content: '';float: right;width: 80px;height: 60px;}
 
-.bulletin h3{margin: 0 0 1em;font-size: 1.25em;}
+.bulletin h3{padding:0;margin: 0 auto;font-size: 1.25em;line-height: 1.3;}
 .bulletin p{margin: 1.2em 0;}
 .bulletin ul {list-style: disc;}
 .bulletin ol {list-style: decimal;}
 .bulletin ul,
-.bulletin ol {margin-left: 1.2em;}
-.bulletin>ul {list-style: none;}
-.bulletin>ul>li{padding-left: .5em;}
-.bulletin>ul>li:before{content: "◎ ";margin-left: -1.3em;}
+.bulletin ol {margin-left: 1.2em;margin-top: 1.2em;}
+.bulletin>ul,
+.bulletin .toggleArea>ul {list-style: none;}
+.bulletin>ul>li,
+.bulletin .toggleArea>ul>li{padding-left: .5em;}
+.bulletin>ul>li:before,
+.bulletin .toggleArea>ul>li:before{content: "◎ ";margin-left: -1.3em;}
 .bulletin li + li,
 .bulletin li ul,
 .bulletin li ol{margin-top: .6em;}
 .bulletin em{color: #c00; font-weight: normal;}
 
 
-.animalSearch{margin: 0 auto;padding: .5em 0;background: #686d64;color: #fff;}
-.animalSearch>*{margin-left: auto;margin-right: auto; width: 94%;}
-.animalSearch>*+*{margin-top: 1.5em;}
-.multiColumn .animalSearch{padding-top: 2.5em;border-radius: 0;width: 100%;margin:0;}
+.animalSearch{margin: 0 auto;padding: 3.2em 0 2em;background: #686d64;color: #fff;}
+.animalSearch form table{width:100%;margin: 0 auto;}
+.animalSearch .buttonDiv{width: 94%;margin-left: auto;margin-right: auto;}
+.animalSearch form td:nth-child(2){width:76%;}
+.multiColumn .animalSearch{border-radius: 0;}
+.multiColumn .animalSearch form table,
+.multiColumn .animalSearch .buttonDiv{max-width:none;width: 88%;}
+.animalSearch form th,
+.animalSearch form td{display: table-cell;border: 1px solid #888;padding:2px 0 6px;}
+.animalSearch form th,
+.animalSearch form td:first-child{text-align: right;color: #ddd;padding-right: .4em}
 
-.animalSearch form table{width: 100%;max-width:500px;margin: 0 auto;}
-.animalSearch form table caption{font-size: 1.25em;margin-bottom: .5em;}
-.animalSearch form table caption i{font-style: normal;font-size: .82em;display: block;}
-.animalSearch form th,
-.animalSearch form td{padding: 2px 0;display: table-cell;}
-.animalSearch form th,
-.animalSearch form td:first-child{padding-right: 6px;text-align: right;line-height:1.25;color: #ddd;}
-.animalSearch form td:nth-child(even){width: 70%;}
+.animalSearch form table caption{font-size: 1.25em;line-height: 1.3;margin-bottom:.4em;}
+.animalSearch form table caption i,
+.animalSearch .drawerCaption i{font-size: .8em;font-style: normal;display: block;color: #ddd;}
+.animalSearch .drawerCaption i{display: inline-block}
 .animalSearch form th label,
-.animalSearch form td:first-child label{width: auto;margin: 0;line-height: inherit;white-space: normal;}
-.animalSearch form th:after,
-.animalSearch form td:first-child:after{content: "";display: inline-block;height: 2.2em;width: 0;vertical-align: middle;}
-.animalSearch form td:nth-child(even) label{display: inline-block;margin: 0 .9em 5px 2px;border-radius: 4px;padding: 0 3px;}
-.animalSearch form td:nth-child(even) label:hover,
-.animalSearch form td:nth-child(even) label:focus{box-shadow:#deff33 0 0 0 2px;}
+.animalSearch form td:first-child label{width: auto;margin: .4em 0 0;white-space: normal;vertical-align:top;}
+.animalSearch form td:nth-child(2) label{display: inline-block;margin: 0 .9em 5px 2px;border-radius: 3px;padding: 0 3px;}
+.animalSearch form td:nth-child(2) label:hover,
+.animalSearch form td:nth-child(2) label:focus{box-shadow:#deff33 0 0 0 2px;}
 
-.animalSearch label input[type="radio"],
-.animalSearch label input[type="checkbox"]{vertical-align: 5%;outline: none;}
-.animalSearch select,
 .animalSearch input[type="text"],
+.animalSearch input[type="password"],
 .animalSearch input[type="tel"],
 .animalSearch input[type="email"],
-.animalSearch input[type="number"],
 .animalSearch input[type="date"],
-.animalSearch textarea{border: none;box-sizing: content-box;height: 2.1em;margin: 0 2px 5px;}
-.animalSearch button.clearDate{height: 2.1em;width: 2.1em;}
+.animalSearch input[type="number"],
+.animalSearch input[type="time"],
+.animalSearch input[type="url"],
+.animalSearch input[type="file"],
+.animalSearch select {border: none;box-sizing:border-box;}
+.animalSearch textarea{width:100%;border: none;box-sizing:border-box;}
 
-.animalSearch select:only-child{width: 96%;width: calc(98% - .9em);}
 .animalSearch input[type="text"]:only-child,
+.animalSearch input[type="password"]:only-child,
 .animalSearch input[type="tel"]:only-child,
 .animalSearch input[type="email"]:only-child,
-.animalSearch input[type="number"]:only-child,
 .animalSearch input[type="date"]:only-child,
-.animalSearch textarea{width: 96%;width: calc(98% - .8em)}
-.animalSearch textarea{height: 6em;}
+.animalSearch input[type="number"]:only-child,
+.animalSearch input[type="time"]:only-child,
+.animalSearch input[type="url"]:only-child,
+.animalSearch input[type="file"]:only-child,
+.animalSearch select:only-child {width:100%;}
 
 .animalSearch input.dateInput + .clearDate {margin-left: 3px;}
 .animalSearch button.clearDate:hover,
 .animalSearch button.clearDate:focus{box-shadow:#dbff57 0 0 0 2px;background-color: #deff33;}
-.animalSearch form .buttonDiv{margin-left: 0;margin-right: 0;}
+/* .animalSearch form .buttonDiv{margin-left: 0;margin-right: 0;} */
+.animalSearch td p{margin: 1.2em auto 0;}
 
 .animalSearch.aDrawer .toggleCtrl:hover,
-.animalSearch.aDrawer .toggleCtrl:focus{box-shadow:#99c300 0 0 0 2px;background-color: #99c300;outline: none;}
+.animalSearch.aDrawer .toggleCtrl:focus{background:#99c300;outline: none;box-shadow: none;}
+.animalSearch.aDrawer .toggleCtrl:hover{box-shadow: #99c300 0 0 0 2px;}
 .animalSearch.aDrawer .toggleCtrl:after{border-color: #99c300;}
 .animalSearch.aDrawer .toggleCtrl:hover:after,
 .animalSearch.aDrawer .toggleCtrl:focus:after{border-color: #fff;}
-.animalSearch .drawerCaption{font-size: 1.3em;display: block;margin:.4em  72px 0 3%;width: auto;}
-/* .animalSearch.closed .drawerCaption{margin-top: .4em;margin-right: 72px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;height: 1.5em;} */
-.animalSearch .drawerCaption i{font-size: .8em;font-style: normal;display: inline-block;color: #ddd;}
-.animalSearch .toggleArea{padding: 1em 0;}
-/* 開合控制元件 */
 
-@media screen and (min-width:441px){
-	.animalSearch form td:nth-child(2){width: 80%;}
+@media screen and (min-width:601px){
+	.animalSearch form table{width: auto;max-width:100%;min-width: 72%;}
 }
 @media screen and (min-width:801px){
 	.animalSearch{width: 96%;margin: 2vw auto 0;border-radius: 6px;}
+	.animalSearch form table{max-width: 720px;}
+	/* .animalSearch form td:nth-child(2){width: 80%;} */
+
 	.multiColumn .animalSearch{width: 50%;float: right;position: relative;z-index: 9;}
-	.multiColumn .animalSearch form{width: 88%;}
-	.animalSearch form table{max-width: 80%;}
-	.multiColumn .animalSearch form table{max-width: none;}
-	.multiColumn .bulletin{width: 44%;float: left;;}
+	/* .multiColumn .animalSearch form{width: 88%;} */
+	.multiColumn .bulletin{width: 44%;float: left;}
   .multiColumn .bulletin:only-child{float: none;width: auto;}
-	.animalSearch textarea{height: 7em;line-height: 1.4}
-	.animalSearch form td:nth-child(2){width: 72%;}
-	/* 模擬背景延伸 */
+	/* .animalSearch textarea{height: 7em;line-height: 1.4} */
+
+	/* 模擬背景延伸 */ 
 	.multiColumn{position: relative;}
 	.multiColumn:after{content: '';position: absolute;right: 0;bottom: 0;width: 50%;top: 0;background: #686d64;}
+	.multiColumn + .page{margin-top:2em;}
 }
 @media screen and (min-width:1001px){
+	/* .animalSearch form table{width:72%;} */
 	.multiColumn,
 	.animalSearch,
 	.bulletin{width: 96%;margin: 0 auto;}
-	
-	.animalSearch select:only-child{width: 98%;}
+	.bulletin{width: 90%;border-radius: 6px;}
+
+	/* .animalSearch select:only-child{width: 98%;} */
 
 }
 
@@ -280,10 +285,10 @@
 }
 
 /*  拾獲／失蹤查詢、登錄資料 */
-.missingFinding{width: 98%;margin: 5px auto;}
-.missingFinding ul{list-style: none;margin: 0;padding:4px 0 8px;overflow: hidden;text-align: center;}
-.missingFinding li{float: left;width: 31.5%;padding:0;margin: 0 .916% 10px;}
-.missingFinding li a{display: block;padding:8px 0 6px;border-radius: 8px;background:#5c5c5c ;color: #fff;text-decoration: none;box-shadow: rgba(0,0,0,.4) 0 1px 5px;white-space: nowrap;transition: .15s;}
+.missingFinding{width: 98%;margin: 0 auto;}
+.missingFinding ul{list-style: none;margin: 0;padding:1px 0;overflow: hidden;text-align: center;}
+.missingFinding li{float: left;width: 31.5%;padding:10px 0;margin: 0 .916%;}
+.missingFinding li a{display: block;padding:8px 0 6px;border-radius: 8px;background:#686d64 ;color: #fff;text-decoration: none;box-shadow: rgba(0,0,0,.4) 0 1px 5px;white-space: nowrap;transition: .15s;}
 .missingFinding li a:before{content: '';display: block;width: 64px;height: 64px;margin: 0 auto 4px;background: #444 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto;border-radius: 50%;transition: .15s;}
 .missingFinding li:nth-child(2) a:before{background-position: 0 -52px;}
 .missingFinding li:nth-child(3) a:before{background-position: 0 -118px;}
@@ -295,16 +300,14 @@
 .bulletin .missingFinding ul{float: none;padding:4px 5px 8px;text-align: center;}
 .bulletin .missingFinding li{margin: 0 .6% 10px;display: inline-block;width: 31%;max-width:10em; }
 @media screen and (min-width:601px){
-	.missingFinding{width: 96%;margin: 10px auto 0;overflow: hidden;}
+	.missingFinding{width: 96%;margin: 5px auto 0;overflow: hidden;}
 	.missingFinding ul{float: right;}
-	.missingFinding li{width: auto;margin: 0 0 5px 5px;}
+	.missingFinding li{width: auto;margin: 0 5px 5px 5px;}
 	.missingFinding li a{position: relative;line-height: 70px;height: 72px;padding:0 15px 0 76px;border-radius: 80px;}
 	.missingFinding li a:before{content: '';position: absolute;width: 64px;height: 64px;left: 4px;top: 4px;background: #333 url(../images/animalFunc.png) no-repeat 0 8px;background-size:60px auto ;border-radius: 50%;transition: .15s;}
 }
 @media screen and (min-width:801px){
-	.missingFinding ul {float: right;padding-right: 5px}
-	.missingFinding li{float: left;margin: 0 0 0 5px;padding:0;}
-	
+	.missingFinding + .animalSearch{margin-top: 0;}
 	.bulletin .missingFinding{margin: 0 -2%;width: auto}
 	.bulletin .missingFinding ul{padding:4px 5px 8px;}
 	.bulletin .missingFinding li{margin: 0 .6% 10px;padding:0;min-width:9em;width: 32%;max-width:none;}

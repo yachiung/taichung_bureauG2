@@ -153,22 +153,22 @@
       <form>
         <table summary="失蹤或拾獲動物資料登錄"><caption>登錄資料</caption>
           <tr>
-            <th scope="row"><label for="htx_LostStatus">狀態</label></th>
+            <td><label for="htx_LostStatus">狀態</label></td>
             <td>
               <label><input type="radio" id="htx_LostStatus" name="htx_LostStatus" value="L" checked="checked">失蹤</label>
               <label><input type="radio" id="htx_LostStatus" name="htx_LostStatus" value="G">拾獲</label>
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_ChipNo">晶片號碼</label></th>
+            <td><label for="htx_ChipNo">晶片號碼</label></td>
             <td><input type="text" id="htx_ChipNo" name="htx_ChipNo"></td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_DogNo">犬牌號碼</label></th>
+            <td><label for="htx_DogNo">犬牌號碼</label></td>
             <td><input type="text" id="htx_DogNo" name="htx_DogNo"></td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_Kind">種類</label></th>
+            <td><label for="htx_Kind">種類</label></td>
             <td>
               <select id="htx_Kind" name="htx_Kind">
                 <option value="">請選擇</option>
@@ -198,29 +198,29 @@
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_Kindother">其他種類</label></th>
+            <td><label for="htx_Kindother">其他種類</label></td>
             <td><input type="text" id="htx_Kindother" name="htx_Kindother" size="50" placeholder="請說明動物種類（「種類」項目請選「其他」）"></td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_Gender">性別</label></th>
+            <td><label for="htx_Gender">性別</label></td>
             <td>
               <label><input type="radio" id="htx_Gender" name="htx_Gender" value="00">母</label>
               <label><input type="radio" id="htx_Gender" name="htx_Gender" value="01">公</label>
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_LostDate">時間</label></th>
+            <td><label for="htx_LostDate">時間</label></td>
             <td>
               <input type="text" class="dateInput" name="htx_LostDate" id="htx_LostDate" size="8" readonly="readonly" placeholder="失蹤或拾獲時間，點擊選日期"><button type="button" class="clearDate" id="btnShowhtx_LostDate" onclick="javascript:document.getElementById('htx_LostDate').value='';" onkeypress="javascript:document.getElementById('htx_LostDate').value='';">清除</button>
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_LostPlace">地點</label></th>
+            <td><label for="htx_LostPlace">地點</label></td>
             <td><input type="text" id="htx_LostPlace" name="htx_LostPlace" size="50" placeholder="請輸入失蹤或拾獲地點">
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_Size">體型</label></th>
+            <td><label for="htx_Size">體型</label></td>
             <td><select id="htx_Size" name="htx_Size">
                 <option value="">請選擇</option>
                 <option value="01">迷你型(3公斤以下)</option>
@@ -231,11 +231,11 @@
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_age">年齡</label></th>
+            <td><label for="htx_age">年齡</label></td>
             <td><input type="text" id="htx_age" name="htx_age" placeholder="請輸入動物年齡"></td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_Color">毛色</label></th>
+            <td><label for="htx_Color">毛色</label></td>
             <td><select id="htx_Color" name="htx_Color" size="1">
                 <option value="">請選擇</option>
                 <option value="01">黑色</option>
@@ -252,32 +252,32 @@
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_Colorother">其他毛色</label></th>
+            <td><label for="htx_Colorother">其他毛色</label></td>
             <td><input type="text" id="htx_Colorother" name="htx_Colorother" placeholder="請描述毛色" size="50">
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_xbody">其他特徵</label></th>
+            <td><label for="htx_xbody">其他特徵</label></td>
             <td><textarea id="htx_xbody" name="htx_xbody" rows="8" cols="60" placeholder="請說明動物特徵"></textarea>
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_ximgFile">上傳照片</label></th>
+            <td><label for="htx_ximgFile">上傳照片</label></td>
             <td><input type="file" id="htImg_ximgFile" name="htImg_ximgFile">
             </td>
           </tr>
           <tr>
-            <th scope="row"><abbr class="must" title="必填欄位">*</abbr><label for="htx_xurl">E-Mail</label></th>
+            <td><abbr class="must" title="必填欄位">*</abbr><label for="htx_xurl">E-Mail</label></td>
             <td><input type="text" id="htx_xurl" name="htx_xurl" size="50" placeholder="請輸入聯絡 E-Mail">
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="htx_xContactTel">聯絡電話</label></th>
+            <td><label for="htx_xContactTel">聯絡電話</label></td>
             <td><input type="text" id="htx_xContactTel" name="htx_xContactTel" placeholder="請輸入電話號碼">
             </td>
           </tr>
           <tr>
-            <th scope="row"><label for="aspCaptcha">驗證碼</label></th>
+            <td><label for="aspCaptcha">驗證碼</label></td>
             <td><img id="imgCaptcha" src="images/captcha.png" title="點擊換一組驗證碼" onclick="" onkeypress="">
               <input type="text" id="strCAPTCHA" name="aspCaptcha" placeholder="請輸入驗證碼">
               <p> 如按"送出"鈕後出現驗證碼錯誤，請點擊<em>驗證碼圖片</em>

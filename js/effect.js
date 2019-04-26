@@ -628,7 +628,9 @@ function drawer(){
 		if(_aDrawer.hasClass('animalSearch')){
 			_aDrawer.prepend('<span class="drawerCaption">' + _aDrawer.find('caption').html() + '</span>');
 			_aDrawer.find('caption').hide();
-		};
+		} else {
+			_aDrawer.find('h3').addClass('drawerCaption').prependTo(_aDrawer);
+		}
 		var _drawerCaption = _aDrawer.find('.drawerCaption');
 
 		_toggleCtrl.add(_drawerCaption).click(function(){
