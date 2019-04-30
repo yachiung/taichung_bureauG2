@@ -96,7 +96,7 @@
 .attachment .images li a{display:block;margin:0 auto;height: 100%;} 
 .attachment .images li a:hover{text-decoration:none;}
 .attachment .images li img{display:block;margin:0 auto;width:100%;}
-.attachment .images li p{line-height: 1.5;padding: .4em .5em .2em;margin:0;font-size:1em;}
+.attachment .images li p{line-height: 1.5;padding: .4em .5em .2em;margin:0;font-size:1em;text-align: left;}
 
 @media screen and (min-width:800px){
 	.attachment .images{overflow:hidden;}
@@ -591,20 +591,14 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 /* 動物資料表格與照片列表 */
 .profileList,
 .profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;}
-.profile{overflow: hidden;}
-.profileList>ul>li{clear: both;overflow: hidden;margin: 0 0 25px;padding:25px 10px 15px;border: none;background: #fff;box-shadow: rgba(0,0,0,.6) 0 0 4px;border-radius: 4px;}
+.profileList>ul>li{clear: both;overflow: hidden;margin: 0 0 25px;padding:15px 10px;border: none;background: #fff;box-shadow: rgba(0,0,0,.6) 0 0 4px;border-radius: 4px;}
 .profileList>ul>li:last-child{border-bottom: none;}
 
-figure.petPicture{display: block;background: url(../images/animalNoPhoto.png) no-repeat center center;border: 4px solid #fff;box-shadow: rgba(0,0,0,.3) 0 0 8px;margin-bottom: 15px;}
+figure.petPicture{display: block;background: url(../images/animalNoPhoto.png) no-repeat center center;border: 4px solid #fff;box-shadow: rgba(0,0,0,.4) 0 0 5px;margin-bottom: 15px;min-height: 200px;}
 .petPicture img{display: block;width: 100%;}
 .petPicture>a{display: block;border: 1px solid #fff;}
-.petPicture>a:hover{border-color: #000;}
-.petPicture>a:focus{border-color: #fc3;box-shadow: #fc3 0 0 0 4px;outline: none;} 
-
-
-
-
-
+.petPicture>a:hover,
+.petPicture>a:focus{box-shadow: #fc3 0 0 0 4px;outline: none;}
 
 /* 動物保護處: 動物基本資料 */
 table.meta4col,
@@ -640,10 +634,15 @@ table.meta4col,
 	.profileList li .askBtn + p.hint{float:right;width:calc(100% - 12em);}
 }
 @media screen and (min-width:801px){
-  .profile .meta4col,
-  .profileList li .meta4col{float: left;width:68%;margin: 0;}
+	.profile{padding-top: 5px;margin-top:10px;}
+	.profile,
+	.profileList li{overflow: hidden;}
+	
+	.profile .meta4col,
+  .profileList li .meta4col{float: left;width:66%;margin: 0;}
   .profile .petPicture,
-	.profileList li .petPicture{float: right;width: 30%;}
+	.profileList li .petPicture{float: right;width: 31%;}
+	.profile .petPicture{margin-right: 5px;}
 	.profile.noPicture .meta4col,
   .profileList.noPicture li .meta4col{float: none;width: 100%}
 
@@ -657,7 +656,9 @@ table.meta4col,
 	.meta4col th{width: 20%;display: table-cell;}
 	.meta4col td{width: 28%;display: table-cell;}
 }
-
+@media screen and (min-width:1001px){
+	.profile{margin-top: 0;}
+}
 
 
 
