@@ -180,7 +180,6 @@
 .animalSearch.aDrawer form table{margin-top: 1em;}
 .animalSearch .buttonDiv{width: 92%;margin-bottom: 0;}
 .animalSearch form td:nth-child(2){width:76%;}
-
 .animalSearch form th,
 .animalSearch form td{display: table-cell;padding:2px 0;}
 .animalSearch form th,
@@ -235,7 +234,7 @@
 	.animalSearch form table{width: auto;max-width:92%;min-width: 72%;}
 	.animalSearch .datePeriod input[type="text"]{width: 7em;}
 	.multiColumn .animalSearch .datePeriod {white-space: nowrap;}
-	}
+}
 @media screen and (min-width:801px){
 	.animalSearch form table{max-width: 720px;}
 	.multiColumn .animalSearch form table{width:92%;}
@@ -250,13 +249,9 @@
 	.multiColumn + .page{margin-top:2em;}
 }
 @media screen and (min-width:1001px){
-	/* .animalSearch form table{width:72%;} */
 	.multiColumn,
 	.animalSearch{width: 96%;margin: 0 auto;}
 	.bulletin{margin: 0 auto 1em;}
-
-	/* .animalSearch select:only-child{width: 98%;} */
-
 }
 
 
