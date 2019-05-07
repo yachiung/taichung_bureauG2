@@ -48,9 +48,10 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 .header .search input[type="submit"]{background:#199986 url(../images/search_submit.png) no-repeat center center;background-size:1.8em;color:transparent;width:2.5em;}
 .header .search input[type="submit"]:hover,
 .header .search input[type="submit"]:focus{background-color:#344;outline:none;}
-.header .search input[type="text"]{width:12em;background:rgba(255,255,255,.8);border:none;}
-.header .search input[type="text"]:hover{background:#fff;}
-.header .search input[type="text"]:focus{background:#fff;box-shadow:#199986 0 0 0 2px inset;}
+.header .search input[type="text"]{width:12em;background: #fff;background:rgba(255,255,255,.8);border:none;}
+.header .search input[type="text"]:hover,
+.header .search input[type="text"]:focus{box-shadow:#199986 0 0 0 2px inset;}
+.header .search input[type="text"]:focus{background:#fff;}
 .header .search a:hover{text-decoration:underline;}
 .header .search a:focus{background:#fe0;}
 

@@ -68,9 +68,10 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .header .search form a{color:#3f4534;padding:0 .4em;margin-left:3px;}
 .header .search form a:hover,
 .header .search form a:focus{outline:none;background:#e6f366;}
-.header .search input[type="text"]{border:none;width:12em;}
+.header .search input[type="text"]{border:none;width:12em;background: #fff;background:rgba(255,255,255,.8);}
 .header .search input[type="text"]:hover,
 .header .search input[type="text"]:focus{box-shadow:#25a3a5 0 0 0 2px inset;}
+.header .search input[type="text"]:focus{background: #fff;}
 .header .search input[type="submit"]{width:2.5em;background:#18959a url(../images/search_submit.png) no-repeat center center;background-size:64%;text-indent:-8em;}
 .header .search input[type="submit"]:hover,
 .header .search input[type="submit"]:focus{background-color:#377476;outline:none;}
