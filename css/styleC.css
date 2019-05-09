@@ -404,7 +404,7 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 
 
 /* *** */
-.path .before:after{;border-color:#7faf0b;}
+.path .before:after{border-color:#7faf0b;}
 
 
 .function li a:hover,
