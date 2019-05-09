@@ -497,7 +497,7 @@
 .orgTree>ul>li>a{display:block;width:auto;margin-right:3em;}
 .orgTree>ul>li>span.close{background-position:center -74px;}
 }
-/* 20190509 訊息條列標示重要*/
-.stress {position: relative;display: inline-block !important;height:28px;width: 28px; line-height: 29px;color: #f40;padding:5px;text-decoration: none;vertical-align: middle;margin:-7px 0 -5px 10px;font-size: 13px;text-align: center;background: #fff; box-shadow:rgba(0,0,0,.4) 1px 1px 4px	;border: 2px solid #f50;border-radius: 50%;}
+/* 20190509 訊息條列重要標示*/
+.stress {position: relative;display: inline-block !important;height:28px;width: 28px; line-height: 29px;color: #f40;padding:4px;text-decoration: none;vertical-align: middle;margin:-5px 0 -3px 10px;font-size: 13px;text-align: center;background: #fff; box-shadow:rgba(0,0,0,.4) 1px 1px 4px	;border: 2px solid #f50;border-radius: 50%;}
 .stress:before{content: '';position: absolute;left: -9px;top:11px; width:0;height:0;border: 3px solid #f50;border-width:7px 9px 7px 0;border-color:transparent #f50 transparent transparent;}
 .stress:after{content: attr(title);}
