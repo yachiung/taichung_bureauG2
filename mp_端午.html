@@ -17,20 +17,34 @@
   <header class="header" style="background-image:url(publicData/header-端午.png);"><a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題區">:::</a>
     <h1><a href="#"><img src="publicData/h1-端午.png" alt="端午連假訊息專區"></a></h1>
     <style>
+      .header{background-color: #6bc9c9;}
       .header.fixed .menu{background: rgba(107,201,201, .95);}
-      @media screen and (min-width:1000px) {.header>h1 img{width:354px;margin:8px 0 0 30px;}}
+      .main .search{display: none}
+      .keywordHot{display: none}
+      @media screen and (min-width:1000px) {
+        .header>h1 img{width:354px;margin:8px 0 0 30px;}
+        .header .navigation{background-color: transparent;}
+        .header .navigation ul{background-color:rgba(0,0,0,.4);border-radius:0 0 4px 4px}
+        .header .navigation li a{height: 1.8em;line-height: 1.8em;}
+      }
     </style>
     <nav class="navigation">
       <ul>
+        <li><a href="#" title="回首頁" target="_self">回首頁</a></li>
+        <li><a href="#" title="臺中市政府(另開新視窗)" target="_blank">臺中市政府</a></li>
       </ul>
     </nav>
-    <!-- <section class="search">
+    <section class="search">
       <form action="">
         <input type="text" id="" name="" value="" placeholder="請輸入關鍵字" accesskey="S" title="網站搜尋" />
         <input type="submit" id="" name="" value="查詢" title="查詢" />
         <a class="btnAdv" href="#" title="進階搜尋(另開視窗)" target="_blank">進階搜尋</a>
       </form>
-    </section> -->
+    </section>
+    <div class="keywordHot">
+      <ul>
+      </ul>
+    </div>
     <button class="sidebarCtrl"></button>
     <!-- <button class="searchCtrl">查詢</button> -->
     <nav class="menu"><!--巨型選單 class="megaMenu" -->
