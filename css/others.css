@@ -211,7 +211,27 @@ section.waitingCount h2{text-align: left;padding: 12px 0 20px;margin-right: 100p
 .waitingCount li em{font-size: 1.5em;margin-right: .2em;line-height: 1;color: #000;}
 
 
-
-
+/* fb 影片列表 */
+.videoType3 .showArea{width:80vw;position: relative;overflow: hidden;margin: 0 auto 15px;}
+.videoType3 .fbVideoThumb{list-style: none;margin:0;padding:0;white-space: nowrap;font-size: 0;}
+.fbVideoThumb>li{display: inline-block;width:80vw;margin:0 7px;padding:7px 0 10px;white-space: normal;font-size: 18px;}
+.fbVideoThumb>li>a{display: block;width:calc(80vw - 24px);padding: 5px;background: #fff;box-shadow: rgba(0,0,0,.3) 0 1px 3px;transition: .2s;}
+.fbVideoThumb>li>a:hover,
+.fbVideoThumb>li>a:focus{box-shadow: rgba(0,0,0,.5) 0 3px 9px -2px;}
+.fbVideoThumb .screenShot img {display: block;width: 100%;}
+.fbVideoThumb .vTitle {line-height: 1.5;height: 4.4em;overflow: hidden;margin: .6em auto;color: #000;}
+.fbVideoThumb a .vInfo {color: #666;font-size: .86em;}
+.videoType3 .arbtn.left {display: none}
+@media screen and (min-width: 528px){
+	.videoType3 .showArea{width:448px;}
+	.fbVideoThumb>li{width: 210px;font-size: 16px;}
+	.fbVideoThumb>li>a{width: auto;}
+}
+@media screen and (min-width: 752px){
+	.videoType3 .showArea{width:672px;}
+}
+@media screen and (min-width: 1000px){
+	.videoType3 .showArea{width:896px;font-size: 15px;}
+}
 
 

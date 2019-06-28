@@ -441,6 +441,8 @@ function clickToSlide(){//click 左右箭頭滑動
 					});
 
 				});
+			} else {
+				_arLeft.add(_arRight).hide();
 			}
 		});
 	}
