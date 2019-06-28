@@ -5,9 +5,9 @@
 .header .menu li>a:hover,
 .header .menu li a:focus{background-color:#444;color:#fff;}
 
-.header .menu>ul{padding:3px 0 0;font-size:16px;line-height:1.25;text-align:center;}
+.header .menu>ul{padding:0;font-size:16px;line-height:1.25;text-align:center;}
 .header .menu>ul>li{display:inline-block;min-width:7em;}
-.header .menu>ul>li>a{padding:0 .9em;height:2.4em; line-height:2.5em;}
+.header .menu>ul>li>a{padding:0 .9em;height:2.2em; line-height:2.3em;}
 .header .menu li li.hasChild>a{padding-right:2em;}
 .header .menu li li.hasChild>a:after{content:'';position:absolute;right:10px; top:.9em;width:10px;height:10px;border:3px solid #999;transform:rotate(45deg);border-bottom:none;border-left:none;}
 .header .menu li li.hasChild:hover>a:after,
@@ -26,7 +26,7 @@
 .header .megaMenu li a{display:block;outline:none;text-decoration:none;}
 .header .megaMenu>ul{text-align: center;font-size: 16px;line-height:1.25;}
 .header .megaMenu>ul>li{display: inline-block;min-width:5em;}
-.header .megaMenu>ul>li>a{padding:0 .9em;height:2.4em;line-height:2.5em;}
+.header .megaMenu>ul>li>a{padding:0 .9em;height:2.2em;line-height:2.3em;}
 .header .megaMenu>ul>li:hover>a,
 .header .megaMenu>ul>li>a:hover,
 .header .megaMenu>ul>li>a:focus{background-color:#444;color:#fff;}

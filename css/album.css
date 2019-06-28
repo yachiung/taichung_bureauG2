@@ -65,7 +65,7 @@
 .albumType3 li a:hover{text-decoration:underline;}
 .albumType3 ul{overflow:hidden;}
 .albumType3 .box li{padding-bottom:2em;}
-.albumType3 li img {object-fit:cover;}
+.albumType3 li img {object-fit:contain;}
 .albumType3 li p{position:static;height:3.7em;line-height:1.8;margin: .1em .5em;background:none;max-width:560px;white-space: normal;}
 .albumType3 li p time {float:right;margin-left:.5em;}
 .albumType3 .dots{ height:20px;line-height:20px;position:relative;margin:0;padding: 5px;}

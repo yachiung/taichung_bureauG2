@@ -86,11 +86,10 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 .header .megaMenu li li li a:hover:before,
 .header .megaMenu li li li a:focus:before{background:#fff;}
 
-
+/* 
 .flowerCountdown{background:rgba(47,47,47,.8);}
-.flowerCountdown:before{background:#2f2f2f;}
+.flowerCountdown:before{background:#2f2f2f;} */
 
-.slide.bb1{/**/}
 .gutter .bb1{padding:0;background:#fff;}
 
 .dots li{background:#777;}

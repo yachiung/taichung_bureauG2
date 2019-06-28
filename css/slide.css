@@ -16,11 +16,11 @@
 .slide .box li{position:absolute;left:0;top:0;}
 .slide .box img{display:block;width:100%;height:100%;}
 
-.slide .box li.lovelyPets {overflow: hidden;}
+.slide .box li.lovelyPets {overflow: hidden;background: #a8e0f9}
 .slide .box li.lovelyPets a{display: block;width:100%;height:100%;}
-.slide .box li.lovelyPets img {float: left;width:33%;height: 50%;object-fit: cover}
+.slide .box li.lovelyPets img {float: left;width:33%;height: 50%;object-fit: cover;}
 .slide .box li.lovelyPets img:nth-child(3){width:34%;}
-.lovely {position: absolute;right: 0;bottom: 0;width: 34%;height:50%;background: url(../images/lovely.png) no-repeat center center;background-size: auto 100%;}
+.lovely {position: absolute;right: 0;bottom: 0;width: 34%;height:50%;background: url(../images/lovely.png) no-repeat right bottom;background-size:auto 100%;}
 
 
 .slide .box a:before{content:'';position:absolute;left:0;top:0;right:0;bottom:0;border:2px solid #c19;display:none;}
@@ -45,7 +45,7 @@
 .dots:empty{display: none;}
 
 .slide .arbtn{visibility:hidden;margin-top:-45px;}
-.slide .arbtn:before{border-color:#fff}
+.slide .arbtn:before{border-color:#888}
 .slide:hover .arbtn{visibility:visible;}
 
 .slide .hide{display:none;}
@@ -77,7 +77,7 @@
 .arbtn:hover{background:rgba(0,0,0,.4);opacity:1;}
 .arbtn.left{left:0;}
 .arbtn.right{right:0;}
-.arbtn:before{content:'';display:inline-block;width:21px;height:21px;border:3px solid rgba(160,160,160,.65);border-top:none;border-right:none;transform:rotate(45deg);margin:18px auto 0 14px;}
+.arbtn:before{content:'';display:inline-block;width:21px;height:21px;border:3px solid rgba(120,120,120,.70);border-top:none;border-right:none;transform:rotate(45deg);margin:18px auto 0 14px;}
 .arbtn.right:before{transform:rotate(225deg);margin-left:-12px;}
 .arbtn:hover:before{border-color:#fff;}
 

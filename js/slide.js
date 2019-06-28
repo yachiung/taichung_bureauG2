@@ -89,6 +89,10 @@ $(document).ready(function(){
 				_slide.off('mouseenter mouseleave');
 			});
 
+
+
+
+
 			_slideItem.find('a').keydown(function(ev){
 				var tabCode = ev.which || ev.keyCode;
 
@@ -137,6 +141,8 @@ $(document).ready(function(){
 				function(){tt = setInterval(autoSlide, timer);}
 			);			
 		}
+
+
 
 	});
 

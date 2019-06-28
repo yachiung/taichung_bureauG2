@@ -61,8 +61,8 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .sidebar .navigation li a{background:#93c622;color:#000;box-shadow:#3f4534 0 0 0 1px;}
 .sidebar .navigation li a:hover{background:#beed19;}
 
-.flowerCountdown{background:rgba(63,69,52,.75);}
-.flowerCountdown:before{background:#3f4534 }
+/* .flowerCountdown{background:rgba(63,69,52,.75);}
+.flowerCountdown:before{background:#3f4534 } */
 
 /* .header .search{top:28px;} */
 .header .search form a{color:#3f4534;padding:0 .4em;margin-left:3px;}

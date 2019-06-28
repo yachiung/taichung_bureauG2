@@ -28,10 +28,10 @@
 
 
 /*花博倒數*/
-/* .flowerCountdown{position:absolute;top:4px;left:50%;width:102px; height:74px;margin-left:-240px;border-radius:6px;background: rgba(0,0,0,.7);overflow: hidden;}
+.flowerCountdown{position:absolute;top:4px;left:50%;width:102px; height:74px;margin-left:-240px;border-radius:6px;background: rgba(0,0,0,.7);overflow: hidden;}
 .flowerCountdown:before{content: '花博倒數';position: absolute;background: #000;color:#bdf21c;letter-spacing: 3px;top: 3px;left: 4px;font-size: 15px;line-height: 1;padding: 3px 12px 3px 3px;}
 .flowerCountdown iframe{margin:-38px auto auto -98px;border:none;}
-.flowerCountdownMobil{display:none;position:absolute;overflow: hidden;} */
+.flowerCountdownMobil{display:none;position:absolute;overflow: hidden;}
 
 @media screen and (max-width:1000px) {
 	.header{padding:0 64px;height:64px;margin-bottom:0;background-image: none !important;}
@@ -40,10 +40,10 @@
 	.header>h1 img{height:80%;width: auto;margin:1.2% auto 0;}
 	.header.fixed{position: fixed;top: 0;right: 0;left: 0;}
 
-	/* .flowerCountdown{display:none;}
+	.flowerCountdown{display:none;}
 	.flowerCountdownMobil{top:0;left:auto;display:block; background: rgba(255,255,255,.85);width:63px; height:48px;border-radius: 0 0 5px 5px;transition: 1s;}
 	.header.fixed .flowerCountdownMobil{top: -60px;}
-	.flowerCountdownMobil iframe{margin:-54px auto auto -121px;} */
+	.flowerCountdownMobil iframe{margin:-54px auto auto -121px;}
 
 
 	.header .sidebarCtrl{display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:100%;font-size:0;}
@@ -76,6 +76,7 @@
 @media screen and (max-width:600px){
 	.header{padding:0 44px;height:44px;}
 
+	/*.flowerCountdownMobil{top: auto;left: 8px;}*/
 	.header .sidebarCtrl,
 	.searchCtrl {width:44px;}
 	.searchCtrl:before{width:20px;height:20px;left:20%;top:20%;}
@@ -89,18 +90,4 @@
 	.header .search input[type="text"]{width:calc(100% - 7em);}
 	.search .keywordHot{ display:none;}
 
-}
-/* 2020 燈會倒數 */
-.flowerCountdownMobil{display: none;}
-.flowerCountdown{position:absolute;top:0;left:240px;width: 83px;height:62px;overflow: hidden;background:rgba(255,255,255,.9);border-radius:0 0 6px 6px;}
-.flowerCountdown iframe,
-.flowerCountdownMobil iframe{display:block;width: 100%;height: 100%;border: none;margin: 0 0 0 -2px;padding: 0;background: transparent;overflow: hidden;}
-@media (max-width:1000px){
-	.flowerCountdown{left:70px;}
-}
-@media (max-width:600px){
-	.header{margin-bottom: 30px;}
-	.flowerCountdown{display: none;}
-	.flowerCountdownMobil{display: block;position: static;margin:5px 0 0;height: 1.5em;}
-	.header.fixed .flowerCountdownMobil{position: fixed;left: 0;right: 0;margin:1px 0 0;padding-top:4px;background:rgba(255,255,255,.8);box-shadow: rgba(0,0,0,.3) 0 5px 6px -2px;}
 }
