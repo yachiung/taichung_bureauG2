@@ -25,14 +25,28 @@
 
 
 
-.sns{text-align:center;}
-.sns ul{text-align: center;margin: 0 auto;}
-.sns li{display: inline-block;margin: 2px 1px 8px;vertical-align: top;}
-.sns li a{display:block;border: 1px solid transparent;transition: .2s;}
-.sns li a:hover{box-shadow: rgba(0,0,0,.5) 0 4px 6px -2px;border-color: #fff;}
-.sns li a:focus{box-shadow:#e30 0 0 0 2px;outline:none;}
+.sns{text-align:center;position: relative;z-index: 99;}
+.sns ul{text-align: center;margin: 0 auto;padding: 0;}
+.sns li{position: relative;}
+.sns li a{display:block;text-decoration: none;}
+.sns>ul>li{display: inline-block;margin: 2px 1px 8px;vertical-align: top;position: relative;}
+.sns>ul>li>a{border: 1px solid transparent;transition: .2s;}
+.sns>ul>li>a:hover,
+.sns>ul>li>a:focus{box-shadow: rgba(0,0,0,.5) 0 4px 6px -2px;border-color: #fff;}
+.sns li a:focus{outline:1px solid #333;}
+.sns>ul>li img{display:block;width:140px;height:50px;}
+/* 20190628 新增次選單 */
+.sns li ul{display: none;width: 140px;position: absolute;background: #fff;border: 1px solid #bbb;text-align-last: left;margin: 0 auto;padding: 0;line-height: 1.4;box-shadow: rgba(0,0,0,.3) 0 1px 9px;margin-top: -2px;text-align: left;z-index: 999;}
+.sns li li{padding: 0;margin: 0;border-bottom: 1px solid #ddd;display: block;}
+.sns li li:last-child{border:none}
+.sns li li a{padding:.45em 10px;transition: .2s;}
+.sns li li a:hover,
+.sns li li a:focus{background: #52544a;color: #fff;outline: none;}
 
-.sns li img{display:block;width:140px;height:50px;}
+.sns li.hasChild>a{position: relative;}
+.sns li.hasChild>a:before{content: '';position: absolute;right: 6px;bottom: 6px;width: 0;height: 0;border-width: 6px 5px 0 5px;border-color: #fff transparent transparent transparent;border-style: solid;}
+
+
 
 .sns2{text-align:center;}
 .sns2 ul{display:inline-block;}
@@ -218,7 +232,8 @@ section.waitingCount h2{text-align: left;padding: 12px 0 20px;margin-right: 100p
 .fbVideoThumb>li>a{display: block;width:calc(80vw - 24px);padding: 5px;background: #fff;box-shadow: rgba(0,0,0,.3) 0 1px 3px;transition: .2s;}
 .fbVideoThumb>li>a:hover,
 .fbVideoThumb>li>a:focus{box-shadow: rgba(0,0,0,.5) 0 3px 9px -2px;}
-.fbVideoThumb .screenShot img {display: block;width: 100%;}
+
+.fbVideoThumb .screenShot img {display: block;width: 100%; height:42vw;}
 .fbVideoThumb .vTitle {line-height: 1.5;height: 4.4em;overflow: hidden;margin: .6em auto;color: #000;}
 .fbVideoThumb a .vInfo {color: #666;font-size: .86em;}
 .videoType3 .arbtn.left {display: none}
@@ -226,6 +241,8 @@ section.waitingCount h2{text-align: left;padding: 12px 0 20px;margin-right: 100p
 	.videoType3 .showArea{width:448px;}
 	.fbVideoThumb>li{width: 210px;font-size: 16px;}
 	.fbVideoThumb>li>a{width: auto;}
+	.fbVideoThumb .screenShot{width: 200px;height: 112px;}
+	.fbVideoThumb .screenShot img{height: 100%;}
 }
 @media screen and (min-width: 752px){
 	.videoType3 .showArea{width:672px;}

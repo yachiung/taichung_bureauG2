@@ -39,6 +39,29 @@ $(document).ready(function(){
 		}
 	});
 
+	// 20190628 社群有多層選單
+	var snsSpeed = 240;
+	$('.sns').each(function(){
+		var _sns = $(this);
+		var _snsHasChild = _sns.find('li').has('ul');
+		_snsHasChild.addClass('hasChild').children('a').attr('href','#not_a-link');
+		_snsHasChild.hover(
+			function(){
+				$(this).children('ul').stop(true, true).slideDown(snsSpeed);
+			},
+			function(){
+				$(this).children('ul').stop(true, true).slideUp(snsSpeed);
+			}
+		);
+		_snsHasChild.children('a').focus(function(e){
+			$(this).next('ul').stop(true, true).slideDown(snsSpeed);
+			$(this).next('ul').children('li').last().children('a').blur(function(){
+				$(this).parent('li').parent('ul').stop(true, true).slideUp(snsSpeed);
+				e.preventDefault();
+			});
+		})
+	})
+
 
 	webSiteMenu();
 	fixHeader();
@@ -681,3 +704,8 @@ function optionGp(){
     });
   })
 }
+
+
+// function snsMenu(){
+
+// }

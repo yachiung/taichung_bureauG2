@@ -508,7 +508,7 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 .qp caption:after{content:"";display: block;height: 3px;background-color: #ccc;}
 
 .dateRange{display: inline-block;}
-.qp .dateRange input[type="text"]{width: 2em;margin: .1em 3px auto;height: 2.2em;}
+.qp .dateRange input[type="text"]{width: 2em;margin: .1em 3px 3px;height: 2.2em;}
 .qp .dateRange input[type="text"].year{width: 3em;}
 .qp>form td:nth-child(2) .dateRange label{margin-right:0;}
 .optionPool + .optionPool{margin-top:.5em}
@@ -519,14 +519,24 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 .qp>form td:nth-child(2) label{display: inline-block;margin: 0 .9em 5px 2px;border-radius: 4px;padding: 0 3px;}
 .qp>form td:nth-child(2) label:hover,
 .qp>form td:nth-child(2) label:focus{box-shadow:#99c300 0 0 0 2px;}
+.qp td:nth-child(2) .dateRange label:hover{box-shadow: none;background: rgba(185, 220, 0, .5);}
+
+
 .qp>form td input.dateInput {width:calc(100% - 3em);max-width: 14em;}
 .qp>form td input.dateInput+button{margin-left: 5px;}
 .qp input[type="text"][id="strCAPTCHA"],
 .qp input[type="text"][name="aspCaptcha"]{width: 16em}
 
+/* 20190808 */
+.matchingList{position: relative;width: 100%;margin-top: -2px;}
+.matchingList ul{position: absolute;top: 0;background: #fff;border:solid 1px #bbb;border-radius: 4px;padding:0 .4em;width: auto;height: 15.2em;overflow-y: scroll;display: none;width: 96%;width: calc(100% - .8em - 2px)}
+.matchingList li{margin: 2px 0;padding: .2em;}
+.matchingList li:hover{background: #f3f3f3;}
+.qp input[type="text"].showMatching {width: 100%;}
+.qp.onLpTop{padding-top:10px;padding-bottom: 10px;}
+
 @media screen and (min-width:601px){
 	.qp td .optionPool label{display: inline-block;}
-
 }
 @media screen and (min-width:801px){
 	.qp form table{max-width: 760px;}
@@ -548,6 +558,14 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 	.qp input.short{width:8em;}
 	.qp td p{width: 27em;}
 	.qp>form td input.dateInput {width:calc(100% - 4em);}
+
+	.matchingList{width: 26.8em;}
+	.matchingList ul{width: 26em;}
+	.qp input[type="text"].showMatching{width: 26em;}
+
+	/* 20190809 */
+	.qp.onLpTop{padding-top:30px;padding-bottom: 10px;}
+	.qp.onLpTop .buttonDiv{margin-top: 10px;}
 }
 @media screen and (min-width:1001px){
 	.qp{margin:1em auto 3em;width: 90%;border-radius: 6px;box-shadow: rgba(0,0,0,.7) 0 1px 5px -2px;}

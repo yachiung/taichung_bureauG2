@@ -1,6 +1,6 @@
 /*header*/
 .header{position:relative;margin:0 auto;padding:2em 0 0;z-index:5000;/*background-size: 1000px auto;*/background-repeat: no-repeat;background-position: left bottom;background-size: cover;}
-.header>h1{clear:both;height:64px;width:60%;margin: 0;}
+.header>h1{clear:both;height:64px;width:60%;margin: 0;font-size: 20px;}
 .header>h1 a{display:inline-block;}
 .header>h1 a:focus{outline: 1px solid red;}
 .header>h1 img{display:block;width:210px;margin:5px 20px;/*max-width:90%;max-height:90%;*/}
@@ -46,7 +46,7 @@
 	.flowerCountdownMobil iframe{margin:-54px auto auto -121px;} */
 
 
-	.header .sidebarCtrl{display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:100%;font-size:0;}
+	.header .sidebarCtrl{display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:64px;font-size:0;}
 	.header .sidebarCtrl:before,
 	.header .sidebarCtrl:after{content:'';position:absolute;width:40%;}
 	.header .sidebarCtrl:before{height:14px;border:2px solid #fff;left:50%;top:50%;margin:-9px auto auto -20%;border-left:none;border-right:none;}
@@ -61,6 +61,9 @@
 	.searchCtrl.close:before,
 	.searchCtrl.close:after{width:28px;height:2px;border:none;border-radius:0;background:#fff;transform:rotate(45deg);left:50%;top:50%;margin:0 auto auto -14px;}
 	.searchCtrl.close:after{transform:rotate(-45deg);}
+	.searchCtrl:hover, .sidebarCtrl:hover,
+	.searchCtrl:focus, .sidebarCtrl:focus{box-shadow: none;}
+
 
 	.header .search {display:none;position:fixed;left:0;right:0;padding:.5em .8em;background:rgba(0,0,0,.7);width: auto;}
 	.header .search a{color:#fff}
@@ -74,10 +77,11 @@
 }
 
 @media screen and (max-width:600px){
-	.header{padding:0 44px;height:44px;}
+	.header{padding:0 44px;height:44px;height: auto;}
+	.header h1{height: 44px;}
 
 	.header .sidebarCtrl,
-	.searchCtrl {width:44px;}
+	.searchCtrl {width:44px;height: 44px;}
 	.searchCtrl:before{width:20px;height:20px;left:20%;top:20%;}
 	.searchCtrl:after{width:10px;left:62%;top:65%;}
 
@@ -99,8 +103,8 @@
 	.flowerCountdown{left:70px;}
 }
 @media (max-width:600px){
-	.header{margin-bottom: 30px;}
+	/*.header{margin-bottom: 30px;}  留燈會倒數的位置 */
 	.flowerCountdown{display: none;}
-	.flowerCountdownMobil{display: block;position: static;margin:5px 0 0;height: 1.5em;}
-	.header.fixed .flowerCountdownMobil{position: fixed;left: 0;right: 0;margin:1px 0 0;padding-top:4px;background:rgba(255,255,255,.8);box-shadow: rgba(0,0,0,.3) 0 5px 6px -2px;}
+	.flowerCountdownMobil{display:block;position: static;margin:0;height:20px;padding: 2px 0;}
+	.header.fixed .flowerCountdownMobil{position: fixed;left: 0;right: 0;margin:1px 0 0;background:rgba(255,255,255,.8);box-shadow: rgba(0,0,0,.3) 0 5px 6px -2px;}
 }
