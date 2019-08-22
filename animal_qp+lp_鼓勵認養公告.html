@@ -8,6 +8,11 @@
 <link href="css/styleC.css" rel="stylesheet" type="text/css">
 <link media="print" href="css/print.css" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" type="text/css" href="css/calendar-win2k-1.css">
+<!-- <script type="text/javascript" src="/bureauData/js/calendar-setup.js"></script>
+<script type="text/javascript" src="/bureauData/js/calendar.js"></script>
+<script type="text/javascript" src="/bureauData/js/calendar-big5-utf8.js"></script>
+<script type="text/javascript" src="/bureauData/js/calendar-setup.js"></script> -->
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <![endif]-->
@@ -228,12 +233,34 @@
           </td>
         </tr>
         <tr>
+          <td>
+            <label for="q_shelterDate">被認養日期</label>
+          </td>
+          <td>
+            <input class="text" id="q_shelterDateS" name="q_shelterDateS" size="10" readonly="readonly" placeholder="日期起日">
+            <input type="button" value="清除" id="btnShowhtx_avBeginS" onclick="javascript:document.getElementById('q_shelterDateS').value='';return false;" onkeypress="javascript:document.getElementById('q_shelterDateS').value='';return false;">
+            <script type="text/javascript">
+              Calendar.setup({
+                inputField: "q_shelterDateS",
+                ifFormat: "%Y/%m/%d"
+              });
+            </script> ~ <input id="q_shelterDateE" name="q_shelterDateE" size="10" readonly="readonly" class="text" placeholder="日期迄日">
+            <input type="button" value="清除" id="btnShowhtx_avBeginE" onclick="javascript:document.getElementById('q_shelterDateE').value='';return false;" onkeypress="javascript:document.getElementById('q_shelterDateE').value='';return false;">
+            <script type="text/javascript">
+              Calendar.setup({
+                inputField: "q_shelterDateE",
+                ifFormat: "%Y/%m/%d"
+              });
+            </script>
+          </td>
+        </tr>
+        <!-- <tr>
           <td><label for="htx_iHave">是否被認養</label></td>
           <td>
             <label><input type="radio" name="htx_iHave" value="Y">是</label>
             <label><input type="radio" name="htx_iHave" value="N">否</label>
           </td>
-        </tr>
+        </tr> -->
         <tr>
           <td><label for="htx_xabstract">備註</label></td>
           <td><textarea placeholder="請輸入內容簡介" name="htx_xabstract" id="htx_xabstract"></textarea></td>
@@ -558,5 +585,7 @@
 <script type="text/javascript" src="js/jquery.jscroll.js"></script> 
 <script type="text/javascript" src="js/effect.js"></script> 
 <script type="text/javascript" src="js/slide.js"></script>
+
+<div class="calendar"><table cellspacing="0" cellpadding="0" style="visibility: visible;"><thead><tr><td colspan="1" class="buttonCal"><div unselectable="on">?</div></td><td colspan="6" class="title" style="cursor: move;">八月, 2019</td><td colspan="1" class="buttonCal"><div unselectable="on">×</div></td></tr><tr class="headrow"><td colspan="1" class="buttonCal navCal"><div unselectable="on">«</div></td><td colspan="1" class="buttonCal navCal"><div unselectable="on">‹</div></td><td colspan="4" class="buttonCal"><div unselectable="on">今日</div></td><td colspan="1" class="buttonCal navCal"><div unselectable="on">›</div></td><td colspan="1" class="buttonCal navCal"><div unselectable="on">»</div></td></tr><tr class="daynames"><td class="1name wn">週</td><td class="1name 1day weekend">日</td><td class="1day 1name">一</td><td class="1day 1name">二</td><td class="1day 1name">三</td><td class="1day 1name">四</td><td class="1day 1name">五</td><td class="1name 1day weekend">六</td></tr></thead><tbody><tr class="daysrow"><td class="day wn">30</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="day">1</td><td class="day">2</td><td class="day weekend">3</td></tr><tr class="daysrow"><td class="day wn">31</td><td class="day weekend">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td><td class="day">8</td><td class="day">9</td><td class="day weekend">10</td></tr><tr class="daysrow"><td class="day wn">32</td><td class="day weekend">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td><td class="day">15</td><td class="day">16</td><td class="day weekend">17</td></tr><tr class="daysrow"><td class="day wn">33</td><td class="day weekend">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td><td class="day selected today">22</td><td class="day">23</td><td class="day weekend">24</td></tr><tr class="daysrow"><td class="day wn">34</td><td class="day weekend">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td><td class="day">29</td><td class="day">30</td><td class="day weekend">31</td></tr><tr class="emptyrow"><td class="day wn">35</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td><td class="emptycell">&nbsp;</td></tr></tbody><tfoot><tr class="footrow"><td colspan="8" class="ttip" style="cursor: move;"><div unselectable="on">選擇日期</div></td></tr></tfoot></table><div class="combo" style="display: none;"><div class="label">一月</div><div class="label">二月</div><div class="label">三月</div><div class="label">四月</div><div class="label">五月</div><div class="label">六月</div><div class="label">七月</div><div class="label">八月</div><div class="label">九月</div><div class="label">十月</div><div class="label">十一月</div><div class="label">十二月</div></div><div class="combo"><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div><div class="label"></div></div></div>
 </body>
 </html>

@@ -195,6 +195,7 @@
 .animalSearch form td:nth-child(2) label:hover,
 .animalSearch form td:nth-child(2) label:focus{box-shadow:#deff33 0 0 0 2px;}
 
+.animalSearch input.text,
 .animalSearch input[type="text"],
 .animalSearch input[type="password"],
 .animalSearch input[type="tel"],
@@ -230,6 +231,11 @@
 .animalSearch.aDrawer .toggleCtrl:after{border-color: #99c300;}
 .animalSearch.aDrawer .toggleCtrl:hover:after,
 .animalSearch.aDrawer .toggleCtrl:focus:after{border-color: #fff;}
+
+.animalSearch input[type="button"][id*="btnShowhtx_"] {width: 2.4em;border-radius: 4px;text-indent: -20em;background: #99c300 url(../images/icon_close.png) no-repeat center center;background-size: 16px;transition: .2s;}
+.animalSearch input[type="button"][id*="btnShowhtx_"]:hover,
+.animalSearch input[type="button"][id*="btnShowhtx_"]:focus{background-color: #deff33;box-shadow:#dbff57 0 0 0 2px;outline: none}
+
 @media screen and (min-width:601px){
 	.animalSearch form table{width: auto;max-width:92%;min-width: 72%;}
 	.animalSearch .datePeriod input[type="text"]{width: 7em;}
