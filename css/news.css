@@ -147,11 +147,10 @@
 .newsType6 article{margin:0;padding:0 0 .5em;overflow:hidden;}
 .newsType6 article+article{border-top:1px solid #bbb;padding-top:1.2em;margin-top:.8em;}
 .newsType6 article h3{font-size:1.3em;font-weight:normal;margin:0 0 .2em 0;}
-.newsType6 article a{text-decoration:none;}
+.newsType6 article a{text-decoration:none;position: relative;}
 .newsType6 article a:hover,
 .newsType6 article a:focus,
-.newsType6 li>a:hover,
-.newsType6 li>a:focus{text-decoration:underline;}
+
 .newsType6 .poInfo{clear:both;}
 .newsType6 .poInfo .from,
 .newsType6 .poInfo time{margin-left:0;margin-right:1em;}
@@ -160,10 +159,16 @@
 .newsType6 article figure figcaption{font-size:.88em;}
 .newsType6 article figure img{display:block;width:100%;height:100%;object-fit:cover;max-width:100%;max-height:100%;}
 .newsType6 article p{margin-top:1em;}
+
 .newsType6 ul{border-top:1px solid #bbb;margin: .6em auto 0;}
-.newsType6 li>a{display:block;line-height:1.8em;padding:.5em 0;border-bottom:1px solid #bbb;text-decoration:none;overflow: hidden;}
+.newsType6 li>a{position: relative;display:block;line-height:1.8em;padding:.5em 0;border-bottom:1px solid #bbb;text-decoration:none;overflow: hidden;transition: .2s;}
+.newsType6 li>a:before{content: '';position: absolute;top: .9em;left:-6px;width: 6px;height: 13px;background: transparent;transition: .2s;}
 .newsType6 li>a:hover,
-.newsType6 li>a:focus{border-color:#000;outline:none;}
+.newsType6 li>a:focus{border-color:#000;outline:none;text-decoration:underline;padding-left: 12px;}
+.newsType6 li>a:hover:before,
+.newsType6 li>a:focus:before{left: 2px;background: #000;}
+
+
 
 .newsType6 li time{float:right;margin-top: .2em;}
 .newsType6 .from{color:#777;}
@@ -176,7 +181,7 @@
 	.cx2 .newsType6 article figure{width:12em;height:8em;}
 	.newsType6 li time{position:absolute;right:0;}
 	.newsType6 li .from{display: none;}
-	.newsType6 li>a{position:relative;height:2.8em;line-height:2.8em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 6.5em 0 0;}
+	.newsType6 li>a{position:relative;height:2.8em;line-height:2.8em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6.5em;padding-top: 0;padding-bottom: 0;}
 	.newsType6 li>a:hover,
 	.newsType6 li>a:focus{text-decoration:none;}
 }

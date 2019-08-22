@@ -176,15 +176,14 @@
 
 
 /*電子書*/
-.eBookType1{}
 .eBookType1 .box{position:relative;margin:0 auto 1.2em;max-width:420px;min-height: 440px;}
 /*.eBookType1 .showArea{width:260px;margin:0 auto;}*/
 .eBookType1 .showArea{position:relative;overflow:hidden;margin:0 auto;width:260px;}
 .eBookType1 ul{overflow:hidden;}
 .eBookType1 li {float:left;text-align:center;margin:5px 10px;}
 .eBookType1 li>a{display:block;width:240px;margin:0 auto 12px;text-decoration:none;background:#fff;box-shadow:rgba(0,0,0,.5) 0 0 3px;transition:.25s;}
-.eBookType1 li>a:focus,
 .eBookType1 li>a:hover{box-shadow:rgba(0,0,0,.5) 0 5px 8px;}
+.eBookType1 li>a:focus{box-shadow:#444 0 0 0 4px;}
 .eBookType1 li img{display:block;margin:5px auto;width:240px;height:320px;object-fit:cover;max-width:240px ;max-height:320px;}
 .eBookType1 li p{font-size:1.08em;margin:1em .55em 0;padding:.5em 0;border-top:1px solid #bbb;text-align:left;height:1.6em;line-height: 1.6em;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 

@@ -7,11 +7,11 @@ input[type="file"]:focus,
 select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 
 .more a{display:inline-block;padding:0 .8em;text-decoration:none;position:relative;overflow:hidden;border-radius:5px;color:#777;transition:.2s;}
-.more a:hover,
-.more a:focus{background:rgba(255,255,255,.5);color:#222;box-shadow:rgba(0,0,0,.4) 0 0 5px 1px;outline:none;text-decoration:none;}
+.more a:hover{background:rgba(255,255,255,.5);color:#222;box-shadow:rgba(0,0,0,.4) 0 0 5px 1px;outline:none;text-decoration:none;}
+.more a:focus{background-color: #c70e69;color: #fff;}
 .more a:after{content:'';display:inline-block;width:0;height:0;border-width:6px 0 6px 9px;border-style:solid;border-color:transparent transparent transparent #444;vertical-align:middle;margin:-4px 0 auto 6px;}
-.more a:hover:after,
-.more a:focus:after{border-left-color:#c70e69}
+.more a:hover:after{border-left-color:#c70e69}
+.more a:focus:after{border-left-color:#fff}
 
 .header{background-color:#f0c13b;color:#000;border-bottom:1px solid #fff;box-shadow:rgba(0,0,0,.5) 0 3px 8px -3px;}
 .header h1 a:focus{outline-color:#e6f366}
@@ -328,6 +328,10 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .newsType2 li a:hover:before{width:6px;}
 
 
+.newsType6 li a:hover:before,
+.newsType6 li a:focus:before{background-color: #bb2965;}
+
+
 .newsType5 p {border-color:#aead9c;}
 .newsType7 li h3,
 .linkType5 h2{border-bottom:4px solid #ff4088;}
@@ -375,16 +379,24 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 
 
 .footer{background:#fff;border-top:4px solid #e17c1a}
-.footer>nav li a:focus{outline-color:#e17c1a }
+/* .footer>nav li a:focus{outline-color:#e17c1a } */
+.footer>nav li a{border-radius: 3px;}
+.footer>nav li a:hover,
+.footer>nav li a:focus{background: #bb2965;color: #fff;text-decoration: none;}
+
 .footer>section{color:#5f5c5c;background:#f9f8ec;}
 .footer>section a{display:inline-block;padding:0 .3em;border-radius:3px;color:#333;}
 .footer>section a:hover,
-.footer>section a:focus{text-decoration:none;background:rgba(255,230,80,.6);outline:none;}
+.footer>section a:focus{text-decoration:none;background:#f9c63b;color: #000;outline:none;}
 .footer>section p a{margin:0 .5em;}
 .fatfootCtrl{background:#e17c1a}
 .fatfootCtrl:hover,
-.fatfootCtrl:focus{background:#fa0;outline:none;}
+.fatfootCtrl:focus{background:#bb2965;outline:none;box-shadow:#bb2965 0 0 0 3px }
 
+.footer .markA a:hover,
+.footer .egov a:hover,
+.footer .markA a:focus,
+.footer .egov a:focus{box-shadow: #e17c1a 0 0 0 3px;background: #fff;}
 @media screen and (max-width:1000px) {
 	.header .sidebarCtrl,
 	.header .searchCtrl{background:none;}

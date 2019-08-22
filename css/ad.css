@@ -50,7 +50,7 @@
 .adSlide li img{display:block;width:180px;height:80px;}
 .adSlide li a{display:block;position:relative;border:1px solid #fff;transition:.2s;}
 .adSlide li a:hover{box-shadow:rgba(0,0,0,.4) 0 0 6px;}
-.adSlide li a:focus{box-shadow:#e30 0 0 0 2px;outline:none;}
+.adSlide li a:focus{box-shadow:#444 0 0 0 2px;outline:none;}
 .adSlide .arbtn.left{margin-left:0;}
 .adSlide .arbtn.right{margin-right:0;}
 @media screen and (min-width:480px){
