@@ -223,7 +223,7 @@ section.waitingCount h2{text-align: left;padding: 12px 0 20px;margin-right: 100p
 
 
 /* fb 影片列表 */
-.videoType3 .showArea{width:80vw;position: relative;overflow: hidden;margin: 0 auto 15px;background: #fcc;}
+.videoType3 .showArea{width:80vw;position: relative;overflow: hidden;margin: 0 auto 15px;}
 .videoType3 .fbVideoThumb{list-style: none;margin:0;padding:0;white-space: nowrap;font-size: 0;}
 .fbVideoThumb>li{float: left;width:80vw;margin:0;padding:7px 0 10px;white-space: normal;font-size: 18px;}
 .fbVideoThumb>li>a{display: block;width:calc(100% - 24px);margin: 0 auto;padding: 5px;background: #fff;box-shadow: rgba(0,0,0,.3) 0 1px 3px;transition: .2s}
