@@ -432,8 +432,7 @@ function clickToSlide(){//click 左右箭頭滑動
 					itemWidth = _ckSlideItem.outerWidth(true),
 					_arLeft = _ckSlide.find('.arbtn.left'),
 					_arRight = _ckSlide.find('.arbtn.right'),
-					listLeft = 0,
-					ic = 0;
+					listLeft = 0;
 
 			_ckSlideList.width(itemWidth * length).wrap('<div class="showArea"></div>');
 
@@ -446,11 +445,12 @@ function clickToSlide(){//click 左右箭頭滑動
 				_ckSlideList.css({'position':'absolute','left':0,'top':0});
 				_arRight.show();
 
-				var rightLimit = _showArea.width() - _ckSlideList.width() + itemWidth;
-
+				// var rightLimit = _showArea.width() - _ckSlideList.width() + itemWidth;
+				var rightLimit = Math.ceil( _showArea.width() + itemWidth - _ckSlideList.width() );
+				
 				_arRight.click(function(){
 					_arLeft.fadeIn();
-					if ( parseInt(_ckSlideList.css('left')) <= rightLimit ){$(this).fadeOut();}
+					if ( parseInt( _ckSlideList.css('left')) <= rightLimit ){$(this).fadeOut();}
 					_ckSlideList.stop(true,false).animate({	'left': listLeft-itemWidth },500,function(){
 						listLeft = listLeft-itemWidth;
 					});

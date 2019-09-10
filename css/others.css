@@ -74,7 +74,6 @@
 .epSubscribe .btnDiv input:first-child{border: none;}
 .epSubscribe .btnDiv input:hover{background: #444;color: #fff}
 @media screen and (max-width:1000px){
-	.epSubscribe label{}
 	.epSubscribe label input[type="text"]{width: 100%;}
 }
 @media screen and (max-width:420px){
@@ -91,8 +90,6 @@
 .row>.search input[type="text"]{margin-right: -5px}
 .row>.search input[type="submit"]{background:#888 url(../images/search_submit.png) no-repeat center center;background-size:1.8em;color:transparent;width:2.6em;margin-right: .1em;}
 .row>.search form a{display: inline-block;height:2.6em;line-height:2.6em;padding: 0 .5em;text-decoration: none;}
-
-
 
 
 
@@ -226,29 +223,26 @@ section.waitingCount h2{text-align: left;padding: 12px 0 20px;margin-right: 100p
 
 
 /* fb 影片列表 */
-.videoType3 .showArea{width:80vw;position: relative;overflow: hidden;margin: 0 auto 15px;}
+.videoType3 .showArea{width:80vw;position: relative;overflow: hidden;margin: 0 auto 15px;background: #fcc;}
 .videoType3 .fbVideoThumb{list-style: none;margin:0;padding:0;white-space: nowrap;font-size: 0;}
-.fbVideoThumb>li{display: inline-block;width:80vw;margin:0 7px;padding:7px 0 10px;white-space: normal;font-size: 18px;}
-.fbVideoThumb>li>a{display: block;width:calc(80vw - 24px);padding: 5px;background: #fff;box-shadow: rgba(0,0,0,.3) 0 1px 3px;transition: .2s;}
+.fbVideoThumb>li{float: left;width:80vw;margin:0;padding:7px 0 10px;white-space: normal;font-size: 18px;}
+.fbVideoThumb>li>a{display: block;width:calc(100% - 24px);margin: 0 auto;padding: 5px;background: #fff;box-shadow: rgba(0,0,0,.3) 0 1px 3px;transition: .2s}
 .fbVideoThumb>li>a:hover,
 .fbVideoThumb>li>a:focus{box-shadow: rgba(0,0,0,.5) 0 3px 9px -2px;}
-
-.fbVideoThumb .screenShot img {display: block;width: 100%; height:42vw;}
-.fbVideoThumb .vTitle {line-height: 1.5;height: 4.4em;overflow: hidden;margin: .6em auto;color: #000;}
+.fbVideoThumb .screenShot img {display: block;width: 100%; height:42vw;object-fit: contain;background: #eee;}
+.fbVideoThumb .vTitle {line-height: 1.5;height: 4.4em;overflow: hidden;margin: 5px auto .6em;color: #000;}
 .fbVideoThumb a .vInfo {color: #666;font-size: .86em;}
 .videoType3 .arbtn.left {display: none}
-@media screen and (min-width: 528px){
-	.videoType3 .showArea{width:448px;}
-	.fbVideoThumb>li{width: 210px;font-size: 16px;}
-	.fbVideoThumb>li>a{width: auto;}
-	.fbVideoThumb .screenShot{width: 200px;height: 112px;}
-	.fbVideoThumb .screenShot img{height: 100%;}
+@media screen and (min-width: 520px){
+	.videoType3 .showArea{width:440px;}
+	.fbVideoThumb>li{width: 220px;font-size: 16px;}
+	.fbVideoThumb .screenShot img{height: 114px;}
 }
-@media screen and (min-width: 752px){
-	.videoType3 .showArea{width:672px;}
+@media screen and (min-width: 740px){
+	.videoType3 .showArea{width:660px;}
 }
 @media screen and (min-width: 1000px){
-	.videoType3 .showArea{width:896px;font-size: 15px;}
+	.videoType3 .showArea{width:880px;font-size: 15px;}
 }
 
 
