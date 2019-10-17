@@ -112,8 +112,10 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .tabItem a:focus{background:#bbb;color:#222;outline:none;}
 .tabItem.active a,
 .albumType4 .tabItem.active a{background:#bb2965;color:#fff;}
-.tabItem.active a:focus{color:#fff;}
 .tabItem.active a:after{background:#bb2965;}
+.tabItem.active a:focus{background:#ff50a0;color:#000;}
+.tabItem.active a:focus:after{background:#ff50a0;}
+
 .tabContent{background:#fff;}
 
 .albumType4 .tabContent{background:#000;}

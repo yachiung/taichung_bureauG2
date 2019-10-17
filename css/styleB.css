@@ -109,10 +109,14 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .tabItem a{background:#424639;color:#ddc;}
 .tabItem a:hover,
 .tabItem a:focus{background:#221;color:#ac0;outline:none;}
-.tabItem.active a{background:#84c000;color:#fff;}
-.tabItem.active a:focus{color:#e6f366;}
+.tabItem.active a{background:#90d202;color:#000;}
+.tabItem.active a:after{background:#90d202;}
+.tabItem.active a:focus{background:#33aca3;color:#fff;}
+.tabItem.active a:focus:after{background:#33aca3;}
+
+
 @media screen and (min-width:601px){
-	.tabItem.active a:after{background:#84c000;}
+	
 }
 
 

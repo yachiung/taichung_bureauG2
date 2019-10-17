@@ -126,6 +126,8 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 .tabItem a:focus{color:#fe0;outline:none;}
 .tabItem a:after{border-color:#fff;}
 .tabItem.active a{background:#eb6400;color:#fff;}
+.tabItem.active a:focus{background:#ffa022;color:#000;}
+.tabItem.active a:focus:after{background:#ffa022;}
 
 @media screen and (min-width:601px){
 	.tabItem.active a:after{background:#eb6400;}

@@ -118,12 +118,13 @@
 .tabs{margin:0 auto;}
 .tabItem{position:relative;display:block;}
 .tabItem a{display:block;height:2.8em;line-height:2.8em;padding:0 2em 0 4%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;border-top:1px solid #fff;text-decoration:none;font-size:1.3em;}
+.tabItem a:after{content:'';position:absolute;right:20px;bottom:1.1em;width: 16px;height: 16px;border:3px solid #fff;transform:rotate(45deg);z-index:9;border-left:none;border-top:none;transition:transform .5s .5s;}
+.tabItem.active a:after{transform:rotate(225deg);bottom:.7em;}
 .tabItem:first-child a{border: none;}
 .tabItem a:hover,
 .tabItem a:focus{text-decoration:none;}
-
-.tabItem a:after{content:'';position:absolute;right:20px;bottom:1.1em;width: 16px;height: 16px;border:3px solid #fff;transform:rotate(45deg);z-index:9;border-left:none;border-top:none;transition:transform .5s .5s;}
-.tabItem.active a:after{transform:rotate(225deg);bottom:.7em;}
+/* .tabItem a:before{content: '';position: absolute;top: 5px;left: 4px;right: 4px;bottom:8px;border: 1px solid rgba(255,255,255,.7);border-radius: 3px;box-shadow:#fff 0 0 2px;display: none;}
+.tabItem a:focus:before{display: block;} */
 .tabContent{position: static;display:none;padding:1.2em 4% .8em;background: #fff;}
 .active .tabContent{display:block;}
 @media screen and (min-width:801px){
@@ -149,7 +150,7 @@
 .newsType6 article h3{font-size:1.3em;font-weight:normal;margin:0 0 .2em 0;}
 .newsType6 article a{text-decoration:none;position: relative;}
 .newsType6 article a:hover,
-.newsType6 article a:focus,
+.newsType6 article a:focus{text-decoration: underline;}
 
 .newsType6 .poInfo{clear:both;}
 .newsType6 .poInfo .from,
