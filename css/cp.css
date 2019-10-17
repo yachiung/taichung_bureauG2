@@ -595,7 +595,14 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 .like input[type="button"]:focus { background-position:0 -50px;outline: none}
 /* 本日新增 */
 .newArrival {width:124px; height:72px; background:url(../images/newArrival.png) no-repeat 0 0;font-size: 0;}
-
+/* 已認養 */
+.adopted {position: absolute;right: 15px;bottom: 135px;width: 100px;height: 100px;background: url(../images/label_adopted.png) no-repeat 0 0;}
+@media screen and (min-width: 601px){
+	.adopted{right:90px;bottom: 80px;}
+}
+@media screen and (min-width: 801px){
+	.adopted{right:20%;right:calc(30% - 90px);bottom: 50px;}
+}
 
 
 .profileList li{position: relative;}
