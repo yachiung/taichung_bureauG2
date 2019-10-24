@@ -116,7 +116,7 @@
 .row.cx2>section.tabs{height:100%;}
 
 .tabs{margin:0 auto;}
-.tabItem{position:relative;display:block;}
+.tabItem{position:relative;display:block;font-size: 1em;font-weight: normal;margin: 0;padding: 0 !important;line-height: 1;}
 .tabItem a{display:block;height:2.8em;line-height:2.8em;padding:0 2em 0 4%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;border-top:1px solid #fff;text-decoration:none;font-size:1.3em;}
 .tabItem a:after{content:'';position:absolute;right:20px;bottom:1.1em;width: 16px;height: 16px;border:3px solid #fff;transform:rotate(45deg);z-index:9;border-left:none;border-top:none;transition:transform .5s .5s;}
 .tabItem.active a:after{transform:rotate(225deg);bottom:.7em;}

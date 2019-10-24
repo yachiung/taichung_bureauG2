@@ -144,6 +144,37 @@
 	.epb .icon img{display:block;width:72px;margin: 0;}
 }
 
+.qa{background:#fff;}
+.qa ol{width:92vw;margin:.6em auto 0;}
+.qa li{line-height:1.5;border:1px solid #aaa;margin-top:-1px;overflow:auto;}
+.qa li p{position:relative;margin:0;}
+.qa .question{font-size:1.2em;}
+.qa .question>a{position:relative;display:block;padding:15px 36px 15px 44px;text-decoration: none;}
+.qa .question>a:after{content:'';position:absolute;right:10px; top:25px;width:16px; height:16px;border:2px solid #777;border-top:none;border-left:none;transform:rotate(-135deg);transition:.4s;}
+.qa .hiddenAns .question>a:after{transform:rotate(45deg);top:18px;}
+.qa .answer{border-top:1px dashed #bbb;padding:15px 12px 15px 44px;}
+.qa .hiddenAns .answer{display:none;}
+.qa li .detail {display:block;text-align:right;margin:.3em 12px 0 1em;line-height:1.5;}
+.qa li .detail a{display:inline-block;text-decoration:none;border:1px solid #bbb;padding:0 .8em;line-height:1.8em;height:1.8em;transition: .2s;}
+.qa li .detail a:hover,
+.qa li .detail a:focus{border-color:#000;box-shadow: rgba(0,0,0,.5) 0 1px 5px;}
+.qa .question:before,
+.qa .answer:before{position:absolute;left:-10px;top:10px;text-indent: 5px;
+	/*left:12px;top:9px;*/width:44px;height:44px;line-height:44px;background:#bbb;color:#fff;font-size:20px;text-align:center;border-radius:50%;font-weight:normal;}
+.qa .question:before{content:'問';}
+.qa .answer:before{content:'答';background:#555;}
+.no-js .qa .answer{display:block;}
+@media screen and (min-width:601px){
+	.qa ol{width:88%;}
+	.qa .question>a{padding-right:48px;}
+	.qa .question>a:after{right:20px;}
+	.qa .question>a,
+	.qa .answer{padding-left: 68px;}
+	.qa .question:before,
+	.qa .answer:before{left:12px;top:9px;text-indent: 0;}
+	.qa .question:before{top:8px;}
+}
+
 
 
 
