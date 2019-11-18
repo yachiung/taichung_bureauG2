@@ -81,8 +81,8 @@ $(document).ready(function(){
 	optionGp();
 
 	if (ww <= wwMedium ) {
-		$('.list, .thumbnail').jscroll({
-			contentSelector: '.list, .thumbnail'
+		$('.list, .thumbnail, .profileList').jscroll({
+			contentSelector: '.list, .thumbnail, .profileList'
 		});
 	}
 	rwdTable();

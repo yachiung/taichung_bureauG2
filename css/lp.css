@@ -24,9 +24,9 @@
 .list li{margin:0;padding:0;border-bottom:1px solid #ccc;text-align:justify;position:relative;}
 .list li:nth-child(even) {background:#f6f6f6;}
 .list li:last-child{border:none;}
-.list li a{display:block;padding:.7em 8em .7em 3.5em;overflow:hidden;text-decoration: none;}
-.list li a:hover,
-.list li a:focus{text-decoration:underline;outline:none;}
+.list li>a{display:block;padding:.7em 8em .7em 3.5em;overflow:hidden;text-decoration: none;}
+.list li>a:hover,
+.list li>a:focus{text-decoration:underline;outline:none;}
 .list li time,
 .list li .date{ margin:0 0 0 .6em;position:absolute; top:.7em; right:1em;}
 .list li .numb{display:inline-block;font-family:Arial, Helvetica, sans-serif;min-width:2.4em;text-align:right;margin:0 .4em 0 -2.8em;}
@@ -292,7 +292,7 @@
 
 @media screen and (max-width:800px){
 	.list{border:none;}
-	.list ul li a{padding-left:2.4em; padding-right:1em;}
+	.list ul li>a{padding-left:2.4em; padding-right:1em;}
 	.list ul li .numb{min-width:3em;margin-left:-3.4em;}
 	.list ul li .date,
 	.list ul li time{ margin-left:1em;position: static; display:inline-block;}
@@ -304,8 +304,8 @@
 	.list td:last-child{border:none;}
 	.list table tr:last-child td{border-bottom:1px dotted #ccc;}
 	.list table tr:last-child td:last-child{border:none}
-	.list td:empty{display:none;}
-	.list tr:nth-child(odd){background: transparent;}
+	.list:not(.profileList) td:empty{display:none;}
+	.list tr:nth-child(odd){background-color: transparent;}
 	.list td:before{content:attr(data-title) '：';display:inline-block; color:#999;}
 	.list td[data-title="序號"]:before{display:none;}
 	.list td[data-title="序號"]{float:right;margin:0 0 0 .5em;/*position:absolute;top:0;right:0;*/min-width:1.4em;height:1.2em;line-height:.9em ;background:#5d666f;color:#fff;font-size:1.2em;text-align:center;box-shadow:rgba(0,0,0,.4) 0 0 10px;border:none !important;}

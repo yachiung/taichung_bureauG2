@@ -585,9 +585,9 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 /* 2019 動保處新增版型 */
 /* 認養事項發問 btn */
 .askBtn{display: inline-block;text-align: center;}
-.askBtn a{display: block;margin: 0 auto;height: 2.6em;line-height: 2.55em;padding: 0 2em;background: #05a3bb;color: #fff;border-radius: 2em;text-decoration: none;transition: .2s;}
-.askBtn a:hover,
-.askBtn a:focus{text-decoration: none;color: #fff;background: #00b5d0;box-shadow: #6ed9e9 0 0 0 3px;}
+.askBtn>a{display: block;margin: 0 auto;height: 2.6em;line-height: 2.55em;padding: 0 2em;background: #05a3bb;color: #fff;border-radius: 2em;text-decoration: none;transition: .2s;}
+.askBtn>a:hover,
+.askBtn>a:focus{text-decoration: none;color: #fff;background-color: #00b5d0 !important;box-shadow: #6ed9e9 0 0 0 3px;}
 /* 萌指數 button */
 .like{display: inline-block;font-size: 1em;line-height:40px; }
 .like input[type="button"] {color: transparent;padding: 0;margin: 0 4px 0 0;;width: 44px;height: 40px;background:url(../images/iconLovely.png) no-repeat 0 0;  cursor:pointer;background-size:100% auto}
@@ -612,13 +612,14 @@ img#imgCaptcha + input[type="text"] {height:2.4em;line-height:2.4em;}
 .profile .askBtn {display: block;margin:0 5px;padding-top: 15px;}
 .profile .askBtn a{display: inline-block}
 
-
 /* 動物資料表格與照片列表 */
 .profileList,
 .profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;}
-.profileList>ul>li{clear: both;overflow: hidden;margin: 0 0 25px;padding:15px 10px;border: none;background: #fff;box-shadow: rgba(0,0,0,.6) 0 0 4px;border-radius: 4px;}
-.profileList>ul>li:last-child{border-bottom: none;}
-
+.profileList .profileList,
+.profile .profile{width: 100%;}
+.profileList li{clear: both;overflow: hidden;margin: 0 0 25px;padding:15px 10px;border: none;background: #fff;box-shadow: rgba(0,0,0,.6) 0 0 4px;border-radius: 4px;}
+.profileList li:last-child{border-bottom: none;}
+.profileList li:nth-child(n){background-color: #fff;}
 figure.petPicture{display: block;background: url(../images/animalNoPhoto.png) no-repeat center center;border: 4px solid #fff;box-shadow: rgba(0,0,0,.4) 0 0 5px;margin-bottom: 15px;min-height: 200px;}
 .petPicture img{display: block;width: 100%;}
 .petPicture>a{display: block;border: 1px solid #fff;}
@@ -626,25 +627,35 @@ figure.petPicture{display: block;background: url(../images/animalNoPhoto.png) no
 .petPicture>a:focus{box-shadow: #fc3 0 0 0 4px;outline: none;}
 
 /* 動物保護處: 動物基本資料 */
-table.meta4col,
+
+ table.meta4col,
 .meta4col table{width: 100%;line-height: 1.7;border-collapse: collapse;border: 2px solid #888;margin: 0 auto 1em;}
+.list table.meta4col{width: 100%;line-height: 1.7;border-collapse: collapse;border: 2px solid #888;margin: 0 auto 1em;}
 .meta4col caption{text-align: left;}
+.meta4col tr{margin: 0;border: none;}
+.meta4col tr:nth-child(n){background-color: transparent;}
 .meta4col th,
-.meta4col td{vertical-align: top;padding: .5em 6px .4em;border-bottom: 1px solid #aaa;}
+.meta4col td,
+.meta4col td:last-child{vertical-align: top;padding: .5em 6px .4em;border-bottom: 1px solid #aaa;}
 .meta4col th{text-align: right;padding-right:12px;position: relative;width: 20%;}
 .meta4col th:after{content:'';position: absolute;top: 4px;bottom: 4px;right: 2px;width: 1px;background: #ddd;}
 .meta4col th:nth-child(3){border-left: 1px solid #aaa;}
+.meta4col td{text-align: left; word-break: break-word;}
 .meta4col td a{color: #0a77bb;text-decoration: underline;}
+.list .meta4col td a{display: inline;padding: 0;}
 .meta4col td a:hover,
 .meta4col td a:focus{text-decoration: none;color: #09f}
 .meta4col td a:focus{outline: 1px solid #09f}
-.profileList li .askBtn + p.hint{padding: .4em 1em;margin:1em 0 0;border: 1px dashed #bcc;background-color: #eef3f6;;border-radius: 4px;font-size:.9em}
-@media screen and (max-width:600px){
+.profileList li .askBtn + p.hint{padding: .4em 1em;margin:1em 0 0;border: 1px dashed #bcc;background-color: #eef3f6;border-radius: 4px;font-size:.9em}
+.profileList .petPicture a{ display: block; padding: 0 !important;margin: 0 !important;}
+.profileList .petPicture a>img{display: block;}
+@media screen and (max-width:800px){
   .meta4col{clear: both;}
 	.meta4col tr, .meta4col th, .meta4col td{display: block;}
   .meta4col th,
 	.meta4col td{width: auto;padding-left: 2vw;padding-right: 2vw;border-bottom: none;text-align: left;}
-	.meta4col td{border-bottom: 1px solid #ddd;}
+	.meta4col th{border: none;}
+	.meta4col td, .meta4col td:last-child,  .list .meta4col tr:last-child td{border-bottom: 1px solid #ddd;}
 	.meta4col tr:last-child td:last-child{border: none;}
 	.meta4col th{float: left;clear: both;padding-bottom: 0;padding-right:20px}
 	.meta4col td:before{content: '';display: inline-block;height: 5px;}/* 避免無資料時高度塌陷 */
