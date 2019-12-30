@@ -224,7 +224,9 @@
 .animalSearch form td:first-child label{width: auto;margin: .4em 0 0;white-space: normal;vertical-align:top;}
 .animalSearch form td:nth-child(2) label{display: inline-block;margin: 0 .9em 5px 2px;border-radius: 3px;padding: 0 3px;}
 .animalSearch form td:nth-child(2) label:hover,
-.animalSearch form td:nth-child(2) label:focus{box-shadow:#deff33 0 0 0 2px;}
+.animalSearch form td:nth-child(2) label:focus{box-shadow:#deff33 0 0 0 2px; outline: 1px solid #ff0;}
+.animalSearch form input[type="checkbox"]:focus{box-shadow:#deff33 0 0 0 3px;border-radius: 2px;}
+.animalSearch form input[type="radio"]:focus{border-radius: 50%;box-shadow:#deff33 0 0 0 4px;}
 
 .animalSearch input.text,
 .animalSearch input[type="text"],

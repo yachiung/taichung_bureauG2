@@ -236,7 +236,8 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .linkType2 li>a:before{background:#84a;}
 .linkType1 .more a,
 .linkType2 .more a{color:#444;}
-
+.linkType1 .more a:hover,
+.linkType2 .more a:focus{color:#fff;background:#c70e69;}
 
 .linkType3,
 .linkType4,
@@ -526,9 +527,6 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .sns2 li a:hover img,
 .sns2 li a:focus img {box-shadow:#f0c13b 0 0 0 3px;background:#f0c13b;}
 .epSubscribe+.sns2 ul{margin-top:-.25em;}
-
-
-
 
 
 

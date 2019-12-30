@@ -6,6 +6,9 @@
 .cx2>section, .cx3>section, .cx4>section,
 .cx2a>section, .cx2b>section,
 .cx3a>section, .cx3b>section, .cx3c>section{float:left;}
+.cx2:after, .cx3:after, .cx4:after,
+.cx2a:after, .cx2b:after,
+.cx3a:after, .cx3b:after, .cx3c:after{content: '';display: block;clear: both;}
 /*定義直欄寬度*/
 .cx2>section{width:50%;/*max-width: 780px;*/}
 .cx2a>section{width:33%;/*max-width: 420px;*/}

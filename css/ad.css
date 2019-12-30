@@ -3,7 +3,7 @@
 .adType1 li{display:inline-block;margin:4px -1px;padding:0;vertical-align:top}
 .adType1 li a,
 .adType1 li img{display:block;width:180px;height:80px;margin:0 auto;}
-.adType1 li a{background:#fff;padding:1px;transition:.2s;}
+.adType1 li a{background:#fff;padding:2px;transition:.2s;}
 .adType1 li a:hover,
 .adType1 li a:focus{box-shadow:rgba(0,0,0,.5) 0 1px 6px;outline:none;}
 .adType1 li a:focus{background:#333;}

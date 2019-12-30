@@ -60,6 +60,37 @@
 .list td a.fileType:focus{text-decoration: none;box-shadow: #f00 0 0 2px 2px;border: 1px solid #fff;}
 
 
+.list td ul.attIcons{overflow: hidden; display: inline-block; margin: 0;padding: 0;}
+.list td .attIcons>li{border:none; float: left;margin: 3px;}
+.list td .attIcons>li:nth-child(odd),
+.list td .attIcons>li:nth-child(even){background-color: transparent;}
+.attIcons{font-family: 'Courier New', Courier, monospace;}
+.list .attIcons>li>a{min-width: 2em;padding: 0 3px; height: 1.5em;line-height: 1.5em;
+	background-color: #888;color: #fff;border: 1px solid transparent; text-align: center; text-decoration: none; border-radius: 4px;font-size: .9em; transition: .15s;}
+.list .attIcons>li>a:hover,
+.list .attIcons>li>a:focus{background-color: #888; box-shadow:#888 0 0 0 2px; color: #fff; border-color:#fff;text-decoration: none;}
+.list .attIcons>li>a.doc, .list .attIcons>li>a.docx{background-color: #0a5bbf;}
+.list .attIcons>li>a.xls, .list .attIcons>li>a.xlsx{background-color: #0b9449;}
+.list .attIcons>li>a.zip, .list .attIcons>li>a.rar{background-color: #678;}
+.list .attIcons>li>a.pdf{background-color: #c00;}
+
+.list .attIcons>li>a.doc:hover,
+.list .attIcons>li>a.docx:hover,
+.list .attIcons>li>a.doc:focus,
+.list .attIcons>li>a.docx:focus{background-color: #0a5bbf;box-shadow:#0a5bbf 0 0 0 2px;}
+.list .attIcons>li>a.xls:hover,
+.list .attIcons>li>a.xlsx:hover,
+.list .attIcons>li>a.xls:focus,
+.list .attIcons>li>a.xlsx:focus{background-color: #0b9449;box-shadow:#0b9449 0 0 0 2px;}
+.list .attIcons>li>a.zip:hover,
+.list .attIcons>li>a.rar:hover,
+.list .attIcons>li>a.zip:focus,
+.list .attIcons>li>a.rar:focus{background-color: #678;box-shadow:#678 0 0 0 2px;}
+.list .attIcons>li>a.pdf:hover,
+.list .attIcons>li>a.pdf:focus{background-color: #c00;box-shadow:#c00 0 0 0 2px;}
+
+
+
 .list.openData td:first-child a{display: inline-block;white-space: nowrap;padding: 0 .8em;margin: 0 .2em;font-size: 1.05em;border-radius: 2em;height: 2.2em;line-height: 2.2em;text-decoration: none;border: 2px solid #bbb;}
 .dsIcon {list-style: none;white-space: nowrap;}
 .dsIcon li{display: inline-block;margin:2px 1px;font-size:.8em;border: none;background: none !important;}
@@ -306,7 +337,7 @@
 	.list table tr:last-child td:last-child{border:none}
 	.list:not(.profileList) td:empty{display:none;}
 	.list tr:nth-child(odd){background-color: transparent;}
-	.list td:before{content:attr(data-title) '：';display:inline-block; color:#999;}
+	.list td:before{content:attr(data-title) '：';display:inline-block; color:#999;vertical-align: top;}
 	.list td[data-title="序號"]:before{display:none;}
 	.list td[data-title="序號"]{float:right;margin:0 0 0 .5em;/*position:absolute;top:0;right:0;*/min-width:1.4em;height:1.2em;line-height:.9em ;background:#5d666f;color:#fff;font-size:1.2em;text-align:center;box-shadow:rgba(0,0,0,.4) 0 0 10px;border:none !important;}
 	/*.list td[data-title="序號"] + td{padding-right:4em;}*/
