@@ -369,6 +369,9 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .footer .markA a:focus,
 .footer .egov a:focus{box-shadow: #ffa 0 0 0 3px;background: #ffa;}
 
+.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"]{border-bottom: 3px solid #93c622;}
+.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:hover{ background-color: #189595;color: #fff;}
+
 
 @media screen and (max-width:1000px) {
 	.header .searchCtrl.close{background:#18959a;}

@@ -400,6 +400,10 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 .footer .egov a:hover,
 .footer .markA a:focus,
 .footer .egov a:focus{box-shadow: #e17c1a 0 0 0 3px;background: #fff;}
+
+.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"]{border-bottom: 3px solid #ebb726;}
+.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:hover{ background-color: #e17c1a;color: #fff;}
+
 @media screen and (max-width:1000px) {
 	.header .sidebarCtrl,
 	.header .searchCtrl{background:none;}
