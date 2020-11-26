@@ -532,3 +532,46 @@
 .stress {position: relative;display: inline-block !important;height:28px;width: 28px; line-height: 29px;color: #f40;padding:4px;text-decoration: none;vertical-align: middle;margin:-5px 0 -3px 10px;font-size: 13px;text-align: center;background: #fff; box-shadow:rgba(0,0,0,.4) 1px 1px 4px	;border: 2px solid #f50;border-radius: 50%;}
 .stress:before{content: '';position: absolute;left: -9px;top:11px; width:0;height:0;border: 3px solid #f50;border-width:7px 9px 7px 0;border-color:transparent #f50 transparent transparent;}
 .stress:after{content: attr(title);}
+
+
+/* 在表格條列上方的查詢區 */
+.searchInlp{position: relative;margin: 0 auto 15px;padding:0;clear: both;min-height: 50px;border-radius: 6px; width: 96%; background: #f5f6f1;}
+.searchInlp .toggleArea{padding: 0 0 20px;display: none;}
+.searchInlp .caption{color: #000;font-size: 1.08em;display: inline-block;
+	padding: 10px 0; line-height:50px;width: 100%; font-size: 1.2em; font-weight: bold; transition: .4s;}
+.searchInlp .slideCtrl.closed ~ .caption{padding-top: 0; padding-bottom: 0;}
+.searchInlp .toggleArea caption{display: none}
+.searchInlp .slideCtrl{position: absolute;top: 5px;right:14px;background: none;}
+.searchInlp .slideCtrl:focus,
+.searchInlp .slideCtrl:hover{background:#bd3;box-shadow: none}
+/* .searchInlp .slideCtrl:focus{box-shadow:rgba(0,0,0,.5) 0 0 0 1px} */
+.searchInlp .slideCtrl:active{box-shadow: #bd3 0 0 0 2px;}
+
+.searchInlp table{ width: 90%; margin: 0 auto;}
+.searchInlp td:first-child{ width:22%;}
+.searchInlp td:last-child{ width: 78%;}
+.searchInlp td input[type="text"]{width: 95%;}
+.searchInlp .caption{ margin-left: 2%;width: 90%;}
+
+@media (max-width:1000px){
+	.searchInlp{margin:0 auto;width: auto;padding: 0 2vw;border-radius: 0}
+	.searchInlp .slideCtrl{right:3px;}
+	.searchInlp .slideCtrl:hover,
+	.searchInlp .slideCtrl:focus{background: none;box-shadow: none;}
+	.searchInlp .caption{ margin-left: 0;}
+	.preface + .searchInlp{margin-top: -1em;border-top: 1px solid #ddd;border-radius: 0;}
+}
+@media (max-width:800px){
+	.searchInlp table{width: 99%;}
+	.searchInlp td:first-child, .searchInlp td:last-child{ width:auto;}
+	.searchInlp td input[type="text"]{width: 100%;}
+}
+@media (max-width:600px){
+	.searchInlp{margin: 0 auto;padding: 0 3vw;}
+}
+
+/* arrow up and down  */
+.slideCtrl{border: none;font-size: 0;padding: 0;margin: 0;width: 40px;height: 40px;text-align: center;transition:.15s;cursor: pointer;background: rgba(0,0,0,.8);border-radius: 50%;}
+.slideCtrl:hover{background:rgba(0,0,0,.8);}
+.slideCtrl:after{content:'';display: inline-block;width:10px;height:10px;border:3px solid #666;border-bottom:none;border-right:none;transform:rotate(45deg);margin:auto 0 -7px;transition:.3s;}
+.slideCtrl.closed:after{transform:rotate(225deg);margin-bottom:5px;}

@@ -728,6 +728,39 @@ function optionGp(){
 }
 
 
+
+	//條列頁上方的查詢區 20201126 
+	// copy from ../main/js/app.js
+	var _searchInlp = $('.searchInlp');
+	_searchInlp.each(function(){
+		var _this = $(this);
+		var _toggleArea = _this.find('.toggleArea');
+
+		_toggleArea.before('<button class="slideCtrl"></button>');
+		_toggleArea.before('<span class="caption"></span>').before('<button class="slideCtrl"></button>');
+		var _caption = _this.find('.caption').text(_this.find('caption').text());
+		var _slideCtrl = $(this).find('.slideCtrl');
+
+		if(_toggleArea.is(':visible')){
+			_slideCtrl.removeClass('closed');
+			_caption.hide();
+		} else {
+			_slideCtrl.addClass('closed');
+			_caption.show();
+		}
+		_slideCtrl.add(_caption).click(function(){
+			if(_toggleArea.is(':visible')){
+				_slideCtrl.addClass('closed');
+				_toggleArea.slideUp();
+			} else {
+				_slideCtrl.removeClass('closed');
+				_toggleArea.slideDown();
+			}
+		});
+	})
+
+
+
 // 取副檔名
 // function attIcons(){
 // 	var _attIconList = $('.list').find('td').find('.attIcons');
