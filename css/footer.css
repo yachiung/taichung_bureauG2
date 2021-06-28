@@ -76,19 +76,39 @@
 	.footer .visitor + .update{margin-left:0;}
 	.footer>section iframe{display:block;float:right;width:200px;margin-right:-290px;margin-top:35px;border:5px solid #fff;border-radius:5px;padding-bottom:5px;background:#fff;box-shadow:rgba(0,0,0,.3) 0 0 9px;}
 
-	/* 20200506 */
+	/* 20200506 
 	.footer .capInfo{ display: block; color: #444;
-		float: right;margin:5px -290px 0 0;padding: 0;background: #fff; border-radius: 6px; overflow: hidden; box-shadow: rgba(0,0,0,.3) 0 1px 8px;}
-	/*.footer .alertCAP_forTCC_dressup.bannerGreen,
-	.footer .alertCAP_forTCC_dressdown.bannerGreen{display: none;} */
+		float: right;margin:5px -290px 0 0;padding: 0;background: #fff; border-radius: 6px; overflow: hidden; box-shadow: rgba(0,0,0,.3) 0 1px 8px;
+	}
+	.footer .alertCAP_forTCC_dressup.bannerGreen,
+	.footer .alertCAP_forTCC_dressdown.bannerGreen{display: none;}
 	.footer .alertCAP_forTCC_content span[class^="alertCAP_forTCC_dressup"],
 	.footer .alertCAP_forTCC_content span[class^="alertCAP_forTCC_dressdown"] {display: none}
 	.footer .alertCAP_forTCC{border: none;}
 	.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"]{ border-top-color: transparent; border-bottom: 3px solid #619100;}
-	/* .footer .alertCAP_forTCC h3.alertCAP_forTCC_header.bannerGreen{ border-top-color: transparent; border-bottom: 3px solid #619100;} */
-	/* .footer .alertCAP_forTCC h3.alertCAP_forTCC_header.bannerYellow{ border-top-color: transparent; border-bottom: 3px solid #e0c800;} */
+	.footer .alertCAP_forTCC h3.alertCAP_forTCC_header.bannerGreen{ border-top-color: transparent; border-bottom: 3px solid #619100;}
+	.footer .alertCAP_forTCC h3.alertCAP_forTCC_header.bannerYellow{ border-top-color: transparent; border-bottom: 3px solid #e0c800;}
 
 	.footer .alertCAP_forTCC h4.alertCAP_forTCC_title{border-top: none;}
 	.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]{ border:none;text-decoration: none; color: #666;}
+*/
+
+	/* 20210428 災害示警資訊 .alertCAP_forTCC*/
+	.footer .capInfo{display: block; float: right;  margin: 5px -290px 0 0; padding: 0; width: 170px;
+		color: #444;background: #fff; border-radius: 6px; overflow: hidden;	}
+	.footer .alertCAP_forTCC_content span[class^="alertCAP_forTCC_dressup"],
+	.footer .alertCAP_forTCC_content span[class^="alertCAP_forTCC_dressdown"] {display: none}
+	.footer .alertCAP_forTCC{border: none;}
+	.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"]{ border:none; font-size: 1.36em; padding: 8px 3px 0; line-height: 1;}
+	.footer .alertCAP_forTCC h3 img{margin:0 3px 0 4px;}
+	.footer .alertCAP_forTCC h4.alertCAP_forTCC_title{ border-top:none; border-bottom: 1px solid #ccc; padding: 5px 0 2px;}
+	.footer .alertCAP_forTCC_con{ padding: 4px 8px;}
+	.footer .alertCAP_forTCC_con .alertCAP_forTCC_time{ color: #777;}
+
+
+	.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]{ border:none;text-decoration: none; color: #666; transition: none;}
+	.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:hover,
+	.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:focus{background: #eb6400; color: #fff;}
+
 
 }

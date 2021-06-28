@@ -546,6 +546,13 @@
 .searchInlp .slideCtrl:hover{background:#bd3;box-shadow: none}
 /* .searchInlp .slideCtrl:focus{box-shadow:rgba(0,0,0,.5) 0 0 0 1px} */
 .searchInlp .slideCtrl:active{box-shadow: #bd3 0 0 0 2px;}
+/* 20210628 */
+.searchInlp .slideCtrl::before{ content: '收合條件查詢'; position: absolute; right: -.5em; top: -.9em; font-size: 14px; opacity: 0; width: 7em;}
+.searchInlp .slideCtrl:hover::before,
+.searchInlp .slideCtrl:focus::before{opacity: 1;}
+.searchInlp .slideCtrl.closed::before{content: '展開條件查詢';}
+
+
 
 .searchInlp table{ width: 90%; margin: 0 auto;}
 .searchInlp td:first-child{ width:22%;}
