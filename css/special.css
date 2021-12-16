@@ -1,13 +1,13 @@
 /*勞工局統計數字*/
 .row>section.laborData{width: 92vw;padding:0 0 1em;margin:40px auto !important;background:#fff;}
-.row>section.laborData>h2{padding: 0;line-height: 2.4em;}
+.row>section.laborData>h2{ padding:.6em .5em;line-height: 1.4;}
 
-.laborData>h2{background:#73ae18;color:#fff;height: 2.4em;}
+.laborData>h2{background:#73ae18;color:#fff;}
 .laborData ul{text-align: right;border-bottom: 1px solid #9facaa;}
-.laborData li{border-bottom: 1px dotted #9facaa;padding:0 1em;height: 2.6em;line-height: 2.6em;}
+.laborData li{border-bottom: 1px dotted #9facaa;padding:0 .5em; /* height: 2.6em;line-height: 2.6em; */}
 .laborData li:last-child{border: none;}
-.laborData li .label{width:7.5em;float: left;}
-.laborData li em {font-size:1.3em;display:inline-block;margin-left:.5em;}
+.laborData li .label{ min-width:7.5em;float: left; padding: .3em 0 0; text-align: left;}
+.laborData li em {font-size:1.3em;display:inline-block;margin-left:.5em; white-space: nowrap; min-width: 35%;}
 .sign{display:inline-block;width:20px;height:20px;background:url(../images/sign.png) no-repeat center center;background-size:16px;vertical-align:middle;margin:-3px 0 0 .4em}
 .sign.down{transform:rotate(180deg);}
 .sign.equal {background:#7d8f8c; height:5px;width:18px;}
@@ -19,17 +19,29 @@
 .laborData .more a:hover,
 .laborData .more a:focus{background: #fc7300}
 @media screen and (min-width:801px){
-	.row>section.laborData{width: 96vw;position: relative;margin:0 auto 30px !important;box-shadow:rgba(0,0,0,.5) 0 4px 12px !important;overflow:hidden;padding:0;}
+	.row>section.laborData{width: 96vw;position: relative;margin:0 auto 30px !important;
+		box-shadow:rgba(0,0,0,.5) 0 4px 12px !important;overflow:hidden;padding:0;
+		/* 20211216 */
+		display: flex; justify-content: space-between; align-items: center;
+	}
 
-	.laborData>h2{position:absolute;left:0;top:0;bottom:0;width:25%;line-height: 1.6em;height: auto;}
+	/* 20211216 */
+	.laborData>h2{width: auto; margin: 0; align-self: stretch;}
 	.laborData>h2:before{content:'';display:inline-block;height:100%;vertical-align:middle;}
-	.laborData ul{float:left;padding:1.2em 2% .4em 0;width:26%;border: none;}
+	.laborData ul{ margin: 0; padding: 6px 0; border: none; }
+	.row>.laborData .more{ margin: 0; width: 6em;}
+
+	/* .laborData>h2{position:absolute;left:0;top:0;bottom:0;width:21%;}
+	.laborData ul{float:left;padding:1em 2% .4em 0;width:26%;border: none; border: 1px dotted red;}
 	.laborData h2+ul{margin-left:25%;width:32%;}
+	.row>.laborData .more{width:12%;position:absolute;right:0;top:50%;margin-top:-1.1em;} */
+
+	.laborData li em{min-width: 0;}
 	.laborData li{white-space: nowrap;padding:0;border: none;}
 	.laborData li .label{float: none;display: inline-block;text-align:right;}
-	.row>.laborData .more{width:12%;position:absolute;right:0;top:50%;margin-top:-1.1em;}
 }
 @media screen and (min-width:1001px){
+	.laborData>h2{width: 25%;}
 	.row>section.laborData{width:96%;box-shadow:rgba(0,0,0,.65) 0 8px 16px -10px;}
 }
 
