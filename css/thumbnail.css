@@ -32,13 +32,20 @@
 .thumbnail.videos ol li.from{clear:both;display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .thumbnail.videos .play{position:absolute;top:9px;left:9px;}
 
-.thumbnail.eBooks ul>li{text-align:center;}
+.thumbnail.eBooks ul>li{text-align:center; padding-top: 0;}
+.thumbnail.eBooks ul>li>a{ display: block; padding-bottom: 5px; padding-top: 9px;}
+.thumbnail.eBooks li .image{box-shadow:#ccc 0 0 0 1px;transition: .2s; margin-bottom: 12px;}
+.thumbnail.eBooks ul>li>a:hover .image,
+.thumbnail.eBooks ul>li>a:focus .image{box-shadow:#999 0 0 0 1px, rgba(0,0,0,.4) 0 2px 12px;}
+.thumbnail.eBooks ul>li>a:hover .p{ text-decoration: underline; }
+.thumbnail.eBooks ul>li>a:focus{ box-shadow: #c00 0 0 0 2px;}
 .thumbnail.eBooks li p,
 .thumbnail.eBooks li h3,
 .thumbnail.eBooks li ol{text-align:left;}
-.thumbnail.eBooks li .image{box-shadow:#ccc 0 0 0 1px;}
 .thumbnail.eBooks li .image img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:scale-down;}
 .thumbnail.eBooks li h3{display:inline-block;text-align:left;}
+
+
 .thumbnail.eBooks li p.downloadPdf{height:auto;line-height:1;margin:.6em 10px 1em;padding:0;text-align:center;overflow:visible;}
 .thumbnail.eBooks li p.downloadPdf a{display:inline-block;height:2.4em;line-height:2.5em;;margin:0 auto;padding:0 1.2em;background:#7c8785;color:#fff;border-radius:2.5em;box-shadow:#444 0 3px 0;text-decoration:none;}
 .thumbnail.eBooks li p.downloadPdf a:hover,
@@ -152,7 +159,7 @@
 @media screen and (min-width:1001px){
 	.thumbnail ul>li{margin:.5em 0 1em 1.5%;transition:box-shadow .2s;}
 	.thumbnail ul>li:nth-child(3n+1){margin-left:2%}
-	.thumbnail ul>li:hover{box-shadow:rgba(0,0,0,.6) 0 4px 16px -2px;}
+	.thumbnail ul>li:hover{box-shadow:rgba(0,0,0,.4) 0 4px 16px -2px;}
 	.thumbnail li .image{height:14em;}
 	.thumbnail.videos li .image{height:12em;}
 	.thumbnail.animalPhotos li .image{height:18em;}
