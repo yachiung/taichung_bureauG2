@@ -14,8 +14,9 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 
 .header{background-color:#8cc11f;color:#000;border-bottom:1px solid #fff;box-shadow:rgba(0,0,0,.5) 0 3px 8px -3px;}
 .header h1 a:focus{outline:2px solid #e30}
+/* 2022
 .goCenter{margin-left:-480px;height:1.8em;line-height:1.8em;}
-
+ */
 .sidebar {background:#3f4534;}
 .sidebar .sidebarClose{background:#e6f366;}
 
