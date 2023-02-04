@@ -1,0 +1,87 @@
+.weatherForecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.weatherForecast * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.weatherForecast .clock, .weatherForecast .weather, .weatherForecast .pop {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  padding: 0.8em 10px 0.6em;
+}
+.weatherForecast .clock em, .weatherForecast .weather em, .weatherForecast .pop em {
+  font-weight: normal;
+  font-style: normal;
+}
+.weatherForecast .clock {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  background: #f0770f;
+}
+.weatherForecast .weather {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  background: #1785cf;
+}
+.weatherForecast .weather > * {
+  vertical-align: middle;
+}
+.weatherForecast .weather img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 46px;
+  height: 46px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 5px;
+}
+.weatherForecast .pop {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  background: #44a115;
+}
+.weatherForecast .pop > * {
+  vertical-align: middle;
+}
+.weatherForecast .pop span, .weatherForecast .pop em {
+  display: inline-block;
+}
+.weatherForecast .pop::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 46px;
+  height: 46px;
+  margin-right: 5px;
+  background: url(../images/icon_pop.svg) no-repeat center center;
+  background-size: 60% auto;
+}
+@media screen and (min-width: 800px) {
+  .weatherForecast .weather, .weatherForecast .pop, .weatherForecast .clock {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+  .weatherForecast .clock .GMT {
+    display: block;
+  }
+  .weatherForecast .clock time {
+    display: block;
+    margin: 0.2em auto 0;
+    padding: 0;
+  }
+}

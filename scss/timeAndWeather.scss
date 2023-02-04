@@ -1,0 +1,60 @@
+// 時間、溫度、降雨機率
+.weatherForecast{
+  display: flex; flex-flow: row wrap;
+  box-sizing: border-box;
+  *{box-sizing: border-box;}
+
+  .clock, .weather, .pop{
+    color: #fff;text-align: center;
+    font-size: 1.5rem; line-height: 1.1;
+    padding: .8em 10px .6em;
+    em{
+      font-weight: normal; font-style: normal;
+    }
+  }
+  .clock{
+    flex: 0 0 100%;
+    background: #f0770f;
+    .GMT{}
+    time{
+    }
+  }
+  .weather{
+    flex: 0 0 50%;
+    background: #1785cf;
+    &>*{vertical-align: middle;}
+
+    img{
+      display: inline-block;vertical-align: middle;
+      width: 46px; height: 46px; object-fit: contain;
+       margin-right: 5px;
+    }
+  }
+  .pop{
+    position: relative;
+    flex: 0 0 50%;
+    background: #44a115;
+    &>*{vertical-align: middle;}
+    span, em{ display: inline-block;}
+    &::before{
+      content: ''; display: inline-block;vertical-align: middle;
+      width: 46px; height: 46px; 
+      margin-right: 5px;
+      background: url(../images/icon_pop.svg) no-repeat center center;
+      background-size: 60% auto;
+    }
+  }
+
+  @media screen and (min-width: 800px){
+    .weather, .pop, .clock {
+      flex-basis: 33.33%;
+    }
+    .clock{
+      .GMT {display: block;}
+      time {
+        display: block; margin: .2em auto 0; padding: 0;
+      }
+  
+    }
+  }
+}
