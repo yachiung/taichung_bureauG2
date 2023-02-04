@@ -20,6 +20,9 @@ $(document).ready(function(){
 		if (_slide.hasClass('bb2')){boxRatio = .25};
 		if (_slide.hasClass('bb3')){boxRatio = .5};
 		if (_slide.hasClass('albumType3')){boxRatio = .75};
+		
+		if (_slide.hasClass('bb_n3')){boxRatio = undefined}; //2023 added
+
 		_slideItem.not('.lovelyPets').find('img').width(imgWidth);
 		_slideBox.height(imgWidth*boxRatio);
 

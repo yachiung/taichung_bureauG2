@@ -32,12 +32,15 @@
 
 .bb1 li p,
 .bb2 li p,
+.bb_n3 li p,
 .bb3 li p{position:absolute;left:0;right:0;bottom:-3em;height:2.8em;line-height:2.8em;padding:.1em .5em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;color:#fff;background:rgba(0,0,0,.6);transition:.5s;}
 .bb1 li:hover p,
 .bb2 li:hover p,
+.bb_n3 li:hover p,
 .bb3 li:hover p{bottom:0;transition:.2s;}
 .bb1 li>a:focus p,
 .bb2 li>a:focus p,
+.bb_n3 li>a:focus p,
 .bb3 li>a:focus p{bottom:0;transition:0;}
 .slide li p:empty{display:none;}
 
@@ -95,6 +98,8 @@
 .no-js .slide.bb1 .box{width:500px;height:380px;}
 .no-js .slide.bb2 .box{width:1000px;height:250px;}
 .no-js .slide.bb3 .box{width:1000px;height:500px;}
+.no-js .slide.bb_n3 .box{width:1000px;height:600px;}
+
 
 .no-js .cx2 .slide.bb2 .box,
 .no-js .cx3a .slide.bb2 .box,
