@@ -15,34 +15,30 @@
   <button type="button" class="sidebarClose">關閉</button>
 </aside>
 <div class="main">
-  <header class="header">
+  <header class="header" style="background-image: url(publicData/wbc網站-header_banner-pc用-v3.png);">
     <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題區">:::</a>
-    <h1><a href="mp_baseball.html"><img src="publicData/h1.png" alt="世界棒球經典賽在台中"></a></h1>
+    <style>
+      .header.fixed .menu {background: rgba(255, 207, 68, .95)}
+      @media screen and (min-width:1000px) {
+        .header>h1 img {width: 327px;margin: 10px 0 0 120px;}
+        .header .navigation {background-color: transparent;}
+        .header .navigation ul {background-color: rgba(0, 0, 0, .4);border-radius: 0 0 4px 4px}
+        .header .navigation li a {height: 1.8em;line-height: 1.8em;}
+      }
+      @media screen and (max-width: 1000px) {
+        .header .sidebarCtrl, .header .searchCtrl {background: #ff8822;}
+      }
+      .linkStyle1 h2 {display: none;}
+      section.linkStyle1 {padding: 0;}
+    </style>
+    <h1><a href="mp_baseball.html"><img src="publicData/wbc網站-header_banner-logo-v3.png" alt="世界棒球經典賽在台中"></a></h1>
     <nav class="navigation">
       <ul>
         <li><a href="mp.html">回首頁</a></li>
-        <li><a href="#">網站導覽</a></li>
-        <li><a href="#">English</a></li>
-        <li><a href="#">兒童版</a></li>
-        <li><a href="#">常見問答</a></li>
+        <li><a href="#">台中市政府</a></li>
       </ul>
     </nav>
-    <section class="search">
-      <div class="keywordHot">
-        <ul>
-          <li><a href="#">噪音</a></li>
-          <li><a href="#">空氣品質</a></li>
-          <li><a href="#">一條龍</a></li>
-        </ul>
-      </div>
-      <form action="">
-        <input type="text" id="" name="" value="" placeholder="請輸入關鍵字" accesskey="S" title="網站搜尋" />
-        <input type="submit" id="" name="" value="查詢" title="查詢" />
-        <a class="btnAdv" href="#" title="進階搜尋(另開視窗)" target="_blank">進階搜尋</a>
-      </form>
-    </section>
     <button class="sidebarCtrl"></button>
-    <button class="searchCtrl">查詢</button>
     <nav class="menu" aria-label="主選單">
       <ul>
         <li class="hasChild">
@@ -111,33 +107,6 @@
   <div class="center" id="center"><a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
 
     <div class="row cx2a">
-      <section class="slide bb_n3">
-        <div class="box">
-          <ul>
-            <li><a href="#"><img src="publicData/baseball01.jpg" alt="" />
-              <p>睽違10年臺中市再度爭取2023世界棒球經典賽於臺中洲際舉辦</p>
-            </a></li>
-            <li><a href="#"><img src="publicData/baseball02.jpg" alt="" />
-              <p>2023頂級棒球賽事經典賽-亞錦賽接連登場</p>
-            </a></li>
-          </ul>
-        </div>
-        <div class="dots circle"></div>
-        <div class="arbtn left"></div>
-        <div class="arbtn right"></div>
-        <a class="hide" href="#">請點選此連結查看完整資料</a>
-      </section>
-      <section class="weatherForecast">
-        <div class="temperature">
-          <img src="images/weatherIcons/sunnyCloudy.png" alt="多雲">
-          <em>15~24°C</em></div>
-        <div class="pop"><span>降雨機率</span> <em>20%</em></div>
-      </section>
-    </div>
-    <h2> （1.） 圖變形（沒有等比縮放）填滿容器</h2>
-    <br><br><br>
-
-    <div class="row cx2a">
       <section class="slide bb_n3 cover">
         <div class="box">
           <ul>
@@ -157,45 +126,21 @@
 
       <section class="weatherForecast">
         <div class="temperature">
-          <img src="images/weatherIcons/sunnyCloudyRain.png" alt="多雲">
-          <em>15~24°C</em></div>
-        <div class="pop"><span>降雨機率</span> <em>20%</em></div>
+          <img src="images/weatherIcons/sunnyCloudy.svg" alt="多雲">
+          <!-- 
+            <img src="images/weatherIcons/sunny.svg" alt="晴天">
+            <img src="images/weatherIcons/moon.svg" alt="晴天">
+            <img src="images/weatherIcons/cloudy.svg" alt="陰天">
+            <img src="images/weatherIcons/cloudyNight.svg" alt="多雲">
+            <img src="images/weatherIcons/rain.svg" alt="雨天">
+          -->
+          <!-- 氣象圖示與文字
+            cloudy.svg : 陰時多雲、多雲時陰 
+          -->
+          <em title="現在氣溫（每三小時更新）">24°C</em></div>
+        <div class="pop"><span>降雨機率</span><em>100%</em></div>
       </section>
     </div>
-    <h2> （2.）圖填滿容器，不變形，但上下或左右超出部分不顯示，</h2>
-    <br><br><br>
-
-
-    <div class="row cx2a">
-      <section class="slide bb_n3 contain">
-        <div class="box">
-          <ul>
-            <li><a href="#"><img src="publicData/baseball01.jpg" alt="" />
-              <p>睽違10年臺中市再度爭取2023世界棒球經典賽於臺中洲際舉辦</p>
-            </a></li>
-            <li><a href="#"><img src="publicData/baseball02.jpg" alt="" />
-              <p>2023頂級棒球賽事經典賽-亞錦賽接連登場</p>
-            </a></li>
-          </ul>
-        </div>
-        <div class="dots circle"></div>
-        <div class="arbtn left"></div>
-        <div class="arbtn right"></div>
-        <a class="hide" href="#">請點選此連結查看完整資料</a>
-      </section>
-
-      <section class="weatherForecast">
-        <div class="temperature">
-          <img src="images/weatherIcons/sunny.png" alt="晴">
-          <em>15~24°C</em>
-        </div>
-        <div class="pop"><span>降雨機率</span> <em>0%</em></div>
-      </section>
-    </div>
-    
-    <h2> （3.） 圖不變形，上下或左右不足部分留空白</h2>
-    <br><br><br>
-
 
 
     <div class="row">
@@ -316,16 +261,7 @@
 </div><!--/.main-->
 
 <button type="button" class="goTop">回到頁面最上方</button>
-<!-- 
-<div class="popMessage">
-  <article>
-  <p>為落實開放政府理念，讓施政透明開放，歡迎有興趣者至以下網址收看市政會議。(<strong>直播議程包括主席致詞、專案報告及主席指(裁)示事項。</strong>)<br />一般民眾、行動裝置：<a  href="http://vod.taichung.gov.tw/ct.asp?xItem=173715&amp;ctNode=6647&amp;mp=1" target="_blank">http://vod.taichung.gov.tw/ct.asp?xItem=173715&amp;ctNode=6647&amp;mp=1</a><br />府內同仁(限桌上型電腦)：<a title="" href="http://vod.taichung.gov.tw/sp.asp?xdurl=webcast.asp" target="_blank">http://vod.taichung.gov.tw/sp.asp?xdurl=webcast.asp</a></p>
-  <p>會議名稱：第251次市政會議。<br />會議時間：105年5月23日(星期一)上午10:00。<br />會議地點：大甲區公所。</p>
-  <p>發布暨聯絡單位：臺中市政府研究發展考核委員會<br />聯絡電話：04-22289111分機21205</p>
-  </article>
-  <button tabindex="1" class="closePop">關閉</button>
-</div>
- -->
+
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
 <script type="text/javascript" src="js/rwdTable.js"></script> 
 <script type="text/javascript" src="js/jquery.jscroll.js"></script> 
