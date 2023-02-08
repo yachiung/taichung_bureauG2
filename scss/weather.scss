@@ -150,6 +150,7 @@
     }
   }
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 // 大圖輪播修改
 .slide{
@@ -162,7 +163,7 @@
     width: 100%;
     .box{
       height: 60vw;
-      img{ height: 60vw; width: 100% !important;}
+      img{ height: 60vw; width: 100% !important;object-fit: cover;}
     }
     .dots{
       position: absolute; bottom: 5px; left: 50%; height: auto; padding:0 5px;
@@ -186,11 +187,11 @@
     }
   }
 }
-.slide.cover{
-  .box img{object-fit: cover;}
-}
-.slide.contain{
-  .box img{object-fit: contain;}
-}
+// .slide.cover{
+//   .box img{object-fit: cover;}
+// }
+// .slide.contain{
+//   .box img{object-fit: contain;}
+// }
 
 

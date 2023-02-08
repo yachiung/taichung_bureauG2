@@ -255,6 +255,8 @@
 .slide.bb_n3 .box img {
   height: 60vw;
   width: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .slide.bb_n3 .dots {
   position: absolute;
@@ -282,14 +284,4 @@
   .slide.bb_n3 .box img {
     height: var(--imgHeight);
   }
-}
-
-.slide.cover .box img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.slide.contain .box img {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
