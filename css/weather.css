@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .weatherForecast {
-  --tempBg:#68bebc;
-  --popBg: #609fae;
+  --tempBg:#eca648;
+  --popBg: #53a0b3;
   --textColor:#fff;
   --whitBg:#fff;
   position: relative;
@@ -76,7 +76,6 @@
 .weatherForecast .temperature em::after {
   content: "°C";
   font-size: 0.72em;
-  font-weight: normal;
 }
 .weatherForecast .pop {
   position: relative;

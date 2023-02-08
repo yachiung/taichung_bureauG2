@@ -1,7 +1,7 @@
-// 時間、溫度、降雨機率
+// 氣溫、降雨機率
 .weatherForecast{
-  --tempBg:#68bebc;
-  --popBg: #609fae;
+  --tempBg:#eca648;
+  --popBg: #53a0b3;
   --textColor:#fff;
   --whitBg:#fff;
   // -------------------------- //
@@ -42,7 +42,7 @@
     em{
       vertical-align: middle; height: 50px;line-height: 50px;font-size: 2em;
       &::after{
-        content: '°C';font-size: .72em;font-weight: normal;
+        content: '°C';font-size: .72em;
       }
     }
   }
@@ -187,11 +187,3 @@
     }
   }
 }
-// .slide.cover{
-//   .box img{object-fit: cover;}
-// }
-// .slide.contain{
-//   .box img{object-fit: contain;}
-// }
-
-
