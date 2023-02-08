@@ -1,40 +1,65 @@
 // 時間、溫度、降雨機率
 .weatherForecast{
+  --tempBg:#68bebc;
+  --popBg: #609fae;
+  --textColor:#fff;
+  --whitBg:#fff;
+  // -------------------------- //
+
+  position: relative; overflow: hidden;
   display: flex; flex-flow: row nowrap;
+  padding: 0; margin: 0;
   box-sizing: border-box;
  
   *{box-sizing: border-box;}
+
+  &::after{
+    content: ''; position: absolute; bottom: -25px; right: calc(50% - 25px); left: auto;
+    width: 50px; height: 50px;
+    background: url(../images/weatherbg_baseball2.png) no-repeat center center;
+    background-size: 100%;
+  }
 
   .temperature, .pop{
     position: relative;
     padding: 6px 2px 5px; margin: 0; min-height: 50px;
     font-size: 1rem; line-height: 1.1;
-    color: #fff;text-align: center;
-    em{font-weight: normal; font-style: normal;}
+    color: var(--textColor);text-align: center;
+    em{font-weight: bold; font-style: normal;}
     &>img, &>em, &>span{position: relative; z-index: 2;} 
   }
  
+  // 氣溫
   .temperature{
     flex: 0 0 50%;
-    background: #c47c00 url(../images/weatherbg1.jpg) left bottom no-repeat;
+    // background: #c47c00 url(../images/weatherbg1.jpg) left bottom no-repeat;
+    background-color: var(--tempBg);
     background-size: 100% auto;
     img{
       display: inline-block;vertical-align: middle; 
       width: 50px; height: 50px; object-fit: contain; margin-right: 3px;
     }
     em{
-      vertical-align: middle; height: 50px;line-height: 50px;font-size: 1.8em;
+      vertical-align: middle; height: 50px;line-height: 50px;font-size: 2em;
+      &::after{
+        content: '°C';font-size: .72em;font-weight: normal;
+      }
     }
   }
+
+  // 降雨機率
   .pop{
     position: relative; flex: 0 0 50%;
-    background: #244700 url(../images/weatherbg2.jpg) left center no-repeat;
-    background-size: 100% auto;
+    background-color: var(--popBg);
     &>*{vertical-align: middle;}
     span, em{ display: inline-block;}
     span{font-size: .9em;}
-    em{ margin-left: 2px;font-size: 1.5em;}
-    &::before{
+    em{ margin-left: 2px;font-size: 1.5em;
+      &::after{
+        content: '%'; font-size: .72em;
+      }
+  }
+    &::before{// 水滴圖示
       content: ''; display: inline-block;vertical-align: middle;
       position: relative; z-index: 2;
       width: 50px; height: 50px; 
@@ -44,6 +69,7 @@
   }
 
   @media screen and (min-width: 601px){
+    &::after{ bottom: calc(50% - 25px);}
     .temperature, .pop{ padding: 12px 5px;}
     .pop{
       span{ font-size: 1em;}
@@ -51,60 +77,79 @@
   }
 
   @media screen and (min-width: 1001px){
-    position: relative;
-    display: block; padding: 0; margin: 0;
-    background-color: #fff; 
+    display: block; 
+    &::after{
+      top: calc(50% - 75px); right: 0; bottom: auto;
+      width: 60px; height: 150px;
+      background: url(../images/weatherbg_baseball.png) no-repeat 0 0;
+      background-size: auto 100%;
+    }
     .temperature, .pop{
-      height: 168px;  line-height: 170px;padding: 0;
+      height: 168px;line-height: 170px;padding: 0 0 0 140px;
       &::after{
-        content: ''; position: absolute; left: 0; top: 0;right: 0;bottom: 0;
+        content: ''; position: absolute; left: 136px; top: calc(50% - 50px); 
+        width: 1px; height:100px;
+        background-color: rgba(255,255,255,.6);
       }
     }
-    .temperature::after{animation: blurBackground 20s infinite alternate-reverse;}
-    .pop::after{animation: blurBackground 20s infinite alternate;}  
+
+    //氣溫
     .temperature{
-      display: flex; align-items: center;
-    
+      text-align: left;
       img{
-        flex: 0 1 50%; display: block; margin: 0 auto;
+        width: 100px; height: 100px;
+        position: absolute; left: 20px; top:calc(50% - 50px);
+      }
+      em{ 
+        display: inline-block; left: 20px;
+        font-size: 3.6rem; text-align: right; 
+        &::after{font-size: .6em;}
+        // outline: 1px dashed red;
+      }
+    }
+
+    // 降雨機率
+    .pop{
+      &::before{ 
+        position: absolute; left: 20px; top: calc(50% - 50px); 
         width: 100px; height: 100px;
       }
-      em{ 
-        flex: 0 1 50%;
-        font-size: 3.2em;
-        &::before{
-          content: ''; position: absolute; left: -1px; top: 50%; 
-          width: 1px; height:100px; margin-top: -50px;
-          background-color: rgba(255,255,255,.6);
-        }
+
+      span, em{
+        display: block;
+        margin-right: 70px;text-align: right;
       }
-    }
-    .pop{
-      background-position: left 0 top -12px;
-      span{ font-size: 1.1em;line-height: 1; letter-spacing: 1px; transform: translateY(-1.15em);}
-      em{ 
-        font-size: 2.4em; margin: .9em 0 0 -.3em; 
-        width: 2.6em;height: 1.2em; line-height: 1.2;
-        text-align: right;
-        &::before{
-          content: ''; position: absolute; left: -4rem; top: -2px; right: 0;
-          height: 1px;
-          background-color: rgba(255,255,255,.6);
-        }
+      span{
+        top:calc(50% - 2em);
+        font-size: 1.2rem;line-height: 1.1; letter-spacing: 1px;
+        width: 6em; padding-right: 1em;
       }
-      &::before{width: 100px; height: 100px;}
+      em{
+        display: block; top:calc(50% - 2rem);
+        font-size: 3rem; line-height: 1.1;
+        &::after{font-size: .6em;}
+
+      }
     }
   }
 }
 
-@keyframes blurBackground {
-  0% {backdrop-filter: blur(0); }
-  50% {backdrop-filter: blur(0); }
-  100% {backdrop-filter: blur(6px); }
+
+.row.col84{
+  &>.weatherForecast{ padding: 0; height: auto !important; background: var(--whitBg);}
+  @media screen and (min-width: 1001px){
+    width: 100%;
+    display: flex; flex-flow: row nowrap;
+    align-content: flex-start;
+    &>*{box-shadow: none !important;}
+    &>*:first-child{
+      flex: 0 0 67%; width:67%;
+    }
+    &>*:last-child{
+      flex: 0 0 33%; width: 33%;
+    }
+  }
 }
-
-.row.cx2a>.weatherForecast{ padding: 0; box-shadow: none !important;}
-
 ////////////////////////////////////////////////////////////////////////////////
 // 大圖輪播修改
 .slide{
@@ -114,11 +159,18 @@
 
   &.bb_n3{
     max-width: none; box-shadow: none !important;
-    width: 100%; height: auto; 
+    width: 100%;
     .box{
       height: 60vw;
       img{ height: 60vw; width: 100% !important;}
     }
+    .dots{
+      position: absolute; bottom: 5px; left: 50%; height: auto; padding:0 5px;
+      background-color: rgba(255,255,255,.75);
+      border-radius: 20px;
+      transform: translateX(-50%); transition:opacity .4s;
+    }
+    .box:hover ~ .dots{opacity: 0.1;}
   }
 
   @media screen and (min-width: 801px){

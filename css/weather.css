@@ -1,4 +1,11 @@
+@charset "UTF-8";
 .weatherForecast {
+  --tempBg:#68bebc;
+  --popBg: #609fae;
+  --textColor:#fff;
+  --whitBg:#fff;
+  position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,12 +13,25 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 .weatherForecast * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.weatherForecast::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  right: calc(50% - 25px);
+  left: auto;
+  width: 50px;
+  height: 50px;
+  background: url(../images/weatherbg_baseball2.png) no-repeat center center;
+  background-size: 100%;
 }
 .weatherForecast .temperature, .weatherForecast .pop {
   position: relative;
@@ -20,11 +40,11 @@
   min-height: 50px;
   font-size: 1rem;
   line-height: 1.1;
-  color: #fff;
+  color: var(--textColor);
   text-align: center;
 }
 .weatherForecast .temperature em, .weatherForecast .pop em {
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 .weatherForecast .temperature > img, .weatherForecast .temperature > em, .weatherForecast .temperature > span, .weatherForecast .pop > img, .weatherForecast .pop > em, .weatherForecast .pop > span {
@@ -35,7 +55,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  background: #c47c00 url(../images/weatherbg1.jpg) left bottom no-repeat;
+  background-color: var(--tempBg);
   background-size: 100% auto;
 }
 .weatherForecast .temperature img {
@@ -51,15 +71,19 @@
   vertical-align: middle;
   height: 50px;
   line-height: 50px;
-  font-size: 1.8em;
+  font-size: 2em;
+}
+.weatherForecast .temperature em::after {
+  content: "°C";
+  font-size: 0.72em;
+  font-weight: normal;
 }
 .weatherForecast .pop {
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  background: #244700 url(../images/weatherbg2.jpg) left center no-repeat;
-  background-size: 100% auto;
+  background-color: var(--popBg);
 }
 .weatherForecast .pop > * {
   vertical-align: middle;
@@ -74,6 +98,10 @@
   margin-left: 2px;
   font-size: 1.5em;
 }
+.weatherForecast .pop em::after {
+  content: "%";
+  font-size: 0.72em;
+}
 .weatherForecast .pop::before {
   content: "";
   display: inline-block;
@@ -86,6 +114,9 @@
   background-size: 100% auto;
 }
 @media screen and (min-width: 601px) {
+  .weatherForecast::after {
+    bottom: calc(50% - 25px);
+  }
   .weatherForecast .temperature, .weatherForecast .pop {
     padding: 12px 5px;
   }
@@ -95,131 +126,115 @@
 }
 @media screen and (min-width: 1001px) {
   .weatherForecast {
-    position: relative;
     display: block;
-    padding: 0;
-    margin: 0;
-    background-color: #fff;
+  }
+  .weatherForecast::after {
+    top: calc(50% - 75px);
+    right: 0;
+    bottom: auto;
+    width: 60px;
+    height: 150px;
+    background: url(../images/weatherbg_baseball.png) no-repeat 0 0;
+    background-size: auto 100%;
   }
   .weatherForecast .temperature, .weatherForecast .pop {
     height: 168px;
     line-height: 170px;
-    padding: 0;
+    padding: 0 0 0 140px;
   }
   .weatherForecast .temperature::after, .weatherForecast .pop::after {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .weatherForecast .temperature::after {
-    animation: blurBackground 20s infinite alternate-reverse;
-  }
-  .weatherForecast .pop::after {
-    -webkit-animation: blurBackground 20s infinite alternate;
-            animation: blurBackground 20s infinite alternate;
+    left: 136px;
+    top: calc(50% - 50px);
+    width: 1px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
   }
   .weatherForecast .temperature {
+    text-align: left;
+  }
+  .weatherForecast .temperature img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 50px);
+  }
+  .weatherForecast .temperature em {
+    display: inline-block;
+    left: 20px;
+    font-size: 3.6rem;
+    text-align: right;
+  }
+  .weatherForecast .temperature em::after {
+    font-size: 0.6em;
+  }
+  .weatherForecast .pop::before {
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+  }
+  .weatherForecast .pop span, .weatherForecast .pop em {
+    display: block;
+    margin-right: 70px;
+    text-align: right;
+  }
+  .weatherForecast .pop span {
+    top: calc(50% - 2em);
+    font-size: 1.2rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    width: 6em;
+    padding-right: 1em;
+  }
+  .weatherForecast .pop em {
+    display: block;
+    top: calc(50% - 2rem);
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  .weatherForecast .pop em::after {
+    font-size: 0.6em;
+  }
+}
+
+.row.col84 > .weatherForecast {
+  padding: 0;
+  height: auto !important;
+  background: var(--whitBg);
+}
+@media screen and (min-width: 1001px) {
+  .row.col84 {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
-  .weatherForecast .temperature img {
+  .row.col84 > * {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  .row.col84 > *:first-child {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
+        -ms-flex: 0 0 67%;
+            flex: 0 0 67%;
+    width: 67%;
   }
-  .weatherForecast .temperature em {
+  .row.col84 > *:last-child {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-    font-size: 3.2em;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    width: 33%;
   }
-  .weatherForecast .temperature em::before {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 50%;
-    width: 1px;
-    height: 100px;
-    margin-top: -50px;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .weatherForecast .pop {
-    background-position: left 0 top -12px;
-  }
-  .weatherForecast .pop span {
-    font-size: 1.1em;
-    line-height: 1;
-    letter-spacing: 1px;
-    -webkit-transform: translateY(-1.15em);
-            transform: translateY(-1.15em);
-  }
-  .weatherForecast .pop em {
-    font-size: 2.4em;
-    margin: 0.9em 0 0 -0.3em;
-    width: 2.6em;
-    height: 1.2em;
-    line-height: 1.2;
-    text-align: right;
-  }
-  .weatherForecast .pop em::before {
-    content: "";
-    position: absolute;
-    left: -4rem;
-    top: -2px;
-    right: 0;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .weatherForecast .pop::before {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@-webkit-keyframes blurBackground {
-  0% {
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  50% {
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  100% {
-    -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px);
-  }
-}
-
-@keyframes blurBackground {
-  0% {
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  50% {
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  100% {
-    -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px);
-  }
-}
-.row.cx2a > .weatherForecast {
-  padding: 0;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
 .slide .box img {
@@ -233,7 +248,6 @@
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   width: 100%;
-  height: auto;
 }
 .slide.bb_n3 .box {
   height: 60vw;
@@ -241,6 +255,22 @@
 .slide.bb_n3 .box img {
   height: 60vw;
   width: 100% !important;
+}
+.slide.bb_n3 .dots {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  height: auto;
+  padding: 0 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.slide.bb_n3 .box:hover ~ .dots {
+  opacity: 0.1;
 }
 @media screen and (min-width: 1001px) {
   .slide.bb_n3 {
