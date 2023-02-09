@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .weatherForecast {
-  --tempBg:#eca648;
+  --tempBg:#68bebc;
   --popBg: #53a0b3;
   --textColor:#fff;
   --whitBg:#fff;
@@ -21,17 +21,6 @@
 .weatherForecast * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-.weatherForecast::after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  right: calc(50% - 25px);
-  left: auto;
-  width: 50px;
-  height: 50px;
-  background: url(../images/weatherbg_baseball2.png) no-repeat center center;
-  background-size: 100%;
 }
 .weatherForecast .temperature, .weatherForecast .pop {
   position: relative;
@@ -82,35 +71,33 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  text-align: center;
   background-color: var(--popBg);
 }
 .weatherForecast .pop > * {
   vertical-align: middle;
 }
-.weatherForecast .pop span, .weatherForecast .pop em {
+.weatherForecast .pop .label, .weatherForecast .pop em, .weatherForecast .pop time {
   display: inline-block;
+  vertical-align: middle;
 }
-.weatherForecast .pop span {
+.weatherForecast .pop .label {
   font-size: 0.9em;
+  margin: 0 2px;
 }
 .weatherForecast .pop em {
-  margin-left: 2px;
   font-size: 1.5em;
 }
 .weatherForecast .pop em::after {
   content: "%";
   font-size: 0.72em;
 }
-.weatherForecast .pop::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  z-index: 2;
-  width: 50px;
+.weatherForecast .pop time {
+  margin: 0;
   height: 50px;
-  background: url(../images/icon_pop.svg) no-repeat center center;
-  background-size: 100% auto;
+  line-height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 @media screen and (min-width: 601px) {
   .weatherForecast::after {
@@ -126,15 +113,6 @@
 @media screen and (min-width: 1001px) {
   .weatherForecast {
     display: block;
-  }
-  .weatherForecast::after {
-    top: calc(50% - 75px);
-    right: 0;
-    bottom: auto;
-    width: 60px;
-    height: 150px;
-    background: url(../images/weatherbg_baseball.png) no-repeat 0 0;
-    background-size: auto 100%;
   }
   .weatherForecast .temperature, .weatherForecast .pop {
     height: 168px;
@@ -169,19 +147,22 @@
   .weatherForecast .temperature em::after {
     font-size: 0.6em;
   }
-  .weatherForecast .pop::before {
+  .weatherForecast .pop time {
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: calc(50% - 50px);
-    width: 100px;
+    width: 120px;
     height: 100px;
+    line-height: 105px;
+    text-align: center;
+    font-size: 3rem;
   }
-  .weatherForecast .pop span, .weatherForecast .pop em {
+  .weatherForecast .pop .label, .weatherForecast .pop em {
     display: block;
     margin-right: 70px;
     text-align: right;
   }
-  .weatherForecast .pop span {
+  .weatherForecast .pop .label {
     top: calc(50% - 2em);
     font-size: 1.2rem;
     line-height: 1.1;
