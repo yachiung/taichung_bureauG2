@@ -93,10 +93,10 @@
     // }
     &::after{
       content: '';
-      position: absolute;right: -15px; top: calc(50% - 100px);
-      width: 170px; height: 200px;
+      position: absolute;right: -16px; top: calc(50% - 100px);
+      width: 180px; height: 200px;
       background: url(../images/weatherBg.png) no-repeat right center;
-      background-size: 100% auto;
+      background-size:auto 100%;
     }
     .temperature, .pop{
       height: 168px;line-height: 170px;padding: 0 0 0 140px;
