@@ -97,7 +97,7 @@
   height: 50px;
   line-height: 50px;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
 }
 @media screen and (min-width: 601px) {
   .weatherForecast::after {
@@ -113,6 +113,16 @@
 @media screen and (min-width: 1001px) {
   .weatherForecast {
     display: block;
+  }
+  .weatherForecast::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: calc(50% - 100px);
+    width: 170px;
+    height: 200px;
+    background: url(../images/weatherBg.png) no-repeat right center;
+    background-size: 100% auto;
   }
   .weatherForecast .temperature, .weatherForecast .pop {
     height: 168px;
