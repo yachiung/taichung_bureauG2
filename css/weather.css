@@ -4,8 +4,6 @@
   --popBg: #53a0b3;
   --textColor:#fff;
   --whitBg:#fff;
-  position: relative;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,17 +11,22 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  position: relative;
+  overflow: hidden;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .weatherForecast * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 .weatherForecast .temperature, .weatherForecast .pop {
-  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   padding: 6px 2px 5px;
   margin: 0;
   min-height: 50px;
@@ -32,18 +35,33 @@
   color: var(--textColor);
   text-align: center;
 }
-.weatherForecast .temperature em, .weatherForecast .pop em {
-  font-weight: bold;
-  font-style: normal;
+.weatherForecast .pop {
+  text-align: center;
+  line-height: 50px;
+  background-color: var(--popBg);
 }
-.weatherForecast .temperature > img, .weatherForecast .temperature > em, .weatherForecast .temperature > span, .weatherForecast .pop > img, .weatherForecast .pop > em, .weatherForecast .pop > span {
-  position: relative;
-  z-index: 2;
+.weatherForecast .pop time {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-family: inherit;
+  font-weight: normal;
+}
+.weatherForecast .pop .day::before {
+  content: "(";
+}
+.weatherForecast .pop .day::after {
+  content: ")";
+}
+.weatherForecast .pop .percent {
+  display: inline-block;
+  vertical-align: middle;
+}
+.weatherForecast .pop .percent em::after {
+  content: "%";
 }
 .weatherForecast .temperature {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
   background-color: var(--tempBg);
   background-size: 100% auto;
 }
@@ -66,96 +84,47 @@
   content: "°C";
   font-size: 0.72em;
 }
-.weatherForecast .pop {
-  position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  text-align: center;
-  background-color: var(--popBg);
-}
-.weatherForecast .pop > * {
-  vertical-align: middle;
-}
-.weatherForecast .pop .label, .weatherForecast .pop em, .weatherForecast .pop time {
-  display: inline-block;
-  vertical-align: middle;
-}
-.weatherForecast .pop .label {
-  font-size: 0.9em;
-  margin: 0 2px;
-}
-.weatherForecast .pop em {
-  font-size: 1.5em;
-}
-.weatherForecast .pop em::after {
-  content: "%";
-  font-size: 0.72em;
-}
-.weatherForecast .pop time {
-  margin: 0;
-  height: 50px;
-  line-height: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
 @media screen and (min-width: 601px) {
-  .weatherForecast::after {
-    bottom: calc(50% - 25px);
-  }
   .weatherForecast .temperature, .weatherForecast .pop {
     padding: 12px 5px;
-  }
-  .weatherForecast .pop span {
-    font-size: 1em;
   }
 }
 @media screen and (min-width: 1001px) {
   .weatherForecast {
+    --bigFont: 3.2rem;
     display: block;
   }
   .weatherForecast::after {
     content: "";
     position: absolute;
-    right: -16px;
-    top: calc(50% - 100px);
-    width: 180px;
-    height: 200px;
-    background: url(../images/weatherBg.png) no-repeat right center;
+    top: calc(50% - 75px);
+    right: 0;
+    width: 60px;
+    height: 150px;
+    background: url(../images/weatherbg_baseball.png) no-repeat 0 0;
     background-size: auto 100%;
   }
   .weatherForecast .temperature, .weatherForecast .pop {
+    position: relative;
     height: 168px;
-    line-height: 170px;
     padding: 0 0 0 140px;
   }
   .weatherForecast .temperature::after, .weatherForecast .pop::after {
     content: "";
     position: absolute;
-    left: 136px;
+    left: 140px;
     top: calc(50% - 50px);
     width: 1px;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.6);
   }
-  .weatherForecast .temperature {
-    text-align: left;
+  .weatherForecast .pop .day, .weatherForecast .pop .label {
+    font-size: 1.25rem;
+    line-height: 2;
   }
-  .weatherForecast .temperature img {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    left: 20px;
-    top: calc(50% - 50px);
-  }
-  .weatherForecast .temperature em {
-    display: inline-block;
-    left: 20px;
-    font-size: 3.6rem;
-    text-align: right;
-  }
-  .weatherForecast .temperature em::after {
-    font-size: 0.6em;
+  .weatherForecast .pop .date, .weatherForecast .pop .percent > em {
+    font-size: var(--bigFont);
+    line-height: 1.15;
   }
   .weatherForecast .pop time {
     position: absolute;
@@ -163,30 +132,64 @@
     top: calc(50% - 50px);
     width: 120px;
     height: 100px;
-    line-height: 105px;
-    text-align: center;
-    font-size: 3rem;
+    padding: 2.5rem 0 0;
   }
-  .weatherForecast .pop .label, .weatherForecast .pop em {
+  .weatherForecast .pop time .day {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    letter-spacing: 4px;
+  }
+  .weatherForecast .pop time .day::before {
+    content: "（";
+  }
+  .weatherForecast .pop time .day::after {
+    content: "）";
+  }
+  .weatherForecast .pop time .date {
     display: block;
-    margin-right: 70px;
-    text-align: right;
+    margin: 0;
   }
-  .weatherForecast .pop .label {
-    top: calc(50% - 2em);
-    font-size: 1.2rem;
-    line-height: 1.1;
+  .weatherForecast .pop .percent {
+    display: block;
+    width: 8rem;
+    height: 100px;
+    position: relative;
+    top: calc(50% - 50px);
+    left: 10px;
+  }
+  .weatherForecast .pop .percent .label {
+    display: block;
+    text-align: left;
+    text-indent: 0.8em;
     letter-spacing: 1px;
-    width: 6em;
-    padding-right: 1em;
   }
-  .weatherForecast .pop em {
+  .weatherForecast .pop .percent em {
     display: block;
-    top: calc(50% - 2rem);
-    font-size: 3rem;
-    line-height: 1.1;
   }
-  .weatherForecast .pop em::after {
+  .weatherForecast .pop .percent em::after {
+    font-size: 0.6em;
+  }
+  .weatherForecast .temperature img {
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+  }
+  .weatherForecast .temperature em {
+    display: block;
+    width: 8rem;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    top: calc(50% - 50px);
+    left: 10px;
+    font-size: var(--bigFont);
+    text-align: center;
+  }
+  .weatherForecast .temperature em::after {
     font-size: 0.6em;
   }
 }
@@ -234,10 +237,10 @@
   display: block;
 }
 .slide.bb_n3 {
+  width: 100%;
   max-width: none;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
-  width: 100%;
 }
 .slide.bb_n3 .box {
   height: 60vw;

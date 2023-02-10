@@ -6,33 +6,42 @@
   --whitBg:#fff;
   // -------------------------- //
 
-  position: relative; overflow: hidden;
   display: flex; flex-flow: row nowrap;
-  padding: 0; margin: 0;
-  box-sizing: border-box;
- 
+  position: relative; overflow: hidden;
+  padding: 0; margin: 0; box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
   *{box-sizing: border-box;}
 
-  // &::after{
-  //   content: ''; position: absolute; bottom: -25px; right: calc(50% - 25px); left: auto;
-  //   width: 50px; height: 50px;
-  //   background: url(../images/weatherbg_baseball2.png) no-repeat center center;
-  //   background-size: 100%;
-  // }
-
   .temperature, .pop{
-    position: relative;
+    flex: 0 0 50%;
     padding: 6px 2px 5px; margin: 0; min-height: 50px;
     font-size: 1rem; line-height: 1.1;
     color: var(--textColor);text-align: center;
-    em{font-weight: bold; font-style: normal;}
-    &>img, &>em, &>span{position: relative; z-index: 2;} 
   }
- 
+
+   // 降雨機率
+   .pop{
+    text-align: center;line-height: 50px;
+    background-color: var(--popBg);
+    time {
+      margin: 0; display: inline-block;vertical-align: middle; text-align: center;
+      font-family: inherit; font-weight: normal;
+    }
+    .day {
+      &::before{ content: '(';}
+      &::after{ content: ')';}
+    }
+    .percent{
+      display: inline-block;vertical-align: middle;
+      em{
+        &::after{content: '%';}
+      }
+    }
+  }
+
   // 氣溫
   .temperature{
-    flex: 0 0 50%;
-    // background: #c47c00 url(../images/weatherbg1.jpg) left bottom no-repeat;
     background-color: var(--tempBg);
     background-size: 100% auto;
     img{
@@ -47,111 +56,76 @@
     }
   }
 
-  // 降雨機率
-  .pop{
-    position: relative; flex: 0 0 50%;
-    text-align: center; 
-    background-color: var(--popBg);
-    &>*{vertical-align: middle;}
-    .label, em, time{ display: inline-block;vertical-align: middle;}
-    .label{font-size: .9em; margin: 0 2px;}
-    em{ font-size: 1.5em;
-      &::after{
-        content: '%'; font-size: .72em;
-      }
-    }
-    // &::before{// 水滴圖示
-    //   content: ''; display: inline-block;vertical-align: middle;
-    //   position: relative; z-index: 2;
-    //   width: 50px; height: 50px; 
-    //   background: url(../images/icon_pop.svg) no-repeat center center;
-    //   background-size: 100% auto;
-    // }
-    time{
-      margin: 0;
-      height: 50px; line-height: 50px;
-      // outline: 1px solid red;
-      font-family:Arial, Helvetica, sans-serif; font-weight: bold;
-    }
-  }
-
   @media screen and (min-width: 601px){
-    &::after{ bottom: calc(50% - 25px);}
     .temperature, .pop{ padding: 12px 5px;}
-    .pop{
-      span{ font-size: 1em;}
-    }
   }
 
   @media screen and (min-width: 1001px){
-    display: block; 
-    // &::after{
-    //   top: calc(50% - 75px); right: 0; bottom: auto;
-    //   width: 60px; height: 150px;
-    //   background: url(../images/weatherbg_baseball.png) no-repeat 0 0;
-    //   background-size: auto 100%;
-    // }
+    --bigFont: 3.2rem;
+
+    display: block;
     &::after{
-      content: '';
-      position: absolute;right: -16px; top: calc(50% - 100px);
-      width: 180px; height: 200px;
-      background: url(../images/weatherBg.png) no-repeat right center;
-      background-size:auto 100%;
+      content: ''; position: absolute; top: calc(50% - 75px); right: 0;
+      width: 60px; height: 150px;
+      background: url(../images/weatherbg_baseball.png) no-repeat 0 0;
+      background-size: auto 100%;
     }
+
     .temperature, .pop{
-      height: 168px;line-height: 170px;padding: 0 0 0 140px;
+      position: relative;height: 168px;padding: 0 0 0 140px;
       &::after{
-        content: ''; position: absolute; left: 136px; top: calc(50% - 50px); 
+        content: ''; position: absolute; left: 140px; top: calc(50% - 50px); 
         width: 1px; height:100px;
         background-color: rgba(255,255,255,.6);
       }
     }
 
-    //氣溫
-    .temperature{
-      text-align: left;
-      img{
-        width: 100px; height: 100px;
-        position: absolute; left: 20px; top:calc(50% - 50px);
+    // 降雨機率
+    .pop{
+      .day, .label{ font-size: 1.25rem; line-height: 2; }
+      .date, .percent>em{ font-size: var(--bigFont); line-height: 1.15;}
+      time{
+        position: absolute; left: 10px; top: calc(50% - 50px); 
+        width: 120px; height: 100px; padding: 2.5rem 0 0;
+        .day{
+          position: absolute; top: 0; right: 0; left: 0;
+          letter-spacing: 4px;
+          &::before{ content: '（';}
+          &::after{ content: '）';}
+        }
+        .date{display: block; margin: 0;}
       }
-      em{ 
-        display: inline-block; left: 20px;
-        font-size: 3.6rem; text-align: right; 
-        &::after{font-size: .6em;}
-        // outline: 1px dashed red;
+      .percent{
+        display: block; width: 8rem;height: 100px;
+        position: relative;top: calc(50% - 50px); left: 10px;
+        .label{
+          display: block;text-align: left;
+          text-indent: .8em; letter-spacing: 1px;
+        }
+        em{
+          display: block; 
+          &::after{font-size: .6em;}
+        }
       }
     }
 
-    // 降雨機率
-    .pop{
-      // &::before{ 
-      //   position: absolute; left: 20px; top: calc(50% - 50px); 
-      //   width: 100px; height: 100px;
-      // }
-      time{
-        position: absolute; left: 10px; top: calc(50% - 50px); 
-        width: 120px; height: 100px; line-height:105px;
-        text-align: center; font-size: 3rem;
+    //氣溫
+    .temperature{
+      img{
+        position: absolute; left: 20px; top:calc(50% - 50px);
+        width: 100px; height: 100px;
       }
-
-      .label, em{
-        display: block;
-        margin-right: 70px;text-align: right;
-      }
-      .label{
-        top:calc(50% - 2em);
-        font-size: 1.2rem;line-height: 1.1; letter-spacing: 1px;
-        width: 6em; padding-right: 1em;
-      }
-      em{
-        display: block; top:calc(50% - 2rem);
-        font-size: 3rem; line-height: 1.1;
+      em{ 
+        display: block; width: 8rem; height: 100px;line-height: 100px;
+        position: relative; top: calc(50% - 50px); left: 10px;
+        font-size: var(--bigFont); text-align: center; 
         &::after{font-size: .6em;}
       }
     }
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////
 
 .row.col84{
   &>.weatherForecast{ padding: 0; height: auto !important; background: var(--whitBg);}
@@ -169,16 +143,14 @@
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////
 // 大圖輪播修改
 .slide{
   .box img{margin: 0 auto;}
   li>a{ display: block;}
 
-
   &.bb_n3{
-    max-width: none; box-shadow: none !important;
     width: 100%;
+    max-width: none; box-shadow: none !important;
     .box{
       height: 60vw;
       img{ height: 60vw; width: 100% !important;object-fit: cover;}
@@ -192,8 +164,6 @@
     .box:hover ~ .dots{opacity: 0.1;}
   }
 
-  @media screen and (min-width: 801px){
-  }
 
   @media screen and (min-width: 1001px){
     &.bb_n3{
