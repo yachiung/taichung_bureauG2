@@ -78,11 +78,9 @@
   vertical-align: middle;
   height: 50px;
   line-height: 50px;
-  font-size: 2em;
 }
 .weatherForecast .temperature em::after {
   content: "°C";
-  font-size: 0.72em;
 }
 @media screen and (min-width: 601px) {
   .weatherForecast .temperature, .weatherForecast .pop {
