@@ -121,7 +121,9 @@
         display: block; width: 8rem; height: 100px;line-height: 100px;
         position: relative; top: calc(50% - 50px); left: 10px;
         font-size: var(--bigFont); text-align: center; 
-        &::after{font-size: .6em;}
+        &::after{
+          font-size: .6em; vertical-align: text-top;line-height:2.8rem;
+        }
       }
     }
   }
