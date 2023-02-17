@@ -1,0 +1,146 @@
+// /*小廣告 banner 不輪播*/
+// .adType1 ul{text-align:center;margin:0 auto;max-width:960px;}
+// .adType1 li{display:inline-block;margin:4px -1px;padding:0;vertical-align:top}
+// .adType1 li a,
+// .adType1 li img{display:block;width:180px;height:80px;margin:0 auto;}
+// .adType1 li a{background:#fff;padding:2px;transition:.2s;}
+// .adType1 li a:hover,
+// .adType1 li a:focus{box-shadow:rgba(0,0,0,.5) 0 1px 6px;outline:none;}
+// .adType1 li a:focus{background:#333;}
+
+// 小廣告 banner，不輪播
+
+// .adType1
+.adType1{
+	ul{text-align:center;margin:0 auto;max-width:960px;}
+	li{display:inline-block;margin:4px -1px;padding:0;vertical-align:top;
+		a, img{display:block;width:180px;height:80px;margin:0 auto;}
+		a{background:#fff;padding:2px;transition:.2s;
+			&:hover, &:focus{box-shadow:rgba(0,0,0,.5) 0 1px 6px;outline:none;}
+			&:focus{background:#333;}
+		}
+	}
+
+	@media screen and (min-width:601px){
+		li{margin:8px 1px 0;}
+	}
+}
+
+.cx4 .adType1 li,
+.cx2a .adType1:last-child li,
+.cx2b .adType1:first-child li{display:block;margin:8px auto;}
+@media screen and (min-width:601px){
+	.cx2 .adType1 ul{width:400px;}
+	.cx2a .adType1:first-child ul,
+	.cx2b .adType1:last-child ul{width:600px;}
+}
+
+
+//////////////////////////////////////////////////////////////////////
+// .adType2 ul{text-align:center;margin:0 auto;max-width:480px;}
+// .adType2 li{width:100%;height:auto;position:relative;}
+// .adType2 li a,
+// .adType2 li img{display:block;width:100%;height:100%;margin:0;}
+// .adType2 li a:before{display:none;content:'';position:absolute;left:0;right:0;top:0;bottom:0;border:2px solid #c19;}
+// .adType2 li a:focus:before{display:block;}
+
+// .adType2
+.adType2{
+	ul{text-align:center;margin:0 auto;max-width:480px;}
+	li{width:100%;height:auto;position:relative;
+		a, img{display:block;width:100%;height:100%;margin:0;}
+		a{
+			&:before{display:none;content:'';position:absolute;left:0;right:0;top:0;bottom:0;border:2px solid #c19;}
+			&:focus:before{display:block;}
+		}
+	}
+
+	@media screen and (min-width:1001px){
+		ul{width:100%;max-width:340px;}
+		li{height:33.3%;}
+	}
+}
+
+
+@media screen and (min-width:1001px){
+	.row>.adType2 {padding:0;}
+	// .adType2 ul{width:100%;max-width:340px;}
+	// .adType2 li{height:33.3%;}
+	.gutter>.adType2 ul,
+	.gutter1>.adType2 ul{height:477px;}
+
+	.cx2a>.adType2 ul,
+	.cx2b>.adType2 ul,
+	.cx3>.adType2 ul{height:510px;}
+	.cx2a.gutter>.adType2 ul,
+	.cx2b.gutter>.adType2 ul,
+	.cx2a.gutter1>.adType2 ul,
+	.cx2b.gutter1>.adType2 ul{height:477px;}
+}
+
+//////////////////////////////////////////////////////////////////////
+
+
+/*小廣告輪播水平款*/
+// .adSlide{position:relative;margin:0 auto;}
+// .adSlide .box{position:relative;margin:0 auto;overflow:hidden;height:86px;width:200px;padding:10px 0;}
+// .adSlide ul{position:absolute;white-space:nowrap;height:86px;width:9999px;font-size:0;}
+// .adSlide li{margin:2px 9px 9px;padding:0;display:inline-block;width:182px;height:82px;}
+// .adSlide li img{display:block;width:180px;height:80px;}
+// .adSlide li a{display:block;position:relative;border:1px solid #fff;transition:.2s;}
+// .adSlide li a:hover{box-shadow:rgba(0,0,0,.4) 0 0 6px;}
+// .adSlide li a:focus{box-shadow:#444 0 0 0 2px;outline:none;}
+// .adSlide .arbtn.left{margin-left:0;}
+// .adSlide .arbtn.right{margin-right:0;}
+// @media screen and (min-width:480px){
+// 	.adSlide .box{width:400px;}
+// }
+// @media screen and (min-width:680px){
+// 	.adSlide .box{width:600px;}
+// }
+// @media screen and (min-width:880px){
+// 	.adSlide .box{width:800px;}
+// }
+
+// 小廣告輪播水平款
+.adSlide{position:relative;margin:0 auto;
+	.box{position:relative;margin:0 auto;overflow:hidden;height:86px;width:200px;padding:10px 0;}
+	ul{position:absolute;white-space:nowrap;height:86px;width:9999px;font-size:0;}
+	li{margin:2px 9px 9px;padding:0;display:inline-block;width:182px;height:82px;
+		img{display:block;width:180px;height:80px;}
+		a{display:block;position:relative;border:1px solid #fff;transition:.2s;
+			&:hover{box-shadow:rgba(0,0,0,.4) 0 0 6px;}
+			&:focus{box-shadow:#444 0 0 0 2px;outline:none;}
+		}
+	}
+
+	.arbtn.left{margin-left:0;}
+	.arbtn.right{margin-right:0;}
+
+	@media screen and (min-width:480px){
+		.box{width:400px;}
+	}
+	@media screen and (min-width:680px){
+		.box{width:600px;}
+	}
+	@media screen and (min-width:880px){
+		.box{width:800px;}
+	}
+}
+
+
+
+
+/*小廣告輪播垂直款*/
+.adSlideV .box{position:relative;margin:45px auto 0;overflow:hidden;height:264px;width:182px;padding:0 9px 9px;}
+.adSlideV ul{position:absolute;left:9px;width:182px;}
+.adSlideV li{padding:4px 0;margin:0;line-height:1;}
+.adSlideV li img{display:block;width:180px;height:80px;}
+.adSlideV li a{display:block;width:180px;height:80px;padding:1px;background:#fff;transition:.2s;}
+.adSlideV li a:hover,
+.adSlideV li a:focus{box-shadow:rgba(0,0,0,.4) 0 1px 6px;outline:none;}
+.adSlideV li a:focus{background:#666;}
+
+
+
+
