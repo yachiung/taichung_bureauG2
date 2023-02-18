@@ -241,7 +241,7 @@ input[type="url"],
 input[type="file"],
 textarea{height:2.4em;line-height:2.4;padding:0 .4em;border-radius: 4px;vertical-align: top;-webkit-appearance:none;border:solid 1px #bbb;background: #fff;}
 textarea{line-height:1.5;padding-top:.3em;padding-bottom: .3em;height:6em;resize: vertical}
-select{-webkit-appearance: none;height:2.4em;line-height:2.4;padding:0 22px 0 .4em;border-radius: 4px;vertical-align: top;border:solid 1px #bbb;background-image: linear-gradient(#fff, #fff);background: #fff url(../images/select-arrow.png) no-repeat right 1em;background-size: 16px;max-width: calc(100% - .8em -24px);}
+select{-webkit-appearance: none;height:2.4em;line-height:2.4;padding:0 22px 0 .4em;border-radius: 4px;vertical-align: top;border:solid 1px #bbb;background-image: linear-gradient(#fff, #fff);background: #fff url(../images/select-arrow.png) no-repeat right 1em;background-size: 16px;max-width: calc(100% - .8em - 24px);}
 
 input.text:focus,
 input[type="text"]:focus,

@@ -8,8 +8,8 @@
 // .adType1 li a:focus{box-shadow:rgba(0,0,0,.5) 0 1px 6px;outline:none;}
 // .adType1 li a:focus{background:#333;}
 
-// 小廣告 banner，不輪播
 
+// 小廣告 banner，不輪播
 // .adType1
 .adType1{
 	ul{text-align:center;margin:0 auto;max-width:960px;}
@@ -80,7 +80,6 @@
 
 //////////////////////////////////////////////////////////////////////
 
-
 /*小廣告輪播水平款*/
 // .adSlide{position:relative;margin:0 auto;}
 // .adSlide .box{position:relative;margin:0 auto;overflow:hidden;height:86px;width:200px;padding:10px 0;}
@@ -132,15 +131,25 @@
 
 
 /*小廣告輪播垂直款*/
-.adSlideV .box{position:relative;margin:45px auto 0;overflow:hidden;height:264px;width:182px;padding:0 9px 9px;}
-.adSlideV ul{position:absolute;left:9px;width:182px;}
-.adSlideV li{padding:4px 0;margin:0;line-height:1;}
-.adSlideV li img{display:block;width:180px;height:80px;}
-.adSlideV li a{display:block;width:180px;height:80px;padding:1px;background:#fff;transition:.2s;}
-.adSlideV li a:hover,
-.adSlideV li a:focus{box-shadow:rgba(0,0,0,.4) 0 1px 6px;outline:none;}
-.adSlideV li a:focus{background:#666;}
+// .adSlideV .box{position:relative;margin:45px auto 0;overflow:hidden;height:264px;width:182px;padding:0 9px 9px;}
+// .adSlideV ul{position:absolute;left:9px;width:182px;}
+// .adSlideV li{padding:4px 0;margin:0;line-height:1;}
+// .adSlideV li img{display:block;width:180px;height:80px;}
+// .adSlideV li a{display:block;width:180px;height:80px;padding:1px;background:#fff;transition:.2s;}
+// .adSlideV li a:hover,
+// .adSlideV li a:focus{box-shadow:rgba(0,0,0,.4) 0 1px 6px;outline:none;}
+// .adSlideV li a:focus{background:#666;}
 
-
-
-
+// 小廣告輪播垂直款
+.adSlideV{
+	.box{position:relative;margin:45px auto 0;overflow:hidden;height:264px;width:182px;padding:0 9px 9px;}
+	ul{position:absolute;left:9px;width:182px;}
+	li{padding:4px 0;margin:0;line-height:1;
+		img{display:block;width:180px;height:80px;}
+		a{display:block;width:180px;height:80px;padding:1px;background:#fff;transition:.2s;
+			&:hover,
+			&:focus{box-shadow:rgba(0,0,0,.4) 0 1px 6px;outline:none;}
+			&:focus{background:#666;}
+		}
+	}
+}
