@@ -10091,6 +10091,163 @@ section.waitingCount h2 {
   display: none;
 }
 
+.extraBtn a:hover {
+  background: #639100;
+  color: #fff;
+}
+.extraBtn a:focus {
+  background: #639100;
+  color: #fff;
+}
+
+.dateRange {
+  display: inline-block;
+}
+
+.optionPool + .optionPool {
+  margin-top: 0.5em;
+}
+.optionPool label input[type=checkbox] {
+  vertical-align: middle;
+  height: 1em;
+}
+.optionPool label:first-child::before {
+  content: "";
+  display: block;
+}
+
+.refresh {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0 0 6px;
+}
+.refresh a {
+  display: block;
+  background: url(../images/btn_refresh.png) no-repeat 0 0;
+  padding: 10px 0 12px 37px;
+  font-size: 1em;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.reqMark {
+  text-align: right;
+  margin: 0 1em 1em;
+}
+
+.magList {
+  margin: 0 auto;
+}
+.magList label {
+  display: block;
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+form td .magList p {
+  margin: 0 0 1.5em;
+  line-height: 1.6;
+}
+
+.note {
+  margin: 0 0 2.5em;
+  padding: 2.5em 3% 2.5em;
+  border-width: 1px;
+  line-height: 1.8;
+  background: #fe8;
+}
+.note h2 {
+  font-size: 1.2em;
+  margin: 0 0 1em;
+}
+.note li {
+  margin-bottom: 1.2em;
+}
+.note a {
+  color: #f50;
+  text-decoration: underline;
+  word-break: break-all;
+}
+.note .extraBtn a {
+  background-color: #f80;
+  color: #fff;
+}
+.note .extraBtn a:hover {
+  background-color: #e60;
+}
+.note .extraBtn a:focus {
+  background-color: #e60;
+}
+
+a.mapMarker {
+  display: inline-block;
+  padding: 0 0.5em 0 2.2em;
+  background: #fff url(../images/bubble.png) no-repeat 0.3em center;
+  background-size: 1.6em auto;
+  margin-left: 1em;
+  min-height: 2.4em;
+  line-height: 2.4em;
+  border-radius: 6px;
+  border: 1px solid #65adbb;
+  text-decoration: none;
+}
+a.mapMarker:hover, a.mapMarker:focus {
+  border-color: #186c7d;
+  -webkit-box-shadow: #186c7d 0 0 3px;
+          box-shadow: #186c7d 0 0 3px;
+  outline: none;
+}
+
+.ppause {
+  display: block;
+  position: relative;
+  left: 50%;
+  margin: -26px auto -26px -26px;
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ppause:hover {
+  -webkit-box-shadow: rgba(250, 0, 0, 0.4) 0 0 0 4px;
+          box-shadow: rgba(250, 0, 0, 0.4) 0 0 0 4px;
+  background-color: rgba(250, 0, 0, 0.8);
+}
+.ppause:before, .ppause:after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  width: 5px;
+  height: 18px;
+  background: #fff;
+}
+.ppause:after {
+  left: 30px;
+}
+.ppause.pplay {
+  background-color: rgba(250, 0, 0, 0.8);
+}
+.ppause.pplay:before {
+  border: 10px solid transparent;
+  border-left: 16px solid #fff;
+  height: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  left: 21px;
+}
+.ppause.pplay:after {
+  display: none;
+}
+@media screen and (min-width: 601px) {
+  .ppause {
+    display: none;
+  }
+}
+
 .cpArticle {
   width: 96%;
   margin: 0 auto;
@@ -10512,7 +10669,6 @@ section.waitingCount h2 {
   }
 }
 
-/*--附件：圖檔*/
 .attachment .images {
   width: 96vw;
   margin: 2vw auto;
@@ -10923,25 +11079,6 @@ section.waitingCount h2 {
   }
 }
 
-a.mapMarker {
-  display: inline-block;
-  padding: 0 0.5em 0 2.2em;
-  background: #fff url(../images/bubble.png) no-repeat 0.3em center;
-  background-size: 1.6em auto;
-  margin-left: 1em;
-  min-height: 2.4em;
-  line-height: 2.4em;
-  border-radius: 6px;
-  border: 1px solid #65adbb;
-  text-decoration: none;
-}
-a.mapMarker:hover, a.mapMarker:focus {
-  border-color: #186c7d;
-  -webkit-box-shadow: #186c7d 0 0 3px;
-          box-shadow: #186c7d 0 0 3px;
-  outline: none;
-}
-
 .album {
   width: 96%;
   margin: 0 auto;
@@ -11175,56 +11312,6 @@ a.mapMarker:hover, a.mapMarker:focus {
     height: 76px;
     border: 2px solid #9d0;
     z-index: 99;
-  }
-}
-
-.ppause {
-  display: block;
-  position: relative;
-  left: 50%;
-  margin: -26px auto -26px -26px;
-  width: 52px;
-  height: 52px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.ppause:hover {
-  -webkit-box-shadow: rgba(250, 0, 0, 0.4) 0 0 0 4px;
-          box-shadow: rgba(250, 0, 0, 0.4) 0 0 0 4px;
-  background-color: rgba(250, 0, 0, 0.8);
-}
-.ppause:before, .ppause:after {
-  content: "";
-  position: absolute;
-  top: 17px;
-  left: 18px;
-  width: 5px;
-  height: 18px;
-  background: #fff;
-}
-.ppause:after {
-  left: 30px;
-}
-.ppause.pplay {
-  background-color: rgba(250, 0, 0, 0.8);
-}
-.ppause.pplay:before {
-  border: 10px solid transparent;
-  border-left: 16px solid #fff;
-  height: 18px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: transparent;
-  left: 21px;
-}
-.ppause.pplay:after {
-  display: none;
-}
-@media screen and (min-width: 601px) {
-  .ppause {
-    display: none;
   }
 }
 
@@ -11736,33 +11823,6 @@ ol.policies > li > a[title=原住民族政策] {
   background: #0094a8;
 }
 
-.extraBtn a:hover {
-  background: #639100;
-  color: #fff;
-}
-
-.extraBtn a:focus {
-  background: #639100;
-  color: #fff;
-}
-
-.note .extraBtn a {
-  background-color: #f80;
-  color: #fff;
-}
-
-.note .extraBtn a:hover {
-  background-color: #e60;
-}
-
-.note .extraBtn a:focus {
-  background-color: #e60;
-}
-
-.note a {
-  word-break: break-all;
-}
-
 .forwardForm {
   width: 96%;
   margin: 0 auto 2em;
@@ -12055,78 +12115,6 @@ ol.policies > li > a[title=原住民族政策] {
 .center .qp header, .center .forwardForm header {
   margin: 0 3px 3px;
   border: none;
-}
-
-.dateRange {
-  display: inline-block;
-}
-
-.optionPool + .optionPool {
-  margin-top: 0.5em;
-}
-
-.optionPool label input[type=checkbox] {
-  vertical-align: middle;
-  height: 1em;
-}
-
-.optionPool label:first-child:before {
-  content: "";
-  display: block;
-}
-
-.refresh {
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px 0 0 6px;
-}
-
-.refresh a {
-  display: block;
-  background: url(../images/btn_refresh.png) no-repeat 0 0;
-  padding: 10px 0 12px 37px;
-  font-size: 1em;
-  letter-spacing: 0;
-  text-decoration: none;
-}
-
-.reqMark {
-  text-align: right;
-  margin: 0 1em 1em;
-}
-
-.magList {
-  margin: 0 auto;
-}
-
-form td .magList p {
-  margin: 0 0 1.5em;
-  line-height: 1.6;
-}
-
-.magList label {
-  display: block;
-  margin: 0.5em 0;
-  font-size: 1.2em;
-}
-
-.note {
-  margin: 0 0 2.5em;
-  padding: 2.5em 3% 2.5em;
-  border-width: 1px;
-  line-height: 1.8;
-  background: #fe8;
-}
-.note h2 {
-  font-size: 1.2em;
-  margin: 0 0 1em;
-}
-.note li {
-  margin-bottom: 1.2em;
-}
-.note a {
-  color: #f50;
-  text-decoration: underline;
 }
 
 a[title=換一組驗證碼],
@@ -12736,6 +12724,96 @@ td:nth-child(even) .optionGp label {
   }
 }
 
+/* 
+@media screen and (max-width:1000px) {
+	// .share{top:200px;left:50%;margin:0 auto 0 -180px;padding:1.2em 0 0;width:360px;height:auto;background:rgba(180,180,180,.9);border-radius:8px;box-shadow:rgba(0,0,0,.6) 0 5px 40px;display:none;}
+	// .share span{font-size:1.5em;text-align:center;font-weight:normal;color:#333;}
+	// .share ul{list-style:none;margin:.3em 0 0;padding:0;font-size:1.5em;text-align:left;}
+	// .share li{margin:.3em .6em;width:auto;height:auto;font-weight:normal;}
+	// .share li a{display:block;overflow:hidden;width:auto;height:auto;background:#fff;white-space:nowrap;line-height:64px;color:#000;}
+	// .share li a img{float:left;width:64px;height:64px;margin-right:.5em;}
+	// .share li.close{display:block;text-align:center;width:3em;padding:.4em 1em;margin:.6em auto;background:#fff;border-radius:2em;color:#000;}
+
+	// .LatestIssue .contents{-moz-column-count:1;-moz-column-gap:1em;-webkit-column-count:1;-webkit-column-gap:1em;column-count:1;column-gap:1em;}
+	// .eMag.LatestIssue .buttons li{display:block;width:auto;}
+	// .eMag.LatestIssue .buttons li a{display:block;width:auto;margin:0 0 8px;}
+
+	// .seeAlso{margin:30px auto;}
+	// .seeAlso ul li a{display:block;padding:.8em 0 .2em;}
+
+
+	// .album{width:100vw}
+
+	// .preface{width:auto;}
+	// .page + .preface{margin-bottom:0;}
+
+}
+@media screen and (max-width:800px) {
+	// .share{top:70px;width:300px;margin-left:-150px;}
+	// .share h2, .share ul{font-size:1.15em;}
+
+	// .cpArticle{width:92vw;margin:0 auto;}
+	// .videoPlay{padding:15px;}
+	// .videoPlay object{display:block;max-width:100%;float:none;margin:0 auto 2em;border-bottom:3px solid #bbb;}
+
+	// .meta{margin:1em 0 0;padding-left:0;padding-right:0;width:100vw}
+	// .meta h2{margin:0 16px;font-size:1em;}
+	// .meta table{border:none;}
+	// .meta tr{display:block;border-top:1px solid #bbb;padding:.8em 16px;}
+	// .meta th, .meta td{display:inline-block;text-align:left;border:none;width:auto;padding:.2em 0;}
+	// .meta th{min-width:0;background:#e0e8ee;color: #111;border-radius:0 2em 2em  0;padding-left:16px;padding-right:.9em;margin-left:-16px;margin-right:.5em;}
+	// .meta td iframe{margin:.5em auto 0;height:400px;}
+	// .meta.resume table{width:100vw;float:none;margin:0;border-bottom:1px solid #bbb}
+	// .meta.resume figure{max-width:none;width:100vw;float:none;margin:8px auto 1.5em;text-align:center;}
+	// .meta.resume figure img{width:auto;max-width:96%;display:inline-block;}
+
+	// .cpArticle .meta{margin-left:-15px;margin-right:-15px;}
+	// .pubInfo ul{font-size:.67em;}
+	// .pubInfo li em{font-size:1.25em;}
+
+	// .album .meta table {width:100%;}
+	// .preface{margin:0;padding-top:.8em;}
+	// .preface h2{font-size:1.4em;}
+	// .preface .info, .preface .count{font-size:.9em;display:block;}
+	// .preface .info li{margin:0 0 .8em;display:block;}
+	// .preface .count{float:none;text-align:left;}
+
+}
+@media screen and (max-width:600px) {
+	// .cpArticle figure{float:none;width:100%;margin:0 auto 2em;box-sizing:border-box;}
+	// .cpArticle figcaption{font-size:.88em;}
+	// .cpArticle figure img{width:100%;}
+	// .cpArticle th[scope="row"]{width:auto;}
+	// .cpArticle ul, .cpArticle ol{clear:both;}
+	// .cpArticle li{word-break:break-all;}
+
+	// .cpArticle .list  table{border:none;}
+	// .cpArticle .list td{border:none;border-bottom:1px dotted #ccc;}
+
+	// .meta{margin:1em 0 0;}
+	// .meta h2{margin:0 16px;font-size:1em;}
+	// .meta table{border:none;}
+	// .meta tr{display:block;border-top:1px solid #bbb;padding:.8em 16px;}
+	// .meta td iframe{ margin:.5em auto 0;height:400px;}
+	// .meta.resume table{width:100%;float:none;margin:0;}
+	// .meta.resume figure{width:92%;max-width:none;float:none;margin:10px auto 2em;}
+	// .pubInfo ul{font-size:.67em;}
+	// .pubInfo li{white-space:normal}
+	// .pubInfo li em{font-size:1.25em;}
+
+	// .eMag .image, .eMag.LatestIssue .image{float:none;width:100%;height:auto;margin:0;}
+	// .eMag .image img, .eMag.LatestIssue .image img{width:100%;max-height:none;}
+	// .eMag.LatestIssue .buttons{font-size:1.2em;}
+	// .eMag.LatestIssue .buttons li{clear:none;float:left;width:49%;}
+	// .eMag.LatestIssue .buttons li:last-child{float:right;}
+	// .eMag.LatestIssue .buttons li a{padding-left:0;padding-right:0; min-width:0;}
+	// .eMag h2{font-size:1.4em;margin-top:1.5em;}
+	// .eMag .meta{float:none;width:100%;margin:.6em 0 0;}
+	// .eMag .meta + .buttons{text-align:center;padding-top:0;}
+	// .eMag .contents{padding-top:0;-moz-column-count:1;-moz-column-gap:1em;-webkit-column-count:1;-webkit-column-gap:1em;column-count:1;column-gap:1em;}
+}
+
+ */
 /* .cpArticle
 // .cpArticle{width:96%;margin:0 auto;padding:16px 0 0;line-height:1.7;font-size:1.1em;overflow:hidden;}
 // .cpArticle p{line-height:inherit;margin:0 0 1em;padding:0;}
