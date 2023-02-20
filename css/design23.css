@@ -4498,32 +4498,27 @@ form th label {
 }
 
 /*slide 顯示區*/
-[class^=iconType] h2 { /*text-align:center;margin:0 auto .3em;*/
+[class^=iconType] h2 {
   width: 95%;
 }
-
 [class^=iconType] ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
 }
-
 [class^=iconType] li a {
   display: block;
   padding: 6px;
   text-decoration: none;
 }
-
 [class^=iconType] li a:focus {
   outline: none;
 }
-
 [class^=iconType] li img {
   width: 72px;
   height: 72px;
   vertical-align: middle;
 }
-
 [class^=iconType].circle li img {
   border-radius: 50%;
   width: 48px;
@@ -4535,23 +4530,16 @@ form th label {
   background: #eee;
 }
 
-/* @media screen and (max-width:600px) and (min-width:321px){
-	[class^="iconType"] li img{width:64px;height:64px;}
-	[class^="iconType"].circle li img{width:48px;height:48px;padding:8px;border: none}
-} */
-/*圖示第一型：圖在字左方*/
 .iconType1 ul {
   text-align: center;
   margin: 0 auto;
 }
-
 .iconType1 li {
   margin: 8px auto;
   max-width: 290px;
   min-width: 180px;
   text-align: left;
 }
-
 .iconType1 li span {
   display: inline-block;
   vertical-align: middle;
@@ -4561,12 +4549,6 @@ form th label {
   max-height: 4.4em;
   overflow: hidden;
 }
-
-.cx2 .iconType1 h2,
-.cx2 .iconType1 .more {
-  width: 92%;
-}
-
 @media screen and (min-width: 601px) {
   .iconType1 li {
     display: inline-block;
@@ -4583,6 +4565,12 @@ form th label {
   .iconType1 li {
     width: 23.9%;
   }
+}
+
+.cx2 .iconType1 h2, .cx2 .iconType1 .more {
+  width: 92%;
+}
+@media screen and (min-width: 801px) {
   .cx2 .iconType1 ul {
     margin-left: 4%;
   }
@@ -4590,19 +4578,7 @@ form th label {
     width: 47%;
   }
 }
-@media screen and (min-width: 1001px) {
-  .gutter > .iconType1:only-child,
-  .gutter1 > .iconType1:only-child,
-  .gutter > .iconType2:only-child,
-  .gutter1 > .iconType2:only-child,
-  .gutter > .iconType3:only-child,
-  .gutter1 > .iconType3:only-child,
-  .gutter > .iconType4:only-child,
-  .gutter1 > .iconType4:only-child {
-    width: 100%;
-  }
-}
-/*圖示第二型：圖在字上方*/
+
 .iconType2 ul {
   text-align: center;
   margin: 0 auto;
@@ -4638,155 +4614,38 @@ form th label {
     max-width: 500px;
   }
 }
-/* 20190221新增，訊息專區用 */
-.iconType6 ul {
-  text-align: center;
-  margin: 0 auto;
-  padding: 5px 0;
-}
-
-.iconType6:only-child ul {
-  padding-top: 25px;
-}
-
-.iconType6 li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 3px 2px 5px;
-  width: 29vw;
-  height: 29vw;
-  padding: 0;
-}
-
-.iconType6 li a {
-  height: 100%;
-  padding: 0;
-  border-radius: 4px;
-  background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0 3px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0 0 3px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.iconType6 li a:hover,
-.iconType6 li a:focus {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 6px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0 1px 6px;
-  outline: none;
-}
-
-.iconType6 li a img {
-  margin: 0;
-  width: 60%;
-  height: auto;
-  margin-top: 8%;
-  padding: 0;
-}
-
-.iconType6.circle li {
-  margin-bottom: 15px;
-}
-
-.iconType6.circle li a img {
-  width: 45%;
-  height: auto;
-  background-color: #000;
-  padding: 18%;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.iconType6.circle li a:hover img,
-.iconType6.circle li a:focus img {
-  -webkit-box-shadow: #999 0 0 0 3px;
-          box-shadow: #999 0 0 0 3px;
-}
-
-.iconType6.circle li a,
-.iconType6.circle li a:hover,
-.iconType6.circle li a:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-color: transparent;
-}
-
-.iconType6 li span {
-  display: block;
-  line-height: 1.3;
-  height: 1.3em;
-  margin: 4% 4% 0;
-  overflow: hidden;
-} /* 字數限制最多5字，只能一行 */
-@media screen and (min-width: 440px) {
-  .iconType6 li {
-    width: 124px;
-    height: 124px;
-  }
-  .gutter .iconType6 li {
-    width: 120px;
-    height: 120px;
-  }
-  .iconType6 ul {
-    max-width: 440px;
-  }
-  .gutter .iconType6 ul,
-  .cx2.gutter .iconType6 ul {
-    max-width: 428px;
-  }
-}
-@media screen and (min-width: 800px) {
-  .iconType6 ul,
-  .gutter .iconType6 ul {
-    max-width: none;
-  }
-  .iconType6.circle li {
-    margin-bottom: 5px;
-  }
-}
-/*圖示第三型（全寬）*/
 .iconType3 {
   position: relative;
   text-align: center;
 }
-
 .iconType3 ul {
   width: 876px;
   height: 9.1em;
   overflow: hidden;
 }
-
+.iconType3 ul.moving {
+  background: #f66;
+}
 .iconType3 li {
   float: left;
   margin: 0 3px 8px;
   width: 140px;
   padding: 8px 0;
 }
-
-.iconType3 ul.moving {
-  background: #f66;
-}
-
-.no-js .iconType3 ul {
-  height: auto;
-}
-
 .iconType3 .arbtn.left {
   left: 0;
   display: none;
 }
-
 .iconType3 .arbtn.right {
   right: 0;
   display: none;
 }
-
 .iconType3 .showArea {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
   width: 146px;
-} /*slide 顯示區*/
+}
 @media screen and (min-width: 372px) {
   .iconType3 .showArea {
     width: 292px;
@@ -4812,14 +4671,17 @@ form th label {
     width: 876px;
   }
 }
-/*圖示第四型，文字在圈圈裡面（全寬／半寬）*/
+
+.no-js .iconType3 ul {
+  height: auto;
+}
+
 .iconType4 ul {
   text-align: center;
   overflow: hidden;
   margin: 0 auto;
   width: 96%;
 }
-
 .iconType4 li {
   display: inline-block;
   margin: 6px 2px 8px;
@@ -4827,7 +4689,6 @@ form th label {
   height: 148px;
   vertical-align: top;
 }
-
 .iconType4 li a {
   padding: 0;
   color: #fff;
@@ -4837,42 +4698,42 @@ form th label {
   border-radius: 50%;
   overflow: hidden;
 }
-
 .iconType4 li a img {
   display: block;
   margin: 20px auto 2px;
 }
-
-.iconType4.circle li a img {
-  margin: 15px auto 5px;
-}
-
 .iconType4 li span {
   display: block;
   width: 110px;
   margin: 0 auto;
   line-height: 1.3;
 }
-
 .iconType4.circle li img {
   background: none;
   width: 72px;
   height: 72px;
   padding: 0;
 }
-
+.iconType4.circle li a img {
+  margin: 15px auto 5px;
+}
 @media screen and (max-width: 1000px) {
   .iconType4 ul {
     max-width: 500px;
   }
 }
-/*圖示第五型：圖示下方有壓底圖，字在圖示下方（全寬）６＝３＊２*/
+
+@media screen and (min-width: 1001px) {
+  .gutter > .iconType1:only-child, .gutter > .iconType2:only-child, .gutter > .iconType3:only-child, .gutter > .iconType4:only-child, .gutter1 > .iconType1:only-child, .gutter1 > .iconType2:only-child, .gutter1 > .iconType3:only-child, .gutter1 > .iconType4:only-child {
+    width: 100%;
+  }
+}
+
 .iconType5 ul {
   width: 92vw;
   margin: 0 auto;
   text-align: center;
 }
-
 .iconType5 li {
   position: relative;
   margin: 0.6em auto;
@@ -4882,8 +4743,13 @@ form th label {
   background-size: cover;
   background-color: #666;
 }
-
-.iconType5 li a:before {
+.iconType5 li a {
+  position: relative;
+  display: block;
+  padding: 20px 0 5px;
+  color: #fff;
+}
+.iconType5 li a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -4894,19 +4760,16 @@ form th label {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
-.iconType5 li a:hover:before,
-.iconType5 li a:focus:before {
+.iconType5 li a:hover::before, .iconType5 li a:focus::before {
   background: rgba(0, 0, 0, 0.5);
 }
-
-.iconType5 li a {
-  position: relative;
-  display: block;
-  padding: 20px 0 5px;
-  color: #fff;
+.iconType5 li a::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 3.2em;
+  vertical-align: middle;
 }
-
 .iconType5 li img {
   position: relative;
   display: block;
@@ -4914,17 +4777,6 @@ form th label {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
-.iconType5.circle li img {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-}
-
-.iconType5.circle li a:hover img,
-.iconType5.circle li a:focus img {
-  background: rgba(0, 0, 0, 0.85);
-}
-
 .iconType5 li span {
   position: relative;
   display: inline-block;
@@ -4937,14 +4789,13 @@ form th label {
   font-size: 1.13em;
   line-height: 1.5;
 }
-
-.iconType5 li a:after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 3.2em;
-  vertical-align: middle;
-} /*置中對齊用*/
+.iconType5.circle li img {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+.iconType5.circle li a:hover img, .iconType5.circle li a:focus img {
+  background: rgba(0, 0, 0, 0.85);
+}
 @media screen and (min-width: 601px) {
   .iconType5 li {
     display: inline-block;
@@ -4961,6 +4812,111 @@ form th label {
     width: 30%;
   }
 }
+
+.iconType6 ul {
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+.iconType6:only-child ul {
+  padding-top: 25px;
+}
+.iconType6 li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3px 2px 5px;
+  width: 29vw;
+  height: 29vw;
+  padding: 0;
+  /* 字數限制最多5字，只能一行 */
+}
+.iconType6 li a {
+  height: 100%;
+  padding: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0 3px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 0 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.iconType6 li a:hover, .iconType6 li a:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 6px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0 1px 6px;
+  outline: none;
+}
+.iconType6 li a img {
+  margin: 0;
+  width: 60%;
+  height: auto;
+  margin-top: 8%;
+  padding: 0;
+}
+.iconType6 li span {
+  display: block;
+  line-height: 1.3;
+  height: 1.3em;
+  margin: 4% 4% 0;
+  overflow: hidden;
+}
+.iconType6.circle li {
+  margin-bottom: 15px;
+}
+.iconType6.circle li a {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+}
+.iconType6.circle li a img {
+  width: 45%;
+  height: auto;
+  background-color: #000;
+  padding: 18%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.iconType6.circle li a:hover, .iconType6.circle li a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+}
+.iconType6.circle li a:hover img, .iconType6.circle li a:focus img {
+  -webkit-box-shadow: #999 0 0 0 3px;
+          box-shadow: #999 0 0 0 3px;
+}
+@media screen and (min-width: 440px) {
+  .iconType6 li {
+    width: 124px;
+    height: 124px;
+  }
+  .iconType6 ul {
+    max-width: 440px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .iconType6.circle li {
+    margin-bottom: 5px;
+  }
+  .iconType6 .iconType6 ul {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .gutter .iconType6 li {
+    width: 120px;
+    height: 120px;
+  }
+  .gutter .iconType6 ul, .gutter.cx2 .iconType6 ul {
+    max-width: 428px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .gutter .iconType6 ul {
+    max-width: none;
+  }
+}
+
 /*勞工局統計數字*/
 .row > section.laborData {
   width: 92vw;
