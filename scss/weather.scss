@@ -22,11 +22,11 @@
 
    // 降雨機率
    .pop{
-    text-align: center;line-height: 50px;
+    text-align: center;line-height: 50px; font-weight: bold;
     background-color: var(--popBg);
     time {
       margin: 0; display: inline-block;vertical-align: middle; text-align: center;
-      font-family: inherit; font-weight: normal;
+      font-family: inherit;
     }
     .day {
       &::before{ content: '(';}
@@ -49,11 +49,9 @@
       width: 50px; height: 50px; object-fit: contain; margin-right: 3px;
     }
     em{
-      vertical-align: middle; height: 50px;line-height: 50px;
-      // font-size: 2em;
+      vertical-align: middle; height: 50px;line-height: 50px; font-weight: bold;
       &::after{
         content: '°C';
-        // font-size: .72em;
       }
     }
   }
@@ -106,7 +104,7 @@
         }
         em{
           display: block; 
-          &::after{font-size: .6em;}
+          // &::after{font-size: .6em;}
         }
       }
     }
@@ -121,9 +119,9 @@
         display: block; width: 8rem; height: 100px;line-height: 100px;
         position: relative; top: calc(50% - 50px); left: 10px;
         font-size: var(--bigFont); text-align: center; 
-        &::after{
-          font-size: .6em; vertical-align: text-top;line-height:2.8rem;
-        }
+        // &::after{
+        //   font-size: .6em; vertical-align: text-top;line-height:2.8rem;
+        // }
       }
     }
   }

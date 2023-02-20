@@ -38,6 +38,7 @@
 .weatherForecast .pop {
   text-align: center;
   line-height: 50px;
+  font-weight: bold;
   background-color: var(--popBg);
 }
 .weatherForecast .pop time {
@@ -46,7 +47,6 @@
   vertical-align: middle;
   text-align: center;
   font-family: inherit;
-  font-weight: normal;
 }
 .weatherForecast .pop .day::before {
   content: "(";
@@ -78,6 +78,7 @@
   vertical-align: middle;
   height: 50px;
   line-height: 50px;
+  font-weight: bold;
 }
 .weatherForecast .temperature em::after {
   content: "°C";
@@ -166,9 +167,6 @@
   .weatherForecast .pop .percent em {
     display: block;
   }
-  .weatherForecast .pop .percent em::after {
-    font-size: 0.6em;
-  }
   .weatherForecast .temperature img {
     position: absolute;
     left: 20px;
@@ -186,11 +184,6 @@
     left: 10px;
     font-size: var(--bigFont);
     text-align: center;
-  }
-  .weatherForecast .temperature em::after {
-    font-size: 0.6em;
-    vertical-align: text-top;
-    line-height: 2.8rem;
   }
 }
 
