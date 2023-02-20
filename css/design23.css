@@ -7513,7 +7513,6 @@ section.waitingCount h2 {
   }
 }
 
-/* 台中市政府：機關公版*/
 .np ul {
   width: 96%;
   margin: 0 auto 2em;
@@ -7523,7 +7522,6 @@ section.waitingCount h2 {
   margin-top: 24px;
   overflow: hidden;
 }
-
 .np ul li {
   display: inline-block;
   vertical-align: top;
@@ -7531,16 +7529,13 @@ section.waitingCount h2 {
   width: 49% \9 ;
   margin: 0 0.3% 10px;
 }
-
 .np ul li:nth-child(odd) {
   margin-left: 0;
 }
-
 .np ul li:nth-child(even) {
   margin-right: 0;
   float: right;
 }
-
 .np ul li a {
   display: block;
   border: none;
@@ -7554,7 +7549,6 @@ section.waitingCount h2 {
           box-sizing: border-box;
   text-decoration: none;
 }
-
 .np ul li a:hover {
   background-color: #9cbb46;
   color: #fff;
@@ -7563,7 +7557,6 @@ section.waitingCount h2 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0 9px 8px -6px;
           box-shadow: rgba(0, 0, 0, 0.45) 0 9px 8px -6px;
 }
-
 .np ul li a:focus {
   background-color: #9cbb46;
   color: #fff;
@@ -7573,7 +7566,6 @@ section.waitingCount h2 {
           box-shadow: rgba(0, 0, 0, 0.45) 0 9px 8px -6px;
   outline: none;
 }
-
 @media screen and (max-width: 1000px) {
   .np ul {
     font-size: 1.1em;
@@ -7595,6 +7587,7 @@ section.waitingCount h2 {
     float: none;
   }
 }
+
 .list {
   clear: both;
   width: 96%;
@@ -7603,11 +7596,9 @@ section.waitingCount h2 {
   border-left: none;
   border-right: none;
 }
-
 .list .list {
   margin: 0;
 }
-
 .list ul {
   list-style: none;
   margin: 0;
@@ -7615,7 +7606,6 @@ section.waitingCount h2 {
   font-size: 1.2em;
   line-height: 1.8;
 }
-
 .list li {
   margin: 0;
   padding: 0;
@@ -7623,28 +7613,22 @@ section.waitingCount h2 {
   text-align: justify;
   position: relative;
 }
-
 .list li:nth-child(even) {
   background: #f6f6f6;
 }
-
 .list li:last-child {
   border: none;
 }
-
 .list li > a {
   display: block;
   padding: 0.7em 8em 0.7em 3.5em;
   overflow: hidden;
   text-decoration: none;
 }
-
-.list li > a:hover,
-.list li > a:focus {
+.list li > a:hover, .list li > a:focus {
   text-decoration: underline;
   outline: none;
 }
-
 .list li time,
 .list li .date {
   margin: 0 0 0 0.6em;
@@ -7652,7 +7636,6 @@ section.waitingCount h2 {
   top: 0.7em;
   right: 1em;
 }
-
 .list li .numb {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
@@ -7660,12 +7643,9 @@ section.waitingCount h2 {
   text-align: right;
   margin: 0 0.4em 0 -2.8em;
 }
-
-.list li .numb:after {
+.list li .numb::after {
   content: ".";
 }
-
-/*-------------------------------------list table*/
 .list table {
   padding: 0;
   margin: 0;
@@ -7673,59 +7653,51 @@ section.waitingCount h2 {
   border-collapse: collapse;
   line-height: 150%;
 }
-
-.list th,
-.list td {
+.list th, .list td {
   padding: 0.8em 8px 0.6em;
   vertical-align: middle;
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
-
 .list tr:first-child th {
   white-space: nowrap;
 }
-
+.list tr:nth-child(odd) {
+  background: #f6f6f6;
+}
+.list table tr:last-child td {
+  border-bottom: none;
+}
 .list td {
   border-bottom: 1px solid #d8d8d8;
   max-width: 300px;
 }
-
 .list td img {
   vertical-align: middle;
   margin: 0 3px;
 }
-
 .list td[data-title=姓名] {
   font-size: 1.2em;
   text-decoration: underline;
 }
-
-.list td[data-title*=名稱],
-.list td[data-title*=地址],
-.list td[data-title=業務類別],
-.list td[data-title=核准飼養頭數] {
+.list td[data-title*=名稱], .list td[data-title*=地址], .list td[data-title=業務類別], .list td[data-title=核准飼養頭數] {
   text-align: left;
 }
-
 .list td span {
   display: block;
   margin: 0 auto;
   text-align: center;
   white-space: nowrap;
 }
-
 .list td.title {
   text-align: left;
   white-space: normal;
 }
-
 .list td .date {
   letter-spacing: 0;
   color: #666;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .list td.date {
   display: table-cell;
   text-align: center;
@@ -7733,74 +7705,52 @@ section.waitingCount h2 {
   color: #666;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.list tr:nth-child(odd) {
-  background: #f6f6f6;
-}
-
-.list table tr:last-child td {
-  border-bottom: none;
-}
-
 .list td a {
   text-decoration: none;
   color: #000;
 }
-
-.list td a:hover,
-.list td a:focus {
+.list td a:hover, .list td a:focus {
   text-decoration: underline;
   color: #006898;
 }
-
+.list td a.fileType {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #c00;
+}
+.list td a.fileType:hover, .list td a.fileType:focus {
+  text-decoration: none;
+  -webkit-box-shadow: #f00 0 0 2px 2px;
+          box-shadow: #f00 0 0 2px 2px;
+  border: 1px solid #fff;
+}
 .list td.document a {
   display: inline-block;
   text-align: left;
   min-width: 15em;
   margin: 0 auto;
 }
-
 .list td.document br + a {
   border-top: 1px solid #ddd;
 }
-
-.list td a.fileType {
-  display: inline-block;
-  color: #fff;
-  border: 1px solid #c00;
-}
-
-.list td a.fileType:hover,
-.list td a.fileType:focus {
-  text-decoration: none;
-  -webkit-box-shadow: #f00 0 0 2px 2px;
-          box-shadow: #f00 0 0 2px 2px;
-  border: 1px solid #fff;
-}
-
 .list td ul.attIcons {
   overflow: hidden;
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-
+.list td .attIcons {
+  font-family: "Courier New", Courier, monospace;
+}
 .list td .attIcons > li {
   border: none;
   float: left;
   margin: 3px;
 }
-
-.list td .attIcons > li:nth-child(odd),
-.list td .attIcons > li:nth-child(even) {
+.list td .attIcons > li:nth-child(odd), .list td .attIcons > li:nth-child(even) {
   background-color: transparent;
 }
-
-.attIcons {
-  font-family: "Courier New", Courier, monospace;
-}
-
-.list .attIcons > li > a {
+.list td .attIcons > li > a {
   min-width: 2em;
   padding: 0 3px;
   height: 1.5em;
@@ -7815,9 +7765,7 @@ section.waitingCount h2 {
   -webkit-transition: 0.15s;
   transition: 0.15s;
 }
-
-.list .attIcons > li > a:hover,
-.list .attIcons > li > a:focus {
+.list td .attIcons > li > a:hover, .list td .attIcons > li > a:focus {
   background-color: #888;
   -webkit-box-shadow: #888 0 0 0 2px;
           box-shadow: #888 0 0 0 2px;
@@ -7825,57 +7773,38 @@ section.waitingCount h2 {
   border-color: #fff;
   text-decoration: none;
 }
-
-.list .attIcons > li > a.doc, .list .attIcons > li > a.docx {
+.list td .attIcons > li > a.doc, .list td .attIcons > li > a.docx {
   background-color: #0a5bbf;
 }
-
-.list .attIcons > li > a.xls, .list .attIcons > li > a.xlsx {
+.list td .attIcons > li > a.xls, .list td .attIcons > li > a.xlsx {
   background-color: #0b9449;
 }
-
-.list .attIcons > li > a.zip, .list .attIcons > li > a.rar {
+.list td .attIcons > li > a.zip, .list td .attIcons > li > a.rar {
   background-color: #678;
 }
-
-.list .attIcons > li > a.pdf {
+.list td .attIcons > li > a.pdf {
   background-color: #c00;
 }
-
-.list .attIcons > li > a.doc:hover,
-.list .attIcons > li > a.docx:hover,
-.list .attIcons > li > a.doc:focus,
-.list .attIcons > li > a.docx:focus {
+.list td .attIcons > li > a.doc:hover, .list td .attIcons > li > a.docx:hover, .list td .attIcons > li > a.doc:focus, .list td .attIcons > li > a.docx:focus {
   background-color: #0a5bbf;
   -webkit-box-shadow: #0a5bbf 0 0 0 2px;
           box-shadow: #0a5bbf 0 0 0 2px;
 }
-
-.list .attIcons > li > a.xls:hover,
-.list .attIcons > li > a.xlsx:hover,
-.list .attIcons > li > a.xls:focus,
-.list .attIcons > li > a.xlsx:focus {
+.list td .attIcons > li > a.xls:hover, .list td .attIcons > li > a.xlsx:hover, .list td .attIcons > li > a.xls:focus, .list td .attIcons > li > a.xlsx:focus {
   background-color: #0b9449;
   -webkit-box-shadow: #0b9449 0 0 0 2px;
           box-shadow: #0b9449 0 0 0 2px;
 }
-
-.list .attIcons > li > a.zip:hover,
-.list .attIcons > li > a.rar:hover,
-.list .attIcons > li > a.zip:focus,
-.list .attIcons > li > a.rar:focus {
+.list td .attIcons > li > a.zip:hover, .list td .attIcons > li > a.rar:hover, .list td .attIcons > li > a.zip:focus, .list td .attIcons > li > a.rar:focus {
   background-color: #678;
   -webkit-box-shadow: #678 0 0 0 2px;
           box-shadow: #678 0 0 0 2px;
 }
-
-.list .attIcons > li > a.pdf:hover,
-.list .attIcons > li > a.pdf:focus {
+.list td .attIcons > li > a.pdf:hover, .list td .attIcons > li > a.pdf:focus {
   background-color: #c00;
   -webkit-box-shadow: #c00 0 0 0 2px;
           box-shadow: #c00 0 0 0 2px;
 }
-
 .list.openData td:first-child a {
   display: inline-block;
   white-space: nowrap;
@@ -7888,12 +7817,16 @@ section.waitingCount h2 {
   text-decoration: none;
   border: 2px solid #bbb;
 }
+@media screen and (max-width: 1000px) {
+  .list {
+    width: auto;
+  }
+}
 
 .dsIcon {
   list-style: none;
   white-space: nowrap;
 }
-
 .dsIcon li {
   display: inline-block;
   margin: 2px 1px;
@@ -7901,7 +7834,6 @@ section.waitingCount h2 {
   border: none;
   background: none !important;
 }
-
 .dsIcon li a {
   display: block;
   width: 3.8em;
@@ -7917,8 +7849,7 @@ section.waitingCount h2 {
   background-color: #7c8785;
 }
 
-.openData .dsIcon li a:hover,
-.openData .dsIcon li a:focus {
+.openData .dsIcon li a:hover, .openData .dsIcon li a:focus {
   -webkit-box-shadow: #7c8785 0 0 0 2px;
           box-shadow: #7c8785 0 0 0 2px;
   text-decoration: none;
@@ -7931,7 +7862,6 @@ section.waitingCount h2 {
   display: inline-block;
   line-height: 1.4;
 }
-
 .linkBtn a {
   display: block;
   background: #eeeeee;
@@ -7942,7 +7872,6 @@ section.waitingCount h2 {
   text-decoration: none;
   color: #fff;
 }
-
 .linkBtn a:hover {
   background: #666;
 }
@@ -7953,7 +7882,6 @@ section.waitingCount h2 {
   margin: 1em auto;
   font-size: 0.92em;
 }
-
 .jscroll-added small img {
   vertical-align: middle;
 }
@@ -7962,106 +7890,78 @@ section.waitingCount h2 {
   display: none;
 }
 
-/*機關通訊錄*/
+.list.org tr:hover td a:hover, .list.org tr:hover td a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.list.org td {
+  border-top: 1px solid #999;
+  border-bottom: none;
+  padding: 0.45em 8px 0.4em;
+  background: url(../images/icon_mail.png) no-repeat center center;
+}
 .list.org td:first-child {
   font-size: 1.2em;
   text-align: left;
   width: 33%;
 }
-
-.list.org .org2nd td:first-child {
-  padding-left: 2.5em;
-  font-size: 1em;
-}
-
-.list.org td {
-  border-top: 1px solid #999;
-  border-bottom: none;
-  padding: 0.45em 8px 0.4em;
-}
-
-.list.org .org2nd td {
-  border-top: 1px dotted #ccc;
-}
-
-.list.org a {
-  display: inline-block;
-  padding: 0.4em 1em 0.35em;
-}
-
-.list.org .org2nd td a {
-  border-radius: 2em;
-  padding: 0.3em 1em 0.2em;
-}
-
-.list.org tr:hover td a:hover,
-.list.org tr:hover td a:focus {
-  text-decoration: none;
-  outline: none;
-}
-
-.list.org td[data-title*=信箱] a,
-.list.org td[data-title*=簡介] a {
+.list.org td[data-title*=信箱] a, .list.org td[data-title*=簡介] a {
   display: inline-block;
   width: 38px;
   height: 30px;
-  background: url(../images/icon_mail.png) no-repeat center center;
   background-size: 30px auto;
   font-size: 0;
   border-radius: 6px;
   vertical-align: 5px;
 }
-
 .list.org td[data-title*=簡介] a {
   background-image: url(../images/icon_detail.png);
   background-size: 36px auto;
 }
-
-.list.org tr:hover td[data-title*=信箱] a:hover,
-.list.org tr:hover td[data-title*=簡介] a:hover,
-.list.org tr:hover td[data-title*=信箱] a:focus,
-.list.org tr:hover td[data-title*=簡介] a:focus {
+.list.org .org2nd td {
+  border-top: 1px dotted #ccc;
+}
+.list.org .org2nd td:first-child {
+  padding-left: 2.5em;
+  font-size: 1em;
+}
+.list.org .org2nd td a {
+  border-radius: 2em;
+  padding: 0.3em 1em 0.2em;
+}
+.list.org a {
+  display: inline-block;
+  padding: 0.4em 1em 0.35em;
+}
+.list.org tr:hover td[data-title*=信箱] a:hover, .list.org tr:hover td[data-title*=簡介] a:hover, .list.org tr:hover td[data-title*=信箱] a:focus, .list.org tr:hover td[data-title*=簡介] a:focus {
   outline: none;
 }
 
-/*市長行程*/
 .list.schedule {
+  position: relative;
   border: none;
 }
-
 .list.schedule table {
   border-collapse: separate;
   border-spacing: 2px 12px;
 }
-
 .list.schedule th, .list.schedule td, .list.schedule table tr:last-child td {
   border: 1px solid #999;
 }
-
 .list.schedule td {
   padding: 0;
   background: #fff;
 }
-
 .list.schedule td.date {
   padding: 0.5em 1em;
   color: #333;
   text-align: center;
 }
-
 .list.schedule td.date em {
   display: block;
   margin: 0 0 0.2em;
   font-size: 1.25em;
 }
-
-.list.schedule td ul li a {
-  padding: 0.5em 1em 0.4em;
-  margin: 0;
-  text-align: left;
-  background: #fff;
-}
-
 .list.schedule td ul li time {
   display: inline-block;
   white-space: nowrap;
@@ -8069,41 +7969,30 @@ section.waitingCount h2 {
   color: #676;
   font-family: "Courier New", Courier, monospace;
 }
-
-.list.schedule td ul li a:hover {
-  background-color: #ac2;
-  color: #fff;
+.list.schedule td ul li a {
+  padding: 0.5em 1em 0.4em;
+  margin: 0;
+  text-align: left;
+  background: #fff;
 }
-
-.list.schedule td ul li a:focus {
+.list.schedule td ul li a:hover, .list.schedule td ul li a:focus {
   background-color: #ac2;
   color: #fff;
   outline: none;
 }
-
-.list.schedule td ul li a:hover time {
-  color: #fff;
-}
-
-.list.schedule td ul li a:focus time {
+.list.schedule td ul li a:hover time, .list.schedule td ul li a:focus time {
   color: #fff;
   outline: none;
 }
-
-.schedule caption {
+.list.schedule caption {
   font-size: 1.5em;
   margin: 0.2em 48px 0;
   line-height: 1.6;
   min-height: 44px;
 }
-
-.schedule caption time {
+.list.schedule caption time {
   display: inline-block;
   white-space: nowrap;
-}
-
-.schedule {
-  position: relative;
 }
 
 .navPrev, .navNext {
@@ -8113,12 +8002,6 @@ section.waitingCount h2 {
   top: 0;
   left: 2px;
 }
-
-.navNext {
-  left: auto;
-  right: 2px;
-}
-
 .navPrev a, .navNext a {
   display: block;
   width: 44px;
@@ -8126,7 +8009,6 @@ section.waitingCount h2 {
   border-radius: 50%;
   background: #718c91;
 }
-
 .navPrev a:before, .navNext a:before {
   content: "";
   display: inline-block;
@@ -8134,7 +8016,10 @@ section.waitingCount h2 {
   height: 14px;
   border: 5px solid #fff;
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.navPrev a:hover, .navPrev a:hover, .navNext a:hover, .navNext a:hover {
+  background-color: #ac2;
 }
 
 .navPrev a:before {
@@ -8143,15 +8028,14 @@ section.waitingCount h2 {
   margin: 12px 0 0 16px;
 }
 
+.navNext {
+  left: auto;
+  right: 2px;
+}
 .navNext a:before {
   border-left: none;
   border-bottom: none;
   margin: 12px 0 0 10px;
-}
-
-.navPrev a:hover,
-.navNext a:hover {
-  background-color: #ac2;
 }
 
 .list.event td[data-title=活動主題] a {
@@ -8174,44 +8058,33 @@ section.waitingCount h2 {
   -webkit-box-shadow: #fff 0 0 0 2px;
           box-shadow: #fff 0 0 0 2px;
 }
-
 .list td .eventType.t01 {
   background-color: #6a0;
 }
-
 .list td .eventType.t02 {
   background-color: #d50082;
 }
-
 .list td .eventType.t03 {
   background-color: #f70;
 }
-
 .list td .eventType.t04 {
   background-color: #8f9fa1;
 }
-
 .list td .eventType.t05 {
   background-color: #00bfef;
 }
-
-/*預留活動類別*/
 .list td .eventType.t06 {
   background-color: #e22011;
 }
-
 .list td .eventType.t07 {
   background-color: #984fb0;
 }
-
 .list td .eventType.t08 {
   background-color: #08b8b2;
 }
-
 .list td .eventType.t09 {
   background-color: #1a6bbd;
 }
-
 .list td .eventType.t10 {
   background-color: #a36136;
 }
@@ -8223,7 +8096,6 @@ section.waitingCount h2 {
   background: rgba(255, 255, 255, 0.95);
   font-family: Verdana, Geneva, sans-serif;
 }
-
 .oneWeek.fixed {
   position: fixed;
   left: 0;
@@ -8233,13 +8105,11 @@ section.waitingCount h2 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px;
           box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px;
 }
-
 .oneWeek h2 {
   font-size: 1.25em;
   margin: 0 0 0.5em;
   line-height: 1;
 }
-
 .oneWeek ul {
   vertical-align: middle;
   display: inline-block;
@@ -8249,13 +8119,11 @@ section.waitingCount h2 {
   font-size: 20px;
   line-height: 1.8;
 }
-
 .oneWeek li {
   margin: 0 2px;
   padding: 0;
   float: left;
 }
-
 .oneWeek li a {
   display: block;
   width: 1.6em;
@@ -8264,18 +8132,23 @@ section.waitingCount h2 {
   text-decoration: none;
   border-radius: 4px;
 }
-
-.oneWeek li a:focus, .oneWeek li a:hover, .oneWeek li.current a {
+.oneWeek li a a:focus, .oneWeek li a a:hover {
   background: #ef5;
   border-color: #ac0;
   outline: none;
 }
-
+.oneWeek li.current a {
+  background: #ef5;
+  border-color: #ac0;
+  outline: none;
+}
 .oneWeek li.now a {
   background-color: #a0c000;
   color: #fff;
 }
-
+.oneWeek li.now .day {
+  border-color: #fff;
+}
 .oneWeek li .day {
   display: block;
   margin: 0;
@@ -8283,16 +8156,10 @@ section.waitingCount h2 {
   font-size: 0.85em;
   border-top: 1px solid #ccc;
 }
-
-.oneWeek li.now .day {
-  border-color: #fff;
-}
-
 .oneWeek .navPrev, .oneWeek .navNext {
   display: inline-block;
   vertical-align: middle;
 }
-
 .oneWeek .navPrev a, .oneWeek .navNext a {
   display: block;
   width: 14px;
@@ -8301,26 +8168,25 @@ section.waitingCount h2 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-
+.oneWeek .navPrev a:hover, .oneWeek .navNext a:hover {
+  border-color: #0bf;
+}
+.oneWeek .navPrev a:focus, .oneWeek .navNext a:focus {
+  border-color: #0bf;
+}
 .oneWeek .navPrev a {
   border-top: none;
   border-right: none;
 }
-
 .oneWeek .navNext a {
   border-bottom: none;
   border-left: none;
 }
 
-.oneWeek .navPrev a:hover, .oneWeek .navNext a:hover {
-  border-color: #0bf;
+.oneWeek .eventSearch {
+  padding-top: 1px;
 }
 
-.oneWeek .navPrev a:focus, .oneWeek .navNext a:focus {
-  border-color: #0bf;
-}
-
-/*----2017*/
 .eventSearch {
   width: 96%;
   padding: 0.2em;
@@ -8328,16 +8194,10 @@ section.waitingCount h2 {
   text-align: left;
   overflow: auto;
 }
-
-.oneWeek .eventSearch {
-  padding-top: 1px;
-}
-
 .eventSearch form {
   font-size: 1em;
   color: #000;
 }
-
 .eventSearch input,
 .eventSearch input[type=text],
 .eventSearch select {
@@ -8346,18 +8206,14 @@ section.waitingCount h2 {
   height: 2.2em;
   line-height: 2.2;
 }
-
-/*活動行事曆 功能介面調整 2017*/
 .eventSearch .oneDay {
   padding: 0 0 13px;
 }
-
 .eventSearch .oneDay label {
   line-height: 2.4em;
   height: 2.4em;
 }
-
-.oneDay button {
+.eventSearch .oneDay button {
   font-size: 1em;
   line-height: 2.4em;
   height: 2.4em;
@@ -8372,13 +8228,11 @@ section.waitingCount h2 {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
-.oneDay button.today {
+.eventSearch .oneDay button.today {
   position: relative;
   padding-left: 3em;
 }
-
-.oneDay button.today:before {
+.eventSearch .oneDay button.today::before {
   content: "今天";
   position: absolute;
   left: 0;
@@ -8388,44 +8242,35 @@ section.waitingCount h2 {
   background: #97a37b;
   color: #fff;
 }
-
-.oneDay button .day {
+.eventSearch .oneDay button .day {
   margin-left: 0.3em;
 }
-
-.oneDay button .day:before {
+.eventSearch .oneDay button .day::before {
   content: "(";
 }
-
-.oneDay button .day:after {
+.eventSearch .oneDay button .day::after {
   content: ")";
 }
-
-.oneDay button:hover,
-.oneDay button:focus {
+.eventSearch .oneDay button:hover, .eventSearch .oneDay button:focus {
   -webkit-box-shadow: #7faf0b 0 0 0 2px;
           box-shadow: #7faf0b 0 0 0 2px;
   outline: none;
 }
-
-.oneDay button.current {
+.eventSearch .oneDay button.current {
   background: #7faf0b;
   color: #fff;
 }
-
-.oneDay button.today.current:before {
+.eventSearch .oneDay button.today.current::before {
   background: #317007;
 }
-
-.oneDay .moreDayPrev,
-.oneDay .moreDayNext {
+.eventSearch .oneDay .moreDayPrev,
+.eventSearch .oneDay .moreDayNext {
   position: relative;
   display: inline-block;
   vertical-align: top;
 }
-
-.oneDay .moreDayPrev a,
-.oneDay .moreDayNext a {
+.eventSearch .oneDay .moreDayPrev a,
+.eventSearch .oneDay .moreDayNext a {
   display: inline-block;
   height: 2.4em;
   width: 2.4em;
@@ -8435,9 +8280,8 @@ section.waitingCount h2 {
   text-indent: -10em;
   overflow: hidden;
 }
-
-.oneDay .moreDayPrev a:before,
-.oneDay .moreDayNext a:before {
+.eventSearch .oneDay .moreDayPrev a:before,
+.eventSearch .oneDay .moreDayNext a:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -8451,79 +8295,49 @@ section.waitingCount h2 {
   border-top: none;
   border-right: none;
 }
-
-.oneDay .moreDayPrev a:before {
+.eventSearch .oneDay .moreDayPrev a:hover, .eventSearch .oneDay .moreDayPrev a:focus,
+.eventSearch .oneDay .moreDayNext a:hover,
+.eventSearch .oneDay .moreDayNext a:focus {
+  background: #ac0;
+  outline: none;
+}
+.eventSearch .oneDay .moreDayPrev a:focus,
+.eventSearch .oneDay .moreDayNext a:focus {
+  -webkit-box-shadow: #317007 0 0 0 2px;
+          box-shadow: #317007 0 0 0 2px;
+}
+.eventSearch .oneDay .moreDayPrev a:hover:before, .eventSearch .oneDay .moreDayPrev a:focus:before,
+.eventSearch .oneDay .moreDayNext a:hover:before,
+.eventSearch .oneDay .moreDayNext a:focus:before {
+  border-color: #fff;
+}
+.eventSearch .oneDay .moreDayPrev a:before {
   margin-left: -0.25em;
 }
-
-.oneDay .moreDayNext a:before {
+.eventSearch .oneDay .moreDayNext a:before {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
   margin-left: -0.8em;
 }
-
-.oneDay .moreDayPrev a:hover,
-.oneDay .moreDayNext a:hover,
-.oneDay .moreDayPrev a:focus,
-.oneDay .moreDayNext a:focus {
-  background: #ac0;
-  outline: none;
-}
-
-.oneDay .moreDayPrev a:focus,
-.oneDay .moreDayNext a:focus {
-  -webkit-box-shadow: #317007 0 0 0 2px;
-          box-shadow: #317007 0 0 0 2px;
-}
-
-.oneDay .moreDayPrev a:hover:before,
-.oneDay .moreDayNext a:hover:before,
-.oneDay .moreDayPrev a:focus:before,
-.oneDay .moreDayNext a:focus:before {
-  border-color: #fff;
-}
-
-.moreFilter > label {
-  margin-left: 0.8em;
-}
-
-.moreFilter > label input {
-  vertical-align: middle;
-  width: 6.5em;
-  margin: 0;
-}
-
-.eventSearch form .buttonDiv {
+.eventSearch .buttonDiv {
   float: right;
   padding: 0 0 10px;
   margin: -2.5em 0 0;
   border: none;
 }
-
-.eventSearch form .buttonDiv input[type=submit],
-.eventSearch form .buttonDiv input[type=reset] {
+.eventSearch .buttonDiv input[type=submit], .eventSearch .buttonDiv input[type=reset] {
   height: 2.1em;
   line-height: 1.6em;
   padding: 0 0.8em;
   min-width: 0 !important;
 }
-
-.eventSearchCtrl {
-  display: none;
-}
-
 @media screen and (max-width: 1000px) {
-  .list {
-    width: auto;
-  }
   .eventSearch {
     padding: 10px 1vw 0;
     font-size: 16px;
     width: 98vw;
     overflow: visible;
   }
-  .eventSearch .moreFilter,
-  .eventSearch .buttonDiv,
   .eventSearch .oneDay label {
     display: none;
   }
@@ -8531,26 +8345,169 @@ section.waitingCount h2 {
     text-align: center;
     padding-bottom: 4px;
   }
-  .oneDay button {
+  .eventSearch .oneDay button {
     margin: 0;
   }
-  .oneDay .moreDayPrev:hover,
-  .oneDay .moreDayNext:hover {
+  .eventSearch .oneDay .moreDayPrev:hover,
+  .eventSearch .oneDay .moreDayNext:hover {
     opacity: 1;
   }
   .eventSearch .moreFilter {
     float: left;
     margin-bottom: 10px;
   }
-  .moreFilter label {
+  .eventSearch .moreFilter label {
     display: inline-block;
     vertical-align: top;
     line-height: 2.2em;
   }
-  .eventSearch form .buttonDiv {
+  .eventSearch .buttonDiv {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .eventSearch .oneDay button {
+    height: 3.2em;
+    line-height: 1.4;
+    width: 10.4vw;
+  }
+  .eventSearch .oneDay button .day {
+    display: block;
+    margin-left: 0;
+  }
+  .eventSearch .oneDay button.today {
+    padding-left: 1.6em;
+    width: 15vw;
+  }
+  .eventSearch .oneDay button.today::before {
+    width: 1.6em;
+  }
+  .eventSearch .oneDay .moreDayPrev a,
+  .eventSearch .oneDay .moreDayNext a {
+    height: 3.2em;
+    width: 7vw;
+  }
+  .eventSearch .moreFilter {
+    float: none;
+    text-align: center;
+  }
+  .eventSearch .moreFilter > input[type=text], .eventSearch .moreFilter select {
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .eventSearch .moreFilter > input[type=text] {
+    width: 21vw;
+  }
+  .eventSearch .buttonDiv {
+    float: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .eventSearch form {
+    overflow: auto;
+  }
+  .eventSearch .buttonDiv {
     float: right;
+    clear: none;
     margin-top: 0;
   }
+  .eventSearch .oneDay button {
+    margin: 4px 0;
+  }
+  .eventSearch .oneDay .moreDayPrev, .eventSearch .oneDay .moreDayNext {
+    margin: 4px 0;
+  }
+  .eventSearch .moreFilter {
+    text-align: center;
+  }
+  .eventSearch .moreFilter select {
+    width: 25vw;
+  }
+  .eventSearch .moreFilter > input[type=text] {
+    width: 42vw;
+  }
+  .eventSearch .moreFilter label {
+    float: left;
+    margin-left: 1vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .eventSearch {
+    padding: 10px 0 0;
+    width: 100vw;
+  }
+  .eventSearch .buttonDiv {
+    float: none;
+    clear: both;
+  }
+  .eventSearch .oneDay {
+    font-size: 0.67em;
+  }
+  .eventSearch .oneDay button {
+    padding: 0;
+  }
+  .eventSearch .oneDay button.today::before {
+    padding-top: 0.3em;
+    font-size: 0.9em;
+  }
+  .eventSearch .moreFilter select {
+    width: 47vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .eventSearch .moreFilter > input[type=text] {
+    width: 96vw;
+    margin: 0 auto 10px;
+  }
+  .eventSearch .moreFilter label {
+    float: none;
+    text-align: center;
+  }
+  .eventSearch .moreFilter label input {
+    width: 32vw;
+  }
+  .eventSearch ~ .list.event {
+    margin-top: 5px;
+  }
+  .eventSearch ~ .list.event tr {
+    margin-bottom: 6px;
+  }
+  .eventSearch ~ .list.event td {
+    padding: 0.3em 0.3em 0.2em;
+  }
+  .eventSearch ~ .list.event td[data-title=活動類型] {
+    padding-top: 0.2em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .eventSearch .oneDay {
+    padding: 0;
+  }
+  .eventSearch .oneDay button {
+    width: 18vw;
+  }
+  .eventSearch .oneDay button.today {
+    width: 22vw;
+  }
+  .eventSearch .oneDay .moreDayPrev a, .eventSearch .oneDay .moreDayNext a {
+    width: 15vw;
+  }
+}
+
+.moreFilter > label {
+  margin-left: 0.8em;
+}
+.moreFilter > label input {
+  vertical-align: middle;
+  width: 6.5em;
+  margin: 0;
+}
+
+.eventSearchCtrl {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
   .eventSearchCtrl {
     display: block;
     position: absolute;
@@ -8571,139 +8528,9 @@ section.waitingCount h2 {
   }
 }
 @media screen and (max-width: 800px) {
-  .oneDay button {
-    height: 3.2em;
-    line-height: 1.4;
-    width: 10.4vw;
-  }
-  .oneDay button .day {
-    display: block;
-    margin-left: 0;
-  }
-  .oneDay button.today {
-    padding-left: 1.6em;
-    width: 15vw;
-  }
-  .oneDay button.today:before {
-    width: 1.6em;
-  }
-  .oneDay .moreDayPrev a,
-  .oneDay .moreDayNext a {
-    height: 3.2em;
-    width: 7vw;
-  }
-  .eventSearch .moreFilter {
-    float: none;
-    text-align: center;
-  }
-  .moreFilter > input[type=text],
-  .moreFilter select {
-    width: auto;
-    margin-bottom: 10px;
-  }
-  .moreFilter > input[type=text] {
-    width: 21vw;
-  }
-  .eventSearch form .buttonDiv {
-    float: none;
-  }
   .list.event td[data-title=活動主題] a {
     display: inline-block;
     max-width: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  .moreFilter {
-    text-align: center;
-  }
-  .moreFilter select {
-    width: 25vw;
-  }
-  .moreFilter > input[type=text] {
-    width: 42vw;
-  }
-  .moreFilter label {
-    float: left;
-    margin-left: 1vw;
-  }
-  .oneDay button {
-    margin: 4px 0;
-  }
-  .oneDay .moreDayPrev,
-  .oneDay .moreDayNext {
-    margin: 4px 0;
-  }
-  .eventSearch form {
-    overflow: auto;
-  }
-  .eventSearch form .buttonDiv {
-    float: right;
-    clear: none;
-    margin-top: 0;
-  }
-}
-@media screen and (max-width: 420px) {
-  .eventSearch {
-    padding: 10px 0 0;
-    width: 100vw;
-  }
-  .oneDay {
-    font-size: 0.67em;
-  }
-  .oneDay button {
-    padding: 0;
-  }
-  .oneDay button.today:before {
-    padding-top: 0.3em;
-    font-size: 0.9em;
-  }
-  .moreFilter select {
-    width: 47vw;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .moreFilter > input[type=text] {
-    width: 96vw;
-    margin: 0 auto 10px;
-  }
-  .moreFilter label {
-    float: none;
-    text-align: center;
-  }
-  .moreFilter label input {
-    width: 32vw;
-  }
-  .eventSearch form .buttonDiv {
-    float: none;
-    clear: both;
-  }
-  .eventSearch ~ .list.event tr {
-    margin-bottom: 6px;
-  }
-  .eventSearch ~ .list.event {
-    margin-top: 5px;
-  }
-  .eventSearch ~ .list.event td {
-    padding: 0.3em 0.3em 0.2em;
-  }
-  .eventSearch ~ .list.event td[data-title=活動類型] {
-    padding-top: 0.2em;
-  }
-}
-@media screen and (max-width: 320px) {
-  .eventSearch .oneDay {
-    padding: 0;
-  }
-  .oneDay button,
-  .oneDay button.today {
-    width: 18vw;
-  }
-  .oneDay button.today {
-    width: 22vw;
-  }
-  .oneDay .moreDayPrev a,
-  .oneDay .moreDayNext a {
-    width: 15vw;
   }
 }
 @media screen and (max-width: 800px) {
