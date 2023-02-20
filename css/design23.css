@@ -7392,40 +7392,31 @@ section.waitingCount h2 {
   padding: 0;
   font-size: 0.86em;
 }
-
 .footer > section {
   padding: 30px 0;
   width: 92vw;
   margin: auto;
 }
-
 .footer > section li {
   line-height: 1.8;
 }
-
 .footer > section > ul {
   margin: 0 0 1.3em -5px;
 }
-
 .footer > section > ul > li {
   display: inline-block;
   margin: 0 1em 0.8em 0;
 }
-
-.footer > section li > a,
-.footer > section p > a {
+.footer > section li > a, .footer > section p > a {
   padding: 0.3em 5px;
   display: inline-block;
 }
-
 .footer > section p {
   line-height: 1.5;
   margin: 0.7em 0;
 }
-
 .footer > nav,
-.fatfootCtrl,
-.fatfootCtrl + .hint,
+.footer .fatfootCtrl, .footer .fatfootCtrl + .hint,
 .footer .qrcode,
 .footer .deco,
 .footer .markA,
@@ -7434,7 +7425,55 @@ section.waitingCount h2 {
 .footer .capInfo {
   display: none;
 }
-
+.footer .capInfo {
+  display: block;
+  float: right;
+  margin: 5px -290px 0 0;
+  padding: 0;
+  width: 170px;
+  color: #444;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.footer .alertCAP_forTCC_content span[class^=alertCAP_forTCC_dressup],
+.footer .alertCAP_forTCC_content span[class^=alertCAP_forTCC_dressdown] {
+  display: none;
+}
+.footer .alertCAP_forTCC {
+  border: none;
+}
+.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"] {
+  border: none;
+  font-size: 1.36em;
+  padding: 8px 3px 0;
+  line-height: 1;
+}
+.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"] img {
+  margin: 0 3px 0 4px;
+}
+.footer .alertCAP_forTCC h4.alertCAP_forTCC_title {
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0 2px;
+}
+.footer .alertCAP_forTCC_con {
+  padding: 4px 8px;
+}
+.footer .alertCAP_forTCC_con .alertCAP_forTCC_time {
+  color: #777;
+}
+.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"] {
+  border: none;
+  text-decoration: none;
+  color: #666;
+  -webkit-transition: none;
+  transition: none;
+}
+.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:hover, .footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:focus {
+  background: #eb6400;
+  color: #fff;
+}
 @media screen and (min-width: 601px) {
   .footer .update,
   .footer .visitor {
@@ -7446,7 +7485,7 @@ section.waitingCount h2 {
   }
 }
 @media screen and (min-width: 1001px) {
-  .fatfootCtrl {
+  .footer .fatfootCtrl {
     display: block;
     position: absolute;
     right: 0;
@@ -7462,10 +7501,10 @@ section.waitingCount h2 {
     width: 44px;
     height: 44px;
   }
-  .fatfootCtrl:hover {
+  .footer .fatfootCtrl:hover {
     background-color: #000;
   }
-  .fatfootCtrl:before {
+  .footer .fatfootCtrl:before {
     content: "";
     display: inline-block;
     width: 16px;
@@ -7479,12 +7518,15 @@ section.waitingCount h2 {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .fatfootCtrl.close:before {
+  .footer .fatfootCtrl.close::before {
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
     margin-top: -4px;
   }
-  .fatfootCtrl + .hint {
+  .footer .fatfootCtrl.close ~ nav {
+    padding-top: 0;
+  }
+  .footer .fatfootCtrl + .hint {
     position: absolute;
     right: 0;
     top: -2.2em;
@@ -7499,6 +7541,14 @@ section.waitingCount h2 {
     right: 8%;
     top: 40px;
   }
+  .footer .qrcode li {
+    margin-bottom: 8px;
+  }
+  .footer .qrcode li img {
+    width: 100px;
+    display: block;
+    border: 5px solid #fff;
+  }
   .footer.Type2 .qrcode {
     position: relative;
     text-align: center;
@@ -7507,31 +7557,31 @@ section.waitingCount h2 {
     top: 0;
     z-index: 9;
   }
-  .footer .qrcode li {
-    margin-bottom: 8px;
-  }
   .footer.Type2 .qrcode li {
     display: inline-block;
     margin: 0 8px;
   }
-  .footer .qrcode li img {
-    width: 100px;
+  .footer.Type2 .qrcode li img {
+    width: 120px;
     display: block;
     border: 5px solid #fff;
   }
-  .footer.Type2 .qrcode li img {
-    width: 120px;
-  }
-  .footer.Type2 .qrcode li a:hover img,
-  .footer.Type2 .qrcode li a:focus img {
+  .footer.Type2 .qrcode li a:hover img, .footer.Type2 .qrcode li a:focus img {
     border-color: #bbb;
   }
-  .footer .deco:empty {
-    display: none;
+  .footer.Type2 > nav {
+    padding: 20px 30px 0;
+    margin-right: 0;
+  }
+  .footer.Type2 > nav > ul > li {
+    margin: 0 10px 0 0;
   }
   .footer .deco {
     display: block;
     text-align: right;
+  }
+  .footer .deco:empty {
+    display: none;
   }
   .footer .deco img {
     max-width: 100%;
@@ -7545,13 +7595,6 @@ section.waitingCount h2 {
     -webkit-transition: padding-top 0.3s;
     transition: padding-top 0.3s;
   }
-  .footer .fatfootCtrl.close ~ nav {
-    padding-top: 0;
-  }
-  .footer.Type2 > nav {
-    padding: 20px 30px 0;
-    margin-right: 0;
-  }
   .footer > nav a {
     color: #333;
     text-decoration: none;
@@ -7564,8 +7607,15 @@ section.waitingCount h2 {
     line-height: 1.3;
     font-size: 14px;
   }
+  .footer > nav ul li a {
+    display: block;
+    padding: 6px 3px;
+  }
   .footer > nav ul ul {
     margin: 0.6em 0 0 0;
+  }
+  .footer > nav ul ul li {
+    margin: 0 0 0.1em;
   }
   .footer > nav ul ul ul {
     display: none;
@@ -7576,16 +7626,6 @@ section.waitingCount h2 {
     display: inline-block;
     width: 136px;
     vertical-align: top;
-  }
-  .footer.Type2 > nav > ul > li {
-    margin: 0 10px 0 0;
-  }
-  .footer > nav ul ul li {
-    margin: 0 0 0.1em;
-  }
-  .footer > nav li a {
-    display: block;
-    padding: 6px 3px;
   }
   .footer > nav > ul > li > a {
     font-weight: bold;
@@ -7598,6 +7638,19 @@ section.waitingCount h2 {
     padding: 30px 320px 40px 3%;
     clear: both;
     overflow: hidden;
+  }
+  .footer > section iframe {
+    display: block;
+    float: right;
+    width: 200px;
+    margin-right: -290px;
+    margin-top: 35px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    background: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
   }
   .footer .markA,
   .footer .egov {
@@ -7640,87 +7693,8 @@ section.waitingCount h2 {
   .footer .visitor + .update {
     margin-left: 0;
   }
-  .footer > section iframe {
-    display: block;
-    float: right;
-    width: 200px;
-    margin-right: -290px;
-    margin-top: 35px;
-    border: 5px solid #fff;
-    border-radius: 5px;
-    padding-bottom: 5px;
-    background: #fff;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
-            box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px;
-  }
-  /* 20200506 
-  	.footer .capInfo{ display: block; color: #444;
-  		float: right;margin:5px -290px 0 0;padding: 0;background: #fff; border-radius: 6px; overflow: hidden; box-shadow: rgba(0,0,0,.3) 0 1px 8px;
-  	}
-  	.footer .alertCAP_forTCC_dressup.bannerGreen,
-  	.footer .alertCAP_forTCC_dressdown.bannerGreen{display: none;}
-  	.footer .alertCAP_forTCC_content span[class^="alertCAP_forTCC_dressup"],
-  	.footer .alertCAP_forTCC_content span[class^="alertCAP_forTCC_dressdown"] {display: none}
-  	.footer .alertCAP_forTCC{border: none;}
-  	.footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"]{ border-top-color: transparent; border-bottom: 3px solid #619100;}
-  	.footer .alertCAP_forTCC h3.alertCAP_forTCC_header.bannerGreen{ border-top-color: transparent; border-bottom: 3px solid #619100;}
-  	.footer .alertCAP_forTCC h3.alertCAP_forTCC_header.bannerYellow{ border-top-color: transparent; border-bottom: 3px solid #e0c800;}
-
-  	.footer .alertCAP_forTCC h4.alertCAP_forTCC_title{border-top: none;}
-  	.footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]{ border:none;text-decoration: none; color: #666;}
-  */
-  /* 20210428 災害示警資訊 .alertCAP_forTCC*/
-  .footer .capInfo {
-    display: block;
-    float: right;
-    margin: 5px -290px 0 0;
-    padding: 0;
-    width: 170px;
-    color: #444;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .footer .alertCAP_forTCC_content span[class^=alertCAP_forTCC_dressup],
-  .footer .alertCAP_forTCC_content span[class^=alertCAP_forTCC_dressdown] {
-    display: none;
-  }
-  .footer .alertCAP_forTCC {
-    border: none;
-  }
-  .footer .alertCAP_forTCC h3[class^="alertCAP_forTCC_header banner"] {
-    border: none;
-    font-size: 1.36em;
-    padding: 8px 3px 0;
-    line-height: 1;
-  }
-  .footer .alertCAP_forTCC h3 img {
-    margin: 0 3px 0 4px;
-  }
-  .footer .alertCAP_forTCC h4.alertCAP_forTCC_title {
-    border-top: none;
-    border-bottom: 1px solid #ccc;
-    padding: 5px 0 2px;
-  }
-  .footer .alertCAP_forTCC_con {
-    padding: 4px 8px;
-  }
-  .footer .alertCAP_forTCC_con .alertCAP_forTCC_time {
-    color: #777;
-  }
-  .footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"] {
-    border: none;
-    text-decoration: none;
-    color: #666;
-    -webkit-transition: none;
-    transition: none;
-  }
-  .footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:hover,
-  .footer .alertCAP_forTCC_content a[class^="alertCAP_forTCC_more banner"]:focus {
-    background: #eb6400;
-    color: #fff;
-  }
 }
+
 /* 台中市政府：機關公版*/
 .np ul {
   width: 96%;
