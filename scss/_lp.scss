@@ -242,7 +242,13 @@
 
 
 // 活動行事曆 ////////////////////////////////////////////////////////////
-.list.event td[data-title="活動主題"] a{display: block;max-width:24em;margin: 0 auto;text-align: left;}
+.list.event td[data-title="活動主題"] a{
+	display: block;max-width:24em;margin: 0 auto;text-align: left;
+	@media screen and (max-width:800px){
+		display: inline-block;max-width:none;
+	}
+}
+
 // 活動類型
 .list td .eventType{
 	display:inline-block;font-size:.85em;font-weight:300;padding:0 .8em 0;background-color:#aaa;color:#fff;border-radius:4em;line-height:1.85em;height:1.8em;box-shadow:#fff 0 0 0 2px;
@@ -340,21 +346,20 @@
 
 	}
 
-
 	.buttonDiv{
-		float:right;padding:0 0 10px;margin:-2.5em 0 0;border:none;
+		float:right;padding:0;margin:-2.5em 0 0;border:none;
 		input[type="submit"], input[type="reset"] {
 			height: 2.1em;line-height:1.6em;padding: 0 .8em; min-width:0 !important;
 		}
 	}
 
+	.eventSearchCtrl{display: none;}
 
 
 	@media screen and (max-width:1000px){
 		padding: 10px 1vw 0;font-size: 16px;width: 98vw;overflow: visible;
 
-		// .moreFilter,
-		// .buttonDiv,
+		.moreFilter, .buttonDiv,
 		.oneDay label {display:none;}
 	
 		.oneDay {text-align: center;padding-bottom:4px;
@@ -368,7 +373,16 @@
 			label {display: inline-block;vertical-align: top;line-height: 2.2em;}
 		}
 		.buttonDiv{margin:0;}
+
+		.eventSearchCtrl{
+			display: block;position: absolute;right: 7px;top:-42px;text-align: center;
+			height: 32px;line-height: 32px;padding: 0 .4em;border-radius: 6px;
+			border: 1px solid #fff;color: #fff;font-size: 15px;
+			&.esHide{background: #fff;color: #0bf;}
+		}
+	
 	}
+
 
 	@media screen and (max-width:800px){
 		.oneDay{
@@ -384,33 +398,36 @@
 
 		.moreFilter{
 			float: none;text-align: center;
-			&>input[type="text"], select{width:auto;margin-bottom: 10px;}
+			&>input[type="text"], select{width:auto;margin-bottom: 2px;}
 			&>input[type="text"] {width: 21vw;}
 		
 		}
-		.buttonDiv{float:none;}
+		.buttonDiv{float:none; margin: 0;}
 	}
+
 
 	@media screen and (max-width:600px) {
 		form {overflow: auto;}
-		.buttonDiv {float:right;clear: none;margin-top:0;}
 		.oneDay {
 			button{margin: 4px 0;}
 			.moreDayPrev, .moreDayNext{margin: 4px 0;}
 		}
-
+		
 		.moreFilter{
 			text-align: center;
 			select{width: 25vw;}
 			&>input[type="text"]{width: 42vw;}
 			label {float: left;margin-left: 1vw;}
 		}
+
+		.buttonDiv {float:right;clear: none;margin-top:0;}
+		.eventSearchCtrl{ top: -46px;}
+
 	}
+
 
 	@media screen and (max-width:420px){
 		padding: 10px 0 0;width: 100vw;
-
-		.buttonDiv {float: none;clear: both;}
 
 		.oneDay{font-size: .67em;
 			button{padding: 0;
@@ -425,14 +442,16 @@
 			}
 		}
 	
+		.buttonDiv {float: none;clear: both; padding-bottom: 5px;}
 
 		& ~ .list.event{margin-top: 5px;
 			tr{margin-bottom: 6px;}
 			td{padding: .3em .3em .2em;
-				&[data-title="活動類型"]{padding-top: .2em;}
+				&[data-title="活動類型"]{ padding-top: .2em;}
 			}
 		}
 	}
+
 
 	@media screen and (max-width:320px){
 		.oneDay{padding: 0;
@@ -445,39 +464,12 @@
 		}
 	}
 
-	
+
 }
 
 .moreFilter>label { margin-left: .8em;
 	input{ vertical-align:middle;width:6.5em;margin: 0}
 }
-
-// .eventSearch .buttonDiv{float:right;padding:0 0 10px;margin:-2.5em 0 0;border:none;
-// 	input[type="submit"],
-// 	input[type="reset"] {height: 2.1em;line-height:1.6em;padding: 0 .8em; min-width:0 !important;}
-// }
-
-.eventSearchCtrl{display: none;}
-
-
-
-
-
-@media screen and (max-width:1000px){
-	// .moreFilter label {display: inline-block;vertical-align: top;line-height: 2.2em;}
-
-	.eventSearchCtrl{display: block;position: absolute;right: 7px;top:-50px;color: #fff;text-align: center;height: 36px;line-height: 36px;border-radius: 6px;border: 1px solid #fff;font-size: 15px;padding: 0 .4em;}
-	.eventSearchCtrl.esHide{background: #fff;color: #0bf;}
-}
-@media screen and (max-width:800px){
-
-
-	.list.event td[data-title="活動主題"] a{display: inline-block;max-width:none;}
-
-}
-
-
-
 
 
 

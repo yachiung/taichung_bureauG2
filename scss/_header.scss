@@ -4,8 +4,8 @@
 	&>h1{clear:both;height:64px;width:60%;margin: 0;font-size: 20px;
 		a{display:inline-block;
 			&:focus{outline: 1px solid red;}
-			img{display:block;width:210px;margin:5px 20px;/*max-width:90%;max-height:90%;*/}
 		}
+		img{display:block;width:210px;margin:5px 20px;/*max-width:90%;max-height:90%;*/}
 	}
 	&.fixed {
 		.menu,
@@ -30,24 +30,26 @@
 		}
 		.keywordHot{display:block;}
 	}
-}	
-
-.keywordHot{vertical-align:middle;margin-top: -5px;
-	ul{display:inline-block;line-height:2em;height:2em;font-size:.87em;}
-	li{margin:0 .6em 0 0;padding:0;display:inline-block;
-		a:hover,
-		a:focus{text-decoration:underline;color: #000;}
+	.keywordHot{vertical-align:middle;margin-top: -5px;
+		ul{display:inline-block;line-height:2em;height:2em;font-size:.87em;}
+		li{margin:0 .6em 0 0;padding:0;display:inline-block;
+			a:hover,a:focus{text-decoration:underline;color: #000;}
+		}
 	}
 
 
 	@media screen and (max-width:1000px) {
 		padding:0 64px;height:64px;margin-bottom:0;background-image: none !important;
-
-		&>h1{height:100%;width:auto;
-			a{height:100%;display:block;overflow:hidden;}
-			img{height:80%;width: auto;margin:1.2% auto 0;}
+	
+		&>h1{ height:100%;width:auto;
+			a{ display:block;overflow:hidden; height: 100%;}
+			img{
+				margin:0 auto;padding: 8px 0;
+				height:calc(100% - 16px);	width: calc(100% - 128px); object-fit: scale-down;
+				// outline: 1px solid red;
+			}
 		}
-
+	
 		&.fixed{position: fixed;top: 0;right: 0;left: 0;}
 	
 		.sidebarCtrl{display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:64px;font-size:0;
@@ -63,17 +65,20 @@
 			a{color:#fff}
 			input[type="text"]{width:16em;padding:0 .8em;margin:0;background:#fff;box-shadow:none;}
 			input[type="submit"]{position:relative; background:#666 url(../images/search_submit.png) no-repeat center center;background-size:20px;width:3em;margin-left:-5px;text-indent:-200px;}
-			.keywordHot{ display:inline-block;
-				li a{color:#fff;line-height:2.4em;height:2.4em;}
-			}
+			.keywordHot{ display:inline-block;}
 		}
-
+		.keywordHot{
+			li a{color:#fff;line-height:2.4em;height:2.4em;}
+		}
+	
 	}
-
-
+	
+	
 	@media screen and (max-width:600px){
 		padding:0 44px;height:44px;height: auto;
-		h1{height: 44px;}
+		h1{
+			img{ height: 36px; padding: 4px 0; width: calc(100% - 96px);}
+		}
 	
 		.sidebarCtrl {width:44px;height: 44px;
 			&:before, &:after{width:56%;margin-left:-28%}
@@ -82,12 +87,15 @@
 		.search{top:44px;
 			form{display:block;margin:0 auto;}
 			input[type="text"]{width:calc(100% - 7em);}
-			.keywordHot{ display:none;}
+			.keywordHot{ display:none; }
 		}
 	
 	}
+}	
+
+
 	
-}
+
 
 
 

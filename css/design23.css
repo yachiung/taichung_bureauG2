@@ -379,7 +379,7 @@ time {
   margin: 0 auto;
   background: #fff;
 }
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .main {
     font-size: 1.1rem;
   }
@@ -1493,7 +1493,7 @@ form th label {
 .header > h1 a:focus {
   outline: 1px solid red;
 }
-.header > h1 a img {
+.header > h1 img {
   display: block;
   width: 210px;
   margin: 5px 20px; /*max-width:90%;max-height:90%;*/
@@ -1573,55 +1573,56 @@ form th label {
 .header .search .keywordHot {
   display: block;
 }
-
-.keywordHot {
+.header .keywordHot {
   vertical-align: middle;
   margin-top: -5px;
 }
-.keywordHot ul {
+.header .keywordHot ul {
   display: inline-block;
   line-height: 2em;
   height: 2em;
   font-size: 0.87em;
 }
-.keywordHot li {
+.header .keywordHot li {
   margin: 0 0.6em 0 0;
   padding: 0;
   display: inline-block;
 }
-.keywordHot li a:hover,
-.keywordHot li a:focus {
+.header .keywordHot li a:hover, .header .keywordHot li a:focus {
   text-decoration: underline;
   color: #000;
 }
 @media screen and (max-width: 1000px) {
-  .keywordHot {
+  .header {
     padding: 0 64px;
     height: 64px;
     margin-bottom: 0;
     background-image: none !important;
   }
-  .keywordHot > h1 {
+  .header > h1 {
     height: 100%;
     width: auto;
   }
-  .keywordHot > h1 a {
-    height: 100%;
+  .header > h1 a {
     display: block;
     overflow: hidden;
+    height: 100%;
   }
-  .keywordHot > h1 img {
-    height: 80%;
-    width: auto;
-    margin: 1.2% auto 0;
+  .header > h1 img {
+    margin: 0 auto;
+    padding: 8px 0;
+    height: calc(100% - 16px);
+    width: calc(100% - 128px);
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
-  .keywordHot.fixed {
+  .header.fixed {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
   }
-  .keywordHot .sidebarCtrl {
+  .header .sidebarCtrl {
     display: block;
     position: absolute;
     left: 0;
@@ -1631,12 +1632,12 @@ form th label {
     height: 64px;
     font-size: 0;
   }
-  .keywordHot .sidebarCtrl:before, .keywordHot .sidebarCtrl:after {
+  .header .sidebarCtrl:before, .header .sidebarCtrl:after {
     content: "";
     position: absolute;
     width: 40%;
   }
-  .keywordHot .sidebarCtrl:before {
+  .header .sidebarCtrl:before {
     height: 14px;
     border: 2px solid #fff;
     left: 50%;
@@ -1645,7 +1646,7 @@ form th label {
     border-left: none;
     border-right: none;
   }
-  .keywordHot .sidebarCtrl:after {
+  .header .sidebarCtrl:after {
     content: "";
     position: absolute;
     width: 40%;
@@ -1654,11 +1655,11 @@ form th label {
     margin: -1px auto auto -20%;
     background: #fff;
   }
-  .keywordHot .sidebarCtrl:hover, .keywordHot .sidebarCtrl:focus {
+  .header .sidebarCtrl:hover, .header .sidebarCtrl:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .keywordHot .search {
+  .header .search {
     display: none;
     position: fixed;
     left: 0;
@@ -1668,10 +1669,10 @@ form th label {
     width: auto;
     text-align: center;
   }
-  .keywordHot .search a {
+  .header .search a {
     color: #fff;
   }
-  .keywordHot .search input[type=text] {
+  .header .search input[type=text] {
     width: 16em;
     padding: 0 0.8em;
     margin: 0;
@@ -1679,7 +1680,7 @@ form th label {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .keywordHot .search input[type=submit] {
+  .header .search input[type=submit] {
     position: relative;
     background: #666 url(../images/search_submit.png) no-repeat center center;
     background-size: 20px;
@@ -1687,43 +1688,45 @@ form th label {
     margin-left: -5px;
     text-indent: -200px;
   }
-  .keywordHot .search .keywordHot {
+  .header .search .keywordHot {
     display: inline-block;
   }
-  .keywordHot .search .keywordHot li a {
+  .header .keywordHot li a {
     color: #fff;
     line-height: 2.4em;
     height: 2.4em;
   }
 }
 @media screen and (max-width: 600px) {
-  .keywordHot {
+  .header {
     padding: 0 44px;
     height: 44px;
     height: auto;
   }
-  .keywordHot h1 {
-    height: 44px;
+  .header h1 img {
+    height: 36px;
+    padding: 4px 0;
+    width: calc(100% - 96px);
   }
-  .keywordHot .sidebarCtrl {
+  .header .sidebarCtrl {
     width: 44px;
     height: 44px;
   }
-  .keywordHot .sidebarCtrl:before, .keywordHot .sidebarCtrl:after {
+  .header .sidebarCtrl:before, .header .sidebarCtrl:after {
     width: 56%;
     margin-left: -28%;
   }
-  .keywordHot .search {
+  .header .search {
     top: 44px;
   }
-  .keywordHot .search form {
+  .header .search form {
     display: block;
     margin: 0 auto;
   }
-  .keywordHot .search input[type=text] {
+  .header .search input[type=text] {
     width: calc(100% - 7em);
   }
-  .keywordHot .search .keywordHot {
+  .header .search .keywordHot {
     display: none;
   }
 }
@@ -8044,6 +8047,12 @@ section.waitingCount h2 {
   margin: 0 auto;
   text-align: left;
 }
+@media screen and (max-width: 800px) {
+  .list.event td[data-title=活動主題] a {
+    display: inline-block;
+    max-width: none;
+  }
+}
 
 .list td .eventType {
   display: inline-block;
@@ -8321,7 +8330,7 @@ section.waitingCount h2 {
 }
 .eventSearch .buttonDiv {
   float: right;
-  padding: 0 0 10px;
+  padding: 0;
   margin: -2.5em 0 0;
   border: none;
 }
@@ -8331,6 +8340,9 @@ section.waitingCount h2 {
   padding: 0 0.8em;
   min-width: 0 !important;
 }
+.eventSearch .eventSearchCtrl {
+  display: none;
+}
 @media screen and (max-width: 1000px) {
   .eventSearch {
     padding: 10px 1vw 0;
@@ -8338,6 +8350,7 @@ section.waitingCount h2 {
     width: 98vw;
     overflow: visible;
   }
+  .eventSearch .moreFilter, .eventSearch .buttonDiv,
   .eventSearch .oneDay label {
     display: none;
   }
@@ -8363,6 +8376,24 @@ section.waitingCount h2 {
   }
   .eventSearch .buttonDiv {
     margin: 0;
+  }
+  .eventSearch .eventSearchCtrl {
+    display: block;
+    position: absolute;
+    right: 7px;
+    top: -42px;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 0.4em;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 15px;
+  }
+  .eventSearch .eventSearchCtrl.esHide {
+    background: #fff;
+    color: #0bf;
   }
 }
 @media screen and (max-width: 800px) {
@@ -8393,23 +8424,19 @@ section.waitingCount h2 {
   }
   .eventSearch .moreFilter > input[type=text], .eventSearch .moreFilter select {
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
   .eventSearch .moreFilter > input[type=text] {
     width: 21vw;
   }
   .eventSearch .buttonDiv {
     float: none;
+    margin: 0;
   }
 }
 @media screen and (max-width: 600px) {
   .eventSearch form {
     overflow: auto;
-  }
-  .eventSearch .buttonDiv {
-    float: right;
-    clear: none;
-    margin-top: 0;
   }
   .eventSearch .oneDay button {
     margin: 4px 0;
@@ -8430,15 +8457,19 @@ section.waitingCount h2 {
     float: left;
     margin-left: 1vw;
   }
+  .eventSearch .buttonDiv {
+    float: right;
+    clear: none;
+    margin-top: 0;
+  }
+  .eventSearch .eventSearchCtrl {
+    top: -46px;
+  }
 }
 @media screen and (max-width: 420px) {
   .eventSearch {
     padding: 10px 0 0;
     width: 100vw;
-  }
-  .eventSearch .buttonDiv {
-    float: none;
-    clear: both;
   }
   .eventSearch .oneDay {
     font-size: 0.67em;
@@ -8465,6 +8496,11 @@ section.waitingCount h2 {
   }
   .eventSearch .moreFilter label input {
     width: 32vw;
+  }
+  .eventSearch .buttonDiv {
+    float: none;
+    clear: both;
+    padding-bottom: 5px;
   }
   .eventSearch ~ .list.event {
     margin-top: 5px;
@@ -8503,36 +8539,6 @@ section.waitingCount h2 {
   margin: 0;
 }
 
-.eventSearchCtrl {
-  display: none;
-}
-
-@media screen and (max-width: 1000px) {
-  .eventSearchCtrl {
-    display: block;
-    position: absolute;
-    right: 7px;
-    top: -50px;
-    color: #fff;
-    text-align: center;
-    height: 36px;
-    line-height: 36px;
-    border-radius: 6px;
-    border: 1px solid #fff;
-    font-size: 15px;
-    padding: 0 0.4em;
-  }
-  .eventSearchCtrl.esHide {
-    background: #fff;
-    color: #0bf;
-  }
-}
-@media screen and (max-width: 800px) {
-  .list.event td[data-title=活動主題] a {
-    display: inline-block;
-    max-width: none;
-  }
-}
 @media screen and (max-width: 800px) {
   .list {
     border: none;
