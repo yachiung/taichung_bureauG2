@@ -1810,47 +1810,48 @@ form th label {
   margin: 0 auto;
   z-index: 8888;
 }
-
-.header .menu li {
-  position: relative;
-}
-
-.header .menu li a {
-  display: block;
-  outline: none;
-  text-decoration: none;
-}
-
-.header .menu li:hover > a,
-.header .menu li > a:hover,
-.header .menu li a:focus {
-  background-color: #444;
-  color: #fff;
-}
-
 .header .menu > ul {
   padding: 0;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
 }
-
 .header .menu > ul > li {
   display: inline-block;
   min-width: 7em;
 }
-
 .header .menu > ul > li > a {
   padding: 0 0.9em;
   height: 2.2em;
   line-height: 2.3em;
 }
-
-.header .menu li li.hasChild > a {
+.header .menu li {
+  position: relative;
+}
+.header .menu li a {
+  display: block;
+  outline: none;
+  text-decoration: none;
+}
+.header .menu li:hover > a, .header .menu li > a:hover,
+.header .menu li a:focus {
+  background-color: #444;
+  color: #fff;
+}
+.header .menu li li {
+  float: none;
+  border-top: 1px solid #ccc;
+}
+.header .menu li li:first-child {
+  border: none;
+}
+.header .menu li li a {
+  padding: 0.5em 0.6em;
+}
+.header .menu li .hasChild > a {
   padding-right: 2em;
 }
-
-.header .menu li li.hasChild > a:after {
+.header .menu li .hasChild > a::after {
   content: "";
   position: absolute;
   right: 10px;
@@ -1863,91 +1864,64 @@ form th label {
   border-bottom: none;
   border-left: none;
 }
-
-.header .menu li li.hasChild:hover > a:after,
-.header .menu li li.hasChild > a:focus:after {
+.header .menu li .hasChild > a:hover::after, .header .menu li .hasChild > a:focus::after {
   border-color: #fff;
 }
-
+.header .menu li .hasChild > ul {
+  z-index: 999;
+}
 .header .menu ul ul {
   display: none;
   overflow: visible;
   width: 170px;
-  background: #fff;
   font-size: 1em;
   padding: 0;
   position: absolute;
   top: auto;
   left: 0;
-  border: 1px solid #888;
   text-align: left;
   margin-top: -2px;
+  background: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 12px;
           box-shadow: rgba(0, 0, 0, 0.5) 0 5px 12px;
+  border: 1px solid #888;
 }
-
-.header .menu li li {
-  float: none;
-  border-top: 1px solid #ccc;
-}
-
-.header .menu li li:first-child {
-  border: none;
-}
-
-.header .menu li li a {
-  padding: 0.5em 0.6em;
-}
-
 .header .menu ul ul ul {
   top: 0;
   left: 170px;
   margin-top: -1px;
 }
 
-.header .menu li.hasChild > ul {
-  z-index: 999;
-}
-
 .header .megaMenu {
   position: relative;
 }
-
 .header .megaMenu li {
   position: static;
   line-height: 1.25;
 }
-
 .header .megaMenu li a {
   display: block;
   outline: none;
   text-decoration: none;
 }
-
 .header .megaMenu > ul {
   text-align: center;
   font-size: 16px;
   line-height: 1.25;
 }
-
 .header .megaMenu > ul > li {
   display: inline-block;
   min-width: 5em;
 }
-
 .header .megaMenu > ul > li > a {
   padding: 0 0.9em;
   height: 2.2em;
   line-height: 2.3em;
 }
-
-.header .megaMenu > ul > li:hover > a,
-.header .megaMenu > ul > li > a:hover,
-.header .megaMenu > ul > li > a:focus {
+.header .megaMenu > ul > li:hover > a, .header .megaMenu > ul > li > a:hover, .header .megaMenu > ul > li > a:focus {
   background-color: #444;
   color: #fff;
 }
-
 .header .megaMenu > ul > li > ul {
   display: none;
   overflow: visible;
@@ -1964,7 +1938,6 @@ form th label {
   background: rgba(255, 255, 255, 0.95);
   overflow-y: scroll;
 }
-
 .header .megaMenu > ul > li > ul > li {
   display: inline-block;
   width: 24%;
@@ -1972,17 +1945,32 @@ form th label {
   vertical-align: top;
   border: 1px solid #bbb;
 }
-
 .header .megaMenu ul ul {
   width: 90%;
   margin: 0 auto;
 }
-
+.header .megaMenu ul ul ul {
+  display: block;
+  position: static;
+  width: 100%;
+  margin: 0;
+  font-size: 0.9em;
+}
+.header .megaMenu ul ul ul ul {
+  display: none;
+}
+.header .megaMenu li li a {
+  position: relative;
+  padding: 0.6em 0.8em;
+}
+.header .megaMenu li li a:hover, .header .megaMenu li li a:focus {
+  background: #444;
+  color: #fff;
+}
 .header .megaMenu li li.hasChild > a {
   padding-right: 32px;
 }
-
-.header .megaMenu li li.hasChild > a:after {
+.header .megaMenu li li.hasChild > a::after {
   content: "";
   position: absolute;
   right: 14px;
@@ -1995,28 +1983,11 @@ form th label {
   border-bottom: none;
   border-left: none;
 }
-
-.header .megaMenu li li li.hasChild > a:after {
-  display: none;
-}
-
-.header .megaMenu li li a {
-  position: relative;
-  padding: 0.6em 0.8em;
-}
-
-.header .megaMenu li li a:hover,
-.header .megaMenu li li a:focus {
-  background: #444;
-  color: #fff;
-}
-
 .header .megaMenu li li li a {
   border-top: 1px dotted #ccc;
   padding: 0.6em 1em;
 }
-
-.header .megaMenu li li li a:before {
+.header .megaMenu li li li a::before {
   content: "";
   display: inline-block;
   width: 0.5em;
@@ -2025,16 +1996,7 @@ form th label {
   vertical-align: top;
   margin: 0.35em 0.5em 0 0;
 }
-
-.header .megaMenu ul ul ul {
-  display: block;
-  position: static;
-  width: 100%;
-  margin: 0;
-  font-size: 0.9em;
-}
-
-.header .megaMenu ul ul ul ul {
+.header .megaMenu li li li.hasChild > a::after {
   display: none;
 }
 
