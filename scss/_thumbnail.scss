@@ -33,7 +33,11 @@
 	// .animalPhotos ////////////////////////////////////////
 	&.animalPhotos{
 		&>ul>li{padding: 0;
-			&>a {display: block;padding: 9px 0;}
+			&>a {display: block;padding: 9px 0;
+				&:focus{
+					box-shadow: #888 0 0 0 2px inset;
+				}
+			}
 		}
 		li{
 			.image img{object-fit:contain;}
@@ -258,8 +262,15 @@
 		&.animalPhotos li .image{height:30vw;}
 	
 		&.apps{
-			ul>li{padding-right:8%;position:relative;width:88%;margin:.8vw auto 1vw;}
-			li ol{position:absolute;right:0;top:0;bottom:0;margin:0;width:7%;
+			ul>li{
+				position:relative; float: none; min-height: 142px;
+				width:88%;margin:.8vw auto 1vw;padding-right:8%;
+				overflow: hidden;clear: both; 
+			}
+			li ol{
+				position:absolute;right:0;top:0;bottom:0;
+				margin:0;width:7%;
+				float: right;
 				&::before{float:none;width:auto;height:auto;line-height:1.8;}
 				li{float:none;width:auto;margin:0 auto .2em;}
 			}

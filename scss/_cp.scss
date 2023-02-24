@@ -40,10 +40,17 @@
 
 // extraBtn ////////////////////////////////////////
 .extraBtn {
+	display: inline-block;
 	a{
-		&:hover{background:#639100;color:#fff;}
-		&:focus{background:#639100;color:#fff;}
+		display: block; padding: 0 1em;
+		height: 2.4em; line-height: 2.4; border-radius: 1.5em;
+		text-decoration: none;background-color: #ecefe9;
+		&:hover, &:focus{background:#639100;color:#fff;}
 	}
+}
+.center > .extraBtn{
+	display: block; width: 96%; margin: 0 auto; overflow: hidden;
+	a{float: right;}
 }
 
 .dateRange{display: inline-block;}
@@ -130,7 +137,8 @@ a.mapMarker {
 	}
 
 	// table //
-	table{width:100%;margin:.2em auto;border-collapse:collapse;line-height:1.8;border:2px solid #999;color:#111;
+	table{
+		width:100%;margin:.2em auto;border-collapse:collapse;line-height:1.8;border:2px solid #999;color:#111;
 		&.noBorder{width:auto;margin:2em;border:none;
 			th, td{border:none;padding:0}
 		}
@@ -205,9 +213,9 @@ a.mapMarker {
 
 	@media screen and (max-width:800px) {
 		width: 92vw;margin: 0 auto;
-		.meta {
-			margin-left: -15px;margin-right: -15px;
-		}
+		// .meta {
+		// 	margin-left: -15px;margin-right: -15px;
+		// }
 	}
 
 	@media screen and (max-width:700px) {
@@ -753,7 +761,7 @@ ol.policies{
 	}
 
 	@media (max-width:600px){
-		width:100vw;
+		// width:100vw;
 		.note + form table { width:99%;}
 		.note, .note + form { float:none;width:auto;margin:0;padding:1.5em 5vw 1em;}
 		.note + form { padding:1em 4vw 2em;background:none;}
@@ -941,6 +949,9 @@ figure.petPicture {
 
 // 動物資料表格與照片列表 ////////////////////////////////////////
 // profile, profileList ////////////////////////////////////////
+.profileList, .profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;}
+// .profileList .profileList, .profile .profile{width: 100%;}
+
 .profileList{
 	li {
 		position: relative;
@@ -962,7 +973,6 @@ figure.petPicture {
 		&>img{display: block;}
 	}
 
-	.profile{clear:both;width: 96%;margin:0 auto;padding: 15px 0 40px;}
 	.profileList{width: 100%;}
 
 	@media screen and (min-width:601px) {
@@ -1008,7 +1018,7 @@ figure.petPicture {
 	}
 
 	@media screen and (min-width:1001px){
-		margin: 0;
+		margin: 0 auto;
 	}
 } 
 
