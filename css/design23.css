@@ -9347,6 +9347,35 @@ a.mapMarker:hover, a.mapMarker:focus {
   border: 2px solid #999;
   color: #111;
 }
+.cpArticle table caption {
+  font-weight: bold;
+  text-align: left;
+  font-size: 1em;
+  padding: 0.4em 0.5em;
+  text-align: left;
+}
+.cpArticle table th, .cpArticle table td {
+  vertical-align: top;
+  padding: 0.4em 0.5em;
+  border: 1px solid #ccc;
+}
+.cpArticle table th {
+  color: #666;
+  font-weight: normal;
+}
+.cpArticle table th[scope=row] {
+  text-align: right;
+  vertical-align: top;
+  width: 15%;
+}
+.cpArticle table th[scope=col] {
+  text-align: center;
+  vertical-align: middle;
+}
+.cpArticle table tr:first-child > th, .cpArticle table thead th {
+  vertical-align: middle;
+  border-bottom: 1px solid #999;
+}
 .cpArticle table.noBorder {
   width: auto;
   margin: 2em;
@@ -9356,33 +9385,26 @@ a.mapMarker:hover, a.mapMarker:focus {
   border: none;
   padding: 0;
 }
-.cpArticle table caption {
-  font-weight: bold;
-  text-align: left;
-  font-size: 1em;
-  padding: 0.4em 0.5em;
-  text-align: left;
-}
-.cpArticle th, .cpArticle .td {
-  vertical-align: top;
-  padding: 0.4em 0.5em;
-  border: 1px solid #ccc;
-}
-.cpArticle th {
-  color: #888;
-  font-weight: normal;
-}
-.cpArticle th[scope=row] {
-  text-align: right;
-  vertical-align: top;
-  width: 15%;
-}
-.cpArticle th[scope=col] {
-  text-align: center;
-  vertical-align: middle;
-}
 .cpArticle .list th, .cpArticle .list td {
   text-align: left !important;
+}
+.cpArticle .slideTableBox {
+  overflow-x: scroll;
+  margin: 30px 0;
+  padding: 0;
+  background: #fff;
+}
+.cpArticle .slideTableBox table {
+  margin: 0 auto;
+  min-width: 960px;
+  background-color: transparent;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  .cpArticle .slideTableBox {
+    -webkit-box-shadow: #999 0 0 0 2px inset, rgba(0, 0, 0, 0.3) 0 0 8px inset;
+            box-shadow: #999 0 0 0 2px inset, rgba(0, 0, 0, 0.3) 0 0 8px inset;
+  }
 }
 .cpArticle ul {
   list-style: disc;

@@ -139,19 +139,40 @@ a.mapMarker {
 	// table //
 	table{
 		width:100%;margin:.2em auto;border-collapse:collapse;line-height:1.8;border:2px solid #999;color:#111;
-		&.noBorder{width:auto;margin:2em;border:none;
+		caption{font-weight:bold;text-align:left;font-size:1em;padding:.4em .5em;text-align:left;}
+		th, td{vertical-align:top;padding:.4em .5em;border:1px solid #ccc;}
+		th{
+			color:#666;font-weight:normal;
+			&[scope="row"]{text-align:right;vertical-align:top;width:15%;}
+			&[scope="col"]{text-align:center;vertical-align:middle;}
+		}
+
+		tr:first-child>th, thead th {vertical-align: middle; border-bottom: 1px solid #999;}
+
+		// 無框線表格
+		&.noBorder{
+			width:auto;margin:2em;border:none;
 			th, td{border:none;padding:0}
 		}
-		caption{font-weight:bold;text-align:left;font-size:1em;padding:.4em .5em;text-align:left;}
 	}
-	th, .td{vertical-align:top;padding:.4em .5em;border:1px solid #ccc;}
-	th{color:#888;font-weight:normal;
-		&[scope="row"]{text-align:right;vertical-align:top;width:15%;}
-		&[scope="col"]{text-align:center;vertical-align:middle;}
-	}
+
 	.list{
 		th, td{text-align:left !important;}
-	} 
+	}
+	
+	// 處理表格太寬的問題
+	.slideTableBox{
+		overflow-x: scroll; margin: 30px 0; padding: 0;
+		background: #fff;
+		table{
+			margin: 0 auto; min-width: 960px; background-color: transparent;
+			font-size: 1rem;
+		}
+
+		@media screen and (max-width: 1000px){
+			box-shadow: #999 0 0 0 2px inset, rgba(0,0,0,.3) 0 0 8px inset;
+		}
+	}
 
 	// ul , ol
 	// ul, ol{margin:2em 1em;padding:0 0 0 2em;}
