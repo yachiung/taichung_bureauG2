@@ -36,6 +36,9 @@
 .cpArticle th{color:#888;font-weight:normal;}
 .cpArticle th[scope="row"]{text-align:right;vertical-align:top;width:15%;}
 .cpArticle th[scope="col"]{text-align:center;vertical-align:middle;}
+.cpArticle tr:first-child>th,
+.cpArticle thead th {vertical-align: middle; border-bottom: 1px solid #999;}
+
 .cpArticle .list th, .cpArticle .list td{text-align:left !important;}
 
 .slideTableBox {overflow-x: scroll;margin: 30px 0;padding: 0;background: #fff;}
