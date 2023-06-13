@@ -40,7 +40,7 @@
 .cpArticle thead th {vertical-align: middle; border-bottom: 1px solid #999;}
 
 .cpArticle .list th, .cpArticle .list td{text-align:left !important;}
-
+/* 可左右滑動的表格 20230613 */
 .slideTableBox {overflow-x: scroll;margin: 30px 0;padding: 0;background: #fff;}
 .cpArticle .slideTableBox table {margin: 0 auto;min-width: 960px;background-color: transparent;font-size: 1rem;
 }
