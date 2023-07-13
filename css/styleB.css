@@ -6,11 +6,29 @@ textarea:focus,
 input[type="file"]:focus,
 select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 
-.more a{display:inline-block;padding:0 .8em 0 2.5em;text-decoration:none;position:relative;overflow:hidden;border-radius:2em;color:#777;transition:.2s;}
-.more a:before{content:'・・・';font-size:2em;letter-spacing:-.72em;vertical-align:middle;position:absolute;left:0;color:#5ea000;text-decoration:none;}
-.more a:hover{background:rgba(255,255,255,.5);color:#222;box-shadow:rgba(0,0,0,.4) 0 0 6px 1px;outline:none;}
-.more a:focus{background:#5ea000;color:#fff;box-shadow:none;outline:none;}
-.more a:focus:before{color: #fff;}
+.more a{
+	--color1: #5ea000;
+	--color2: #fff;
+	display:inline-block;padding:0 .8em 0 2.5em;text-decoration:none;position:relative;overflow:hidden;border-radius:2em;color:#777;background-color: var(--color2);
+	outline:none;transition:.2s; }
+.more a:before{
+	content:''; width: 4px; height: 4px;margin-top: -2px;
+	position:absolute; left: 13px; top: 50%; 
+	background-color: var(--color1); border-radius: 3px;
+	box-shadow: var(--color1) 7px 0 0, var(--color1) 14px 0 0;
+}
+.more a:hover{
+	/* --color1: #fff;
+	--color2: #5ea000; */
+	color:#222;
+	box-shadow:rgba(0,0,0,.4) 0 0 6px 1px;
+}
+.more a:focus{
+	--color1: #fff;
+	--color2: #5ea000;
+	box-shadow:none; color: var(--color1);
+}
+/* .more a:focus:before{background-color: #fff;} */
 
 .header{background-color:#8cc11f;color:#000;border-bottom:1px solid #fff;box-shadow:rgba(0,0,0,.5) 0 3px 8px -3px;}
 .header h1 a:focus{outline:2px solid #e30}

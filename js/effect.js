@@ -22,7 +22,7 @@ $(document).ready(function(){
  
 	//gotop
 	var _goTop = $('.goTop');
-	_goTop.on('click keydown', function(){
+	_goTop.on('click', function(){
 		$('html,body').stop(true,false).animate({scrollTop:0},700, function () { 
 			$('.goCenter').focus();//20191224
 		 });
@@ -375,6 +375,8 @@ function tabSet(){//頁籤
 				tabItemLength = _tabItem.length,
 				tabItemWidth = tabwidth / tabItemLength;
 
+		_tabItemA.attr('aria-selected', 'false').attr('role', 'tab');
+		_tabItem.filter('.active').find('a').attr('aria-selected',  'true');
 		_tab.find('.active').next('.tabContent').show();
 
 		if(ww > wwSmall ){
@@ -397,8 +399,8 @@ function tabSet(){//頁籤
 					tabIndex = _tabItemNow.index()/2,
 					scollDistance = tvp + tabItemHeight*tabIndex -hh;
 
-			_tabItem.removeClass('active');
-			_tabItemNow.addClass('active');
+			_tabItem.removeClass('active').find('a').attr('aria-selected',  'false');
+			_tabItemNow.addClass('active').find('a').attr('aria-selected',  'true');
 
 			if(ww <= wwSmall){
 				if(! $(this).parents('.tabs').hasClass('albumType4')){// .albumType4.tab 另外處理
@@ -548,7 +550,7 @@ function popMessage(){//彈出訊息
 
 	_popMsg.add(_popMask).show();
 
-	_closePop.on('click focus' ,function(){
+	_closePop.on('click' ,function(){
 		_popMsg.add(_popMask).fadeOut(300);
 	});
 
