@@ -320,7 +320,9 @@ function mobileCategory(){//行動版資料大類開合
 		});
 	}
 }
-function share(){//分享
+
+//分享
+function share(){
 
 	var _share = $('.share');
 	$('.shareThis').click(function(){
@@ -329,23 +331,30 @@ function share(){//分享
 	});
 
 	var svt;
-	_share.append('<span class="after">《</span>');
-	_share.find('.after').hide();
-	_share.children('span').first().wrap('<a href="#"></a>');
+	_share.children('span').first().replaceWith('<button type="button" aria-label="分享到社群平台" aria-expanded="false">分享</button>');
+	var _shareBtn = _share.find('button');
+	_shareBtn.after('<span class="after">《</span>');
+	var _shareAfter = _share.find('.after');
+
+	_shareAfter.hide();
 
 	function miniShare(){
-		_share.stop(true, true).animate({ width:"1.1em"}, 600).find('ul').stop(true, true).slideUp(600, function(){
-			_share.find('.after').show(200);
-		});
+		_share.stop(true, true).animate({ width:"1.1em"}, 600).find('ul').stop(true, true).slideUp(600, 
+			function(){
+				_shareAfter.show(200);
+				_shareBtn.attr('aria-expanded', 'false');
+			}
+		);
 	}
 	function showShare(){
-		_share.find('.after').hide();
+		_shareAfter.hide();
+		_shareBtn.attr('aria-expanded', 'true');
 		_share.stop(true, true).animate({ width:"48px"},300).find('ul').stop(true, true).slideDown(300);
 	}
 	if (ww > wwNormal) {
 		svt = setTimeout(miniShare , 2000);		
 		_share.hover(showShare,miniShare);
-		_share.children('a').focusin(showShare);
+		_share.children('button').focusin(showShare);
 		_share.find('li').last().children('a').focusout(miniShare);
 	}
 	if (ww <= wwNormal) {

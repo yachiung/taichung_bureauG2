@@ -3,7 +3,11 @@
 
 .share{position:fixed;right:0;top:236px;text-align:center;background:#fff;color:#727d7f;padding:5px;z-index:9000;box-shadow:rgba(0,0,0,.4) -1px 3px 10px 1px;min-height:3.2em;}
 .share a{text-decoration:none;}
-.share span{display:block;font-weight:normal;font-size:1em;line-height:1.1;color:#727d7f;}
+.share span.after{display:block;font-weight:normal;font-size:1em;line-height:1.1; height: 1.15em; color:#727d7f;}
+.share button{display:block;font-weight:normal;font-size:1em;line-height:1.1; height: 1em;color:#727d7f;
+	padding: 0; background: none; width: 100%;
+}
+.share button:hover{ box-shadow: none;}
 .share ul{list-style:none;margin:3px 0 0;padding:0;overflow:hidden;}
 .share li{margin:0;padding:0;width:48px;}
 .share li a{display:block;width:48px;height:48px;overflow:hidden;position:relative;}
