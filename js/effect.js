@@ -249,9 +249,9 @@ function fixHeader(){//固定版頭
 	_ffCtrl.after('<span class="hint">按enter鍵可展開或收合次選單，按tab鍵往下游走</span>');
 
 	if(_ffCtrl.hasClass('close')){
-		_ffCtrl.text('展開');
+		_ffCtrl.text('展開').attr('aria-label', '展開');
 	} else {
-		_ffCtrl.text('收合');
+		_ffCtrl.text('收合').attr('aria-label', '收合');
 	}
 
 	_ffCtrl.click(fatfootSlide);
@@ -265,11 +265,11 @@ function fixHeader(){//固定版頭
 	function fatfootSlide(e){
 		if($(this).hasClass('close')){
 				_fatfooter.slideDown(function(){
-					_ffCtrl.removeClass('close').text('收合');
+					_ffCtrl.removeClass('close').text('收合').attr('aria-label', '收合');
 				});
 			} else {
 				_fatfooter.slideUp(function(){
-					_ffCtrl.addClass('close').text('展開');
+					_ffCtrl.addClass('close').text('展開').attr('aria-label', '展開');
 				});
 			}
 		e.preventDefault();

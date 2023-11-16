@@ -337,14 +337,15 @@ $(document).ready(function(){
 	});
 
 
-
-
+	// 跑馬燈 ----------------------------------------------------
+	const btnText = '暫停輪播';
+	const btnTextAlt = '繼續輪播';
 	marqueeB2T();
 	marqueeR2L();
 	function marqueeB2T(){//跑馬燈：垂直
 		
 		$('.marquee.B2T').each(function(){
-			var _mq = $(this),
+			let _mq = $(this),
 					_mqItem = $(this).find('li'),
 					_box = $(this).find('.box'),
 					count = _mqItem.length,
@@ -354,7 +355,7 @@ $(document).ready(function(){
 					i = 0, j,
 					marqueeGo,
 					_button = _mq.find('button');
-			
+					
 			_box.innerHeight(mqH);
 			_mqItem.css({'top': mqH});
 			_mqItem.eq(i).css({'top':0, 'left':0});
@@ -362,15 +363,25 @@ $(document).ready(function(){
 			if(count>1){
 				marqueeGo = setInterval(mqLoop, timer);
 				_button.innerHeight(mqH).innerWidth(mqH).show();
+
 				mqHover();
 
+				if( _button.hasClass('pause') ){
+					_button.attr('aria-label', btnTextAlt).text(btnTextAlt);
+				} else {
+					_button.attr('aria-label', btnText).text(btnText);
+				}
+
 				_button.click(function(){
-					$(this).toggleClass('pause');
-					if($(this).hasClass('pause')){
+					_button.toggleClass('pause');
+					if( _button.hasClass('pause') ){
 						clearInterval(marqueeGo);
+						_button.attr('aria-label', btnTextAlt).text(btnTextAlt);
 					} else {
 						marqueeGo = setInterval(mqLoop, timer);
+						_button.attr('aria-label', btnText).text(btnText);
 					}
+	
 				});
 
 				_mqItem.find('a').focus(function(){
@@ -418,12 +429,13 @@ $(document).ready(function(){
 					}
 				);
 			}
+		
 		});
 	}
 
 	function marqueeR2L(){//跑馬燈：水平
 		$('.marquee.R2L').each(function(){
-			var _mq = $(this),
+			let _mq = $(this),
 					_mqItem = _mq.find('li'),
 					_box = _mq.find('.box'),
 					count = _mqItem.length,
@@ -436,22 +448,29 @@ $(document).ready(function(){
 					_button = _mq.find('button');
 							
 			_box.innerHeight(mqH);
-
-			_box.innerHeight(mqH);
 			_mqItem.css({'left': mqW});
 			_mqItem.eq(i).css('left', 0);
 
 			if (count>1){
 				marqueeGo = setInterval(mqLoopR2L, timer);
 				_button.innerHeight(mqH).innerWidth(mqH).show();
-				mqHhover()
+
+				mqHhover();
+
+				if( _button.hasClass('pause') ){
+					_button.attr('aria-label', btnTextAlt).text(btnTextAlt);
+				} else {
+					_button.attr('aria-label', btnText ).text(btnText );
+				}
 
 				_button.click(function(){
 					$(this).toggleClass('pause');
-					if($(this).hasClass('pause')){
+					if( $(this).hasClass('pause') ){
 						clearInterval(marqueeGo);
+						$(this).attr('aria-label', btnTextAlt ).text( btnTextAlt );
 					} else {
 						marqueeGo = setInterval(mqLoopR2L, timer);
+						$(this).attr('aria-label', btnText ).text( btnText );
 					}
 				});
 
