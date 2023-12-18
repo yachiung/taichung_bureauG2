@@ -62,8 +62,10 @@
 .cpArticle ol ul{margin-left:0;margin-right:0;list-style:circle;}
 .cpArticle ul ol,
 .cpArticle ol ol{margin-left:0;margin-right:0;list-style:upper-latin;}
-.cpArticle a:hover{text-decoration:none;background:#de6;color:#000;}
-.cpArticle a:focus{outline:1px solid red;text-decoration:none;}
+.cpArticle a{color: #017494;}
+.cpArticle a:hover,
+.cpArticle a:focus{outline:1px solid #017494; text-decoration:none;}
+.cpArticle a:focus{outline:2px solid #017494;}
 .cpArticle .gmap{margin:2em 0;}
 .cpArticle .gmap iframe{display:block;padding:0;margin:0 auto;width:100%;height:600px;border:none;}
 
