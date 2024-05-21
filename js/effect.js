@@ -245,37 +245,59 @@ function fixHeader(){//固定版頭
 // Fatfooter 開合
 	var	_ffCtrl = _footer.find('.fatfootCtrl'),
 			_fatfooter = _footer.find('nav>ul>li>ul, .qrcode, .deco ');
+
+	// _ffCtrl.after('<span class="hint">按enter鍵可展開或收合次選單，按tab鍵往下游走</span>');
+	// if(_ffCtrl.hasClass('close')){
+	// 	_ffCtrl.text('展開').attr('aria-label', '展開');
+	// } else {
+	// 	_ffCtrl.text('收合').attr('aria-label', '收合');
+	// }
 	
-	_ffCtrl.after('<span class="hint">按enter鍵可展開或收合次選單，按tab鍵往下游走</span>');
-
-	if(_ffCtrl.hasClass('close')){
-		_ffCtrl.text('展開').attr('aria-label', '展開');
+	// ---------- 2024/5 無障礙修改 ---------- //
+	_ffCtrl.attr('aria-label', '頁腳選單展開/收合').text('控制按鈕');
+	if(_fatfooter.is(':hidden')){
+		_ffCtrl.addClass('close').attr('aria-expanded', false);
 	} else {
-		_ffCtrl.text('收合').attr('aria-label', '收合');
+		_ffCtrl.removeClass('close').attr('aria-expanded', true);
 	}
 
-	_ffCtrl.click(fatfootSlide);
-	_ffCtrl.focus(function(){
-		$(this).keydown(function(e){
-			if(e.which==13){fatfootSlide}
-		});
-		$(this).next('.hint').fadeIn(200).delay(4000).fadeOut(600);
-	});
+	// _ffCtrl.click(fatfootSlide);
+	// _ffCtrl.focus(function(){
+	// 	$(this).keydown(function(e){
+	// 		if(e.which==13){fatfootSlide}
+	// 	});
+	// 	$(this).next('.hint').fadeIn(200).delay(4000).fadeOut(600);
+	// });
+	// function fatfootSlide(e){
+	// 	if($(this).hasClass('close')){
+	// 			_fatfooter.slideDown(function(){
+	// 				_ffCtrl.removeClass('close').text('收合').attr('aria-label', '收合');
+	// 			});
+	// 		} else {
+	// 			_fatfooter.slideUp(function(){
+	// 				_ffCtrl.addClass('close').text('展開').attr('aria-label', '展開');
+	// 			});
+	// 		}
+	// 	e.preventDefault();
+	// }
 
-	function fatfootSlide(e){
-		if($(this).hasClass('close')){
-				_fatfooter.slideDown(function(){
-					_ffCtrl.removeClass('close').text('收合').attr('aria-label', '收合');
-				});
-			} else {
-				_fatfooter.slideUp(function(){
-					_ffCtrl.addClass('close').text('展開').attr('aria-label', '展開');
-				});
-			}
-		e.preventDefault();
-	}
+	// ---------- 2024/5 無障礙修改 ---------- //
+	_ffCtrl.click(function(){
+		if(_fatfooter.is(':hidden')){
+			_fatfooter.stop().slideDown(function(){
+				_ffCtrl.removeClass('close').attr('aria-expanded', true);
+			});
+		} else {
+			_fatfooter.slideUp(function(){
+				_ffCtrl.addClass('close').attr('aria-expanded', false);
+			});
+		}
+	})
 
 
+	// ---------- 2024/5 無障礙修改 ---------- //
+	// 分頁顯示筆數 select 元件加 aria-label 屬性（2024 無障礙修改）
+	$('.page').find('select').attr('aria-label', '每頁顯示筆數');
 
 
 
@@ -752,20 +774,21 @@ function optionGp(){
 		var _caption = _this.find('.caption').text(_this.find('caption').text());
 		var _slideCtrl = $(this).find('.slideCtrl');
 
-		if(_toggleArea.is(':visible')){
-			_slideCtrl.removeClass('closed');
+	// ---------- 2024/5 無障礙修改 ---------- //
+	if(_toggleArea.is(':visible')){
+			_slideCtrl.removeClass('closed').attr('aria-expanded', true);
 			_caption.hide();
 		} else {
-			_slideCtrl.addClass('closed');
+			_slideCtrl.addClass('closed').attr('aria-expanded', false);
 			_caption.show();
 		}
 		_slideCtrl.add(_caption).click(function(){
 			if(_toggleArea.is(':visible')){
-				_slideCtrl.addClass('closed');
 				_toggleArea.slideUp();
+				_slideCtrl.addClass('closed').attr('aria-expanded', false);
 			} else {
-				_slideCtrl.removeClass('closed');
 				_toggleArea.slideDown();
+				_slideCtrl.removeClass('closed').attr('aria-expanded', true);
 			}
 		});
 	})
