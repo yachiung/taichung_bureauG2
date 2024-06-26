@@ -153,7 +153,7 @@
                   <label for="q_operator">業者/市招名稱(抽驗地點)</label>
                 </td>
                 <td>
-                  <input type="text" name="q_operator" id="q_operator" value="" placeholder="請輸入業者/市招名稱(抽驗地點)">
+                  <input type="text" name="q_operator" id="q_operator" value="" aria-label="業者/市招名稱(抽驗地點)" placeholder="請輸入業者/市招名稱(抽驗地點)">
                 </td>
               </tr>
               <tr>
@@ -161,7 +161,14 @@
                   <label for="q_product">品名</label>
                 </td>
                 <td>
-                  <input type="text" name="q_product" id="q_product" value="" placeholder="請輸入品名">
+                  <input type="text" name="q_product" id="q_product" value="" aria-label="品名" placeholder="請輸入品名">
+                </td>
+              </tr>
+              <tr>
+                <td>查詢欄位標題文字</td>
+                <td>
+                  <input type="text"  aria-label="查詢欄位標題文字">
+                  <p>※ 如果沒有包 <code>label</code> <code>for</code>，要把「查詢欄位標題文字」帶入 <code>input</code> 的 <code>aria-label</code> 屬性值</p>
                 </td>
               </tr>
             </tbody>

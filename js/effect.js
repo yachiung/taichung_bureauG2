@@ -774,14 +774,15 @@ function optionGp(){
 		var _caption = _this.find('.caption').text(_this.find('caption').text());
 		var _slideCtrl = $(this).find('.slideCtrl');
 
-	// ---------- 2024/5 無障礙修改 ---------- //
-	if(_toggleArea.is(':visible')){
-			_slideCtrl.removeClass('closed').attr('aria-expanded', true);
-			_caption.hide();
+		// ---------- 2024/5 無障礙修改 ---------- //
+		if(_toggleArea.is(':visible')){
+				_slideCtrl.removeClass('closed').attr('aria-expanded', true);
+				_caption.hide();
 		} else {
 			_slideCtrl.addClass('closed').attr('aria-expanded', false);
 			_caption.show();
 		}
+
 		_slideCtrl.add(_caption).click(function(){
 			if(_toggleArea.is(':visible')){
 				_toggleArea.slideUp();
