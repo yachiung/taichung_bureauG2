@@ -21,7 +21,7 @@ audio, canvas, video{display:inline-block;}
 .egov,
 .center .share,
 .accesskey,
-.goCenter,
+/* .goCenter, */
 .fontSize,
 .accesskey,
 .header .navigation,
@@ -103,7 +103,8 @@ time{display:inline-block;margin-left:1em;font-family:Courier New;letter-spacing
 .navbar .shareThis a{background:url(../images/icon_share.png) no-repeat center center;background-size: 34px;}
 
 
-
+.goCenter{position:absolute;top:-2.2em;left:5vw;padding:0 .5em;height:2em;line-height:2em;background:#f80;color:#fff;text-decoration:none;z-index:9999;border-radius:0 0 4px 4px;opacity:0;transition:.5s;}
+.goCenter:focus{outline:none;top:0;opacity:1;text-decoration:none;}
 
 .goTop{position:fixed;bottom:0;left:50%;margin:0 auto 0 -30px;width:60px;height:40px;text-align:center;color:#fff;background:rgba(0,0,0,.3);z-index:7780;display:none;border-radius: 5px 5px 0 0;font-size:0;transition:.1s;}
 .goTop:hover,
@@ -125,7 +126,7 @@ time{display:inline-block;margin-left:1em;font-family:Courier New;letter-spacing
 	.sidebarCtrl,
 	.navbar{display:none;}
 
-	/*行動版顯示項目*/
+	/*一般版顯示項目*/
 	.friendly,
 	.main .search,
 	.ui-widget-content,
@@ -133,7 +134,7 @@ time{display:inline-block;margin-left:1em;font-family:Courier New;letter-spacing
 	.egov,
 	.center .share,
 	.accesskey,
-	.goCenter,
+	/* .goCenter, */
 	.fontSize,
 	.accesskey,
 	.header .navigation,
@@ -145,13 +146,12 @@ time{display:inline-block;margin-left:1em;font-family:Courier New;letter-spacing
 	*:focus{outline:1px solid #d00;}
 	*::selection{background-color: #278;color: #fff;}
 
-	.goCenter{position:absolute;top:-2.2em;left:50%;margin-left:-480px;padding:0 .5em;height:2em;line-height:2em;background:#f80;color:#fff;text-decoration:none;z-index:9999;border-radius:0 0 4px 4px;opacity:0;transition:.5s;}
-	.goCenter:focus{outline:none;top:0;opacity:1;text-decoration:none;}
-
 	.accesskey{position:absolute;left:-1em;color:#fff;text-decoration:none;color:transparent;}
 	.accesskey:hover,
 	.accesskey:focus{color:#c00;}
 	.header .accesskey{top:0;}
+
+	.goCenter{ left:calc(50% - 480px);}
 
 	.friendly{clear:both;width:96%;padding:.5em 0 0;overflow:hidden;margin:0 auto;}
 	.path{color:#999;margin:0;}

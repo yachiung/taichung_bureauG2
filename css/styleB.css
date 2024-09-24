@@ -469,8 +469,7 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 		a:hover,
 		a:focus{background-color:#fff;color:#000;border-color:#18959a;box-shadow:#18959a 0 0 0 1px;outline:none}
 		&.here a{background:#18959a;color:#fff;border-color:#18959a;box-shadow:#18959a 0 0 0 2px;
-			&:hover,
-			&:focus{background:#fff;border-color:#fff;color: #000;}
+			&:hover, &:focus{background:#fff;border-color:#fff;color: #000;}
 		}
 	}
 	@media screen and (max-width:800px){

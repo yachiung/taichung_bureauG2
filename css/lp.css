@@ -454,16 +454,16 @@
 }
 @media screen and (max-width: 800px) {
 	.category{width: auto;position:relative;margin: 0 0 1em;overflow:hidden;padding:.8em 52px .8em .8em;box-shadow:rgba(0,0,0,.6) 0 3px 7px inset;z-index:700;}
-	.category>a.here{display:block;}
-	.category>a.here:before{content:'資料大類：';font-size:.9em;margin-right:.2em;display: inline-block;}
+	.category>a.here{display:block;font-size: 1.15rem;}
+	.category>a.here:before{content:'資料大類：';font-size:.8em;margin-right:.2em;display: inline-block;}
 	.category ul{display: none;}
 	.category li{margin-bottom:8px;}
 	.category li a{display:block;padding:0 .4em;border: none;}
-	
-	.cateCtrl{display: block;position:absolute;right:5px;bottom:1px;width: 44px;height: 42px;line-height: 44px;text-align: center;background: none;}
+
+	.cateCtrl{display: block;position:absolute;right:5px;bottom:1px;width: 44px;height: 42px;line-height: 42px;text-align: center;background: none;}
 	.cateCtrl:before{content: ''; position: absolute; left: calc(50% - 7px); top: calc(50% - 11px);
-		/* display: inline-block; */
-		width:13px;height:13px;border: 3px solid #333;border-left: none;border-top: none;transform:rotate(45deg);transition: .3s;}
+		width:13px;height:13px;border: 3px solid #333;border-left: none;border-top: none;transform:rotate(45deg);
+		transition:transform .3			s;}
 	.cateCtrl.close:before{transform:rotate(225deg);top: calc(50% - 3px);}
 }
 @media screen and (max-width: 600px) {

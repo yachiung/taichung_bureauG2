@@ -1,4 +1,4 @@
-/* StyleA （勞工局）*/
+/* StyleA */
 body{color:#444}
 a{text-decoration:none;color:#554}
 a:hover, a:focus{outline:none;color:#000;}
@@ -415,14 +415,33 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 @media screen and (max-width:800px){
 	.category{background:#3e3e3e;}
 	.category a{color:#fff}
-	.category a.here:before{color:#c7cdbe }
-	.category li a{border:none;color:#fff;border-radius:4px;}
-	.category li.here a,
+
+	.category>a.here{color:#fff;
+		&::before{color:#c7cdbe;}
+		&:hover, &:focus{ outline: 1px solid #ad0; border-radius: 4px;}
+	}
+
+	.category li a{border:none;color:#fff;border-radius:4px;
+		&:hover, &:focus{border-color:#ad0;color:#fff;background-color:transparent;}
+	}
+	.category li.here a{
+		background-color:#ad0;color:#000;box-shadow:none;
+		&:hover, &:focus{
+			background-color:#ad0;color:#000;
+			box-shadow:#3e3e3e 0 0 0 1px, #ad0 0 0 0 3px;
+		}
+	}
+	/* .category li.here a,
 	.category li.here a:hover,
-	.category li.here a:focus{background-color:#ad0;color:#000;box-shadow:none;}
-	.category li a:hover,
-	.category li a:focus{border-color:#ad0;color:#fff;background-color:transparent;}
-	.cateCtrl:before{border-color:#ad0;}
+	.category li.here a:focus{background-color:#ad0;color:#000;box-shadow:none;} */
+	.cateCtrl{
+		&::before{border-color:#fff;}
+		&:hover, &:focus{
+			box-shadow: none;
+			background-color: #ad0;
+			&::before{border-color:#3e3e3e;}
+		}
+	}
 }
 
 
