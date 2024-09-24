@@ -46,28 +46,37 @@
 	.flowerCountdownMobil iframe{margin:-54px auto auto -121px;} */
 
 
-	.header .sidebarCtrl{display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:64px;font-size:0;}
-	.header .sidebarCtrl:before,
-	.header .sidebarCtrl:after{content:'';position:absolute;width:40%;}
-	.header .sidebarCtrl:before{height:14px;border:2px solid #fff;left:50%;top:50%;margin:-9px auto auto -20%;border-left:none;border-right:none;}
-	.header .sidebarCtrl:after{content:'';position:absolute;width:40%;height:2px;top:50%;margin:-1px auto auto -20%;background:#fff;}
+	.header .sidebarCtrl{
+		display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:64px;font-size:0;
+		&::before, &::after{content:'';position:absolute;width:40%;}
+		&::before{height:14px;border:2px solid #fff;left:50%;top:50%;margin:-9px auto auto -20%;border-left:none;border-right:none;}
+		&::after{content:'';position:absolute;width:40%;height:2px;top:50%;margin:-1px auto auto -20%;background:#fff;}
+		&:hover, &:focus{box-shadow: none;}
+	}
 
-	.searchCtrl{position:absolute;right:0;top:0;width:64px;height:100%;font-size:0;background:#777;}
-	.searchCtrl:before,
-	.searchCtrl:after{content:'';position:absolute;}
-	.searchCtrl:before{width:25px;height:25px;border:2px solid #fff;border-radius:50%;left:23%;top:23%;}
-	.searchCtrl:after{width:12px;height:4px;background:#fff;transform:rotate(45deg);left:58%;top:63%;border-radius:0 2px 2px 0;}
-	.searchCtrl.close{background:#333;}
-	.searchCtrl.close:before,
-	.searchCtrl.close:after{width:28px;height:2px;border:none;border-radius:0;background:#fff;transform:rotate(45deg);left:50%;top:50%;margin:0 auto auto -14px;}
-	.searchCtrl.close:after{transform:rotate(-45deg);}
-	.searchCtrl:hover, .sidebarCtrl:hover,
-	.searchCtrl:focus, .sidebarCtrl:focus{box-shadow: none;}
+	.searchCtrl{
+		position:absolute;right:0;top:0;width:64px;height:100%;font-size:0;background:#777;
+		&::before, &::after{content:'';position:absolute;}
+		&::before{width:25px;height:25px;border:2px solid #fff;border-radius:50%;left:23%;top:23%;}
+		&::after{width:12px;height:4px;background:#fff;transform:rotate(45deg);left:58%;top:63%;border-radius:0 2px 2px 0;}
+		&.close{background:#333;
+			&::before,
+			&::after{width:28px;height:2px;border:none;border-radius:0;background:#fff;transform:rotate(45deg);left:50%;top:50%;margin:0 auto auto -14px;}
+			&::after{transform:rotate(-45deg);}
+		}
+
+		&:hover, &:focus{box-shadow: none;}
+	}
+
+	/* .searchCtrl:hover, .sidebarCtrl:hover,
+	.searchCtrl:focus, .sidebarCtrl:focus{box-shadow: none;} */
 
 
-	.header .search {display:none;position:fixed;left:0;right:0;padding:.5em .8em;background:rgba(0,0,0,.7);width: auto;}
+	.header .search {display:none;position:fixed;left:0;right:0;padding:.5em .8em;background:rgba(0,0,0,.7);width: auto; top: auto;}
 	.header .search a{color:#fff}
-	.header .search input[type="text"]{width:16em;padding:0 .8em;margin:0;background:#fff;box-shadow:none;}
+	.header .search input[type="text"]{width:16em;padding:0 .8em;margin:0;background:#fff;box-shadow:none;
+		&:hover{ border: #c00 0 0 0 2px inset;}
+	}
 	.header .search input[type="submit"]{position:relative; background:#666 url(../images/search_submit.png) no-repeat center center;background-size:20px;width:3em;margin-left:-5px;text-indent:-200px;}
 	.search .keywordHot{ display:inline-block;}
 	.header .search{text-align: center;}
@@ -88,7 +97,7 @@
 	.header .sidebarCtrl:before,
 	.header .sidebarCtrl:after{width:56%;margin-left:-28%}
 
-	.header .search{top:44px;}
+	/* .header .search{top:44px;} */
 	.header .search form{display:block;margin:0 auto;}
 	.header .search input[type="text"]{width:calc(100% - 7em);}
 	.search .keywordHot{ display:none;}

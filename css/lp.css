@@ -438,9 +438,10 @@
 
 }
 
+/* 資料大類 */
 .category{width: 96%;margin: 0 auto 1em;}
 .category a{text-decoration: none;}
-.category ul{list-style: none;margin: 0;padding:2px;overflow: hidden;line-height: 1.1;}
+.category ul{list-style: none;margin: 0;padding:2px 5px;overflow: hidden;line-height: 1.1;}
 .category li{margin: 0 5px 5px 0;padding: 0;float: left;}
 .category li a{display:block;padding:0 .7em;height: 2.3em;line-height: 2.3em;background:none;color:#000;text-decoration:none;border:1px solid #ccc;transition: .2s;}
 .category li.here a{background:#0bf;color:#fff;border-color:#0bf;}
@@ -448,21 +449,22 @@
 .category li a:hover,
 .category li a:focus{outline:none}
 .cateCtrl{display:none;}
-
-
 @media screen and (max-width: 1000px) {
 	.category{margin-top: 1em;}	
 }
 @media screen and (max-width: 800px) {
 	.category{width: auto;position:relative;margin: 0 0 1em;overflow:hidden;padding:.8em 52px .8em .8em;box-shadow:rgba(0,0,0,.6) 0 3px 7px inset;z-index:700;}
+	.category>a.here{display:block;}
+	.category>a.here:before{content:'資料大類：';font-size:.9em;margin-right:.2em;display: inline-block;}
 	.category ul{display: none;}
 	.category li{margin-bottom:8px;}
 	.category li a{display:block;padding:0 .4em;border: none;}
-	.category a.here{display:block;}
-	.category a.here:before{content:'資料大類：';font-size:.9em;margin-right:.2em;display: inline-block;}
-	.cateCtrl{display: block;position:absolute;right:5px;bottom:5px;width: 44px;height: 44px;line-height: 44px;text-align: center;background: none;}
-	.cateCtrl:before{content: '';display: inline-block;width:16px;height:16px;border: 3px solid #333;border-left: none;border-top: none;transform:rotate(45deg);transition: .3s;}
-	.cateCtrl.close:before{transform:rotate(225deg);margin-top: 16px;}
+	
+	.cateCtrl{display: block;position:absolute;right:5px;bottom:1px;width: 44px;height: 42px;line-height: 44px;text-align: center;background: none;}
+	.cateCtrl:before{content: ''; position: absolute; left: calc(50% - 7px); top: calc(50% - 11px);
+		/* display: inline-block; */
+		width:13px;height:13px;border: 3px solid #333;border-left: none;border-top: none;transform:rotate(45deg);transition: .3s;}
+	.cateCtrl.close:before{transform:rotate(225deg);top: calc(50% - 3px);}
 }
 @media screen and (max-width: 600px) {
 	.category li{ float: none;margin:0 0 6px;}
@@ -547,15 +549,16 @@
 /* .searchInlp .slideCtrl:focus{box-shadow:rgba(0,0,0,.5) 0 0 0 1px} */
 .searchInlp .slideCtrl:active{box-shadow: #bd3 0 0 0 2px;}
 /* 20210628 */
-.searchInlp .slideCtrl::before{ content: '收合條件查詢'; position: absolute; right: -.5em; top: -.9em; font-size: 14px; opacity: 0; width: 7em;}
+.searchInlp .slideCtrl::before{ content: '收合'; position: absolute;left: 0;width: 100%; top: -.9em; font-size: 14px; opacity: 0;  }
 .searchInlp .slideCtrl:hover::before,
 .searchInlp .slideCtrl:focus::before{opacity: 1;}
-.searchInlp .slideCtrl.closed::before{content: '展開條件查詢';}
+.searchInlp .slideCtrl.closed::before{content: '展開';}
 
 
 
 .searchInlp table{ width: 90%; margin: 0 auto;}
-.searchInlp td:first-child{ width:22%;}
+.searchInlp td:first-child{ width:22%; padding-top: .65em;}
+.searchInlp td:first-child>label{ line-height: 1;}
 .searchInlp td:last-child{ width: 78%;}
 .searchInlp td input[type="text"]{width: 95%;}
 .searchInlp .caption{ margin-left: 2%;width: 90%;}

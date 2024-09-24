@@ -74,7 +74,7 @@ $(document).ready(function(){
 	share();	
 	popMessage();
 
-	mobileSearch();	
+	// mobileSearch();	
 	mobileCategory();
 
 	clickToSlide();
@@ -180,46 +180,64 @@ function webSiteMenu(){//主選單
 	_megaMenu.parent().clone().prependTo( _sidebar);
 	_sidebar.find('.megaMenu').addClass('menu');
 
-
 	//行動版 menu
-	var _mobileMenuA = _sidebar.find('.menu').find('li.hasChild>a');
+	// ---------- 2024/9/23 無障礙修改 ---------- //
+	var _mobileMenu = _sidebar.find('.menu');
+	var _mobileMenuA = _mobileMenu.find('li.hasChild>a');
+	var _mobileMenuFirstA = _mobileMenu.children('ul').children('li').first().children('a');
+
 	_mobileMenuA.click(function(e){
 		$(this).next().slideToggle();
 		$(this).parent().toggleClass('closeThis');
 		e.preventDefault();
 	});
-	
-    function showSidebar(){
-        _sidebar.css({'margin-left':0,'transition':'.5s'});
-        _overlay.show(0, function(){
-            _overlay.fadeTo('500', 0.5);
-        });   
-    }
-    function hideSidebar(){
-        _sidebar.css('margin-left', _sidebar.width() * -1 + 'px');
-        _overlay.fadeTo('500', 0, function(){
-            _overlay.hide();
-        });
-    }
 
-    var _sidebarClose = $('.sidebarClose'),
-    	_sidebarCtrl = $('.sidebarCtrl');	
-		_overlay.parent().css('min-height', 'inherit');
+	function showSidebar(){
+		_sidebar.show(10, function(){
+			$(this).addClass('show');
+		})
+		_overlay.show(0, function(){
+			$(this).fadeTo('400', 0.5);
+		});
+		_mobileMenuFirstA.trigger('focus');
+	}
 
-    _sidebar.css('margin-left', _sidebar.width() * -1 + 'px');
+	function hideSidebar(){
+		_sidebar.removeClass('show');
+		_overlay.fadeTo('400', 0, function () {
+			_overlay.hide();
+			_sidebar.removeAttr('style');
+		});
+		_sidebarCtrl.trigger('focus');
+	}
 
-    _sidebarCtrl.click(function() {				
-        if (_overlay.is(':visible')) {
-            hideSidebar();
-        } else {
-            showSidebar();
-        }
-    });
+	var _sidebarClose = $('.sidebarClose');
+	var	_sidebarCtrl = $('.sidebarCtrl');	
+	_overlay.parent().css('min-height', 'inherit');
 
-    _overlay.add(_sidebarClose).click(function() {
-        hideSidebar();
-    });
+
+	_sidebarCtrl.on('click', function () {
+		if (_overlay.is(':visible')) {
+			hideSidebar();
+		} else {
+			showSidebar();
+		}
+	});
+
+	_overlay.add(_sidebarClose).on('click' ,function() {
+			hideSidebar();	
+	});
+
+	_sidebarClose.on('keydown', function(e){
+		if( !e.shiftKey && e.key==='Tab' ) {
+			e.preventDefault();
+			_mobileMenuFirstA.trigger('focus');
+		}
+	})
 }
+
+
+
 function fixHeader(){//固定版頭
 	var menuH = _menu.outerHeight(),
 			navH = $('.navbar').height();
@@ -242,16 +260,9 @@ function fixHeader(){//固定版頭
 	});
 }
 
-// Fatfooter 開合
+	// Fatfooter 開合
 	var	_ffCtrl = _footer.find('.fatfootCtrl'),
 			_fatfooter = _footer.find('nav>ul>li>ul, .qrcode, .deco ');
-
-	// _ffCtrl.after('<span class="hint">按enter鍵可展開或收合次選單，按tab鍵往下游走</span>');
-	// if(_ffCtrl.hasClass('close')){
-	// 	_ffCtrl.text('展開').attr('aria-label', '展開');
-	// } else {
-	// 	_ffCtrl.text('收合').attr('aria-label', '收合');
-	// }
 	
 	// ---------- 2024/5 無障礙修改 ---------- //
 	_ffCtrl.attr('aria-label', '頁腳選單展開/收合').text('控制按鈕');
@@ -260,26 +271,6 @@ function fixHeader(){//固定版頭
 	} else {
 		_ffCtrl.removeClass('close').attr('aria-expanded', true);
 	}
-
-	// _ffCtrl.click(fatfootSlide);
-	// _ffCtrl.focus(function(){
-	// 	$(this).keydown(function(e){
-	// 		if(e.which==13){fatfootSlide}
-	// 	});
-	// 	$(this).next('.hint').fadeIn(200).delay(4000).fadeOut(600);
-	// });
-	// function fatfootSlide(e){
-	// 	if($(this).hasClass('close')){
-	// 			_fatfooter.slideDown(function(){
-	// 				_ffCtrl.removeClass('close').text('收合').attr('aria-label', '收合');
-	// 			});
-	// 		} else {
-	// 			_fatfooter.slideUp(function(){
-	// 				_ffCtrl.addClass('close').text('展開').attr('aria-label', '展開');
-	// 			});
-	// 		}
-	// 	e.preventDefault();
-	// }
 
 	// ---------- 2024/5 無障礙修改 ---------- //
 	_ffCtrl.click(function(){
@@ -300,24 +291,60 @@ function fixHeader(){//固定版頭
 	$('.page').find('select').attr('aria-label', '每頁顯示筆數');
 
 
-
-function mobileSearch(){//行動版查詢
+	// ---------- 2024/9/23 無障礙修改 ---------- //
+	// 行動版查詢
 	var _searchCtrl = $('.searchCtrl');
-
-	// if(ww<wwNormal){_search.css('top', hh);}
-	searchTop();
-
-	_searchCtrl.click(function(){
-		_search.slideToggle();
-		_searchCtrl.toggleClass('close');
+	var _searchLastA = _search.find('a.btnAdv');
+	_searchCtrl.on('click', function(){
+		if( _search.is(':hidden')) {
+			_search.css('top', _header.outerHeight(true) ).slideDown(250, function(){
+				_search.find('input[type="text"]').trigger('focus');
+			});
+		} else {
+			_search.slideUp(250, function(){
+				_searchCtrl.trigger('focus');
+				_search.removeAttr('style');
+			});
+		}
 	});
-}
-function searchTop(){
-	ww = _window.width();
-	hh = _header.outerHeight(true);
-	if(ww<wwNormal){_search.css('top', hh);}
-	else {_search.attr('style','');}
-}
+
+	// 行動版 search 開啟時 tab 回查詢開關
+	if( ww < wwNormal) {
+		_searchLastA.on('keydown', function(e){
+			if ( !e.shiftKey && e.key=='Tab' ) {
+				e.preventDefault();
+				_searchCtrl.trigger('focus');
+			}
+		})
+		_searchCtrl.on('keydown' , function(e){
+			if( _search.is(':visible') &&  !e.shiftKey && e.key==='Tab') {
+				e.preventDefault();
+				_search.find('input[type="text"]').trigger('focus');
+			}
+		})
+	}
+
+
+	// function mobileSearch(){//行動版查詢
+	// 	// if(ww<wwNormal){_search.css('top', hh);}
+	// 	// searchTop();
+	// 	// _search.slideToggle();
+	// 	// _searchCtrl.toggleClass('close');
+	// }
+
+	function searchTop() {
+		if( _window.width()<wwNormal ){
+			_search.css('top', _header.outerHeight(true));}
+		else {
+			// _search.attr('style','');
+			_search.removeAttr('style');
+		}
+	}
+
+
+
+
+
 function mobileCategory(){//行動版資料大類開合
 	if(ww<=wwMedium){
 		var _category = $('.category'),
