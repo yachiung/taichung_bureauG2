@@ -25,7 +25,7 @@ $(document).ready(function(){
 	_goTop.on('click', function(){
 		$('html,body').stop(true,false).animate({scrollTop:0},700, function () { 
 			$('.goCenter').focus();//20191224
-		 });
+		});
 	});
 	_window.scroll(function(){
 		if ( $(this).scrollTop() > 250){
@@ -39,8 +39,10 @@ $(document).ready(function(){
 	
 	// 按 Enter 到主內容區
 	$('a.goCenter').keydown(function(e){
+		e.preventDefault();
 		if(e.which == 13) { 
-			$('.goCenter').focus();
+			_window.scrollTop( hh - _menu.innerHeight() + 5 );
+			$('.accesskey#aC').focus();
 		}
 	});
 
@@ -239,22 +241,19 @@ function webSiteMenu(){//主選單
 
 
 function fixHeader(){//固定版頭
-	var menuH = _menu.outerHeight(),
-			navH = $('.navbar').height();
+	var menuH = _menu.outerHeight();
+			// navH = $('.navbar').height();
 
 	_window.scroll(function(){
 		if (ww>wwNormal && $(this).scrollTop() > hh-menuH ){
 			$('.header').addClass('fixed');
-			// $('.center').css('margin-top', menuH );
-			_body.offset({top:menuH});
+			// _body.offset({top: menuH});
+			_body.offset({top: hh });
 		} else if ( ww<=wwNormal && $(this).scrollTop() > 0 ){
 			$('.header').addClass('fixed');
 			_body.offset({top:hh});
-			// $('.navi , .navbar , .center').css('margin-top', hh);
-			// $('.navi , .navbar').next('.center').css('margin-top', 0);
 		} else {
 			$('.header').removeClass('fixed');
-			// $('.navi , .navbar , .center').css('margin-top', 0);
 			_body.offset({top:0});
 		}
 	});

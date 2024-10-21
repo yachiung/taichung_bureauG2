@@ -1,11 +1,5 @@
 /*styleC*/
 
-/* input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-input[type="file"]:focus,
-select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
-
 .more a{display:inline-block;padding:0 .8em;text-decoration:none;position:relative;overflow:hidden;border-radius:5px;color:#777;transition:.2s;}
 .more a:hover{background:rgba(255,255,255,.5);color:#222;box-shadow:rgba(0,0,0,.4) 0 0 5px 1px;outline:none;text-decoration:none;}
 .more a:focus{background-color: #c70e69;color: #fff;}
@@ -15,12 +9,12 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 
 .header{background-color:#f0c13b;color:#000;border-bottom:1px solid #fff;box-shadow:rgba(0,0,0,.5) 0 3px 8px -3px;}
 .header h1 a:focus{outline-color:#cd4a04}
-.goCenter{margin-left:-480px;height:1.8em;line-height:1.8em;}
+a.goCenter{background: #fe5;}
+
 
 .sidebar {background:#3f4534;}
 .sidebar .sidebarClose{background:#e6f366;}
 .sidebar .menu{background-color:#e17c1a;}
-/*.sidebar .menu {background:#f0c13b;}*/
 .sidebar .menu li.hasChild>a::before{border-color:#fff;}
 .sidebar .menu li>a{border-color:rgba(255,255,255,.4);}
 .sidebar .menu li a{color:#fff;

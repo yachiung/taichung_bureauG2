@@ -8,7 +8,7 @@ a:hover, a:focus{outline:none;color:#000;}
 .more a:focus{background:#eb6400;outline:none;text-decoration:none;color: #fff;box-shadow: none;}
 .more a:before{content:'＋';font-weight:bold;display:inline-block;margin-right:1px;color:#70ac14;font-size:1.2em;}
 .more a:focus:before{color: #fff}
-a.goCenter{background:#bdf21c;border-radius:0;height:1.85em;line-height:1.85em;}
+a.goCenter{background:#ffac0e;}
 
 .arbtn:not('.bb1'):hover{background:#ffac0e;}
 /*.bb1 .arbtn:hover{background:rgba;}*/

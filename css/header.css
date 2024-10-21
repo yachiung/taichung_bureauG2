@@ -1,75 +1,92 @@
 /*header*/
-.header{position:relative;margin:0 auto;padding:2em 0 0;z-index:5000;/*background-size: 1000px auto;*/background-repeat: no-repeat;background-position: left bottom;background-size: cover;}
-.header>h1{clear:both;height:64px;width:60%;margin: 0;font-size: 20px;}
-.header>h1 a{display:inline-block;}
-.header>h1 a:focus{outline: 1px solid red;}
-.header>h1 img{display:block;width:210px;margin:5px 20px;/*max-width:90%;max-height:90%;*/}
-.header.fixed .menu,
-.header.fixed .megaMenu{position:fixed;left:50%;width:1000px;margin-left:-500px;right:0;top:0;box-shadow:rgba(0,0,0,.5) 0 0 25px;}
+.header{
+	position:relative;margin:0 auto;padding:2em 0 0;z-index:5000;
+	background-repeat: no-repeat;background-position: left bottom;background-size: cover;
+	&>h1{clear:both;height:64px;width:60%;margin: 0;font-size: 20px;
+		a{display:inline-block;
+			&:focus{outline: 1px solid red;}
+		}
+		img{display:block;width:210px;margin:5px 20px;}
+	}
+	&.fixed{
+		position: fixed;top: 0;left: calc(50vw - 500px); width: 1000px; 
+		padding-top: 0;
+		box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+		h1, .search, .navigation{ display: none;}
+	}
 
-.header .navigation{position:absolute;right:0;top:0;}
-.header .navigation ul{float:right;font-size:.87em;margin-right:12px;}
-.header .navigation li{float:left;margin:0 .8em;}
-.header .navigation li a{display:inline-block;height:2.15em;line-height:2.15em;padding:0 2px;text-decoration:none;}
+	.navigation{position:absolute;right:0;top:0;
+		ul{float:right;font-size:.87em;margin-right:12px;}
+		li{float:left;margin:0 .8em;
+			a{display:inline-block;height:2.15em;line-height:2.15em;padding:0 2px;text-decoration:none;}
+		}
+	}
 
-.header .search{position:absolute;right:0;top:33px;width:31%;}
-.header .search label{font-size:0;}
-.header .search form{display:inline-block;vertical-align:top;}
-.header .search form input{vertical-align:top;margin:0;padding:0 .5em;border:none;border-radius: 0;height:2.4em;line-height:2.4em;float:left;}
-.header .search input[type="submit"]{padding:0;}
-.header .search input[type="text"]{width:10em;border:1px solid #bbb;box-sizing:border-box;/* border-radius: 0; */}
-.header .search form a{display:inline-block;height:2.4em;line-height:2.4em;margin:0;padding:0 2px;text-decoration:none;}
-.search .keywordHot{display:block;}
-.keywordHot{vertical-align:middle;margin-top: -5px;}
-.keywordHot ul{display:inline-block;line-height:2em;height:2em;font-size:.87em;}
-.keywordHot li{margin:0 .6em 0 0;padding:0;display:inline-block;}
-.keywordHot li a:hover,
-.keywordHot li a:focus{text-decoration:underline;color: #000;}
+	/* search */
+	.search{position:absolute;right:0;top:33px;width:31%;
+		label{font-size:0;}
+		form{display:inline-block;vertical-align:top;
+			input{vertical-align:top;margin:0;padding:0 .5em;border:none;border-radius: 0;height:2.4em;line-height:2.4em;float:left;
+				&[type="submit"]{padding:0;}
+				&[type="text"]{width:10em;border:1px solid #bbb;box-sizing:border-box;}
+
+				a{display:inline-block;height:2.4em;line-height:2.4em;margin:0;padding:0 2px;text-decoration:none;}
+			}
+		}
+		.keywordHot{display:block;margin-top: -5px;
+			/* .keywordHot{vertical-align:middle;} */
+			ul{display:inline-block;line-height:2em;height:2em;font-size:.87em;}
+			li{margin:0 .6em 0 0;padding:0;display:inline-block;
+				a:hover,
+				a:focus{text-decoration:underline;color: #000;}
+			}
+		}
+	}
+
+}
 
 
-/*花博倒數*/
-/* .flowerCountdown{position:absolute;top:4px;left:50%;width:102px; height:74px;margin-left:-240px;border-radius:6px;background: rgba(0,0,0,.7);overflow: hidden;}
-.flowerCountdown:before{content: '花博倒數';position: absolute;background: #000;color:#bdf21c;letter-spacing: 3px;top: 3px;left: 4px;font-size: 15px;line-height: 1;padding: 3px 12px 3px 3px;}
-.flowerCountdown iframe{margin:-38px auto auto -98px;border:none;}
-.flowerCountdownMobil{display:none;position:absolute;overflow: hidden;} */
+
+
 
 @media screen and (max-width:1000px) {
-	.header{padding:0 64px;height:64px;margin-bottom:0;background-image: none !important;}
-	.header>h1{height:100%;width:auto;}
-	.header>h1 a{height:100%;display:block;overflow:hidden;}
-	.header>h1 img{height:80%;width: auto;margin:1.2% auto 0;}
-	.header.fixed{position: fixed;top: 0;right: 0;left: 0;}
-
-	/* .flowerCountdown{display:none;}
-	.flowerCountdownMobil{top:0;left:auto;display:block; background: rgba(255,255,255,.85);width:63px; height:48px;border-radius: 0 0 5px 5px;transition: 1s;}
-	.header.fixed .flowerCountdownMobil{top: -60px;}
-	.flowerCountdownMobil iframe{margin:-54px auto auto -121px;} */
-
-
-	.header .sidebarCtrl{
-		display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:64px;font-size:0;
-		&::before, &::after{content:'';position:absolute;width:40%;}
-		&::before{height:14px;border:2px solid #fff;left:50%;top:50%;margin:-9px auto auto -20%;border-left:none;border-right:none;}
-		&::after{content:'';position:absolute;width:40%;height:2px;top:50%;margin:-1px auto auto -20%;background:#fff;}
-		&:hover, &:focus{box-shadow: none;}
-	}
-
-	.searchCtrl{
-		position:absolute;right:0;top:0;width:64px;height:100%;font-size:0;background:#777;
-		&::before, &::after{content:'';position:absolute;}
-		&::before{width:25px;height:25px;border:2px solid #fff;border-radius:50%;left:23%;top:23%;}
-		&::after{width:12px;height:4px;background:#fff;transform:rotate(45deg);left:58%;top:63%;border-radius:0 2px 2px 0;}
-		&.close{background:#333;
-			&::before,
-			&::after{width:28px;height:2px;border:none;border-radius:0;background:#fff;transform:rotate(45deg);left:50%;top:50%;margin:0 auto auto -14px;}
-			&::after{transform:rotate(-45deg);}
+	.header{
+		padding:0 64px;height:64px;margin-bottom:0;background-image: none !important;
+		&>h1{height:100%;width:auto;
+			a{height:100%;display:block;overflow:hidden;}
+			img{height:80%;width: auto;margin:1.2% auto 0;}
+		}
+		&.fixed{
+			position: fixed;top: 0;right: 0;left: 0; width: auto;
+			&>h1{ display: block; margin: 0 64px;}
 		}
 
-		&:hover, &:focus{box-shadow: none;}
+		.sidebarCtrl{
+			display:block;position:absolute;left:0;top:0;bottom:0;width:64px;height:64px;font-size:0;
+			&::before, &::after{content:'';position:absolute;width:40%;}
+			&::before{height:14px;border:2px solid #fff;left:50%;top:50%;margin:-9px auto auto -20%;border-left:none;border-right:none;}
+			&::after{content:'';position:absolute;width:40%;height:2px;top:50%;margin:-1px auto auto -20%;background:#fff;}
+			&:hover, &:focus{box-shadow: none;}
+		}
+		
+		.searchCtrl{
+			position:absolute;right:0;top:0;width:64px;height:100%;font-size:0;background:#777;
+			&::before, &::after{content:'';position:absolute;}
+			&::before{width:25px;height:25px;border:2px solid #fff;border-radius:50%;left:23%;top:23%;}
+			&::after{width:12px;height:4px;background:#fff;transform:rotate(45deg);left:58%;top:63%;border-radius:0 2px 2px 0;}
+			&.close{background:#333;
+				&::before,
+				&::after{width:28px;height:2px;border:none;border-radius:0;background:#fff;transform:rotate(45deg);left:50%;top:50%;margin:0 auto auto -14px;}
+				&::after{transform:rotate(-45deg);}
+			}
+	
+			&:hover, &:focus{box-shadow: none;}
+		}
+
+
 	}
 
-	/* .searchCtrl:hover, .sidebarCtrl:hover,
-	.searchCtrl:focus, .sidebarCtrl:focus{box-shadow: none;} */
+
 
 
 	.header .search {display:none;position:fixed;left:0;right:0;padding:.5em .8em;background:rgba(0,0,0,.7);width: auto; top: auto;}
@@ -102,18 +119,4 @@
 	.header .search input[type="text"]{width:calc(100% - 7em);}
 	.search .keywordHot{ display:none;}
 
-}
-/* 2020 燈會倒數 */
-.flowerCountdownMobil{display: none;}
-.flowerCountdown{position:absolute;top:0;left:240px;width: 83px;height:62px;overflow: hidden;background:rgba(255,255,255,.9);border-radius:0 0 6px 6px;}
-.flowerCountdown iframe,
-.flowerCountdownMobil iframe{display:block;width: 100%;height: 100%;border: none;margin: 0 0 0 -2px;padding: 0;background: transparent;overflow: hidden;}
-@media (max-width:1000px){
-	.flowerCountdown{left:70px;}
-}
-@media (max-width:600px){
-	/*.header{margin-bottom: 30px;}  留燈會倒數的位置 */
-	.flowerCountdown{display: none;}
-	.flowerCountdownMobil{display:block;position: static;margin:0;height:20px;padding: 2px 0;}
-	.header.fixed .flowerCountdownMobil{position: fixed;left: 0;right: 0;margin:1px 0 0;background:rgba(255,255,255,.8);box-shadow: rgba(0,0,0,.3) 0 5px 6px -2px;}
 }

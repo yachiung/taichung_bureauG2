@@ -1,11 +1,4 @@
 /* styleB */
-
-/* input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-input[type="file"]:focus,
-select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
-
 .more a{
 	--color1: #5ea000;
 	--color2: #fff;
@@ -26,6 +19,7 @@ select:focus{border-color:#93c622;box-shadow:#93c622 0 0 0 2px;} */
 	--color2: #5ea000;
 	box-shadow:none; color: var(--color1);
 }
+a.goCenter{background:#bdf21c;}
 
 .header{background-color:#8cc11f;color:#000;border-bottom:1px solid #fff;box-shadow:rgba(0,0,0,.5) 0 3px 8px -3px;}
 
