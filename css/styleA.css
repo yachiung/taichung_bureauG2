@@ -60,17 +60,21 @@ select:focus{border-color:#ffac0e;box-shadow:#ffac0e 0 0 0 2px;outline:none;} */
 .header .navigation li a:focus{background:#000;}
 
 /* .header .search{top:28px;} */
-.header .search input[type="submit"]{background:#199986 url(../images/search_submit.png) no-repeat center center;background-size:1.8em;color:transparent;width:2.5em;}
-.header .search input[type="submit"]:hover,
-.header .search input[type="submit"]:focus,
-.header .search input[value="查詢"]:hover,
-.header .search input[value="查詢"]:focus {background-color:#fb6400;outline:none;}
-.header .search input[type="text"]{width:12em;background: #fff;background:rgba(255,255,255,.8);border:none;}
-.header .search input[type="text"]:hover,
-.header .search input[type="text"]:focus{box-shadow:#199986 0 0 0 2px inset;}
-.header .search input[type="text"]:focus{background:#fff;}
-.header .search a{
-	&:hover, &:focus{background:#fb6400;text-decoration:none;}
+.header .search {
+	input[type="submit"], input[type="button"] {
+		width:2.5em;
+		background:#199986 url(../images/search_submit.png) no-repeat center center;
+		background-size:1.8em;
+		color:transparent;
+		&:hover, &:focus {background-color:#fb6400;outline:none;}
+	}
+	input[type="text"]{width:12em;background: #fff;background:rgba(255,255,255,.8);border:none;}
+	input[type="text"]:hover,
+	input[type="text"]:focus{box-shadow:#199986 0 0 0 2px inset;}
+	input[type="text"]:focus{background:#fff;}
+	a{
+		&:hover, &:focus{background:#fb6400;}
+	}
 }
 
 @media screen and (max-width:1000px){

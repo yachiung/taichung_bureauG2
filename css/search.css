@@ -1,0 +1,57 @@
+	/* 版頭的查詢區 search */
+	.header .search{position:absolute;right:0;top:33px;width:31%;
+		label{font-size:0;}
+		form{display:inline-block;vertical-align:top;
+			input{vertical-align:top;margin:0;padding:0 .5em;border:none;border-radius: 0;height:2.4em;line-height:2.4em;float:left;
+				&[type="submit"]{padding:0;}
+				&[type="text"]{width:10em;border:1px solid #bbb;box-sizing:border-box;}
+
+				a{display:inline-block;height:2.4em;line-height:2.4em;margin:0;padding:0 2px;text-decoration:none;}
+			}
+		}
+
+		.keywordHot{display:block;margin-top: -5px;
+			ul{display:inline-block;line-height:2em;height:2em;font-size:.87em;}
+			li{
+        margin:0 .6em 0 0;padding:0;display:inline-block;
+				a:hover,
+				a:focus{text-decoration:underline;color: #000;}
+			}
+		}
+
+    @media screen and (max-width:1000px) {
+      display: none;
+      position: fixed;top: auto; left: 0;right: 0;
+      padding: .5em .8em; width: auto;
+      background: rgb(0 0 0 / .7);
+      text-align: center;
+
+      a{color:#fff; text-decoration:none;}
+      input[type="text"] {
+        width: 16em;padding: 0 .8em;margin: 0;
+        background: #fff; box-shadow: none;
+        &:hover, &:focus {
+          border: #c00 0 0 0 2px inset;
+        }
+      }
+      input[type="submit"], input[type="button"] {
+        position: relative;
+        margin-left: -5px;width: 3em;text-indent: -200px;
+        background: #666 url(../images/search_submit.png) no-repeat center center;
+        /* background-size: 20px; */
+      }
+
+      .keywordHot{ display:inline-block;
+        ul{font-size: 1em;line-height:2.4em;height:2.4em;vertical-align:top;}
+        li a{color:#fff;line-height:2.4em;height:2.4em;}
+      }
+    }
+
+    @media screen and (max-width:600px){
+      form{display:block;margin:0 auto;}
+      input[type="text"]{width:calc(100% - 7em);}
+      .keywordHot{ display:none;}
+    }
+
+	}
+
